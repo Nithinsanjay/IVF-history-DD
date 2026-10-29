@@ -1,0 +1,51 @@
+.cke_toolbox {
+    display: none;
+}
+.SMainDiv {
+    padding: 10px 0px;
+}
+.SHeaderDiv {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 1px 1px 1px;
+    border-style: none;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bold;
+    color: #fffefe;
+    height: 23px;
+    background: #163256;
+    width: 99.8%;
+    font-size: 13px;
+}
+.SHMultiSearch{
+    margin-right: 10px;
+    width: 250px;
+}
+.MainMultiSelDiv{
+    position: absolute;
+    top: 95%;
+    right: 10px;
+    width: 258px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 99999999999999999;
+    display: none;
+    flex-direction: column;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.SOptionDiv {
+    padding: 1px 0px;
+    border-bottom: 1px solid #d3d3d3;
+}
+.SCheckBox{
+    margin-right:5px;
+}
+.SOptLabel{
+    color: black;
+}
+

@@ -1,0 +1,30 @@
+{
+  "name": "toaster-ui",
+  "version": "1.1.5",
+  "description": "Toaster UI is a lightweight JavaScript library for displaying toast notifications on web pages. It provides a simple and customizable way to show temporary messages or notifications to users. This documentation will guide you through the installation process, usage examples, and customization options of the library.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/murtazajoo/toaster-ui.git"
+  },
+  "main": "dist/main.js",
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "",
+    "build": "webpack --config webpack.config.js"
+  },
+  "author": "Murtaza Joo",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "esm": "^3.2.25",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  }
+ 
+}

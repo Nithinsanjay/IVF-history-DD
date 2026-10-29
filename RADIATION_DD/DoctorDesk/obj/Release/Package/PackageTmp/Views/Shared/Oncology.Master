@@ -1,0 +1,3414 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="<%=ResolveUrl("/Images/favicon.ico")%>">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Doctor Desk</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link href="<%=ResolveUrl("~/JQueryUi/jquery.ui.theme.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/JQueryUi/jquery.ui.css")%>" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="<%=ResolveUrl("~/font-awesome/css/font-awesome.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/font-awesome/css/font-awesome.min.css")%>" rel="stylesheet" />
+    <!-- Ionicons -->
+    <link href="<%=ResolveUrl("~/bootstrap/Icon.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/LoadingCursor/css/style.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/multi-select.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/plugins/select2/select2.css")%>" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="<%=ResolveUrl("~/dist/css/AdminLTE.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/dist/css/skins/skin-blue.min.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/dist/css/skins/skin-yellow.min.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/jqGrid/css/ui.jqgrid.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/jqGrid.bootstrap.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/bootstrap.css")%>" rel="stylesheet" />
+    <link href="../plugins/alert/jquery-confirm.css" rel="stylesheet" />
+    <link href="../Scripts/HoldOn.min.css" rel="stylesheet" /> <%----%>
+    <link href="../js/fancybox/jquery.fancybox2.0.5.css" rel="stylesheet" type="text/css" /><%----%>
+    <script src="<%=ResolveUrl("~/Scripts/jquery-1-10-2.js")%>"></script>
+    <script src="<%=ResolveUrl("~/dist/js/app.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/bootstrap/js/bootstrap.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/bootstrap/js/jquery.messager.js")%>"></script>
+    <script src="<%=ResolveUrl("~/bootstrap/js/dropdown.js")%>"></script>
+    <script src="<%=ResolveUrl("~/Scripts/jquery-1-11-1-ui.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/slimScroll/jquery.slimscroll.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.date.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.regex.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/jqGrid/js/i18n/grid.locale-en.js")%>"></script>
+    <script src="<%=ResolveUrl("~/jqGrid/js/jquery.jqGrid.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/LoadingCursor/jquery-loader.js")%>"></script>
+    <script src="<%=ResolveUrl("~/Scripts/multi-select.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/select2/select2.full.min.js")%>"></script>
+   
+    <%-- --%>
+    <script src="../Scripts/Sortable-master/jquery.binding.js"></script>
+    <script src="../Scripts/Sortable-master/Sortable.js"></script>
+    <script src="../Scripts/Sortable-master/Sortable.min.js"></script>
+    <%--end--%>
+
+    <script src="../Scripts/PatList.js"></script>
+    <script src="../Scripts/PrescriptionPrint.js"></script>
+    <script src="../plugins/alert/jquery-confirm.js"></script>
+    <script src="../Scripts/PrevHistory.js"></script>
+
+    <script src="../Scripts/jquerysession.js"></script>
+      <script src="../Scripts/HoldOn.min.js"></script> <%----%>
+      <script src="<%=ResolveUrl("~/js/fancybox/jquery.fancybox.pack2-0-5.js")%>"></script><%----%>
+
+    <link href="../Content/style.css" rel="stylesheet" />
+    <style>
+        .btn-default:active:hover, .btn-default.active:hover {
+           color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc;
+        }
+
+
+        .btn-default:active,
+        .btn-default.active,
+        .open > .dropdown-toggle.btn-default {
+          color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc;
+        }
+
+
+         .panel-heading {
+    padding: 5px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: #6380bb !important;
+    color: white;
+}
+
+           /*Added By Priyanka on 31/01/2025*/
+             .Sdropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .Sdropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 10000000000;
+            right: 0;
+            border-radius: 5px;
+        }
+            .Sdropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                border-bottom: 1px solid #e4e4e4;
+                font-size: 13px;
+                border-radius: 5px;
+            }
+                .Sdropdown-content a:hover {
+                    background-color: #ddd;
+                }
+        .Sdropdown.active .Sdropdown-content {
+            display: block;
+        }
+    </style>
+
+    <style>
+        #DivOverlay {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            background-color: #80808085;
+            z-index: 10000000000000000000000000000000000000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .MainDivAlertSave {
+            background-color: white;
+            max-width: 90vw;
+            min-width: auto;
+        }
+
+        .MainDivHeaderAlert {
+            background-color: #003b79;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-size: 14px;
+            padding: 5px 0px;
+        }
+
+        .MainAlertHeadLbl {
+            margin: 0;
+            padding-left: 5px;
+        }
+
+        .MainAlertCloseIcon {
+            padding-right: 5px;
+            font-size: 20px;
+            color: red;
+            cursor:pointer;
+        }
+            .MainAlertCloseIcon:hover {
+                color: white;
+            }
+
+        .MainDivContentAlert {
+            padding: 10px;
+            max-height: 70vh; /* You can adjust this as needed */
+            overflow-y: auto;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .fancy-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+            .fancy-table thead {
+                background: #4CAF50;
+                color: white;
+            }
+
+            .fancy-table th, .fancy-table td {
+                padding: 12px 15px;
+                text-align: center;
+                border-bottom: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+            }
+
+            .fancy-table tbody tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+
+            .fancy-table tbody tr:hover {
+                background-color: #f1f1f1;
+                transition: 0.3s ease-in-out;
+            }
+
+        /* Responsive tweaks */
+        @media screen and (max-width: 600px) {
+            .fancy-table th, .fancy-table td {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+
+        .MainDivFooterAlert {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 7px;
+            border-top: 1px solid #d3d3d3;
+        }
+
+        .NotesCount {
+            top: 0px !important;
+        }
+
+        .PopupNotesNotifi {
+            display: block;
+            position: absolute;
+            z-index: 2147483647;
+            width: auto;
+            float: left;
+            background: rgb(237, 237, 237);
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid rgb(216, 216, 216);
+            max-height: 300px;
+            max-width: 450px;
+            left: auto;
+            right: 0;
+            overflow: auto;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var StrDocCode = '<%:Session["gDoctCode"]%>';
+        var rowNoFrMedTaper = 0;
+        var DMSURL = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("LOCALDMSURL")%>'; //meenakshi 
+        var CustomeDateRange = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("CustomeDateRange")%>'; // Dhananjay 20240705 
+        var NoteTranMode = "1"; 
+        var DispDurCritFrPatSrchYN = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("DispDurCritFrPatSrchYN")%>'; // Added by Dhananjay 20240813
+        var HideCheckPatInfoIcon = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("DispShowAllPatIcon")%>';  // Added by Dhananjay 20240828 Re
+        var ISICDDiagReq = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("isICDDiagnoReq")%>'; //Added By Priyanka
+        var ISDiagnoMandatory = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("DiagnosisMandatory")%>';//Added By Priyanka
+        var SendEventToSave = [];
+        var CalenderFancyClose = false;
+        var CalenderActionType = "";
+        var TumorActionType = "";
+        var QMSCall = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("QMSENABLE")%>'; //Added By RAJAN
+        var gDoctCode = '<%: Session["gDoctCode"] ?? "" %>';
+        var UNITCODE = '<%: Session["UNITCODE"] ?? "" %>';
+
+        var adminConsoleYN = '<%: ("" + Session["CONSOLEAPPYN"]).ToString().Trim()%>';
+        var FormName = "";
+        var UnitSel = "";
+        var isCheckingUnit = false;
+        var SkipUnitSession = false;
+        var ErrorType = "";
+        $(document).ready(function (e) {
+            $(document).ajaxSend(function (e, jqxhr, settings) {
+                if (!isCheckingUnit) {
+                    isCheckingUnit = true;
+                    IsUnitCode(function (isValid) {
+                        isCheckingUnit = false;
+                        if (!isValid && !SkipUnitSession) {
+                            e.stopPropagation();
+                            if (ErrorType == "Doctor") {
+                                alert("Session Timeout. Please Login Again");
+                                window.location.href = "../Account/Login";
+                            } else {
+                                window.location.href = "../Error/SessionTimeOut";
+                            }
+                        }
+                    });
+                }
+            });
+
+            function IsUnitCode(callback) {
+                $.ajax({
+                    type: 'POST',
+                    url: '../Account/GetDoctCode',
+                    success: function (data) {
+                        if (data == "success") {
+                            callback(true);
+                        } else {
+                            ErrorType = data;
+                            callback(false);
+                        }
+                    },
+                    error: function () {
+                        callback(false);
+                    }
+                });
+            }
+
+            // Added by Dhananjay 20250928
+            var sessionPatStatus = sessionStorage.getItem('PatCompleted');
+            if (sessionPatStatus && sessionPatStatus == 'Y') {
+                hideButtonsOnPages(['Complaints', 'Examination', 'ClinicalNotes', 'Diagnosis', 'InvestigationTran', 'RxDesktop', 'PatientAdvice', 'ChmoPlanning', 'PersonalHist', 'MedicalHist', 'FamilyHist', 'AllergyHist']);
+            }
+
+            /*kavita 18-01-19*/
+            //Suchita 18-02-2019 
+            $('#DivPatGrid').on('hidden.bs.collapse', toggleIconsofDivTab);
+            $('#DivPatGrid').on('shown.bs.collapse', toggleIconsofDivTab);
+            //end Suchita 18-02-2019  
+            //Added By Priyanka on 31/01/2025
+            ////debugger;
+            //Setting icon for appsetting start
+            $('#cogIcon').click(function () {
+                document.querySelector('.Sdropdown').classList.toggle('active');
+            });
+
+            window.addEventListener('click', function (event) {
+                if (!document.querySelector('.Sdropdown').contains(event.target)) {
+                    document.querySelector('.Sdropdown').classList.remove('active');
+                }
+            });
+            //For Appsetting
+            $('#BtnAppSetting').click(function () {
+                window.location.href = "../Account/AppSettingConfig";
+            });
+            //For ErrorLog
+            $('#BtnErrorLog').click(function () {
+                window.location.href = "../Account/ErrorLogInfo";
+            })
+            <%if (("" + Session["PageId"])== "Menu")
+            {%>
+            $('#SettingDrpdown').css('display', 'block');
+            <%}
+            else 
+            {%>
+            $('#SettingDrpdown').css('display', 'none');
+            <%}
+            %>
+
+            // Setting icon for appsetting end
+
+            if (window.location.pathname == "/Account/MenuList" ||
+               window.location.pathname == "/DoctorDesk/PatientEntry") {
+                $('#lishome').css('display', 'none');
+            } else {
+                $('#lishome').css('display', 'block');
+            }
+
+            if (DispDurCritFrPatSrchYN == "N") {
+                $("#divTodayYest").hide();     // Added by Dhananjay 20240813   
+            }
+
+            if (DMSURL == "")
+                $("#lisDocuments").hide();
+
+            $('#lishome').click(function () {
+                window.location.href = '../DoctorDesk/PatientEntry';
+            });
+
+            $('#btnwhtsup').click(function () {
+                //window.open("whatsapp://send?phone=+91" + ($.session.get('PatMobile')));
+                window.location.href = "whatsapp://send?phone=+91" + ($.session.get('PatMobile'));
+            });
+            ////debugger;
+
+            var strMrNo = $.session.get('PatMRNO');
+            //var diagnosisselect = $.session.set('Diagnosisselect', localStorage.getItem('DiagnosisSelYN'));
+
+            //previousUserCookie["strMrNo"] = previousUserID;
+            //previousUserCookie.Expires = DateTime.Now.AddDays(30);
+
+            //added by priyanka on 19/02/2025
+            //if (window.location.href === "../DoctorDesk/PatientEntry")//added by priyanka on 19/02/2025 not working on the uat
+            //{
+            //    var strMrNo = $.session.get('PatMRNO');
+            //    if (strMrNo != null && strMrNo != "") {
+            //        SetCountsForHistory(strMrNo); // Call only when URL matches
+            //    }
+            //}
+
+            //SetCountsForHistory(strMrNo);//commented by priyanka on 19/02/2025
+
+            SetRightMenuOptionFocus();
+
+            if ($.session.get('OutRefDrNm') != "" && $.session.get('OutRefDrNm') != undefined) {
+                $("#ReferDrPanel").css('display', 'inline-block');
+            } else {
+                $("#ReferDrPanel").css('display', 'none');
+            }
+
+            if (("" + '<%:Session["PageId"]%>') == "Menu") {
+                // $("#menuDots").hide(); suchita   07-03-2019   
+                $("#slide_sdList").hide();//kavita 12-aug
+            }
+            else {
+                if (("" + '<%:Session["FromClinic"]%>') == "Y")// added by vijeta on 5th april 2018
+                    $("#menuDots").hide();
+                else if ($(window).width() < 996)//added by kavita 
+                {
+                    $("#menuDots").show();//added by kavita 
+                    $("#slide_sdList").hide();//kavita 12-aug
+                    //$("#P_Name").css('width', '145px');//kavita
+                }
+                else if ($(window).width() > 996 && $(window).width() <= 1024)//added by kavita 
+                {
+                    $("#P_Name").css('width', '187px');
+                }
+                else {
+                    $("#slide_sdList").show();//kavita 12-aug
+                    SetCountsForHistory(strMrNo);//commented by priyanka on 19/02/2025
+                    $("#P_Name").css('width', 'auto');//kavita
+                }
+            }
+
+            // Meenakshi 28/07/2018
+            $('.content-wrapper').css('margin-left', function () {
+                if ($(window).width() >= 996)
+                    return $("#menuList").width() + 1;
+            });
+
+            // Meenakshi 28/07/2018
+            $(window).resize(function () {
+                $('.content-wrapper').css('margin-left', function () {
+                    if ($(window).width() >= 996)
+                        return $("#menuList").width() + 1;
+                });
+            });
+
+            $("#anchrSignOut").click(function () {
+                //debugger;
+                $.session.set('PatTRANNO', "");
+                $.session.set('PatMRNO', "");
+                $.session.set('PatName', "");
+                $.session.set('PatAge', "");
+                $.session.set('PatAge2', "");//added on 25th june 2018
+                $.session.set('PatGender', "");
+                $.session.set('PatCompleted', "");
+                $.session.set('ClinicCode', "");
+
+                $.session.set('ICUPatName', '');
+                $.session.set('ICUPatGender', '');
+                $.session.set('ICUPatIPNO', '');
+                $.session.set('ICUPatMRNO', '');
+                $.session.set('ICUPatBedNo', '');
+                $.session.set('ICUPatAdmnDate', '');
+                /// Meenakshi
+                $.session.set('PatSelected', '');
+                $.session.set('Pagefrom', '');
+                $.session.set('ClinicName', '');
+                $.session.set('PatMobile', '');
+                $.session.set('PatDOB', '');
+                $.session.set('OutRefDrNm', '');
+                $.session.set('OutRefDrContact', '');
+
+                //// meenaskhi
+                //sessionStorage.clear();
+
+                //Meenakshi
+                //for (key in sessionStorage) {
+                //    delete sessionStorage[key];
+                //}
+                //for (key in localStorage) {
+                //    delete localStorage[key];
+                //}
+                //meenakshi
+            });
+
+            $('.dropdown-toggle').dropdown();
+            var menuL = document.getElementById('menuList');
+
+            $('#menuBar').click(function (e) {
+                menuL.style.display = "block";
+
+                var pg = '<%=System.Web.HttpContext.Current.Session["PageId"]%>';
+                if (pg != "Menu") {
+                    var urls = "<%=Url.Action("GetDctrClinic","Account")%>";
+                    AddClinics(urls, "Y");
+                }
+                else { //added by kavita 30-8-18
+                    var patList = document.getElementById('patList');
+                    patList.style.display = "none"; //suchita 
+                    var urls = "<%=Url.Action("GetDctrClinic","Account")%>";
+                    AddClinics(urls, "Y");
+                }//added by kavita 30-8-18
+            });
+            $("#btnHome").click(function () {
+                ////debugger;
+                //Meenakshi change the url redirection to patient entry page from internal pages..
+                var page = window.location.href;
+                if (page.indexOf("MenuList") != -1) {
+                    GoToHome();
+                }
+                else if (page.indexOf("PatientEntry") != -1 || page.indexOf("PAC") != -1) {
+                    window.location.replace("<%=Url.Action("MenuList", "Account")%>");
+                    $.session.set('PatName', '');
+                    $.session.set('PatAge', '');
+                    $.session.set('PatGender', '');
+                    $.session.set('PatMobile', '');
+                    $.session.set('PatAge2', '');
+                    $.session.set('PatMRNO', '');
+                    $.session.set('PatTRANNO', '');
+                    $.session.set('PatCompleted', '');
+                    $.session.set('ClinicCode', "");
+                    $.session.set('OutRefDrNm', '');
+                }
+                else {
+                    window.location.replace("<%=Url.Action("PatientEntry", "DoctorDesk")%>");
+                }
+            });
+
+            var lst = document.getElementById('sideList');
+            var mainContent = document.getElementById('secCont');
+            $('#menuDots').click(function (e) {
+                $("#sideList").toggle();
+                if ($('#divtabs').css('display') != 'none') {
+                    lst.style.display = "block";
+                    $("#divAdmSideList").show();
+                }
+            });
+
+            $('#historyPanel').click(function (e) {
+                if (document.getElementById("ReferralNotificationPopup").style.display == "block") {
+                    $("#ReferralNotificationPopup").slideToggle();
+                }
+                $("#tblHistDiv").slideToggle();
+            });
+
+            $('#TumorPanel').click(function (e) {
+                if (document.getElementById("ReferralNotificationPopup").style.display == "block") {
+                    $("#ReferralNotificationPopup").slideToggle();
+                }
+                $("#tblTumorDiv").slideToggle();
+            });
+            //Meenakshi
+            $("#btnShowPatInfo").fancybox({
+                openEffect: 'elastic',
+                openSpeed: 100,
+                closeEffect: 'elastic',
+                closeSpeed: 100,
+                helpers: {
+                    overlay: { closeClick: false }
+                },
+                autoDimensions: false,
+                cyclic: true,
+                showNavArrows: true,
+            });
+
+            $("#PatHistory").click(function (e) {
+                var Mrno = ("" + $.session.get('PatMRNO')).toString();
+                if (Mrno != "" && Mrno != "undefined")
+                    $("#btnShowPatHistory").click();
+                else
+                    $.messager.alert("Alert", "Please Select Patient");
+            });
+
+            $("#PatInfo").click(function (e) {
+                var Mrno = ("" + $.session.get('PatMRNO')).toString();
+                if (Mrno != "" && Mrno != "undefined") {
+                    $("a#btnShowPatInfo").click();
+                    GetPatData(Mrno);
+                }
+                else
+                    $.messager.alert("Alert", "Please Select Patient");
+            });
+
+            $('#ReferDrPanel').click(function (e) {
+                document.getElementById("tblRefDoctor").innerHTML = "";
+                $("#tblRefDoctor").slideToggle();
+                var strHtml = "<div>" + $.session.get('OutRefDrNm') + "</br>" + $.session.get('OutRefDrContact') + "</div>";
+                document.getElementById("tblRefDoctor").innerHTML = strHtml;
+            });
+
+            $('#ReferDrNotesListPanel').click(function (e) {
+                if (document.getElementById("tblHistDiv").style.display == "block") {
+                    $("#tblHistDiv").slideToggle();
+                }
+                if (document.getElementById("tblTumorDiv").style.display == "block") {
+                    $("#tblTumorDiv").slideToggle();
+                }
+                $("#ReferralNotificationPopup").slideToggle();
+            });
+            
+            window.onclick = function (event) {
+
+                if (event.target == menuL) {
+                    document.getElementById('menuList').style.display = "none";
+                }
+            }
+
+            window.onclick = function (event) {
+
+                // added by vijeta on 7th april 2018
+                if (event.target == document.getElementById('menuDots')) {
+                    //lst.style.display = "block"; kavita
+                }
+                else if (event.target == document.getElementById('slide_sdList') || event.target == document.getElementById('Divarrow')) {
+                    //kavita 12-aug-2019
+                    $(".rotateArrow").toggleClass("up");
+                    $("#sideList").toggle();
+                    $('.content-wrapper').css("width", "79.5%");
+
+                    if ($('#sideList').is(":visible")) {
+                        SetCountsForHistory(strMrNo);//commented by priyanka on 19/02/2025
+                        $('#MainDiv').css("margin-right", "20%");
+                        if (window.location.href.indexOf("RxNewSearch") != -1) {
+                            $('#ComplaintInput').css("width", "55%");
+                        }
+                        if (window.location.href.indexOf("Examination") != -1) {
+                            $('#ExamDiv').css("width", "80%");
+                        }
+
+                    } else {
+                        $('#MainDiv').css("margin-right", "0%");
+                        if (window.location.href.indexOf("Examination") != -1) {
+                            $('#ExamDiv').css("width", "100%");
+
+                        }
+                        if (window.location.href.indexOf("RxNewSearch") != -1) {
+                            $('#ComplaintInput').css("width", "48%");
+
+                        }
+                    }
+                }
+                else {
+
+                    if ($(window).width() >= 996) {
+                        //  lst.style.display = "block";
+                    }
+                    else {
+                        $("#slide_sdList").css("display", "none");   //kavita 12-aug-2019
+                        if (event.target != document.getElementById('txtNotes') && event.target != document.getElementById('btnSaveNotes')) // condition added by vijeta on 16th may 2018
+                            lst.style.display = "none";
+                    }
+                }
+            }
+
+            panelClose.onclick = function () {
+                menuL.style.display = "none";
+            }
+
+            $('#btnClose').click(function (e) {
+                Makenormal();
+                RemoveBorder();
+            });
+
+            //$("body").disableSelection();
+
+            $("body").keydown(function (e) {
+                if (e.keyCode == 8) {
+                    var element = e.target.nodeName.toLowerCase();
+                    if (element != 'input' && element != 'textarea') {
+                        return false;
+                    }
+                }
+            });
+
+            if (("" + '<%: Session["gDoctCode"]%>') == "" && ("" + '<%: Session["ICUAUTHYN"]%>') != "Y") {
+                if (('<%: Session["FromClinic"]%>') != "Y") {// condition added by vijeta on 5th april 2018
+                    alert("Session expired. Please login again.");
+                    $("#anchrSignOut").click();
+                    window.location.href = "../Account/Login";
+                }
+            }
+
+            //
+            $('#lishistory').click(function (e) {
+                if (CheckPatMRNotEmpty())
+                    window.location.href = '../DoctorDesk/History';
+                else
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+            })
+            //end
+
+            $('#lisattach').click(function (e) {
+                if (CheckPatMRNotEmpty()) {//
+                    var MRNO = $.session.get('PatMRNO');
+                    window.location.href = '../DoctorDesk/Attachments?MRNO=' + MRNO;
+                }
+                else {
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                }
+            })
+
+            // added by vijeta on 3rd april 2018
+            $('#lisVitalHistory').click(function (e) {
+                if (CheckPatMRNotEmpty())
+                    window.location.href = '../DoctorDesk/VitalHistory';
+                else
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+            });
+
+            $('#lisVaccination').click(function (e) {
+                if (CheckPatMRNotEmpty())
+                    window.location.href = '../Clinicalnotes/Vaccination';
+                else
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+            });
+            $('#lisPlanComplete').click(function (e) {
+                if (CheckPatMRNotEmpty())
+                    window.location.href = '../DoctorDesk/PlanCompletedStatus';
+                else
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+            });
+
+            //Priyanka on 13/11/2025
+            $('#lisSchemeApproval').click(function (e) {
+                //if (CheckPatMRNotEmpty())
+                    window.location.href = '../DoctorDesk/SchemeApprovalStatus';
+                //else
+                   // $.messager.alert("Alert", "Please Select Patient");
+            });
+            //End
+
+            //Meenakshi 
+            $('#PresPrint').click(function (e) {
+                ////debugger;
+                <%--if (('<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("isICDDiagnoReq")%>') == "Y" && localStorage.getItem('ICDDiagSelYN') == "N") {
+                    $.messager.alert("Alert", "Please select ICD diagnosis.");
+                    return false;
+                }--%>
+
+                //Added By Priyanka on 29/01/2025
+                if (!CheckDiagnosisValidation(ISICDDiagReq, ISDiagnoMandatory)) {
+                    return false;
+                }
+            });
+
+            $('#lisMedicationHistory').click(function (e) {
+                if (CheckPatMRNotEmpty())
+                    window.location.href = '../DoctorDesk/MedicationHistory';
+                else
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+            });
+
+            $('#lisPatClinicalHistory').click(function (e) {
+                if (CheckPatMRNotEmpty())
+                    window.location.href = '../DoctorDesk/PatientClinicDetails';
+                else
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+            });
+
+            $('#lisPatClinicalHistory').click(function (e) {
+                if (CheckPatMRNotEmpty())
+                    window.location.href = '../DoctorDesk/PatientClinicDetails';
+                else
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+            });
+
+            
+
+            $('#lisSurgicalHistory').click(function (e) {
+                var MRNO = $.session.get('PatMRNO');
+                if (MRNO != undefined && MRNO != "")
+                    window.location.href = '../DoctorDesk/SurgicalHistory';
+                else
+                    $.messager.alert("Alert", "Please Select Patient");
+            });
+            // added by vijeta on 2nd may 2018
+            $('#lisNotes').click(function (e) {
+                if (CheckPatMRNotEmpty())
+                    window.location.href = '../DoctorDesk/Notes';
+                else
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+            });
+
+            // added by vijeta on 4th June 2018
+            $('#lisAllergy').click(function (e) {
+                if (CheckPatSessionNotEmpty())
+                    window.location.href = '../DoctorDesk/Allergy';
+                else
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+            });
+
+            // added by vijeta on 22nd June 2018
+            $("#lisSPTFormat").click(function () {
+                if (CheckPatSessionNotEmpty()) {
+                    var MRNO = $.session.get('PatMRNO');
+                    window.location.href = '../DoctorDesk/SPTReporting';
+                }
+                else {
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                }
+            });
+
+            $('#lisDocuments').click(function (e) {
+                var MRNO = $.session.get('PatMRNO');
+                if (CheckPatSessionNotEmpty()) {
+                    window.location.href = DMSURL + MRNO.toString().trim() + "&&strLocation=P";
+                }
+                else
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+            });
+
+            //added by vishal
+            $('#lisMasterUpdt').click(function (e) {
+                //commented by 09/12/2019  12:26
+                //if (CheckPatSessionNotEmpty()) {
+                //    var MRNO = $.session.get('PatMRNO');
+                window.location.href = '../ClinicalNotes/LanguageEntry';
+                //}
+                //else {
+                //    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                //}
+            });
+
+            $('#lisMasterSetup').click(function (e) {//
+                window.location.href = '../ClinicalNotes/MasterSetup';
+            });
+
+            $('#lisMasterSetupDisplay').click(function (e) {//
+                if (CheckPatSessionNotEmpty()) {
+                    GetWholeSetupList();
+                }
+                else {
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                }
+            });
+
+            $('#lisOncoModule').click(function (e) {//
+                if (CheckPatSessionNotEmpty()) {
+                    $.ajax({
+                        type: 'POST',
+                        url: '../Account/RedirectToOnco',
+                        data: { strMRNo: $.session.get('PatMRNO') },
+                        success: function (data) {
+                            window.open(data);
+                        }
+                    });
+                }
+                else {
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                }
+
+            });
+
+            //end
+            // register the handler 
+            document.addEventListener('keyup', doc_keyUpForRightLst, false);//added on 7th april 2018
+
+            //added on 17th april 2018
+            var patCompletedYN1 = $.session.get('PatCompleted');
+
+            $("#ShortCutComplaint").click(function () {
+                if (typeof patCompletedYN1 === "undefined" || patCompletedYN1 === null) {
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                }
+                else if (patCompletedYN1 == "N") {
+                    if (CheckPatSessionNotEmpty()) {
+                        SaveForAllShortCutMenus(); // added by vijeta on 19th april 2018
+                        window.location.href = '../DoctorDesk/Complaints';
+                    }
+                }
+            });
+
+            $("#ShortCutVitals").click(function () {
+
+                if (typeof patCompletedYN1 === "undefined" || patCompletedYN1 === null) {
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                }
+                else if (patCompletedYN1 == "N") {
+                    if (CheckPatSessionNotEmpty()) {
+                        SaveForAllShortCutMenus();// added by vijeta on 19th april 2018
+                        window.location.href = '../DoctorDesk/Vitals';
+                    }
+                }
+
+            });
+
+            $("#ShortCutDiagnosis").click(function () {
+                if (typeof patCompletedYN1 === "undefined" || patCompletedYN1 === null) {
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                }
+                else if (patCompletedYN1 == "N") {
+                    if (CheckPatSessionNotEmpty()) {
+                        SaveForAllShortCutMenus();// added by vijeta on 19th april 2018
+                        window.location.href = '../DoctorDesk/Diagnosis';
+                    }
+                }
+            });
+
+            $("#ShortCutExamination").click(function () {
+
+                if (typeof patCompletedYN1 === "undefined" || patCompletedYN1 === null) {
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                }
+                else if (patCompletedYN1 == "N") {
+                    if (CheckPatSessionNotEmpty()) {
+                        SaveForAllShortCutMenus();// added by vijeta on 19th april 2018
+                        window.location.href = '../DoctorDesk/Examination';
+                    }
+                }
+            });
+
+            $("#ShortCutInvestigation").click(function () {
+
+                if (typeof patCompletedYN1 === "undefined" || patCompletedYN1 === null) {
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                }
+                else if (patCompletedYN1 == "N") {
+                    if (CheckPatSessionNotEmpty()) {
+                        SaveForAllShortCutMenus();// added by vijeta on 19th april 2018
+                        window.location.href = '../DoctorDesk/InvestigationTran';
+                    }
+                }
+            });
+
+            $("#ShortCutMedicineAdvice").click(function () {
+                if (typeof patCompletedYN1 === "undefined" || patCompletedYN1 === null) {
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                }
+                else if (patCompletedYN1 == "N") {
+                    if (CheckPatSessionNotEmpty()) {
+                        SaveForAllShortCutMenus();// added by vijeta on 19th april 2018
+                        //window.location.href = '../DoctorDesk/Advice';//commented by vijeta on 19th oct 2018
+                        if ('<%=Session["CIMYN"] == "Y"%>')
+                            window.location.href = '../DoctorDesk/RxNewSearch';
+                        else
+                            window.location.href = '../DoctorDesk/RxDesktop';
+                    }
+                }
+            });
+
+            $("#ShortCutPatientAdvice").click(function () {
+                if (typeof patCompletedYN1 === "undefined" || patCompletedYN1 === null) {
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                }
+                else if (patCompletedYN1 == "N") {
+                    if (CheckPatSessionNotEmpty()) {
+                        SaveForAllShortCutMenus();// added by vijeta on 19th april 2018
+                        window.location.href = '../DoctorDesk/PatientAdvice';
+                    }
+                }
+            });
+
+            $("#ShortCutPrescription").click(function () {
+                if (typeof patCompletedYN1 === "undefined" || patCompletedYN1 === null) {
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                }
+                else if (patCompletedYN1 == "N") {
+                    if (CheckPatSessionNotEmpty()) {
+                        SaveForAllShortCutMenus();// added by vijeta on 19th april 2018
+                        window.location.href = '../DoctorDesk/PrescriptionPrint';
+                    }
+                }
+                //if (CheckPatSessionNotEmpty()) {
+                //    SaveForAllShortCutMenus();// added by vijeta on 19th april 2018
+                //    window.location.href = '../DoctorDesk/PrescriptionPrint';
+                //}
+                //else
+                //    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+            });
+            //-------------------------------------
+
+            //added on 2nd may 2018
+            $("#btnSaveNotes").click(function () {
+                ////debugger;
+                var strTranno = $.session.get('PatTRANNO');
+                // Meenakshi 
+                if (strTranno == undefined) { strTranno = ""; }
+                var strMrNo = $.session.get('PatMRNO');
+                var strNotes = $("#txtNotes").val();
+                var strNoteType = $("input[name='NoteType']:checked")[0].value;
+                var strNoteCode = "";
+
+                if ($("#showNotesDiv tr td.NoteTrActive").length > 0) {
+                    strNoteCode = $("#showNotesDiv tr td.NoteTrActive").closest("tr")[0].id;
+                    NoteTranMode = "2";//for edit vijeta 18/4/19
+                }
+
+                if (typeof patCompletedYN1 === "undefined" || patCompletedYN1 === null) {
+                    $.messager.alert("Alert", "Please Select Patient");// 27-11-19 -heading chngd
+                }
+                else if (strNotes == "") {
+                    $.messager.alert("Information", "Please Enter Notes");
+                }
+                else {
+                    if (strMrNo != "" && strMrNo != undefined && strMrNo != null) {
+                        $.ajax({
+                            url: '../DoctorDesk/SaveNotes',
+                            data: { strNotes: strNotes, strTranNo: strTranno, strMrNo: strMrNo, strNoteType: strNoteType, strNoteCode: strNoteCode, tranMode: NoteTranMode },// tranModevijeta 18/4/19
+                            datatype: 'json',
+                            type: 'post',
+                            success: function (result) {
+                                //added on 12th may 2018
+                                if ($("#btnSaveNotes").text().indexOf("Update") != -1) {
+                                    $.messager.alert("Information", "Notes updated successfully");
+                                    $("#btnSaveNotes").text("Save");
+                                    $("#rbtnPrivate").prop("checked", "checked");//by vijeta 18/4/19
+                                }
+                                else if ($("#btnSaveNotes").text().indexOf("Save") != -1) {
+                                    $.messager.alert("Information", "Notes saved successfully");
+                                    //$("#btnSaveNotes").text("Update Notes");
+                                }
+                                else
+                                    $.messager.alert("Information", result);
+
+                                // $.messager.alert("Information", result);
+
+                                if (("" + result).toUpperCase().indexOf("SUCCESSFUL") != -1) {
+                                    $("#txtNotes").val('');
+                                    GetPatNotes(strTranno, strMrNo);
+                                }
+
+                            },
+                            error: function () {
+
+                            }
+                        });
+
+                    }
+                }
+            });
+
+            $("#btnClearNotes").click(function () {
+                NoteTranMode = 1;
+                $("#txtNotes").val("");//by vij on 29th nov 2018
+                $("#btnSaveNotes").text("Save");//by vij on 29th nov 2018
+                $("#rbtnPrivate").prop("checked", "checked");//by vij on 29th nov 2018
+            });
+
+            $('#dialog').dialog({
+                autoOpen: false,
+                position: { my: 'right', at: 'left-10', of: '#NewNotesDiv', },
+                width: 330,
+                height: 'auto',
+                draggable: true,
+                //show: { effect: "blind", duration: 500 },
+                show: { effect: "fade", duration: 600 },
+                close: function () {
+
+                },
+                open: function () {
+                    ////debugger;
+                    // do something on load
+                    // $(event.target).parent().css('position', 'fixed');
+                    //$(event.target).parent().css('top', $("#btnAddNotes").position().top);
+                    $("#txtNotes").val("");//by vij on 29th nov 2018
+                    $("#btnSaveNotes").text("Save");//by vij on 29th nov 2018
+                    $("#rbtnPrivate").prop("checked", "checked");//by vij on 29th nov 2018
+                    var tranno = "";  //Meenakshi
+                    if ($.session.get('PatTRANNO') == undefined) { tranno = ""; }
+                    $(".ui-dialog-content:not(#dialog)").dialog("close");
+                    // $("#showNotesDiv").height($("#dialog").height() - 100);//13th nov
+                    GetPatNotes(tranno, $.session.get('PatMRNO'));
+
+                },
+                //resizable:false,
+            });
+
+            //for mobile phones and tablets
+            if ($(window).width() <= 768) {
+                $("#dialog").dialog("option", "height", $(window).height() - 60);
+                $("#dialog").dialog("option", "width", $(window).width() - 60);
+                $("#dialog").dialog("option", "position", { my: "center", at: "center center+20", of: window });
+                $("#divNotification").css("left", '18%'); $("#divNotification").css("top", '2.7%');
+                //$("#anchrSignOut").hide();
+            }
+
+
+            $("#btnAddNotes").click(function () {
+                var patCompletedYN = $.session.get('PatCompleted');
+                if (typeof patCompletedYN === "undefined" || patCompletedYN === null) {
+                    $(".ui-dialog-content").dialog("close");
+                    $.messager.alert("Alert", "Please Select Patient");
+                }
+                else {
+                    //if (CheckPatSessionNotEmpty()) {
+                    var mrNo = $.session.get('PatMRNO');
+                    if (mrNo != "") {
+                        if (!$("#dialog").dialog("isOpen")) {
+                            $("#dialog").dialog("open");
+                        } else {
+                            $("#dialog").dialog("close");
+                        }
+                    }
+                    else {
+                        $(".ui-dialog-content").dialog("close");
+                        $.messager.alert("Alert", "Please Select Patient");
+                    }
+                    //window.location.href = '../DoctorDesk/Complaints';
+                }
+            });
+
+            $(document).on('click', '#tblNotesList tr', function (e) {
+                $("#txtNotes").val($(this).text());
+                $("#btnSaveNotes").text("Update");
+                $("#tblNotesList td").removeClass("NoteTrActive");
+                $(this).children('td').addClass("NoteTrActive");
+
+                //var color = $(this).css("background-color");
+                //if (color == "rgba(0, 0, 0, 0)")
+                //    $("#rbtnPublic").prop('checked', 'checked');
+                //else
+                //    $("#rbtnPrivate").prop('checked', 'checked');
+                var str = $(this).children('td')[0].id;
+                var noteType = str.substring(str.indexOf("_") + 1);
+                if (noteType == "R")
+                    $("#rbtnPrivate").prop('checked', 'checked');
+                else
+                    $("#rbtnPublic").prop('checked', 'checked');
+            });
+
+            //14th nov
+            $("#ViewAllNotesDiv").click(function () {
+                window.location.href = '../DoctorDesk/Notes';
+            });
+
+
+            $("#btnSearchPatient").click(function () {
+
+                if (!$("#searchPatDialog").dialog("isOpen")) {
+                    $("#searchPatDialog").dialog("open");
+                } else {
+                    $("#searchPatDialog").dialog("close");
+                }
+            });
+
+
+            $('#searchPatDialog').dialog({
+                autoOpen: false,
+                position: { my: 'right', at: 'left-10', of: "#SearchPatients" },
+                width: 300,
+                height: 340,
+                draggable: true,
+                //show: { effect: "blind", duration: 500 },
+                show: { effect: "fade", duration: 500 },
+                close: function () {
+
+                },
+                open: function (event, ui) {
+                    $(".ui-dialog-content:not(#searchPatDialog)").dialog("close");
+                    //$(event.target).parent().css('position', 'fixed');
+                    //$("#showSearchedList").height($("#searchPatDialog").height() - 100);//13th nov //
+                },
+            });
+            //for mobile phones and tablets
+            if ($(window).width() <= 768) {
+                $("#searchPatDialog").dialog("option", "height", $(window).height() - 60);
+                $("#searchPatDialog").dialog("option", "width", $(window).width() - 60);
+                $("#searchPatDialog").dialog("option", "position", { my: "center", at: "center center+20", of: window });
+            }
+            else {
+                //$("#searchPatDialog").dialog("option", "height", 400);
+                //$("#searchPatDialog").dialog("option", "width", 325);  // meenakshi
+                //$("#searchPatDialog").dialog("option", "position", { my: 'right', at: 'left-10', of: "#SearchPatients" });
+            }
+
+            //25-11-2019 16:10
+            $("#spanSearchPat").click(function (e) {
+
+                var str = $("#txtPatSearchNotAppntd").val();
+                if (str.replace(/\s/g, '').length > 0) {
+                    PatientSearchNotAppointed();
+                } else { $("#lblmsg").css('display', 'block'); }
+            });
+
+            $('#txtPatSearchNotAppntd').on("keypress", function (e) {
+                if (e.keyCode == 13) {
+                    var str = $("#txtPatSearchNotAppntd").val();
+                    if (str.replace(/\s/g, '').length > 0) {
+                        PatientSearchNotAppointed();
+                    } else { $("#lblmsg").css('display', 'block'); }
+                } else {
+                    $("#lblmsg").css('display', 'none');
+                }
+                //25-11-2019 16:10ssss
+
+            });
+            $('#txtPatSearchNotAppntd').on("keyup", function (e) {
+                if ($('#txtPatSearchNotAppntd').val() == "") {
+                    $("#tblPatList").empty();
+                }
+            });
+
+            $(window).load(function () {
+                //$('#chkAllPatLst').click(function () {
+                //    CallSearch();
+                //});
+
+
+
+            });
+
+
+            //suchita
+            if ($(window).width() <= 768) {
+                $("#lblAppToday").css({ "margin-left": "0" });
+                $("#lblSurToday").css({ "margin-left": "11%" });
+                $("#lblheadApp").css({ 'border-bottom': 'none' });
+                $("#lblheadSur").css({ 'border-bottom': 'none', 'padding-left': '14px' });
+
+            }
+            else if ($(window).width() <= 500) {
+                $("#lblAppToday").css({ "margin-left": "0" });
+                $("#lblSurToday").css({ "margin-left": "4%" });
+
+            }
+            else {
+                // $("#lblAppToday").css({ "margin-left": "-23%" }); temporary commented
+                $("#lblSurToday").css({ "margin-left": "-19%" });
+                $("#lblheadApp").css({ 'border-bottom': '1px solid' });
+                $("#lblheadSur").css({ 'border-bottom': '1px solid', 'padding-left': '28%' });
+            }
+            $("#tblHead").click(function () {
+                // this.classList.toggle("active");
+
+                //$(this).nextUntil('tr.routine').slideToggle(100, function () {
+                //});
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                    $(this).find('span')[0].children[0].className = "fa fa-clone"
+                } else {
+                    content.style.display = "block";
+                    $(this).find('span')[0].children[0].className = "fa fa-minus";
+                }
+                //if ($(this).find('span')[0].children[0].className == "fa icon fa-minus") {
+                //    $(this).find('span')[0].children[0].className = "fa icon fa-plus";
+                //}
+                //else {
+                //    $(this).find('span')[0].children[0].className = "fa icon fa-minus"
+                //}
+
+
+                //kavita 10-aug-2019
+                var tblheadHeight = $("#PatAdviceSetUpList").height();
+                var menulistheight = $("#menuList").height();
+                $('#divMenuList').css("height", (menulistheight - (tblheadHeight + 7)) + "px");
+
+                //kavita 10-aug-2019
+            });//
+
+            GetPatientList();//vijeta 30/4/19
+            SetPatPrimaryMedicalInfo();//vijeta 30/4/19
+
+            $(document).mouseup(function (e) {//02-12-19
+                var container = $("#tblHistDiv");
+                // if the target of the click isn't the container nor a descendant of the container
+                if (!container.is(e.target) && container.has(e.target).length === 0 && e.target.parentNode.id != "historyPanel") {
+                    container.hide();
+                }
+
+                var container1 = $("#tblRefDoctor");
+                // if the target of the click isn't the container nor a descendant of the container
+                if (!container1.is(e.target) && container1.has(e.target).length === 0 && e.target.parentNode.id != "ReferDrPanel") {
+                    container1.hide();
+                }
+                var container2 = $('#tblTumorDiv');
+                if (!container2.is(e.target) && container2.has(e.target).length === 0 && e.target.parentNode.id != "TumorPanel") {
+                    container2.hide();
+                }
+
+            });
+
+            //Meenakshi
+            //$("#rbtnYesterday").change(function (e) {
+            //    SearchFunction($.session.get('ClinicCode'));
+            //});
+
+            //$("#rbtnToday").change(function (e) {
+            //    SearchFunction($.session.get('ClinicCode'));
+            //});
+
+            //$("#rbtnDayBefYest").change(function (e) {
+
+            //    SearchFunction($.session.get('ClinicCode'));
+            //});
+
+            $("input[name='dateType']").on("change", function () {
+                SearchFunction($.session.get('ClinicCode'));
+            });
+
+
+            // Added by Dhananjay 2024
+            $("#customeDate").click(function () {
+                $("#startDate").css("display", "flex");
+                $("#startDate").datepicker("show"); // Open the datepicker for startDate
+            });
+
+            $("#startDate").datepicker({
+
+                dateFormat: 'yy-mm-dd', // Date format
+                zIndex: 9999,
+                maxDate: '0',
+                minDate: -CustomeDateRange,   // Config Value fetch here
+                beforeShow: function (input, inst) {
+                    setTimeout(function () {
+                        $('#ui-datepicker-div').css('z-index', 9999999);
+                        $('#startDate').css('display', 'none');
+                    }, 0);
+                },
+                onSelect: function (selectedDate) {
+
+                    // Conversion- diff from current date
+                    var selectedDateObj = new Date(selectedDate);
+                    var currentDateObj = new Date();
+                    var timeDifference = currentDateObj.getTime() - selectedDateObj.getTime();
+                    var daysDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
+
+                    if (daysDifference) {
+                        SearchFunction($.session.get('ClinicCode'), "D", daysDifference - 1)
+                    }
+                }
+            });
+
+            if (("<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("DispAddPatientYN")%>") == "Y") {
+                DispAddPatient = true;
+            }
+            else {
+                DispAddPatient = false;
+            }
+
+            // Added by Dhananjay 20250524
+            $("#btnPlanning").fancybox({
+                href: '../DoctorDesk/LoadPlanningView?PatMRNO=' + $.session.get('PatMRNO'),
+                type: 'ajax',
+                openEffect: 'elastic',
+                openSpeed: 100,
+                closeEffect: 'elastic',
+                closeSpeed: 100,
+                helpers: {
+                    overlay: { closeClick: false }
+                },
+                autoDimensions: false,
+                width: '80%',        // 80% of viewport width
+                height: '80%',       // 80% of viewport height
+                fitToView: true,
+                aspectRatio: false,
+                cyclic: true,
+                showNavArrows: true,
+                autoSize: false,
+                scrolling: 'auto'
+            });
+
+
+            $("#lisOncoPlanning").click(function () {
+                if ($.session.get('PatMRNO') == "" || $.session.get('PatMRNO') == null) {
+                    $.messager.alert("Alert", "Please Select Patient.");
+                    return false;
+                }
+                $("a#btnPlanning").click();
+            });
+
+            $('#lisTumorComplete').click(function (e) {
+                TumorActionType = "N";
+                $("a#btnTumorCalender").click();
+            });
+            $("#btnTumorCalender").fancybox({
+                href: '../DoctorDesk/TumorBoardScheduleCalender',
+                type: 'ajax',
+                openEffect: 'elastic',
+                openSpeed: 100,
+                closeEffect: 'elastic',
+                closeSpeed: 100,
+                width: "100%",
+                height: "100%",
+                helpers: {
+                    overlay: { closeClick: false }
+                },
+                autoDimensions: false,
+                fitToView: true,
+                aspectRatio: false,
+                cyclic: true,
+                showNavArrows: true,
+                autoSize: false,
+                scrolling: 'auto',
+                afterShow: function () {
+                    SendEventToSave = [];
+                    CalenderFancyClose = false;
+                    initializeCalendar();
+                },
+                beforeClose: function () {
+                    if (CalenderFancyClose == false && CalenderActionType != "Y") {
+                        if (SendEventToSave.length > 0) {
+                            $.messager.confirm("Confirmation", "Do You Want To Close ?", function (result) {
+                                CalenderFancyClose = true;
+                                if (result) {
+                                    $.fancybox.close();
+                                }
+                                else {
+                                    CalenderFancyClose = false;
+                                }
+                            });
+                            return false;
+                        }
+                    }
+                }
+            });
+
+            $("#lisOncoSchedule").click(function () {
+                CalenderActionType = "N";
+                $("a#btnCalender").click();
+            });
+
+
+            // Added by Dhananjay 20250524 - Calender View
+            $("#btnCalender").fancybox({
+                href: '../DoctorDesk/LoadCalenderView',
+                type: 'ajax',
+                openEffect: 'elastic',
+                openSpeed: 100,
+                closeEffect: 'elastic',
+                closeSpeed: 100,
+                width: "100%",
+                height: "100%",
+                helpers: {
+                    overlay: { closeClick: false }
+                },
+                autoDimensions: false,
+                fitToView: true,
+                aspectRatio: false,
+                cyclic: true,
+                showNavArrows: true,
+                autoSize: false,
+                scrolling: 'auto',
+                afterShow: function () {
+                    SendEventToSave = [];
+                    CalenderFancyClose = false;
+                    initializeCalendar();
+                },
+                beforeClose: function () {
+                    if (CalenderFancyClose == false && CalenderActionType != "Y") {
+                        if (SendEventToSave.length > 0) {
+                            $.messager.confirm("Confirmation", "Do You Want To Close ?", function (result) {
+                                CalenderFancyClose = true;
+                                if (result) {
+                                    $.fancybox.close();
+                                }
+                                else {
+                                    CalenderFancyClose = false;
+                                }
+                            });
+                            return false;
+                        }
+                    }
+                }
+            });
+            //if (document.getElementById("tabMenu").style.display == "none") {
+            //    document.getElementById("secCont").style.paddingTop = "50px";
+            //}
+            var curFormURL = ("" + '<%= Request.Url.AbsolutePath %>').toString().toUpperCase().trim();
+            var loadedFormName = curFormURL.substr(curFormURL.lastIndexOf("/") + 1);
+            document.getElementById("UnitIcon").style.display = "none";
+            if (loadedFormName.toUpperCase() == "MENULIST" && '<%:Session["SINGLEUNITYN"]%>' == "N") {
+                document.getElementById("UnitIcon").style.display = "inline-block";
+            }
+            
+            BindReferalNotesList();
+            $("#btnShowRefDRNotesInfo").fancybox({
+                openEffect: 'elastic',
+                openSpeed: 100,
+                closeEffect: 'elastic',
+                closeSpeed: 100,
+                helpers: {
+                    overlay: { closeClick: false }
+                },
+                autoDimensions: false,
+                cyclic: true,
+                showNavArrows: true,
+            });
+            BindPatRefNote();
+
+            //Pournima 25th Oct 2025
+            $('#lisOutInvstg').click(function (e) {
+                var MRNO = $.session.get('PatMRNO');
+                if (MRNO != undefined && MRNO != "")
+                    window.location.href = '../DoctorDesk/OutsideInvestigation';
+                else
+                    $.messager.alert("Alert", "Please Select Patient");
+            });
+            var headerHeight = document.querySelector('.main-header').offsetHeight;
+            document.querySelector('.content-wrapper').style.paddingTop = (headerHeight + 15) + "px";
+            document.querySelector('.sdList').style.marginTop = (headerHeight + 5) + "px";
+        });
+        $(window).on('load', function () {
+            var headerHeight = document.querySelector('.main-header').offsetHeight;
+            document.querySelector('.content-wrapper').style.paddingTop = (headerHeight + 15) + "px";
+            document.querySelector('.sdList').style.marginTop = (headerHeight + 5) + "px";
+        });
+
+
+        function GoToHome() {
+            var curURL = ("" + '<%= Request.UrlReferrer %>').toString().toUpperCase().trim();
+            var splitURL = curURL.split('/');
+            var HTTPorHTTPS = curURL.toUpperCase().includes("HTTPS") ? "https" : "http";
+            if (curURL.indexOf("TESTWEBHMIS") != -1) {
+                window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/TestWebHmis/Account/ModuleList";
+            }
+            else if (curURL.indexOf("WEBHMIS") != -1) {
+                window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/WebHmis/Account/ModuleList";
+            }
+            else if (curURL.indexOf("TESTOTCATH") != -1) {
+                 window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/TestWebHmis/Account/ModuleList";
+            }
+            else if (curURL.indexOf("WEBOTCATH") != -1) {
+                 window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/WebHmis/Account/ModuleList";
+            }
+            else if (curURL.indexOf("HMIS") != -1) {
+                 window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/HMIS/Account/ModuleList";
+            }
+            else if (curURL.indexOf("WEBEHR") != -1) {
+                 window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/WebHmis/Account/ModuleList";
+            }
+        }
+
+        // Added by Dhananjay 20250928
+        function hideButtonsOnPages(pageKeywords, elementSelectors) {
+            if (!elementSelectors) {
+                elementSelectors = ['#btnSave', '#PrevHistoryBtn'];
+            }
+
+            var currentUrl = window.location.pathname.toLowerCase();
+            var matchedKeyword = null;
+
+            // Find which keyword matches current URL
+            for (var i = 0; i < pageKeywords.length; i++) {
+                var keyword = pageKeywords[i].toLowerCase();
+                if (currentUrl.indexOf(keyword) !== -1) {
+                    matchedKeyword = keyword;
+                    break;
+                }
+            }
+
+            if (matchedKeyword) {
+                // If we're NOT on Diagnosis page, disable #MainDiv
+                if (matchedKeyword !== 'diagnosis') {
+                    var $mainDiv = $('#MainDiv');
+                    $mainDiv.find('input, button, select, textarea, fieldset').prop('disabled', true);
+                    $mainDiv.css('pointer-events', 'none');
+                } else {
+                    if (matchedKeyword == "diagnosis") {
+                        $('#ContentHolderDiv').find(':not(.nav-tabs-custom)').each(function () {
+                            if ($(this).is('input, button, select, textarea, fieldset')) {
+                                $(this).prop('disabled', true);
+                            }
+                            $(this).css('pointer-events', 'none');
+                        });
+                        $("#Diagno, #ICDDiag, #ICDDiagO,#ICDOHist_LI").closest("li").css("pointer-events", "auto").find("a").css("pointer-events", "auto");
+                        $("#ICDOHist_LI,#ICDOHistory").css("pointer-events", "auto").prop("disabled", false);
+                    }
+                }
+
+                for (var j = 0; j < elementSelectors.length; j++) {
+                    var el = document.querySelector(elementSelectors[j]);
+                    if (el) {
+                        el.style.display = 'none';
+                    }
+                }
+            }
+        }
+
+        var AdminLTEOptions = {
+            enableBSToppltip: false
+        };
+
+    function CallSearch() {
+            ////debugger;
+        if ($('#chkAllPatLst')[0].checked == true)
+            SearchFunction($.session.get('ClinicCode'), 'N');
+        else
+            SearchFunction($.session.get('ClinicCode'), 'Y');
+
+        if ($('#chkAllPatLst')[0].checked == true)
+            $.session.set('SrchByDoctYN', 'N');
+        else
+            $.session.set('SrchByDoctYN', 'Y');
+    }
+
+    function GetPatData(MRNo) {
+        if (MRNo != "") {
+            var urlq = '../DoctorDesk/GETOPSEARCHDATA';
+            $.ajax({
+                url: urlq,
+                datatype: 'json',
+                data: { SMRNO: MRNo },
+                async: false,
+                mtype: 'post',
+                success: function (response) {
+                    fillUCdatas(response);
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    // ajaxindicatorstop();
+                    $.messager.alert(textStatus, "Error Information");
+                }
+            });
+
+
+        }
+    }
+
+    //vijeta 30/4/19
+    function GetPatientList() {
+        var page = window.location.href;
+        var urls = "<%=Url.Action("GetDctrClinic","Account")%>";
+        //if (page.indexOf("PatientEntry") != -1) {
+        //    AddClinics(urls);
+        //}
+        AddClinics(urls);
+    }
+
+        // define a handler added by vijeta on 7th april 2018
+        function doc_keyUpForRightLst(e) {
+
+            if (e.altKey && e.keyCode == 72) { //H
+                $('#lishistory').trigger("click");// History from right side list
+            }
+            else if (e.altKey && e.keyCode == 84) { //T
+                $("#lisVitalHistory").trigger("click");//Vital History from right side list
+            }
+            else if (e.altKey && e.keyCode == 78) { //N
+                $("#lisNotes").trigger("click");// History from right side list//kavita linkname
+            }
+                //added by kavita 14-8-18
+            else if (e.altKey && e.keyCode == 89) {
+                $("#lisMedicationHistory").trigger("click");
+            }
+            else if (e.altKey && e.keyCode == 71) {
+                $("#lisAllergy").trigger("click");
+            }
+            else if (e.altKey && e.keyCode == 66) {
+                $("#lisSPTFormat").trigger("click");
+            }
+
+                //ended by kavita 14-8-18
+
+                //added by kavita 17-8-18
+            else if (e.altKey && e.keyCode == 87) {
+                $("#lisattach").trigger("click");
+            }
+            else if (e.altKey && e.keyCode == 90) {
+                $("#lisDocuments").trigger("click");
+            }
+                //else if (e.altKey && e.keyCode == 76) {  //added by vishal
+                //    $("#lisMasterUpdt").trigger("click");
+                //}
+            else if (e.altKey && e.keyCode == 81) {// chngd keycode
+                $("#lisMasterUpdt").trigger("click");
+            }
+
+        }
+
+        function GetPatNotes(strTranNo, strMrNo) {
+            $.ajax({
+                url: '../DoctorDesk/GetPatNotes',
+                data: { strTranNo: strTranNo, strMrNo: strMrNo },
+                datatype: 'json',
+                type: 'post',
+                async:true,  //Added By meenakshi to make the page load fast because of slowness
+                success: function (response) {
+                    $(document).ready(function () {
+                        if (response != "") {
+                            $("#tblNotesList").empty();
+                            $.each(response, function (i, val) {
+                                var type = (response[i].NOTETYPE) == "R" ? "Private" : "Share";
+                                var color = (response[i].NOTETYPE) == "P" ? "#f4e1ef" : "";//13th nov 
+                                var id = (response[i].CODE);//13th nov
+                                var tr = "<tr id='" + id + "' style='background-color:" + color + "' ><td id='" + id + "_" + (response[i].NOTETYPE) + "'>" + response[i].NOTE + "</td></tr>";//13th nov
+                                $("#tblNotesList").append(tr); 
+                            });
+                        }
+                    });
+                },
+                error: function () {
+
+                }
+            });
+        }
+
+        function SetCountsForHistory(strMrNo) {
+            if (strMrNo != undefined && strMrNo != null && strMrNo != "") {  //Added this condition meenakshi on 20/01/2022
+                $.ajax({
+                    type: "POST",
+                    url: "../DoctorDesk/GetAllHistoryCounts",
+                    <%-- url: "<%=Url.Action("GetMasterSetUpList","Clinicalnotes")%>",--%>
+                    data: { strMrNo: strMrNo },
+                    asycn: true,
+                    success: function (data) {
+                        //Notes
+                        if (data.notesCount != "0")
+                            $("#lblNotesCnt").text(data.notesCount);
+
+                        //Vital History
+                        if (data.vitalHistoryCount != "0")
+                            $("#lblVitalHisCnt").text(data.vitalHistoryCount);
+
+                        //Medication History
+                        if (data.medicationHisCount != "0")
+                            $("#lblMedicationHisCnt").text(data.medicationHisCount);
+
+                        //History
+                        if (data.HistoryCnt != "0") {
+                            $("#lblHistoryCnt").text(data.HistoryCnt);
+                            $("#historyPanel").css('display', 'inline-block');
+                            //if ($(location).attr("href") == "http://localhost:49495/DoctorDesk/PatientEntry")
+                            //    $("#historyPanel").trigger("click");//
+                            $("#panHisCnt").text(data.HistoryCnt);
+                            //PatHistoryTab();
+                        } else {
+                            $("#historyPanel").css('display', 'none');
+                        }
+                        //vaccination
+                        if (data.VaccineCount != "0")
+                            $("#lblVaccinationCnt").text(data.VaccineCount);
+
+                        if (data.InvestNotifCode != "" && $("#lblInvNotiCD") != undefined) {
+                            $("#lblInvNotiCD").text('CODE : ' + data.InvestNotifCode);
+                            $("#lblInvNotiCD").show();
+                        }
+                        else
+                            $("#lblInvNotiCD").hide();
+
+                        if (data.InvestNotifCode != "" && $("#LblInvstNotifi") != undefined) {
+                            $("#LblInvstNotifi").text('CODE : ' + data.InvestNotifCode);
+                            $("#SpanInvstNotifi").show();
+                        }
+                        else {
+                            $("#LblInvstNotifi").hide();
+                            $("#SpanInvstNotifi").hide();
+                        }
+
+                        //Attachment Count
+                        if (data.attachmentCount != "0")//Added By Priyanka on 07/02/2025
+                        {
+                            $("#lblAttachmentCount").text(data.attachmentCount);
+                        }
+                        if (data.tumorDetails != "0") {
+                            $('#TumorPanel').show();
+                            $('#panTumorCnt').text(data.tumorDetails);
+
+                        }
+                        else
+                            $('#TumorPanel').hide();
+                    }, error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        HoldOn.close();//
+                        $.messager.alert("Error", errorThrown);
+                    },
+                    complete: function () {
+                        HoldOn.close();//
+                    }
+                });
+            }
+        }
+        function GetSurgicalCount(strMrNo) {
+            if (strMrNo != undefined && strMrNo != null && strMrNo != "") {
+                $.ajax({
+                    type: "POST",
+                    url: "../DoctorDesk/GetSurgicalHistoryData",
+                    data: { strMrNo: strMrNo },
+                    asycn: true,
+                    success: function (data) {
+                        //SurgicalCount
+                        var recordCount = data.length;
+                        if (recordCount != "0")
+                            $("#lblSurgicalHisCnt").text(recordCount);
+
+                    }, error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        HoldOn.close();
+                        $.messager.alert("Error", errorThrown);
+                    },
+                    complete: function () {
+                        HoldOn.close();
+                    }
+                });
+            }
+        }
+
+        function SetRightMenuOptionFocus() {
+            var page = window.location.href;
+            if (page.indexOf("VitalHistory") != -1) {
+                $("li#lisVitalHistory").addClass("RightMenuSelectedOption");
+                $("li#lisVitalHistory img").attr("src", "../Images/bpColor.png");
+            }
+
+            else if (page.indexOf("MedicationHistory") != -1) {
+                $("li#lisMedicationHistory").addClass("RightMenuSelectedOption");
+                $("li#lisMedicationHistory img").attr("src", "../Images/formColor.png");
+            }
+
+            else if (page.indexOf("Notes") != -1) {
+                $("li#lisNotes").addClass("RightMenuSelectedOption");
+                $("li#lisNotes img").attr("src", "../Images/writingColor.png");
+            }
+
+            else if (page.indexOf("Allergy") != -1) {
+                $("li#lisAllergy").addClass("RightMenuSelectedOption");
+                $("li#lisAllergy img").attr("src", "../Images/AllergyColor.png");
+            }
+
+            else if (page.indexOf("SPTReporting") != -1) {
+                $("li#lisSPTFormat").addClass("RightMenuSelectedOption");
+                $("li#lisSPTFormat img").attr("src", "../Images/DiagramColor.png");
+            }
+
+            else if (page.indexOf("Attachments") != -1) {
+                $("li#lisattach").addClass("RightMenuSelectedOption");
+                $("li#lisattach img").attr("src", "../Images/AttachmentColor.png");
+            }
+
+            else if (page.indexOf("History") != -1) {
+                $("li#lishistory").addClass("RightMenuSelectedOption");
+                $("li#lishistory img").attr("src", "../Images/historyColor.png");
+            }
+            else if (page.indexOf("LanguageEntry") != -1) {//
+
+                $("li#lisMasterUpdt").addClass("RightMenuSelectedOption");
+                $("li#lisMasterUpdt img").attr("src", "../Images/settingscolor.png");
+
+            }
+
+        }
+        function GetWholeSetupList() {//
+
+            $.confirm({
+                title: 'Master Set Ups',
+                theme: 'supervan',
+                // theme: 'material',
+                closeIcon: true,
+                offsetTop: 10,
+                type: 'orange',
+                backgroundDismissAnimation: 'glow',
+                //  columnClass: 'col-md-6',
+                content: '' +
+                    //<td style="width:6%"><label style="background-color: transparent; border-color: transparent;margin-left:0px" class="form-control" id="investigationSetUpAdd"> <img src="../Images/add.png"  style=" background-color: white;   border-radius: 50%;position:fixed; "></label></td>
+                 '<form action="" class="formName"><div class="form-group"><table style="width:100%"><tr><td><input id="txtInvestigation" type="text" id="input-name" placeholder="Search Setup" class="form-control" onkeyup="SearchInvestigations()" style="" autofocus></td></tr></table></div>' +
+                '<div id="divtblInvestigation" class="divtblInvestigation" style=""><table id="tblPersInvestigationlist" style="width:100%;border-top:1px solid #29884bd6 !important;" class="table"><tbody></tbody></table></div>' +
+                '</form>',
+                buttons: {
+                    formSubmit: {
+                        text: '<i class="fa fa-check-circle-o"></i>',
+                        btnClass: 'btn-default',
+                        action: function () {
+                            if (($.session.get('PatTRANNO')) != undefined && ($.session.get('PatTRANNO')) != null) {
+                                if ($.session.get('PatCompleted') != "Y") {
+                                    stringcode = '';
+                                    var row = $('#tblPersInvestigationlist tr')
+                                    for (r = 0; r < row.length; r++) {
+                                        var Chk = $(row[r]).find('.chkPersDis')
+                                        if (Chk[0].checked) {
+                                            //CodeTosend.push($(row[r]).attr('id'));
+                                            stringcode += "'" + $(row[r]).attr('id') + "'" + ','
+                                            // stringcode +=  $(row[r]).attr('id') +  ','
+                                        }
+                                    }
+                                    var codeT = stringcode.slice(1)
+                                    var strCode = codeT.substr(0, codeT.length - 2);
+                                    SavePersMastrSetUp(strCode);
+                                }
+                                else {
+                                    $.alert('Can not apply set up.Patient is completed');
+                                }
+                            }
+                            else {
+                                $.alert('Please Select Patient');
+                            }
+                        }
+                    },
+                    Closeed: {
+                        text: '<i class="fa fa-close "></i>'
+                        //close
+                    }
+                },
+
+                onOpen: function () {
+                    $('jconfirm-box').css('margin-top', '10px !important;')
+                },
+                onContentReady: function () {
+                    // GetpersonalisedList()
+                    GetpersonalWholeSetUpList();
+                    $('.jconfirm-buttons').addClass('JsBtnPostion')
+                    var defaultbtn = $('.jconfirm-buttons>button');
+                    $.each(defaultbtn, function (index, val) {
+                        $(defaultbtn[index]).css('font-size', '35px');
+                        $(defaultbtn[index]).css('margin-right', '10px');
+                    })
+                    $(defaultbtn[0]).attr('id', 'btnSubmit');
+                    $(defaultbtn[0]).addClass('disable-clicks');
+
+                    $('.jc-bs3-row').removeClass('row')
+                    $('.jconfirm-box-container').removeClass('col-xs-offset-1')
+                    $('.jconfirm-box-container').removeClass('col-xs-10');
+                    $('.jconfirm-box-container').removeClass('col-md-4');
+                    var jc = this;
+                    this.$content.find('form').on('submit', function (e) {
+                        e.preventDefault();
+                        jc.$$formSubmit.trigger('click'); // reference the button and click it
+                    });
+
+                    $('.jconfirm-bg').css('background-color', 'rgba(255, 255, 255, 0.62)');
+                    $('.jconfirm-box').css('background-color', 'rgba(43, 43, 60, 0.98)');
+                    $('.jconfirm-box').css('box-shadow', '#868686 0px -1px 14px 4px');
+
+                }
+            });
+
+        }
+
+        function GetpersonalWholeSetUpList() {//
+            var strAge = ($.session.get('PatAge2') == undefined || $.session.get('PatAge2') == null) ? "" : $.session.get('PatAge2').toString();
+
+            HoldOn.open();//
+            $.ajax({
+                type: "POST",
+                url: "../Clinicalnotes/GetMasterSetUpList",
+               <%-- url: "<%=Url.Action("GetMasterSetUpList","Clinicalnotes")%>",--%>
+                data: { strAge: strAge, strCimsYN: '<%:Session["CIMYN"]%>', strGender: $.session.get('PatGender') },//
+                asycn: true,
+                success: function (response) {
+                    if (response != "" && response.toUpperCase() != "UNSUCCESSFULL") {//added vijeta 26/4/19
+                        var result = JSON.parse(response)
+                        var rows = "";
+                        for (i = 0; i < result.Table1.length; i++) {
+
+                            if (result.Table1[i].STATUS != "I") //added only active set ups
+                            {
+                                rows += "<tr id='" + $.trim(result.Table1[i].CODE) + "'>" + "<td style='width:40px !important'><input class='chkPersDis' type='checkbox' style='margin-left:10px;height:20px;width:20px' onchange='handleChange(this);'></td><td class='InvestigationName' style='padding:5px;font-size: 13px;vertical-align:middle;width:70%' ><b>" + $.trim(result.Table1[i].NAME) + "</b></td>"
+                               + "<td style='font-size:13px;width:15%;vertical-align:middle;'>" + result.Table1[i].GENDER + "</td><td style='font-size:13px;width:15%;vertical-align:middle;'>" + result.Table1[i].FROMAGE + " - " + result.Table1[i].TOAGE + "</td>";
+                                rows += "</tr>";
+                            }
+                        }
+                        $('#tblPersInvestigationlist tbody').empty();// added by vijeta on 2nd may 2018
+                        $('#tblPersInvestigationlist tbody').append(rows).closest('tr');
+                    }
+                }, error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    HoldOn.close();//
+                    $.messager.alert("Error", errorThrown);
+                },
+                complete: function () {
+                    HoldOn.close();//
+                },
+            });
+        }
+
+        function handleChange(obj) {//
+            var parentRow = $(obj).parent().parent();
+            $('#tblPersInvestigationlist tbody').prepend(parentRow).closest('tr');
+            $('table tr:nth-child(1)').find('input:first').focus(); // added by vijeta on 7th july 2018
+            CountCheckBoxChecked();
+        }
+
+        function CountCheckBoxChecked() {//
+            var CheckBoxCount = $('.chkPersDis:checked').size();
+            if (CheckBoxCount > 0) {
+                $('#btnSubmit').removeClass('disable-clicks');
+            }
+            else {
+                $('#btnSubmit').addClass('disable-clicks');
+            }
+        }
+
+        function SavePersMastrSetUp(strSetUpCd) {
+            ////debugger;
+            var Mrno = ($.session.get('PatMRNO'));
+            var strTran = ($.session.get('PatTRANNO'))
+            var strPatName = $.session.get('PatName').toString();
+            var strPatAge = ($.session.get('PatAge2') == undefined || $.session.get('PatAge2') == null) ? "" : $.session.get('PatAge2').toString();
+            var strPatGender = ($.session.get('PatGender') == undefined || $.session.get('PatGender') == null) ? "" : $.session.get('PatGender').toString();
+            var strPatMobile = ($.session.get('PatMobile') == undefined || $.session.get('PatMobile') == null) ? "" : $.session.get('PatMobile').toString();
+            $.ajax({
+                url: '../DoctorDesk/SavePerMasterSetUp',
+                data: { strTran: strTran, strMrNo: Mrno, strSetUpCd: strSetUpCd, strPatName: strPatName, strPatAge: strPatAge, strPatGender: strPatGender, strPatMobile: strPatMobile },
+                datatype: 'json',
+                type: 'post',
+                success: function (response) {
+                    if (response.toUpperCase().indexOf("SUCCESSFUL") != -1) {
+                        $.alert('Set Up applied successfully');
+                        if ((window.location.href).indexOf("RxNewSearch") > -1) {
+                            window.location.href = 'RxNewSearch';
+
+                        }
+                        else if ((window.location.href).indexOf("PatientAdvice") > -1) {
+                            window.location.href = 'PatientAdvice';
+
+                        }
+                        else if ((window.location.href).indexOf("Complaints") > -1) {
+                            window.location.href = 'Complaints';
+
+                        }
+                        else if ((window.location.href).indexOf("Vitals") > -1) {
+                            window.location.href = 'Vitals';
+
+                        }
+                        else if ((window.location.href).indexOf("Diagnosis") > -1) {
+                            window.location.href = 'Diagnosis';
+
+                        }
+                        else if ((window.location.href).indexOf("Examination") > -1) {
+                            window.location.href = 'Examination';
+
+                        }
+                        else if ((window.location.href).indexOf("InvestigationTran") > -1) {
+                            window.location.href = 'InvestigationTran';
+
+                        } else if ((window.location.href).indexOf("PrescriptionPrint") > -1) {
+                            window.location.href = 'PrescriptionPrint';
+
+                        }
+                        GetAllCounts();
+                    }
+                    else {
+                        $.alert(response);
+                    }
+
+                }
+                , error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    HoldOn.close();//
+                    $.messager.alert("Error", errorThrown);
+                },
+            });
+        }
+        //function GetAllCounts() {
+        //    ////debugger;
+        //    var strTranNo = $.session.get('PatTRANNO');
+        //    var mrno = $.session.get('PatMRNO');//
+        //    if (strTranNo != undefined && strTranNo != null && strTranNo != "") {
+        //        $.ajax({
+        //            url: 'GetCounts',  //Pass URL here 
+        //            type: "POST", //Also use GET method,
+        //            datatype: "json",
+        //            data: { strTranNo: strTranNo, strMrno: mrno },
+        //            success: function (data) {
+        //                if (data != "") {
+        //                    if (data["COMPLAINTS"] == "Y") {
+        //                        $("div#CompPrim")[0].style.backgroundColor = 'rgb(203, 245, 203)';
+        //                    }
+        //                    else {
+        //                        $("div#CompPrim")[0].style.backgroundColor = 'transparent';
+        //                    }
+        //                    //$("div#CompPrim")[0].css('background-color', 'blue')
+
+        //                    if (data["VITALS"] == "Y") {
+        //                        $("div#VitalsPrim")[0].style.backgroundColor = "rgb(203, 245, 203)"
+        //                    }
+        //                    else {
+        //                        $("div#VitalsPrim")[0].style.backgroundColor = 'transparent';
+        //                    }
+
+
+        //                    //if (data["DIAGNOSIS"] == "Y") {
+        //                    //    $("div#DiagnosisPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+        //                    //}
+        //                    //else {
+        //                    //    $("div#DiagnosisPrim")[0].style.backgroundColor = 'transparent';
+        //                    //}
+
+        //                    ////debugger;
+        //                    //Below condition Added by Murali on 08/08/2024
+        //                    if (data["PRODIAGNOSIS"] == "Y" || data["DIAGNOSIS"] == "Y") {
+        //                        $.session.set('Diag', "Y");
+        //                    }
+        //                    else {
+        //                        $.session.set('Diag', "N");
+        //                    }
+
+        //                   // ICDDiagSelYN = data["ICDDIAGNOSIS"];
+        //                    ////debugger;
+
+        //                    localStorage.setItem('ICDDiagSelYN', data["ICDDIAGNOSIS"]);
+
+        //                    //localStorage.setItem('ICDDiagSelYN', "");
+        //                    //localStorage.setItem('DiagnosisSelYN', "");
+
+        //                    if (data["EXAMINATION"] == "Y")
+        //                        $("div#EXAMPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+        //                    else
+        //                        $("div#EXAMPrim")[0].style.backgroundColor = 'transparent';
+
+
+        //                    if (data["INVESTIGATIONS"] == "Y")
+        //                        $("div#InvestPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+        //                    else
+        //                        $("div#InvestPrim")[0].style.backgroundColor = 'transparent';
+
+        //                    if (data["MEDICINE"] == "Y")
+        //                        $("div#MedicinePrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+        //                    else
+        //                        $("div#MedicinePrim")[0].style.backgroundColor = 'transparent';
+
+        //                    if (data["PATADVICE"] == "Y")
+        //                        $("div#PatAdvicePrim")[0].style.backgroundColor = "rgb(203, 245, 203)"; //#d2d6de
+        //                    else
+        //                        $("div#PatAdvicePrim")[0].style.backgroundColor = 'transparent';
+
+        //                    //added on 28th march 2018
+        //                    if (data["ADDICTHISTORY"] == "Y")
+        //                        $("div#PersonalPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+        //                    else
+        //                        $("div#PersonalPrim")[0].style.backgroundColor = 'transparent';
+
+        //                    if (data["MEDICINEHISTORY"] == "Y")
+        //                        $("div#MedicalPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+        //                    else
+        //                        $("div#MedicalPrim")[0].style.backgroundColor = 'transparent';
+
+        //                    if (data["FAMILYHISTORY"] == "Y")
+        //                        $("div#FamilyPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+        //                    else
+        //                        $("div#FamilyPrim")[0].style.backgroundColor = 'transparent';
+                         
+        //                    //25-11-2019 17:53
+        //                    if (data["ALLERGY"] == "Y")
+        //                        $("div#AllergyPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+        //                    else
+        //                        $("div#AllergyPrim")[0].style.backgroundColor = 'transparent';
+                           
+        //                    if (data["PRESCRIPTN"] == "Y") //Comented by Murali on 28/02/2024
+        //                        //if (data["PRESCRIPTN"].trim() != "")  //Comented by Meenakshi  on 14/01/2025 discussed with Nitesh also it is converted to green color when the prescription gets completed
+        //                        $("div#Divprescriptn")[0].style.backgroundColor = "rgb(203, 245, 203)"
+        //                    else
+        //                        $("div#Divprescriptn")[0].style.backgroundColor = 'transparent';
+
+
+        //                    //Added By Priyanka on 30/01/2025
+        //                    if (data["DIAGNOSIS"] == "Y" || data["ICDDIAGNOSIS"] == "Y") {
+        //                        $("div#DiagnosisPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+        //                }
+        //                    else {
+        //                        $("div#DiagnosisPrim")[0].style.backgroundColor = 'transparent';
+        //                    }
+
+        //                    // added by priyanka on 30/01/2025
+        //                    ////debugger;
+        //                    SetDiagnosisFlaging(data['DIAGNOSIS'], data['ICDDIAGNOSIS']);
+        //                }
+        //                else {
+        //                    $.session.set('Diag', "N"); //Added by Murali on 10/07/2024
+        //                    //Added By Priyanka on 31/01/2025
+        //                    localStorage.setItem('DiagnosisSelYN', "N");
+        //                    localStorage.setItem('ICDDiagSelYN', "N");
+        //                }
+        //            }
+        //        });
+        //    }
+        //}
+        //kavita 10-aug-2019
+
+        function GetAllCounts() {
+            ////debugger;
+            var strTranNo = $.session.get('PatTRANNO');
+            var mrno = $.session.get('PatMRNO');//
+            if (strTranNo != undefined) {
+                $.ajax({
+                    url: '../DoctorDesk/GetCounts',  //Pass URL here 
+                    type: "POST", //Also use GET method,
+                    datatype: "json",
+                    data: { strTranNo: strTranNo, strMrno: mrno }, 
+                    success: function (data) {
+                        if (data != "") {
+
+                            //if (data["DIAGNOSIS"] == "Y") {
+                            //    $("div#DiagnosisPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+                            //}
+                            //else {
+                            //    $("div#DiagnosisPrim")[0].style.backgroundColor = 'transparent';
+                            //}
+
+
+                            //commented by priyanka on 22/02/2025 start
+                            //if (data["COMPLAINTS"] == "Y") {
+                            //    $("div#CompPrim")[0].style.backgroundColor = 'rgb(203, 245, 203)';
+                            //}
+                            //else {
+                            //    $("div#CompPrim")[0].style.backgroundColor = 'transparent';
+                            //}
+                            ////$("div#CompPrim")[0].css('background-color', 'blue')
+
+                            //if (data["VITALS"] == "Y") {
+                            //    $("div#VitalsPrim")[0].style.backgroundColor = "rgb(203, 245, 203)"
+                            //}
+                            //else {
+                            //    $("div#VitalsPrim")[0].style.backgroundColor = 'transparent';
+                            //}
+
+                            //commented section end
+
+
+                            ////debugger;
+                            //Below condition Added by Murali on 08/08/2024
+                            if (data["PRODIAGNOSIS"] == "Y" || data["DIAGNOSIS"] == "Y") {
+                                $.session.set('Diag', "Y");
+                            }
+                            else {
+                                $.session.set('Diag', "N");
+                            }
+
+                            // ICDDiagSelYN = data["ICDDIAGNOSIS"];
+                            ////debugger;
+
+                            localStorage.setItem('ICDDiagSelYN', data["ICDDIAGNOSIS"]);
+
+                            //localStorage.setItem('ICDDiagSelYN', "");
+                            //localStorage.setItem('DiagnosisSelYN', "");
+
+
+                            //commented by priyanka on 22/02/2025 start
+                            //if (data["EXAMINATION"] == "Y")
+                            //    $("div#EXAMPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+                            //else
+                            //    $("div#EXAMPrim")[0].style.backgroundColor = 'transparent';
+
+
+                            //if (data["INVESTIGATIONS"] == "Y")
+                            //    $("div#InvestPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+                            //else
+                            //    $("div#InvestPrim")[0].style.backgroundColor = 'transparent';
+
+                            //if (data["MEDICINE"] == "Y")
+                            //    $("div#MedicinePrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+                            //else
+                            //    $("div#MedicinePrim")[0].style.backgroundColor = 'transparent';
+
+                            //if (data["PATADVICE"] == "Y")
+                            //    $("div#PatAdvicePrim")[0].style.backgroundColor = "rgb(203, 245, 203)"; //#d2d6de
+                            //else
+                            //    $("div#PatAdvicePrim")[0].style.backgroundColor = 'transparent';
+
+                            ////added on 28th march 2018
+                            //if (data["ADDICTHISTORY"] == "Y")
+                            //    $("div#PersonalPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+                            //else
+                            //    $("div#PersonalPrim")[0].style.backgroundColor = 'transparent';
+
+                            //if (data["MEDICINEHISTORY"] == "Y")
+                            //    $("div#MedicalPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+                            //else
+                            //    $("div#MedicalPrim")[0].style.backgroundColor = 'transparent';
+
+                            //if (data["FAMILYHISTORY"] == "Y")
+                            //    $("div#FamilyPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+                            //else
+                            //    $("div#FamilyPrim")[0].style.backgroundColor = 'transparent';
+
+                            ////25-11-2019 17:53
+                            //if (data["ALLERGY"] == "Y")
+                            //    $("div#AllergyPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+                            //else
+                            //    $("div#AllergyPrim")[0].style.backgroundColor = 'transparent';
+
+                            //if (data["PRESCRIPTN"] == "Y") //Comented by Murali on 28/02/2024
+                            //    //if (data["PRESCRIPTN"].trim() != "")  //Comented by Meenakshi  on 14/01/2025 discussed with Nitesh also it is converted to green color when the prescription gets completed
+                            //    $("div#Divprescriptn")[0].style.backgroundColor = "rgb(203, 245, 203)"
+                            //else
+                            //    $("div#Divprescriptn")[0].style.backgroundColor = 'transparent';
+                            //commented section end
+
+
+                            $("div#CompPrim")[0].style.backgroundColor = (data["COMPLAINTS"] === "Y") ? 'rgb(203, 245, 203)' : 'transparent';
+                            $("div#VitalsPrim")[0].style.backgroundColor = (data["VITALS"] === "Y") ? 'rgb(203, 245, 203)' : 'transparent';
+                            $("div#EXAMPrim")[0].style.backgroundColor = (data["EXAMINATION"] === "Y") ? 'rgb(203, 245, 203)' : 'transparent';
+                            $("div#InvestPrim")[0].style.backgroundColor = (data["INVESTIGATIONS"] === "Y") ? 'rgb(203, 245, 203)' : 'transparent';
+                            $("div#MedicinePrim")[0].style.backgroundColor = (data["MEDICINE"] === "Y") ? 'rgb(203, 245, 203)' : 'transparent';
+                            $("div#PatAdvicePrim")[0].style.backgroundColor = (data["PATADVICE"] === "Y") ? 'rgb(203, 245, 203)' : 'transparent';
+                            $("div#PersonalPrim")[0].style.backgroundColor = (data["ADDICTHISTORY"] === "Y") ? 'rgb(203, 245, 203)' : 'transparent';
+                            $("div#MedicalPrim")[0].style.backgroundColor = (data["MEDICINEHISTORY"] === "Y") ? 'rgb(203, 245, 203)' : 'transparent';
+                            $("div#FamilyPrim")[0].style.backgroundColor = (data["FAMILYHISTORY"] === "Y") ? 'rgb(203, 245, 203)' : 'transparent';
+                            $("div#AllergyPrim")[0].style.backgroundColor = (data["ALLERGY"] === "Y") ? 'rgb(203, 245, 203)' : 'transparent';
+                            $("div#Divprescriptn")[0].style.backgroundColor = (data["PRESCRIPTN"] === "Y") ? 'rgb(203, 245, 203)' : 'transparent';
+                            $("div#DiagnosisPrim")[0].style.backgroundColor = (data["DIAGNOSIS"] == "Y" || data["ICDDIAGNOSIS"] == "Y") ? 'rgb(203, 245, 203)' : 'transparent';
+                            $("div#ClinicalHistory")[0].style.backgroundColor = data["CLINICALNOTES"] == "Y" ? 'rgb(203, 245, 203)' : 'transparent';
+                            $("div#chemoplan")[0].style.backgroundColor = data["CHEMOPLAN"] == "Y" ? 'rgb(203, 245, 203)' : 'transparent';
+
+                            //Added By Priyanka on 30/01/2025
+                            //if (data["DIAGNOSIS"] == "Y" || data["ICDDIAGNOSIS"] == "Y") {
+                            //    $("div#DiagnosisPrim")[0].style.backgroundColor = "rgb(203, 245, 203)";
+                            //}
+                            //else {
+                            //    $("div#DiagnosisPrim")[0].style.backgroundColor = 'transparent';
+                            //}
+                            // added by priyanka on 30/01/2025
+                            ////debugger;
+                            SetDiagnosisFlaging(data['DIAGNOSIS'], data['ICDDIAGNOSIS']); 
+                        }
+                        else {
+                            $.session.set('Diag', "N"); //Added by Murali on 10/07/2024
+                            //Added By Priyanka on 31/01/2025
+                            localStorage.setItem('DiagnosisSelYN', "N");
+                            localStorage.setItem('ICDDiagSelYN', "N");
+                        }
+                    }
+                });
+            }
+        } 
+
+        function SearchSetup() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("txtWholeSetUpNm");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("tblPatAdviceStUps");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+        
+        function PatHistoryTab() {
+            ////debugger;
+            var tranNo = ($.session.get('PatTRANNO'));
+            var mrNo = ($.session.get('PatMRNO'));// added by vijeta on 23rd May
+
+            if (mrNo == "" || mrNo == null || mrNo == undefined) {
+                return;
+            }
+            $.ajax({
+                type: "POST",
+                url: '../DoctorDesk/GetHistory',
+                datatype: "json",
+                async: true,
+                data: { strMrNo: mrNo },
+                success: function (result) {
+                    //window.location.href = 'PatientEntry';
+                    //var x = typeOf(result);
+                    $("#tblHistDiv").empty();
+                    strPrintData = [];
+                    var name = $.session.get('PatName').toString().trim();// changed by vijeta on 9th march 2018
+                    //var name = $.session.get('PatName').split(" ")[1];
+                    var gDurTypeHis = { 'Select': ' ', 'D': 'Day', 'W': 'Week', 'M': 'Month', 'Y': 'Year' };
+                    var gRelation = {
+                        '01': 'Father', '02': 'Mother', '03': 'Wife',
+                        '04': 'Brother', '05': 'Sister', '06': 'Grand Father',
+                        '07': 'Grand Mother', '08': 'Maternal Aunt', '09': 'Maternal Uncle', '10': 'Paternal Uncle',
+                        '11': 'Paternal Aunt' //Added  by Meenakshi on 21/10/2024 to fix display bug  
+                    };
+                    var gPersonaldata = {
+                        '01': 'Alcohol', '02': 'Amphetamines', '03': 'Cocaine',
+                        '04': 'Drugs', '05': 'Opioids', '06': 'Smoking', '07': 'Tobacco'
+                    };
+                    var gPerMeddata = {
+                        '01': 'Hypertension', '02': 'Diabetes', '03': 'Tuberculosis', '04': 'Cancer', '05': 'Asthma', '06': 'Obesity', '07': 'Alzheimer disease',
+                        '08': 'Osteoporosis', '09': 'Cardiovascular Disease'
+                    };
+                    if (result != "") {
+                        //Append each row to html table
+                        //if (result.jsonFamily.length > 0)
+
+                        if (result.jsonFamily != "" || result.jsonFreeFamily != "") {
+                            strPrintData = [];
+                            var tempData = "<div class='panel' style='margin-bottom: 10px;background-color: #f9f9f9;border-radius: 4px;-webkit-box-shadow: -1px 2px 2px #d0d0d0;'><div class='panel-heading divHeads' style='background: #ceefff !important;font-weight: 600;color: #025882;padding: 5px 11px;border-bottom: 1px solid transparent;'>Family History</div><div class='divBody' style='padding:10px;'>";
+
+                            if (result.jsonFamily != "") {
+                                tempData += "<ul>";
+                                for (var i = 0; i < result.jsonFamily.length; i++) {
+                                    var dur = (result.jsonFamily[i].DURATION != "0" ? " since " + result.jsonFamily[i].DURATION + " " + gDurTypeHis[result.jsonFamily[i].DURTYPE] + "(s)" : "")
+                                    tempData = tempData + "<li><div>" + gRelation[result.jsonFamily[i].RELATION] + " (" + result.jsonFamily[i].AGE + "yrs), suffering with <b>" +
+                                        result.jsonFamily[i].DISEASES + "</b>" + dur + "</div>";
+                                }
+                                tempData += "</ul>";
+                            }
+                            if (result.jsonFreeFamily != "") {
+                                tempData += "<table style='width:90%;border-collapse:collapse;border:1px solid gray;margin-left:22px;' class='tblFree'>";
+                                for (var i = 0; i < result.jsonFreeFamily.length; i++) {
+                                    tempData = tempData + "<tr><td style='width:20%'>" + result.jsonFreeFamily[i].TRANDATE + "</td><td>" + result.jsonFreeFamily[i].FAMHIST + "</td></tr>";
+                                }
+                                tempData += "</table>";
+                            }
+                            tempData = tempData + '</div></div>';
+                            strPrintData.push(tempData);
+                            document.getElementById("tblHistDiv").innerHTML += strPrintData[0];
+                        }
+                        else {
+                            tempData = tempData + "<div>No Family History Found.</div>";
+                        }
+
+                        //if (result.jsonPersonal.length > 0)
+
+                        if (result.jsonPersonal != "" || result.jsonFreePersonal != "") {
+                            strPrintData = [];
+                            var tempData = "<div class='panel' style='margin-bottom: 10px;background-color: #f9f9f9;border-radius: 4px;-webkit-box-shadow: -1px 2px 2px #d0d0d0;'><div class='panel-heading divHeads' style=' background: #ceefff !important;font-weight: 600;color: #025882;padding: 5px 11px;border-bottom: 1px solid transparent;'>Personal History</div>    <div class='divBody' style='padding:10px;'>";// 30-9-19 - styles chngd
+
+                            if (result.jsonPersonal != "") {
+                                tempData += "<ul>";
+                                for (var i = 0; i < result.jsonPersonal.length; i++) {
+                                    tempData = tempData + "<li><div><b>" + result.jsonPersonal[i].NAME + "</b>";
+                                    if (result.jsonPersonal[i].STOPAGE != "") {
+                                        var dur = (result.jsonPersonal[i].STOPAGE != "0") ? " from " + result.jsonPersonal[i].STOPAGE + " " + result.jsonPersonal[i].STARTAGE : "";
+                                        tempData = tempData + dur;
+                                    }
+                                    tempData = tempData + "</div>";
+                                }
+                                tempData += "</ul>";
+                            }
+                            if (result.jsonFreePersonal != "") {
+                                tempData += "<table style='width:90%;border-collapse:collapse;border:1px solid gray;margin-left:22px;' class='tblFree'>";
+                                for (var i = 0; i < result.jsonFreePersonal.length; i++) {
+                                    tempData = tempData + "<tr><td style='width:20%'>" + result.jsonFreePersonal[i].TRANDATE + "</td><td>" + result.jsonFreePersonal[i].PERSHIST + "</td></tr>";
+                                }
+                                tempData += "</table>";
+                            }
+                            tempData = tempData + '</div></div>';
+                            strPrintData.push(tempData);
+                            document.getElementById("tblHistDiv").innerHTML += strPrintData[0];
+                        }
+                        else {
+                            tempData = tempData + "<div>No Personal History Found.</div>";
+                        }
+
+
+                        if (result.jsonMedical != "" || result.jsonFreeMedical != "") {
+                            strPrintData = [];
+                            var tempData = "<div class='panel' style='margin-bottom: 10px;background-color: #f9f9f9;border-radius: 4px;-webkit-box-shadow: -1px 2px 2px #d0d0d0;'><div class='panel-heading divHeads' style=' background: #ceefff !important;font-weight: 600;color: #025882;padding: 5px 11px;border-bottom: 1px solid transparent;'>Medical History</div>    <div class='divBody' style='padding:10px;'>";// 30-9-19 - styles chngd
+
+                            if (result.jsonMedical != "") {
+                                tempData += "<ul>";
+                                for (var i = 0; i < result.jsonMedical.length; i++) {
+                                    tempData = tempData + "<li><div><b>" + result.jsonMedical[i].NAME + "</b>";
+                                    if (result.jsonMedical[i].DURATION != "") {
+                                        var dur = (result.jsonMedical[i].DURATION != "0") ? " since " + result.jsonMedical[i].DURATION + " " + gDurTypeHis[result.jsonMedical[i].DURTYPE] + "(s)" : "";
+                                        tempData = tempData + dur;
+                                    }
+                                    tempData = tempData + "</div>";
+                                }
+                                tempData += "</ul>";
+                            }
+                            if (result.jsonFreeMedical != "") {
+                                tempData += "<table style='width:90%;border-collapse:collapse;border:1px solid gray;margin-left:22px;' class='tblFree'>";
+                                for (var i = 0; i < result.jsonFreeMedical.length; i++) {
+                                    tempData = tempData + "<tr><td style='width:20%'>" + result.jsonFreeMedical[i].TRANDATE + "</td><td>" + result.jsonFreeMedical[i].MEDHIST + "</td></tr>";
+                                }
+                                tempData += "</table>";
+                            }
+                            tempData = tempData + '</div></div>';
+                            strPrintData.push(tempData);
+                            document.getElementById("tblHistDiv").innerHTML += strPrintData[0];
+                        }
+                        else {
+                            tempData = tempData + "<div>No Medical History Found.</div>";
+                        }
+
+
+
+                        if (result.jsonAllergy != "") {
+                            strPrintData = [];
+                            var tempData = "<div class='panel' style='margin-bottom: 10px;background-color: #f9f9f9;border-radius: 4px;-webkit-box-shadow: -1px 2px 2px #d0d0d0;'><div class='panel-heading divHeads' style='background: #ceefff !important;font-weight: 600;color: #025882;padding: 5px 11px;border-bottom: 1px solid transparent;'>Allergy</div>    <div class='divBody' style='padding:10px;'>";
+
+                            if (result.jsonAllergy != "") {
+                                tempData += "<ul>";
+                                for (var i = 0; i < result.jsonAllergy.length; i++) {
+                                    tempData = tempData + "<li><div>Allergy - <b>" + result.jsonAllergy[i].NAME + "</b>"; //25-11-2019 17:19
+                                    if (result.jsonAllergy[i].DURATION != "") {
+                                        var dur = (result.jsonAllergy[i].DURATION != "0") ? " since " + result.jsonAllergy[i].DURATION + " " + gDurTypeHis[result.jsonAllergy[i].DURTYPE] + "(s)" : "";
+                                        tempData = tempData + dur;
+                                    }
+                                    if (result.jsonAllergy[i].REMARKS != "") {
+                                        var rem = "( " + result.jsonAllergy[i].REMARKS + " )";
+                                        tempData = tempData + rem;
+                                    }
+                                    tempData = tempData + "</div>";
+                                }
+                                tempData += "</ul>";
+                            }
+                            tempData = tempData + '</div></div>';
+                            strPrintData.push(tempData);
+                            document.getElementById("tblHistDiv").innerHTML += strPrintData[0];
+                        }
+                        else {
+                            tempData = tempData + "<div>No Allergy Found.</div>";
+                        }
+
+                        //Added previous consultation last diagnosiss found 
+                        //if (result.jsonFamily != "" || result.jsonFreeFamily != "") {
+                        //    strPrintData = [];
+                        //    var tempData = "<div class='panel' style='margin-bottom: 10px;background-color: #f9f9f9;border-radius: 4px;-webkit-box-shadow: -1px 2px 2px #d0d0d0;'><div class='panel-heading divHeads' style='background: #ceefff !important;font-weight: 600;color: #025882;padding: 5px 11px;border-bottom: 1px solid transparent;'>Family History</div>    <div class='divBody' style='padding:10px;'>";// 30-9-19 - styles chngd
+
+                        //    if (result.jsonFamily != "") {
+                        //        tempData += "<ul>";
+                        //        for (var i = 0; i < result.jsonFamily.length; i++) {
+                        //            var dur = (result.jsonFamily[i].DURATION != "0" ? " since " + result.jsonFamily[i].DURATION + " " + gDurTypeHis[result.jsonFamily[i].DURTYPE] + "(s)" : "")
+                        //            tempData = tempData + "<li><div>" + gRelation[result.jsonFamily[i].RELATION] + " (" + result.jsonFamily[i].AGE + "yrs), suffering with <b>" +
+                        //                result.jsonFamily[i].DISEASES + "</b>" + dur + "</div>";
+                        //        }
+                        //        tempData += "</ul>";
+                        //    }
+                        //    if (result.jsonFreeFamily != "") {
+                        //        tempData += "<table style='width:90%;border-collapse:collapse;border:1px solid gray;margin-left:22px;' class='tblFree'>";
+                        //        for (var i = 0; i < result.jsonFreeFamily.length; i++) {
+                        //            tempData = tempData + "<tr><td style='width:20%'>" + result.jsonFreeFamily[i].TRANDATE + "</td><td>" + result.jsonFreeFamily[i].FAMHIST + "</td></tr>";
+                        //        }
+                        //        tempData += "</table>";
+                        //    }
+                        //    tempData = tempData + '</div></div>';
+                        //    strPrintData.push(tempData);
+                        //    document.getElementById("tblHistDiv").innerHTML += strPrintData[0];
+                        //}
+                        //else {
+                        //    tempData = tempData + "<div>No Family History Found.</div>";
+                        //}
+
+
+
+                    }
+                    else {
+                        document.getElementById("tblHistDiv").innerHTML = "<div class='panel'><div class='divBody'>No History Found</div></div>";
+                    }
+
+
+                },
+                complete: function () {
+                    HoldOn.close();//
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) { HoldOn.close(); }//
+            });
+        }
+
+        function OpenUnitSel() {
+            var curFormURL = ("" + '<%= Request.Url.AbsolutePath %>').toString().toUpperCase().trim();
+            var loadedFormName = curFormURL.substr(curFormURL.lastIndexOf("/") + 1);
+            if (loadedFormName.toUpperCase() == "MENULIST" && '<%:Session["SINGLEUNITYN"]%>' == "N") {
+                $("a#btnHospUnitDiv").click();
+            }
+        }
+
+        function PatTumorTreatmentDet() {
+            ////debugger;
+            var tranNo = ($.session.get('PatTRANNO'));
+            var mrNo = ($.session.get('PatMRNO'));// added by vijeta on 23rd May
+
+            if (mrNo == "" || mrNo == null || mrNo == undefined) {
+                return;
+            }
+            $.ajax({
+                type: "POST",
+                url: '../DoctorDesk/PatTumorTreatmentDet',
+                datatype: "json",
+                async: true,
+                data: { strMrNo: mrNo },
+                success: function (result) {
+                    renderTreatmentDetails(result);
+                },
+                complete: function () {
+                    HoldOn.close();//
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) { HoldOn.close(); }//
+            });
+        }
+        function OpenUnitSel() {
+            var curFormURL = ("" + '<%= Request.Url.AbsolutePath %>').toString().toUpperCase().trim();
+            var loadedFormName = curFormURL.substr(curFormURL.lastIndexOf("/") + 1);
+            if (loadedFormName.toUpperCase() == "MENULIST" && '<%:Session["SINGLEUNITYN"]%>' == "N") {
+                $("a#btnHospUnitDiv").click();
+            }
+        }
+        function renderTreatmentDetails(resultArray) {
+            $("#tblTumorDiv").empty(); // clear existing content
+
+            if (resultArray && resultArray.length > 0) {
+                var mainContainer = document.getElementById("tblTumorDiv");
+                mainContainer.innerHTML = ""; // clear old content
+
+                // Common heading once at the top
+                var headingHTML = "<div class='panel-heading divHeads' " +
+                                  "style='background:#3b5998 !important;font-weight:700;" +
+                                  "color:white;padding:8px 12px;margin-bottom:8px;" +
+                                  "border-radius:4px;'>Treatment Details</div>";
+                mainContainer.innerHTML += headingHTML;
+
+                // Add all treatments
+                for (var i = 0; i < resultArray.length; i++) {
+                    var tr = resultArray[i];
+                    var tempData =
+                        "<div class='panel' style='margin-bottom:10px;background-color:#f9f9f9;" +
+                        "border-radius:4px;-webkit-box-shadow:-1px 2px 2px #d0d0d0;'>" +
+                            "<div class='panel-heading divHeads' style='background:#ceefff !important;font-weight:600;" +
+                            "color:#025882;padding:5px 11px;border-bottom:1px solid transparent;'>" +
+                                tr.TREATMENTNAME +
+                            "</div>" +
+                            "<div class='divBody' style='padding:10px;'>" +
+                                "<span style='font-weight:600;'>Treatment: </span>" + tr.TREATMENTDET + "<br/>" +
+                                "<span style='color:#555;font-size:13px;'>Date: " + tr.TREATMENTDATE + "</span><br/>" +
+                                "<span style='color:#777;font-size:12px;'>Remarks: " + tr.REMARKS + "</span>" +
+                            "</div>" +
+                        "</div>";
+                    mainContainer.innerHTML += tempData;
+                }
+            } else {
+                var mainContainer = document.getElementById("tblTumorDiv");
+                mainContainer.innerHTML = ""; // clear old content
+
+                var noDataHTML =
+                    "<div class='panel-heading divHeads' style='background:#b0e0ff !important;font-weight:700;" +
+                    "color:#024e72;padding:8px 12px;margin-bottom:8px;border-radius:4px;'>Treatment Details</div>" +
+                    "<div class='panel' style='margin-bottom:10px;background-color:#f9f9f9;" +
+                    "border-radius:4px;-webkit-box-shadow:-1px 2px 2px #d0d0d0;'>" +
+                        "<div class='divBody' style='padding:10px;'><div>No Treatment Found.</div></div>" +
+                    "</div>";
+
+                mainContainer.innerHTML += noDataHTML;
+            }
+        }
+
+
+        function GetReferalNotesList() {
+            var Resp = [];
+            $.ajax({
+                url: '../DoctorDesk/GetReferralNotesList',
+                type: "POST",
+                datatype: "json",
+                async: false,
+                success: function (data) {
+                    Resp = data;
+                }
+            });
+            return Resp;
+        }
+
+        function BindReferalNotesList() {
+            var NotesLstData = GetReferalNotesList("");
+            $("#ReferralNotificationPopup").empty();
+            if (NotesLstData.length == 0) {
+                var NoDatLbl = "<div class='panel-heading divHeads' style=' background: #ceefff !important;font-weight: 600;color: #025882;padding: 5px 11px;border-bottom: 1px solid transparent;'>No Data.</div>";
+                $("#ReferralNotificationPopup").append(NoDatLbl);
+                document.getElementById("DRRefNoteCountHint").style.display = "none";
+                document.getElementById("DRRefNoteCount").innerText = "";
+                document.getElementById("ReferDrNotesListPanel").style.display = "none";
+            }
+            else {
+                for (var i = 0; i < NotesLstData.length; i++) {
+                    var formattedNote = NotesLstData[i].NOTE;//NotesLstData[i].NOTE.replace(/\n/g, "<br/>");
+                    var MainPanel = "<div class='panel' style='margin-bottom: 10px;background-color: #ffffff;border-radius: 4px;-webkit-box-shadow: -1px 2px 2px #d0d0d0;padding: 10px;color: black;width: 100%;'>{PANELCONTENT}</div>";
+                    var Statement = "<label style='width: max-content;'><b>Dr." + NotesLstData[i].REFBYDOCTOR + "</b> referred <b>" + NotesLstData[i].PATNAME + "</b> with the note: '" + formattedNote + "'</label>";
+                    var RplMainPanel = MainPanel.replace("{PANELCONTENT}", (Statement));
+                    $("#ReferralNotificationPopup").append(RplMainPanel);
+                }
+                document.getElementById("DRRefNoteCountHint").style.display = "inline-block";
+                document.getElementById("DRRefNoteCount").innerText = NotesLstData.length;
+                if (NotesLstData.length <= 9) {
+                    document.getElementById("DRRefNoteCount").style.right = "-10x !important";
+                }
+                else if (NotesLstData.length <= 99) {
+                    document.getElementById("DRRefNoteCount").style.right = "-13x !important";
+                }
+                else {
+                    document.getElementById("DRRefNoteCount").style.right = "-16px !important";
+                }
+                document.getElementById("ReferDrNotesListPanel").style.display = "inline-block";
+            }
+        }
+
+        function GetPatReferalNotes() {
+            var Resp = [];
+            if ($.session.get('PatTRANNO') != "" && $.session.get('PatTRANNO') != null && $.session.get('PatMRNO') != "" && $.session.get('PatMRNO') != null) {
+                $.ajax({
+                    url: '../DoctorDesk/GetPatReferralNotes',
+                    type: "POST",
+                    datatype: "json",
+                    async: false,
+                    data: { TranNo: $.session.get('PatTRANNO'), Mrno: $.session.get('PatMRNO') },
+                    success: function (data) {
+                        Resp = data;
+                    }
+                });
+            }
+            return Resp;
+        }
+
+        function BindPatRefNote() {
+            var NotesLstData = GetPatReferalNotes();
+            $("#DivNotesContent").empty();
+            if (NotesLstData.length == 0) {
+                document.getElementById("ReferDrNotesPanel").style.display = "none";
+            }
+            else {
+                document.getElementById("ReferDrNotesPanel").style.display = "inline-block";
+                $("#DivNotesContent").empty();
+                for (var i = 0; i < NotesLstData.length; i++) {
+                    var MainDiv = '<div style="border: 1px solid grey;padding: 5px;">{MAINDIVCONTENT}</div>';
+                    var RefByDiv = '<div><label style="margin: 0px;">Referred By</label><label style="padding: 0px 5px;">:</label><label>Dr.{REFERREDBYDOCT}</label></div>';
+                    var NoteHeadDiv = '<div><label style="text-decoration: underline;margin: 0px;">Note :</label></div>';
+                    var NoteContDiv = '<div>{NOTECONTENT}</div>';
+                    var formattedNote = NotesLstData[i].NOTE.replace(/\n/g, "<br/>");
+                    var RplRefByDiv = RefByDiv.replace("{REFERREDBYDOCT}", NotesLstData[i].REFBYDOCTOR);
+                    var RplNoteContDiv = NoteContDiv.replace("{NOTECONTENT}", formattedNote);
+                    var RplMainDiv = MainDiv.replace("{MAINDIVCONTENT}", (RplRefByDiv + NoteHeadDiv + RplNoteContDiv));
+                    $("#DivNotesContent").append(RplMainDiv);
+                }
+                if ($.session.get('SHOWNOTES') == "Y" && $.session.get('PatTRANNO') != "" && $.session.get('PatTRANNO') != null) {
+                    $("a#btnShowRefDRNotesInfo").click();
+                    $.session.set('SHOWNOTES', "");
+                }
+            }
+        }
+    </script>
+
+    <%-- Calender Popup --%>
+    <script type="text/javascript">
+        function OpenCloseAlert(Type, ID) {
+            if (Type == "O") {
+                document.getElementById("DivOverlay").style.display = "flex";
+                document.getElementById(ID).style.display = "block";
+            }
+            else {
+                document.getElementById("DivOverlay").style.display = "none";
+                document.getElementById(ID).style.display = "none";
+            }
+        }
+    </script>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini fixed">
+
+    <div class="wrapper" style="background-color: #ffffff;">
+
+        <!-- Main Header -->
+        <header class="main-header">
+           <% if ( (""+ Session["FromClinic"]) != "Y") {%>  
+            <div style="float:left"><button id="menuBar" class="menuButton"><i class="fa fa-bars" style="color: white;"></i></button></div>
+            <%} %>
+
+              <div id="menuList" class="modal" style="background-color: #fff;height: 94.2%;box-shadow:rgb(226 226 226) 0px 1px 2px 1px;">
+                   <div id="divMenuList" style="overflow: auto;">
+                    <!--kavita 10-aug-2019 -->
+                <span id="panelClose" class="close" style="font-size: 18px; opacity: 0.5; margin-right: 5px;">
+                    <i class="fa fa-times fa-2x"></i>
+                </span>
+               <div id="doctPanel">
+                    <hr style="margin-bottom: 3px; margin-top: 0px" />
+                    <img src="<%=ResolveUrl("~/Images/Logo.png")%>" alt="Hospital Logo" style="margin-left:5px;width: 74px; height: 40px;">
+                   <% if( ("" + Session["gDoctCode"]).ToString().Trim() != "") {  %>
+                    <div style ="float: right; width: 69%; "><label class="dropbtn" style="color: #de4a04;margin-left: 5px;margin-top:-1px;">
+                        Dr. <%:Session["gDoctName"]%> </label></div>
+                   <% } else {%>
+                        <div style ="float: right; width: 69%; "><label class="dropbtn" style="color: #de4a04;margin-left: 5px;margin-top:-1px;">
+                        <%:Session["gDoctName"]%> </label></div>
+                   <% } %>
+                   <div style="overflow: auto;width:99%;"> 
+                      <%-- <div id="btnsDiv" class="btn-group btn-group-justified" style="margin-top: 10px;width:auto;"></div>--%>
+                       <div id="btnsDiv" style="margin-top: 10px;width:auto;display: flex;flex-direction: column;align-items: center;"></div>
+                   </div>
+                </div>
+                        <div class="btn-group btn-toggle1" id="divTodayYest" data-toggle="buttons" style="width:99%;height: 26px;margin-left:2px;">
+                                             <label class="btn btn-default borderC " style="width: 21%;font-size: 12px !important;">
+                                                    <input type="radio" name="dateType" id="rbtnToday" value="T" autocomplete="off" checked>
+                                                     Today
+                                             </label>
+                                              <label class="btn btn-default borderC" style="width: 26%;font-size: 12px !important;">
+                                                    <input type="radio" name="dateType" id="rbtnYesterday" value="Y" autocomplete="off">
+                                                     Yesterday
+                                             </label>
+                                             <label class="btn btn-default borderC" style="width: 29%;font-size: 12px !important;">
+                                                    <input type="radio" name="dateType" id="rbtnDayBefYest" value="B" autocomplete="off">
+                                                     Day Before 
+                                             </label>
+                                             <label id="customeDate" class="btn btn-default borderC" style="width: 24%;font-size: 12px !important;">
+                                                    <input type="radio" name="dateType" id="rbtnDayCustom" value="C" autocomplete="off">
+                                                     Custom
+                                                   <input type="text" id="startDate" class="form-control" style="display:none;" >   <%--Added by Dhananjay 20240703--%>
+                                             </label>
+                                           
+                                        </div>
+              
+               <div id="divtabs" style="display:none;">
+                       <div class="col-md-12" id="divAppoint" style="border-bottom: 1px solid;/*border-right: 1px solid;*/background:#d3e6ef;display:none;">
+                          <label class="col-md-12" id="lblheadApp" style="font-size:14px;text-align:center;">Appointment </label>   
+                          <label class="col-md-6 lbls lblActive" id="lblAppToday">Today's<br /></label>     
+                          <label class="col-md-6 lbls" id="lblAppTommorow">Tommorow <br /></label>
+                       </div>                      
+                      <div class="col-md-6" id="divSurgery" style="border-bottom: 1px solid;background: bisque;display:none">
+                          <label class="col-md-12" id="lblheadSur" style="font-size:14px;">Surgery</label>
+                          <label class="col-md-6 lbls" id="lblSurToday">Today's <br /></label> 
+                          <label class="col-md-6 lbls" id="lblSurTommorow">Tommorow <br /></label>
+                      </div>
+                  </div>
+               <div id="patDList">
+                    <div id="DivDPatGrid">
+                    </div>
+                </div>
+
+                <div id="patList">
+                    <div id="DivPatGrid">
+                    </div>
+                </div>
+
+
+
+                   <%--Suchita --%>
+
+                    <%-- vijeta 29/4/19--%>
+                  <div id="MedicalInfo" style="margin-top:10px">
+                    
+                  </div>
+                 <!--kavita 10-aug-2019 -->
+                </div>
+                <div id="PatAdviceSetUpList" style="display: none; width: 98%; border: 1px solid black; margin-left: 4px; bottom: 4px; position: absolute;">
+                    <div id="tblHead" class="setUpHeading" style="width: 100%">
+                        <label>Set Up List</label><span style="float: left; margin-right: 2px;"><i class="fa fa-clone"></i></span>
+                    </div>
+                    <div class="row SetupsDiv" style="display: block; width: 100%">
+                        <input type="text" id="txtWholeSetUpNm" onkeyup="SearchSetup()" placeholder="Search.." title="Type in a name" readonly="readonly" onfocus="this.removeAttribute('readonly')" style="margin: 2px; width: 98%; height: 30px; font-size: x-small; font-weight: bold;"><!--kavita 08-aug -->
+                        <table id="tblPatAdviceStUps" style="width: 100%; border-top: 1px solid #29884bd6 !important">
+                            <tbody style="overflow-x: auto; overflow-y: hidden;"></tbody>
+                        </table>
+                    </div>
+                   
+                </div>
+                 <!--kavita 10-aug-2019 -->
+            </div>
+
+              <% if (("" + Session["FromClinic"]) != "Y" && (("" + Session["PageId"]) != "Menu" || (("" + Session["PageId"]) == "Menu" && ("" + Session["REDIRECTHMIS"]) == "Y")))
+                {%> 
+            <div style="float:left"><button id="btnHome" class="menuButton"  title="Go To Home"  style="margin-left: 15px;"><i class="fa fa-home" style="color: white;">
+                     </i></button></div>
+            <% } %>
+
+            <!--Add by Karthick 20191104 -->
+             <% if (("" + Session["MOBACCESS"]).ToString() == "False" )
+                {%> 
+            <div style="float:left;margin-top:14px;">
+                <a href="<%=ResolveUrl("~/Account/Login")%>" style="color:#fefefe; margin-left : 15px; font-size: 12px;" id="anchrSignOut"> Sign Out</a>
+
+                <% }%>
+            </div>
+            <div style="float: left; margin-top: 10px; margin-left: 10px;">
+                <i class="fa fa-map-marker" aria-hidden="true" style="font-size: 20px; color: #ff8100; margin-right: 5px;"></i>
+                <label style="font-size: 13px; color: white; font-weight: bold; margin: 0px;"
+                    id="HospUnitLbl" onclick="OpenUnitSel()"><%=(""+ Session["HOSPITALNAME"])%></label>
+                <i class="fa fa-chevron-down" aria-hidden="true" style="font-size: 13px;color:white;display:none" title="Change Unit" id="UnitIcon" onclick="OpenUnitSel()"></i>
+            </div>
+            <%--Added By Priyanka on 31/01/2025 Setting Button Start--%>
+              <div class="Sdropdown" id="SettingDrpdown" style="float:right;margin-top:11.5px; display:none;">
+                <i class="fa fa-cog" aria-hidden="true" id="cogIcon" style="cursor: pointer; font-size: 20px;color:white;"></i>
+                <image src=""></image>
+                    <div class="Sdropdown-content">  
+                        <%if (("" + Session["gOncoUserId"]).ToString().Trim() == "SYSTEM")
+                         {%>                
+                         <a href="#" id="BtnAppSetting" title="AppSetting">App Settings</a>
+                         <a href="#" id="BtnErrorLog" title="Error Log">Error Log</a>
+                         <%}
+                        else 
+                         {%>
+                         <a href="#" id="BtnErrorLog" title="Error Log">Error Log</a>
+                         <%}
+                         %>                        
+                    </div>                        
+             </div>
+            <%--Setting Button End--%>
+
+            <div style="float:left">
+            <div class="tabcontainer" id="tabMenu" style="display:none;">
+ 
+             <ul class="nav nav-tabs" id="tabMenuUl" style="border-bottom:none"> <%--Meenakshi added border bottom none--%>
+             <li class="active" id="Complaint"><a href="<%=ResolveUrl("~/DoctorDesk/Complaints")%>" ><u>C</u>omplaint</a></li>
+             <li id="Vitals"><a href="<%=ResolveUrl("~/DoctorDesk/Vitals")%>"><u>V</u>itals</a></li>
+             <li id="Examination"><a  href="<%=ResolveUrl("~/DoctorDesk/Examination")%>">E<u>x</u>amination</a></li>
+             <li id="PresClinicalNotes"><a  href="<%=ResolveUrl("~/DoctorDesk/ClinicalNotes")%>">Clinical <u>N</u>otes</a></li>
+             <li id="Diagnosis"><a href="<%=ResolveUrl("~/DoctorDesk/Diagnosis")%>">Diagnosi<u>s</u></a></li>
+             <li id="Investigation"><a  href="<%=ResolveUrl("~/DoctorDesk/InvestigationTran")%>"><u>I</u>nvestigation</a></li>
+            <% if ((""+Session["CIMYN"]) == "Y")
+                           { %>
+                        <li id="RxNewSearch"><a href="<%=ResolveUrl("~/DoctorDesk/RxNewSearch")%>"><u>R</u>x</a></li>
+                        <%}
+                           else {%>
+                        <li id="RxDesktop"><a href="<%=ResolveUrl("~/DoctorDesk/RxDesktop")%>"><u>R</u>x</a></li>
+                        <%}%>
+
+
+             <li id="PatAdviceLi"><a  href="<%=ResolveUrl("~/DoctorDesk/PatientAdvice")%>"><u>A</u>dvice</a></li>
+			 <li id="PresChemo"><a  href="<%=ResolveUrl("~/DoctorDesk/ChmoPlanning")%>">C<u>h</u>emo Planning</a></li>
+             <li id="PresPrint" ><a  href="<%=ResolveUrl("~/DoctorDesk/PrescriptionPrint")%>"><u>P</u>rescription</a></li>
+            </ul>
+
+            </div>
+
+            </div> 
+             
+            <div><img id="menuDots" style="float: right; margin-top: 15px; margin-right: 5px;cursor: pointer" src="<%=ResolveUrl("~/Images/menuDots.png")%>" title="Go To History"></div>
+           
+             <!-- kavita 12-aug-2019 -->
+          <div id="slide_sdList" title="show side panel" style="width:30px;height:40px;background-color:rgb(241, 241, 241);border-radius:50% 0% 0% 50%;z-index:15;right:0;position:fixed;display:none;
+          box-shadow: 0 1px 1px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);bottom: 0px; margin-bottom: 10px;" class="">
+               <div id="Divarrow" class="fa fa-chevron-left fa-2x rotateArrow" style="top:25%;left:36%;position:relative;color:#055796;"></div>
+          </div>
+
+          <div id="slide_MoveTop" title="show side panel" style="width:30px;height:40px;background-color:rgb(241, 241, 241);border-radius:50% 0% 0% 50%;z-index:15;right:0;position:fixed;display:none;
+          box-shadow: 0 1px 1px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);bottom: 0px; margin-bottom: 10px;cursor: pointer;" class="">
+               <div id="Divuparrow" class="fa fa-chevron-up fa-2x rotateArrow" style="top:15%;left:20%;position:relative;color:#055796;"></div>
+          </div>
+             <!-- kavita 12-aug-2019 -->
+            
+             <div id="sideList" class="sdList" style="background-color: #fff;box-shadow:rgb(171 165 165) 1px 1px 2px 1px;">
+                <ul class="rightPanelul" style="list-style-type: none;max-height: 70vh;overflow: auto;">
+                    <%--id defined by --%>
+
+                        <!--kavita 18-01-19-->
+                      <li id="lishome" class="list" style=" margin-top: 5px;display:none;"><!--title kavita-->
+                      <span class="liIconSpan"><img src="../Images/house.png" /></span> <label class="lblRightMenu">Home</label></li>
+                    <!--kavita 18-01-19-->
+                    <li id="lishistory" class="list" style=" margin-top: 5px;" title="Alt+H"><!--title kavita-->
+                      <span class="liIconSpan"><img src="../Images/history.png"/></span> <label class="lblRightMenu"><u>H</u>istory</label>&nbsp;<label id="lblHistoryCnt"  class="lblCnt"></label></li>
+                      <%--added by vijeta on 3rd april 2018--%>
+                        <li id="lisVitalHistory" class="list" style=" margin-top: 5px;cursor:pointer;" title="Alt+T">
+                          <span class="liIconSpan"><img src="../Images/bp.png"/></span><label   class="lblRightMenu">Vi<u>t</u>al History</label>&nbsp;<label id="lblVitalHisCnt"   class="lblCnt"></label></li>
+                     <li id="lisMedicationHistory" class="list" style=" margin-top: 5px;cursor:pointer;" title="Alt+Y"><!--title kavita-->
+                         <span class="liIconSpan"><img src="../Images/form.png"/></span> <label   class="lblRightMenu">OPD Clinical Histor<span class="underline">y</span></label>&nbsp;<label id="lblMedicationHisCnt" class="lblCnt"></label></li> <%--added by vijeta on 19th april 2018--%><!--title kavita-->
+
+                     <li id="lisPatClinicalHistory" class="list" style=" margin-top: 5px;cursor:pointer;" title="Alt+Y"><!--title kavita-->
+                         <span class="liIconSpan"><img src="../Images/form.png"/></span> <label   class="lblRightMenu">Patient Clinical Details</label></li>
+
+
+
+                     <li id="lisSurgicalHistory" class="list" style=" margin-top: 5px;cursor:pointer;" title="Alt+Y">
+                         <span class="liIconSpan"><img src="../Images/Cancer.png"/  style="width: 20px;"></span> <label   class="lblRightMenu">Cancer Care Histor<span class="underline">y</span></label>&nbsp;<label id="lblSurgicalHisCnt" class="lblCnt"></label></li> <%--added by ashvini on 10th july 2025--%>
+                    
+                    <%-- Added by Dhananjay 20250524 --%>
+                    <li id="lisOncoPlanning" class="list" style=" margin-top: 5px;cursor:pointer;display:none" title="Alt+K">
+                      <span class="liIconSpan"><img width="20" height="20" src="../Images/Planning.png" /></span><label  class="lblRightMenu">Chemo Planning</label><label class="altText"></label>
+                    </li>   
+
+                    <%-- Added by Rajan 20250611 --%>
+                    <li id="lisOncoSchedule" class="list" style=" margin-top: 5px;cursor:pointer;" title="Alt+K">
+                      <span class="liIconSpan"><i class="fa fa-calendar" style="font-size:19px" aria-hidden="true"></i></span><label  class="lblRightMenu">Surgery Adv. Schedule</label><label class="altText"></label>
+                    </li>   
+
+                    <li id="lisVaccination" class="list" style=" margin-top: 5px; cursor: pointer;" >
+                            <span class="liIconSpan">
+                                <img src="../Images/vaccineNew.png" /></span><label class="lblRightMenu">Vaccination</label>&nbsp;<label id="lblVaccinationCnt" class="lblCnt"></label></li>
+                    <hr class='liSeparator' />
+                    <li id="lisTumorComplete" class="list" style=" margin-top: 5px; cursor: pointer;">
+                        <span class="liIconSpan">
+                            <i class="fa fa-calendar" style="font-size:19px" aria-hidden="true"></i></span><label  class="lblRightMenu">Tumor Board Schedule</label><label class="altText"></label></li>
+                    <li id="lisPlanComplete" class="list" style=" margin-top: 5px; cursor: pointer;">
+                        <span class="liIconSpan">
+                            <img src="../Images/PlanReport.jpg" /></span><label class="lblRightMenu">Plan Complete Status</label>&nbsp;<label id="lblPlann" class="lblPlanComplete"></label></li>
+                     <li id="lisOutInvstg" class="list" style=" margin-top: 5px; cursor: pointer;">
+                        <span class="liIconSpan">
+                            <img src="../Images/PlanReport.jpg" /></span><label class="lblRightMenu">Outside Investigation</label>&nbsp;<label id="lblInvstg" class="lblPlanComplete"></label></li>
+                    <%--Priyanka 13/11/2025--%>
+                    <li id="lisSchemeApproval" class="list" style=" margin-top: 5px; cursor: pointer;">
+                        <span class="liIconSpan">
+                            <img src="../Images/PlanReport.jpg" /></span><label class="lblRightMenu">Scheme Approval Status</label>&nbsp;<label id="lblSchemeApproval" class="lblScheeAprovStat"></label></li>
+                    <hr class='liSeparator' />                      <li id="lisNotes" class="list" style=" margin-top: 5px;cursor:pointer;" title="Alt+N">
+                           <span class="liIconSpan"><img src="../Images/writing.png"/></span><label  class="lblRightMenu"><u>N</u>otes</label>&nbsp;<label id="lblNotesCnt"   class="lblCnt"></label></li><!--title kavita-->
+<%--                    <hr class='liSeparator' />
+                     <li id="lisAllergy" class="list" style=" margin-top: 5px;cursor:pointer;" title="Alt+G"><!--title kavita-->
+                          <span class="liIconSpan"><img src="../Images/allergy.png"/></span><label  class="lblRightMenu">Aller<span class="underline">g</span>y</label></li><!--title kavita-->
+                   <li id="lisSPTFormat" class="list" style=" margin-top: 5px;cursor:pointer;" title="Alt+B"><!--title kavita-->
+                           <span class="liIconSpan"><img src="../Images/diagram.png"/></span><label   class="lblRightMenu">SPT Reporting</label></li><!--title kavita  17-8-18  -->
+                    <hr class='liSeparator' />--%>
+                    <li id="lisattach" class="list" style=" margin-top: 5px;cursor:pointer;"  title="Alt+W" ><!--title kavita  17-8-18 -->
+                    <span class="liIconSpan"><img src="../Images/attach-icon.png"/></span><label  class="lblRightMenu">Attachment</label>
+                        &nbsp;<label id="lblAttachmentCount" class="lblCnt"></label></li>
+                        <%-- added by --%>
+                    <li id="lisDocuments" class="list" style=" margin-top: 5px;cursor:pointer;" title="Alt+Z"><!--title kavita 17-8-18-->
+                          <span class="liIconSpan"><img src="../Images/documents-symbol.png"/></span><label  class="lblRightMenu">Documents</label></li><!--title kavita-->
+
+                     <%--  added by vishal--%>
+                     <li id="lisMasterUpdt" class="list" style=" margin-top: 5px;cursor:pointer;" title="Alt+Q">
+                          <span class="liIconSpan"><img src="../Images/settings.png" /></span><label  class="lblRightMenu">Master Settings</label></li>
+                  <%--   changd--%>
+                       <li id="lisMasterSetup" class="list" style=" margin-top: 5px;cursor:pointer;" title="Alt+K">
+                          <span class="liIconSpan"><img src="../Images/setup.png" /></span><label  class="lblRightMenu">Master SetUp</label></li>
+
+                      <li id="lisMasterSetupDisplay" class="list" style=" margin-top: 5px;cursor:pointer;" title="Alt+K">
+                          <span class="liIconSpan"><img src="../Images/setupDlg.png" /></span><label  class="lblRightMenu">Apply Setup</label></li>
+
+                     <li id="lisOncoModule" class="list" style=" margin-top: 5px;cursor:pointer;display:none;" title="Alt+K">
+                          <span class="liIconSpan"><img src="../Images/oncology.png" /></span><label  class="lblRightMenu">Oncology Module</label></li>
+                    
+                </ul>
+
+
+                 <div id="NewAddNotes">
+                     <div style="border-top: 1px solid #d6d2d2; border-bottom: 1px solid #d6d2d2; padding: 10px 10px 10px 10px;" id="NewNotesDiv">
+                         <div style="float: left; width: 40%;" class="divButtonPlus">
+                             <div><i class="fa fa-plus fa-2x divPlusNote" title="add notes" id="btnAddNotes"></i></div>
+                         </div>
+                         <div style="font-size: 14px">
+                             <label>Add Notes</label>
+                         </div>
+                     </div>
+                     <div id="dialog" title="Add Notes" style="display: none">
+                         <div>
+                             <div>
+                                 <textarea cols="34" rows="3" placeholder="Enter Notes" maxlength="1000" id="txtNotes"> </textarea></div>
+                             <div>
+                                 <table>
+                                     <tr>
+                                         <td>
+                                             <label>
+                                                 <input type="radio" name="NoteType" id='rbtnPrivate' value='R' checked />Private</label>
+                                             <label style="width: 100px;">
+                                                 <input type="radio" name="NoteType" id='rbtnPublic' value="P" />Public</label>
+                                         </td>
+                                         <td>
+                                             <button type="button" id="btnSaveNotes" style="background-color: rgb(57, 142, 189); height: 27px; width: 60px; border-radius: 10px 10px 10px 10px; font-weight: bold; font-size: 12px; color: white">Save</button>
+                                             <button type="button" id="btnClearNotes" style="background-color: rgb(57, 142, 189); height: 27px; width: 60px; border-radius: 10px 10px 10px 10px; font-weight: bold; font-size: 12px; color: white">Clear</button>
+                                         </td>
+                                     </tr>
+                                 </table>
+                             </div>
+                         </div>
+                         <hr />
+                         <div id="showNotesDiv" style="overflow-x: hidden; height: 211px;">
+                             <table id="tblNotesList" style="width: 100%; border-collapse: collapse;">
+                             </table>
+                         </div>
+                         <div>
+                             <div class="col-md-6" style='float: left; font-size: 12px'>
+                                 <label class='square'></label>
+                                 &nbsp;&nbsp;
+                             &nbsp;<span style="font-size: 12px; margin-left: -11px;">Public Note</span>
+                             </div>
+                             <div class="col-md-6" style="text-align: center; background-color: aliceblue; margin-top: -2px" id="ViewAllNotesDiv">
+                                 <a style="cursor: pointer;">View All Notes</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                  
+                 <div id="SearchPatients">
+                     <div style="border-top: 1px solid #d6d2d2; border-bottom: 1px solid #d6d2d2; padding: 10px 10px 10px 10px;" id="SearchPatDiv">
+                        <div style="float: left; width: 35%;"  class="divButtonPlus"> <%--4/9/19--%>
+                            <div><i class="fa fa-search fa-2x" title="Search patient" id="btnSearchPatient"></i></div>
+                        </div>
+                        <div style="font-size: 14px">
+                            <label>Search patient</label></div>
+                    </div>
+                    <div id="searchPatDialog" style="display:none;height:400px;width:300px">
+                       <div style="border-bottom: 1px solid rgba(0,0,0,.1);border: 1px solid transparent">
+                           <div class='form-group has-feedback'><input type='text' style='height:40px;width:100%;text-indent: 10px' class='form-control' id='txtPatSearchNotAppntd'  placeholder='MRNo,Name,Empcode,Dependent No'/><span class='fa fa-search form-control-feedback spanSearchPatCls'  id="spanSearchPat" title="search patient" ></span></div>
+                       </div>
+                        <label id="lblmsg" style="color:red;margin-left: 38%;font-size:13px;display:none">No Records</label>
+                        <hr />
+                         <div id="showSearchedList" style="overflow: auto;height: 77%;overflow-x:hidden;" > <%--29-11-2019  15:54--%>
+                            <table id="tblPatList" style="width:100%;border-collapse:collapse;">
+                            </table>
+                        </div>                        
+                    </div>
+                </div>
+             
+                  <div id="NotesNShortCuts" style="bottom:0px;position:fixed;z-index:500;width: 15%; "> <%--4/9/19--%>
+                <div id ="divNotes" style="display:none;">
+                   <%-- <table>
+                        <tr>
+                            <td style="padding:5px;text-align:center;font-size:14px"><label style="width:90px;"><input type="radio" name="NoteType" id='rbtnPrivate' value='R' checked/>Personal</label><label style="width:90px;"><input type="radio" name="NoteType" id='rbtnPublic' value="P" />Share</label></td>
+                        </tr>
+                        <tr>
+                            <td style="padding:5px"><textarea id="txtNotes"   cols="30" rows="5" placeholder="Enter Notes" maxlength="500"> </textarea></td>
+                        </tr>
+                        <tr>
+                            <td style="padding:5px;text-align:center"><button type="button" id="btnSaveNotes" style="background-color:rgb(57, 142, 189);height:32px;width:90px;border-radius:10px 10px 10px 10px;font-weight:bold;font-size:12px;color:white">Save Notes</button></td>
+                        </tr>                    
+                    </table>--%>
+                </div>
+               <div id="shortCutMenus" style="display:none;">
+                    <div class="row" style="margin-left:0px">
+                        <div class="col-xs-6 divIcon" style="background: linear-gradient(to left, #d1a603, #f4e2b1);cursor:pointer;" id="ShortCutComplaint"  title="Alt+C" >
+                             <div style="background-color:rgb(239, 245, 249);" class="leftColumn"  >                              
+                                <div style ="background-image:url( ../Images/shortC.png);background-repeat:no-repeat;height:32px;width:32px;background-position:center;" > </div>                              
+                                 
+                            </div>
+                            <div class="shortCutMenuCaptionLeft"><u>C</u>omplaint</div>
+                        </div>
+                          <div class="col-xs-6 divIcon" style="background: linear-gradient(to left, #1badf2, #d4f1fd);cursor:pointer;" id="ShortCutVitals"  title="Alt+V" >
+                              <div class="leftColumn" style="background-color:rgb(239, 245, 249);" >                              
+                                <div style ="background-image:url( ../Images/shortV.png);background-repeat:no-repeat;height:32px;width:32px;background-position:center" > </div>                              
+                                   
+                            </div>
+                              <div class="shortCutMenuCaptionRight"><u>V</u>itals</div>
+                        </div>
+                         
+                    </div>
+                    <div class="row" style="margin-left:0px">
+                        <div class="col-xs-6 divIcon" style="background: linear-gradient(to left, #1badf2, #d4f1fd);cursor:pointer" id="ShortCutDiagnosis" title="Alt+S">
+                             <div style="background-color:rgb(239, 245, 249);" class="leftColumn"   >                              
+                                <div style ="background-image:url( ../Images/shortS.png);background-repeat:no-repeat;height:32px;width:32px;background-position:center;" > </div>                              
+                                 
+                            </div>
+                            <div class="shortCutMenuCaptionLeft">Diagnosi<u>s</u></div>
+                        </div>
+                          <div class="col-xs-6 divIcon" style="background:linear-gradient(to left, #d1a603, #f4e2b1);cursor:pointer" id="ShortCutExamination"  title="Alt+X">
+                              <div class="leftColumn" style="background-color:rgb(239, 245, 249);"  >                              
+                                <div style ="background-image:url( ../Images/shortE.png);background-repeat:no-repeat;height:32px;width:32px;background-position:center" > </div>                              
+                                   
+                            </div>
+                              <div class="shortCutMenuCaptionRight">E<u>x</u>amination</div>
+                        </div>
+                         
+                    </div>
+                  <div class="row" style="margin-left:0px">
+                        <div class="col-xs-6 divIcon" style="background:  linear-gradient(to left, #d1a603, #f4e2b1);cursor:pointer" id="ShortCutInvestigation" title="Alt+I">
+                             <div style="background-color:rgb(239, 245, 249);" class="leftColumn"   >                              
+                                <div style ="background-image:url( ../Images/shortI.png);background-repeat:no-repeat;height:32px;width:32px;background-position:center;" > </div>                              
+                                 
+                            </div>
+                            <div class="shortCutMenuCaptionLeft"><u>I</u>nvestigation</div>
+                        </div>
+                          <div class="col-xs-6 divIcon" style="background: linear-gradient(to left, #1badf2, #d4f1fd);cursor:pointer" id="ShortCutMedicineAdvice" title="Alt+R">
+                              <div class="leftColumn" style="background-color:rgb(239, 245, 249);"   >                              
+                                <div style ="background-image:url( ../Images/shortR.png);background-repeat:no-repeat;height:32px;width:32px;background-position:center" > </div>                              
+                                   
+                            </div>
+                              <div class="shortCutMenuCaptionRight"><u>R</u>x</div>
+                        </div>
+                         
+                    </div>
+                     <div class="row" style="margin-left:0px">
+                        <div class="col-xs-6 divIcon" style="background: linear-gradient(to left, #1badf2, #d4f1fd);cursor:pointer" id="ShortCutPatientAdvice" title="Alt+A">
+                             <div style="background-color:rgb(239, 245, 249);" class="leftColumn"   >                              
+                                <div style ="background-image:url( ../Images/shortPatAdv.png);background-repeat:no-repeat;height:32px;width:32px;background-position:center;" > </div>                              
+                                 
+                            </div>
+                            <div class="shortCutMenuCaptionLeft"><u>A</u>dvice</div>
+                        </div>
+                          <div class="col-xs-6 divIcon" style="background: linear-gradient(to left, #d1a603, #f4e2b1);cursor:pointer" id="ShortCutPrescription" title="Alt+P">
+                              <div class="leftColumn" style="background-color:rgb(239, 245, 249);"   >                              
+                                <div style ="background-image:url( ../Images/shortPre.png);background-repeat:no-repeat;height:32px;width:32px;background-position:center" > </div>                              
+                                   
+                            </div>
+                              <div class="shortCutMenuCaptionRight"><u>P</u>rescription</div>
+                        </div>
+                         
+                    </div>  
+                  
+               </div>
+
+
+                   
+                    <%--<div id="PatAdviceSetUpList" style="display:none;width:100%;border:1px solid black;" >
+                        <div id="tblHead" class="setUpHeading" style="width:100%"><label>Set Up List</label><span style="float: right;margin-right: 4px;"><i class="fa fa-minus"></i></span></div>
+                        <div class="row SetupsDiv" style="display:block;width:100%" >                         
+                            <table id="tblPatAdviceStUps" style="width:100%;border-top:1px solid #29884bd6 !important" ><tbody></tbody></table>
+                        </div>
+                      </div>--%>
+                 </div>
+
+                  <%--Suchita --%>
+                <div id="divAdmSideList" style="display:none;margin-top:2%;">
+                       <div class="col-md-12" id="divAdm" style="border-right: 1px solid;background: #1c78c1;border-radius: 5px 5px 0 0;color: #fbfafa;">
+                          <label class="col-md-12" id="lblheadAdm" style="font-size:14px;">Admission</label>   
+                         <%-- <label class="col-md-6 lbls" id="lblAdmToday">Today's<br /></label>     
+                          <label class="col-md-6 lbls" id="lblAdmTommorow">Tommorow <br /></label>--%>
+                       </div>     
+                     <div id="PatListPanelDiv" style="padding-top:30px;padding-bottom:40px;">
+                  
+                    </div>                 
+                  </div>
+                 
+            </div>
+
+            <div id="DivpatDtls" style="float: right; color: white;">
+                <div style="display: inline-block; margin-right: 10px;">
+                    <i style="font-size: 34px; color: #74f165; padding-top: 4px;" id="btnwhtsup"></i>
+                </div>
+                <div style="display: inline-block; margin-right: 10px;" id="divNotification">
+                    <div id="TumorPanel" style="position: absolute; display: none; cursor: pointer; margin-left: -130px;">
+                        <a class="fa fa-bell fa-2x" style="color: white; text-decoration: none;" title="Tumor Treatment Details">
+                            <span class="fa fa-comment"></span>
+                            <span class="num" id="panTumorCnt"></span>
+                        </a>
+                    </div>
+                    <div id="ReferDrNotesPanel" style="position: absolute; display: none; cursor: pointer; margin-left: -95px;" onclick="$('a#btnShowRefDRNotesInfo').click();" >
+                        <a class="fa fa-book fa-2x" aria-hidden="true" style="color: white; text-decoration: none;" title="Referal Doctor Notes info"></a>
+                    </div>
+
+                    <div id="ReferDrNotesListPanel" style="position: absolute; display: none; cursor: pointer; margin-left: -60px;">
+                        <a class="fa fa-users fa-2x" aria-hidden="true" style="color: white; text-decoration: none;" title="Referal Doctor Notes List">
+                            <span class="fa fa-comment" id="DRRefNoteCountHint"></span>
+                            <span class="num NotesCount" id="DRRefNoteCount"></span>
+                        </a>
+                        <div id="ReferralNotificationPopup" class="PopupNotesNotifi" style="display:none;">New referral note received.</div>
+                    </div>
+
+                    <div id="ReferDrPanel" style="position: absolute; display: block; cursor: pointer; margin-left: -10px;">
+                        <a class="fa fa-user-md fa-2x" style="color: white; text-decoration: none;" title="Outside Referal Doctor info"></a>
+                    </div>
+
+                    <div id="historyPanel" style="position: relative; display: none; cursor: pointer; margin-left: 20px;">
+                        <a class="fa fa-history fa-2x" style="color: white; text-decoration: none;" title="Patient History">
+                            <span class="fa fa-comment"></span>
+                            <span class="num" id="panHisCnt"></span>
+                        </a>
+                    </div>
+
+                    <div id="PatHistory" style="display: inline-block; cursor: pointer; margin-left: 20px;">
+                        <a class="fa fa-user-plus fa-2x" style="color: white; text-decoration: none;" title="Visit/Admission History"></a>
+                    </div>
+
+                    <div id="PatInfo" style="display: inline-block; cursor: pointer; margin-left: 20px;">
+                        <a class="fa fa-info-circle fa-2x" style="color: white; text-decoration: none;" title="Show Patient Info"></a>
+                    </div>
+
+                    <div style="position: relative; float: right; display: none">
+                        <% Html.RenderPartial("PatientHistoryUserControl", null);%>
+                    </div>
+                </div>
+                <div style="display: inline-block; margin-right: 60px;" id="divpatcompinfo">
+                    <h5 id="P_Name" style="font-weight: 600; line-height: 0.5; padding-right: 2px; height: 6px;color:white" class="PatName"></h5>
+                    <!--id by kavita-->
+                    <h6 style="line-height: 0.3; font-size: 12px; color: #bdfbbd;" id="subPatInfo">
+                        <label id="lblGender" style="line-height: 0.5; font-size: 11px;"></label>
+                        <label id="lblAge" style="line-height: 0.5; font-size: 11px;"></label>
+                    </h6>
+                    <span id="compnmspan" style="display:none;margin-top: -5px;">
+                        <label id="CompanyNM" style="font-weight: 600; line-height: 0.5; padding-right: 2px; height: 6px;" class="PatName"></label>
+                    </span>
+                </div>
+                <div id="PatImgDiv" style="display:none;">
+                    <img id="Patimage" style="height: 50px;width: 50px;margin-top: -35px;border:2px solid #e7e6e6;"/>
+                </div>
+            </div>
+        </header>
+        <div id="tblHistDiv" style="z-index:1031;height:450px;overflow:auto;display:none;box-shadow: rgb(171, 165, 165) -1px 3px 8px;background-color: rgb(247, 252, 255);
+             position:fixed;font-size: 12px; padding: 10px;">
+         </div>
+         <div id="tblTumorDiv" style="z-index:1031;height:400px;overflow:auto;display:none;box-shadow: rgb(171, 165, 165) -1px 3px 8px;background-color: rgb(247, 252, 255);
+             position:fixed;font-size: 12px; padding: 10px;margin-top:52px">
+         </div>
+
+          <div id="tblRefDoctor" style="z-index:1032;height:100px;width:159px;overflow:auto;display:none;box-shadow: rgb(171, 165, 165) -1px 3px 8px;
+                background-color: rgb(247, 252, 255);
+             position:absolute;font-size: 12px; padding: 10px;margin-left: 61.8%;top: 4%;">
+         </div>
+       
+        <!-- Content Wrapper. Contains page content -->
+        <div id="secCont" class="content-wrapper">
+            <div class="row">
+                <div class="modal fade" id="mdAddChangePassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document" style="width: 30%">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myCompModalLabel">Change Password</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="list-group">
+                                    <div class="list-group-item">
+                                        <input type="text" id="txtUid" class="form-control input-sm" placeholder="User ID" />
+                                    </div>
+                                    <div class="list-group-item">
+                                        <input type="password" id="txtOPwd" class="form-control input-sm" placeholder="Current Password" />
+                                    </div>
+                                    <div class="list-group-item">
+                                        <input type="password" id="txtNPwd" class="form-control input-sm" placeholder="New Password" />
+                                    </div>
+                                    <div class="list-group-item">
+                                        <input type="password" id="txtConfirmPwd" class="form-control input-sm" placeholder="Confirm Password" />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="btnClosePass" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                                <button type="button" id="btnPass" class="btn btn-primary btn-sm">Save </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Header (Page header) -->
+            <asp:ContentPlaceHolder runat="server" ID="Head">
+            </asp:ContentPlaceHolder>
+
+
+            <!-- Main content -->
+            <section class="content" style="width:100%;position: relative;"> <%--4/10/19--%>
+
+                <asp:ContentPlaceHolder runat="server" ID="MainContent">
+                </asp:ContentPlaceHolder>
+
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+        </aside>
+        <div id="iframe" style="display: none; width: 100%; height: 100%;"></div>
+        <div class="control-sidebar-bg"></div>
+
+    </div>
+
+    <div id="divPatientInfo" style="display:none;" >
+        <a href="#divPatientInfo" id="btnShowPatInfo"></a>
+          <div style="position: relative; overflow: hidden;" id="divPatInfo">
+            <% Html.RenderPartial("PatientInfoControl", new OncologyEMR.Models.UserControlModel { }); %>
+        </div>
+         <fieldset>
+    </fieldset>
+    </div>
+
+    <%-- Added by Dhananjay 20250524 --%>
+    <div id="divPlanningInfo" style="display: none;">
+        <a href="#divPlanningInfo" id="btnPlanning"></a>
+        <style>
+                #divPlanningInfo {
+                    width: 100%;
+                    height: 100%;
+                    overflow-y: auto;
+                    padding: 10px;
+                    box-sizing: border-box;
+                }
+
+                .panel-heading {
+                    background: #24417c;
+                    color: white;
+                    padding: 8px 12px;
+                    border-radius: 7px 7px 0 0;
+                }
+
+                /* Responsive typography */
+                .panel-heading h3 {
+                    margin: 0;
+                    font-size: 1.3em;
+                }
+        </style>
+        <div class="panel-heading">
+            <h3 class="panel-title">Planning</h3>
+        </div>
+        <div style="position: relative; overflow: hidden;" id="divPlanning">
+            <% 
+                //var planningModel = new OncologyEMR.Models.Planning();
+                //planningModel.FillCombo();
+                //Html.RenderPartial("PlanningView", new OncologyEMR.Models.Planning { Model.FillCombo() }); 
+                //Html.RenderPartial("PlanningView", planningModel);
+            %>
+        </div>
+    </div>
+
+    <div id="divShowRefDRNotesInfo" style="display: none;">
+        <a href="#DivDoctReferralInfo" id="btnShowRefDRNotesInfo"></a>
+        <div id="DivDoctReferralInfo" style="width: 300px">
+            <div class="panel" style="margin-bottom: 10px; background-color: #f9f9f9; border-radius: 4px; -webkit-box-shadow: -1px 2px 2px #d0d0d0;">
+                <div style="background: #3e6eaa; font-weight: 600; color: white; padding: 5px; font-size: 14px; border-bottom: 1px solid transparent;">Notes Info</div>
+                <div id="DivNotesContent" style="font-size: 12px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="divPrevHistory" style="display: none;">
+        <a href="#DivPrevHistory" id="btnPrevHistoryInfo"></a>
+        <div id="DivPrevHistory" style="min-width: 50vw;max-width:90vw;min-height:50vh;max-height:90vh">
+            <div class="panel" style="margin-bottom: 10px; background-color: #f9f9f9; border-radius: 4px; -webkit-box-shadow: -1px 2px 2px #d0d0d0;">
+                <div style="background: #3e6eaa; font-weight: 600; color: white; padding: 5px; font-size: 14px; border-bottom: 1px solid transparent;">History Info</div>
+                <div id="DivPrevHistContent" style="font-size: 12px;"></div>
+                <div id="CopyMesageDiv" style="position: sticky; top: 0;z-index: 9999;padding: 5px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="divCalenderInfo" style="display: none;">
+        <a href="#divCalenderInfo" id="btnCalender"></a>    
+    </div>
+
+    <div id="DivOverlay" style="display: none;">
+        <div id="DivAlertSave" class="MainDivAlertSave" style="display:none">
+            <div id="DivHeaderAlert" class="MainDivHeaderAlert">
+                <label id="AlertHeadLbl" class="MainAlertHeadLbl">Confirmation</label>
+                <i class="fa fa-times-circle MainAlertCloseIcon" aria-hidden="true" id="AlertCloseIcon" onclick="OpenCloseAlert('C','DivAlertSave')"></i>
+            </div>
+            <div id="DivContentAlert" class="MainDivContentAlert">
+                <div class="table-responsive">
+                    <table class="fancy-table"  id="TblSummary">
+                        <thead>
+                            <tr>
+                                <th>MRNO</th>
+                                <th>Patient Name</th>
+                                <th>Surgery</th>
+                                <th>Prev. Advice Date</th>
+                                <th>Advice Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="TblSummarybody"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="DivFooterAlert" class="MainDivFooterAlert">
+                <input type="button" onclick="SaveCalenderData()" class="" style="width: 100px; font-size: 13px; text-align: center; display: block; cursor: pointer; color: white !important; background-color: #008bce; border-radius: 5px; background-position-x: 6px; border: 1px; border-radius: 5px; background-position-y: 2px; padding-top: 3px; padding-bottom: 3px;" id="btnSaveCalender" value="Save">
+            </div>
+        </div>
+        <div id="DivPerformStat" class="MainDivAlertSave" style="display:none">
+            <div id="DivHeaderPerformStat" class="MainDivHeaderAlert">
+                <label id="PerformStatHeadLbl" class="MainAlertHeadLbl">Performance Status Info</label>
+                <i class="fa fa-times-circle MainAlertCloseIcon" aria-hidden="true" id="PerformStatCloseIcon" onclick="OpenCloseAlert('C','DivPerformStat')"></i>
+            </div>
+            <div id="DivContentPrfStatus" class="MainDivContentAlert">
+              <img src="../Images/PerformanceStatus.png" />
+            </div>
+        </div>
+    </div>
+
+    <div id="iframeMain" style="display: none;">
+        <div id="iframeHeader">
+            <label id="PACHistFrameLbl"></label>
+            <div class="iframe-controls">
+                <i class="fa fa-minus-circle IFrameIcon" onclick="minimizeIframe()" aria-hidden="true"></i>
+                <i class="fa fa-times-circle IFrameIcon" onclick="closeIframe()" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div id="iframeContainer" style="height: 100%;">
+        </div>
+    </div>
+
+<%--    added By Roshan For TumorBoard --%>
+      <div id="divTumorBoardCalenderInfo" style="display: none;">
+        <a href="#divTumorBoardCalenderInfo" id="btnTumorCalender"></a>    
+    </div>
+
+    <div id="GlobalCopyToast" style="display:none;position:fixed;bottom: 20px;right: 46VW;background:#28a745;color:white;padding:10px 15px;border-radius:4px;font-weight:600;z-index:999999;"></div>
+</body>
+</html>

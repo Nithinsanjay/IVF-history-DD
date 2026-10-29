@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="719703a0-4885-45b9-a77a-ea0307ed8c1a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://uat.himstccf.org:83/WebemrService/ICU.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ICU.xsd" MetadataType="Schema" ID="9d1a8ca9-18aa-4ceb-9f00-171127d86b62" SourceId="1" SourceUrl="http://uat.himstccf.org:83/WebEMRService/ICU.svc?xsd=xsd4" />
+    <MetadataFile FileName="ICU.wsdl" MetadataType="Wsdl" ID="9b2a66b8-a93f-409a-aca3-5696b6aa7e05" SourceId="1" SourceUrl="http://uat.himstccf.org:83/WebEMRService/ICU.svc?wsdl" />
+    <MetadataFile FileName="ICU1.xsd" MetadataType="Schema" ID="b05f883e-b288-41dd-9a1f-951e9de34f0a" SourceId="1" SourceUrl="http://uat.himstccf.org:83/WebEMRService/ICU.svc?xsd=xsd0" />
+    <MetadataFile FileName="ICU2.xsd" MetadataType="Schema" ID="ba627f26-1562-428b-a5ce-a4270fad1df7" SourceId="1" SourceUrl="http://uat.himstccf.org:83/WebEMRService/ICU.svc?xsd=xsd1" />
+    <MetadataFile FileName="ICU3.xsd" MetadataType="Schema" ID="ed2ce8ef-2f92-4560-bffa-c47af050f8a3" SourceId="1" SourceUrl="http://uat.himstccf.org:83/WebEMRService/ICU.svc?xsd=xsd2" />
+    <MetadataFile FileName="ICU4.xsd" MetadataType="Schema" ID="bac7c219-d140-496c-99bf-6c345488dddf" SourceId="1" SourceUrl="http://uat.himstccf.org:83/WebEMRService/ICU.svc?xsd=xsd3" />
+    <MetadataFile FileName="ICU.disco" MetadataType="Disco" ID="50b23925-d052-438a-a9af-3f50cb3d24cb" SourceId="1" SourceUrl="http://uat.himstccf.org:83/WebEMRService/ICU.svc?disco" />
+    <MetadataFile FileName="ICU5.xsd" MetadataType="Schema" ID="ca68406e-48cb-4907-9384-0238158a6b7f" SourceId="1" SourceUrl="http://uat.himstccf.org:83/WebEMRService/ICU.svc?xsd=xsd5" />
+    <MetadataFile FileName="ICU6.xsd" MetadataType="Schema" ID="ef005d63-26d8-465e-bd3d-8ffb20b89200" SourceId="1" SourceUrl="http://uat.himstccf.org:83/WebEMRService/ICU.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

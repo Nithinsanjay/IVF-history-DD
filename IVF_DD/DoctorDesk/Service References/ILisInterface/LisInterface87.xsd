@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.SafeTran" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.SafeTran" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Bl_SafeTransIntegration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CnxnString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HospUnitCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hospname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipnoorexno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Issretby" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patbldgrp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pattype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Requestno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STTRANNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Takenby" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranMode" type="xs:int" />
+      <xs:element minOccurs="0" name="TranNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tranyear" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isstype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlIssdet" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bl_SafeTransIntegration" nillable="true" type="tns:Bl_SafeTransIntegration" />
+</xs:schema>

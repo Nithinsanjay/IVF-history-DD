@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="LisInterface" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.1.3/WebLisInterFace/LisInterface.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebLisInterFace/LisInterface.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebLisInterFace/LisInterface.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebLisInterFace/LisInterface.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Pos_Integration" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebLisInterFace/LisInterface.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.FSH_Integration" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebLisInterFace/LisInterface.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.CIMS" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebLisInterFace/LisInterface.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.SafeTran" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebLisInterFace/LisInterface.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/BL_Logic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILisInterface_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_SetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetData" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_SetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetPrnData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrnData" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetPrnData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrnDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_FetchVisit_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchVisit" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_FetchVisit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchVisitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_MergeVistSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:MergeVistSession" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_MergeVistSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MergeVistSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getMemberDetialswithPool_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMemberDetialswithPool" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getMemberDetialswithPool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMemberDetialswithPoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getPoollst_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPoollst" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getPoollst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPoollstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_UploadClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadClaim" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_UploadClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_closeclaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:closeclaim" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_closeclaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:closeclaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_ReactivateSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReactivateSession" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_ReactivateSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReactivateSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_SetPoolNumberAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPoolNumberAmount" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_SetPoolNumberAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPoolNumberAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getListofAddedCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListofAddedCompany" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getListofAddedCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListofAddedCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getandSetVisitnumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:getandSetVisitnumber" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getandSetVisitnumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getandSetVisitnumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_setotherCompanyData_InputMessage">
+    <wsdl:part name="parameters" element="tns:setotherCompanyData" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_setotherCompanyData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setotherCompanyDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_PatientAuthorization_InputMessage">
+    <wsdl:part name="parameters" element="tns:PatientAuthorization" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_PatientAuthorization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PatientAuthorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_ClaimUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClaimUpload" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_ClaimUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClaimUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetUnitLST_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitLST" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetUnitLST_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitLSTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetUnitStoreLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitStoreLst" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetUnitStoreLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitStoreLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getUnitTransferLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUnitTransferLst" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getUnitTransferLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUnitTransferLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_SaveAckStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAckStatus" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_SaveAckStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAckStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_InitateTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitateTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_InitateTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitateTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetPosMachLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPosMachLst" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetPosMachLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPosMachLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetPosMachPaymodeLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPosMachPaymodeLst" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetPosMachPaymodeLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPosMachPaymodeLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_UpdatePaymentResponseMosombee_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentResponseMosombee" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_UpdatePaymentResponseMosombee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentResponseMosombeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetPosPaymentResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPosPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetPosPaymentResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPosPaymentResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_CancelTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_CancelTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetSalt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalt" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetSalt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaltResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetFSHOrderData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFSHOrderData" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetFSHOrderData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFSHOrderDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_SetFSHResutl_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetFSHResutl" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_SetFSHResutl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetFSHResutlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getDrugInformationHtml_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDrugInformationHtml" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getDrugInformationHtml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDrugInformationHtmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getDrug2DrugInteration_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDrug2DrugInteration" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getDrug2DrugInteration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDrug2DrugInterationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetDrugDuplicate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrugDuplicate" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetDrugDuplicate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrugDuplicateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetDrugHealth_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrugHealth" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetDrugHealth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrugHealthResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetDrugPregnacy_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrugPregnacy" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_GetDrugPregnacy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrugPregnacyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getDrugLactaion_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDrugLactaion" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getDrugLactaion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDrugLactaionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getPatientInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPatientInfo" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getPatientInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPatientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getServicebyCompName_InputMessage">
+    <wsdl:part name="parameters" element="tns:getServicebyCompName" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getServicebyCompName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getServicebyCompNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getBBGroupCdbyName_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBBGroupCdbyName" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_getBBGroupCdbyName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBBGroupCdbyNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_BBIssueTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:BBIssueTran" />
+  </wsdl:message>
+  <wsdl:message name="ILisInterface_BBIssueTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BBIssueTranResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILisInterface">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/GetData" message="tns:ILisInterface_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/GetDataResponse" message="tns:ILisInterface_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/SetData" message="tns:ILisInterface_SetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/SetDataResponse" message="tns:ILisInterface_SetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrnData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/GetPrnData" message="tns:ILisInterface_GetPrnData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/GetPrnDataResponse" message="tns:ILisInterface_GetPrnData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchVisit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/FetchVisit" message="tns:ILisInterface_FetchVisit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/FetchVisitResponse" message="tns:ILisInterface_FetchVisit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MergeVistSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/MergeVistSession" message="tns:ILisInterface_MergeVistSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/MergeVistSessionResponse" message="tns:ILisInterface_MergeVistSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMemberDetialswithPool">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/getMemberDetialswithPool" message="tns:ILisInterface_getMemberDetialswithPool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/getMemberDetialswithPoolResponse" message="tns:ILisInterface_getMemberDetialswithPool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPoollst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/getPoollst" message="tns:ILisInterface_getPoollst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/getPoollstResponse" message="tns:ILisInterface_getPoollst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/UploadClaim" message="tns:ILisInterface_UploadClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/UploadClaimResponse" message="tns:ILisInterface_UploadClaim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="closeclaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/closeclaim" message="tns:ILisInterface_closeclaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/closeclaimResponse" message="tns:ILisInterface_closeclaim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReactivateSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/ReactivateSession" message="tns:ILisInterface_ReactivateSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/ReactivateSessionResponse" message="tns:ILisInterface_ReactivateSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPoolNumberAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/SetPoolNumberAmount" message="tns:ILisInterface_SetPoolNumberAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/SetPoolNumberAmountResponse" message="tns:ILisInterface_SetPoolNumberAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListofAddedCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/getListofAddedCompany" message="tns:ILisInterface_getListofAddedCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/getListofAddedCompanyResponse" message="tns:ILisInterface_getListofAddedCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getandSetVisitnumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/getandSetVisitnumber" message="tns:ILisInterface_getandSetVisitnumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/getandSetVisitnumberResponse" message="tns:ILisInterface_getandSetVisitnumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setotherCompanyData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/setotherCompanyData" message="tns:ILisInterface_setotherCompanyData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/setotherCompanyDataResponse" message="tns:ILisInterface_setotherCompanyData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PatientAuthorization">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/PatientAuthorization" message="tns:ILisInterface_PatientAuthorization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/PatientAuthorizationResponse" message="tns:ILisInterface_PatientAuthorization_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClaimUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/ClaimUpload" message="tns:ILisInterface_ClaimUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/ClaimUploadResponse" message="tns:ILisInterface_ClaimUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitLST">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/GetUnitLST" message="tns:ILisInterface_GetUnitLST_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/GetUnitLSTResponse" message="tns:ILisInterface_GetUnitLST_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitStoreLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/GetUnitStoreLst" message="tns:ILisInterface_GetUnitStoreLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/GetUnitStoreLstResponse" message="tns:ILisInterface_GetUnitStoreLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUnitTransferLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/getUnitTransferLst" message="tns:ILisInterface_getUnitTransferLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/getUnitTransferLstResponse" message="tns:ILisInterface_getUnitTransferLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAckStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/SaveAckStatus" message="tns:ILisInterface_SaveAckStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/SaveAckStatusResponse" message="tns:ILisInterface_SaveAckStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InitateTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/InitateTransaction" message="tns:ILisInterface_InitateTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/InitateTransactionResponse" message="tns:ILisInterface_InitateTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPosMachLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/GetPosMachLst" message="tns:ILisInterface_GetPosMachLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/GetPosMachLstResponse" message="tns:ILisInterface_GetPosMachLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPosMachPaymodeLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/GetPosMachPaymodeLst" message="tns:ILisInterface_GetPosMachPaymodeLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/GetPosMachPaymodeLstResponse" message="tns:ILisInterface_GetPosMachPaymodeLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentResponseMosombee">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/UpdatePaymentResponseMosombee" message="tns:ILisInterface_UpdatePaymentResponseMosombee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/UpdatePaymentResponseMosombeeResponse" message="tns:ILisInterface_UpdatePaymentResponseMosombee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPosPaymentResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/GetPosPaymentResponse" message="tns:ILisInterface_GetPosPaymentResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/GetPosPaymentResponseResponse" message="tns:ILisInterface_GetPosPaymentResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/CancelTransaction" message="tns:ILisInterface_CancelTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/CancelTransactionResponse" message="tns:ILisInterface_CancelTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/GetSalt" message="tns:ILisInterface_GetSalt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/GetSaltResponse" message="tns:ILisInterface_GetSalt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFSHOrderData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/GetFSHOrderData" message="tns:ILisInterface_GetFSHOrderData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/GetFSHOrderDataResponse" message="tns:ILisInterface_GetFSHOrderData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFSHResutl">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/SetFSHResutl" message="tns:ILisInterface_SetFSHResutl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/SetFSHResutlResponse" message="tns:ILisInterface_SetFSHResutl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDrugInformationHtml">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/getDrugInformationHtml" message="tns:ILisInterface_getDrugInformationHtml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/getDrugInformationHtmlResponse" message="tns:ILisInterface_getDrugInformationHtml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDrug2DrugInteration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/getDrug2DrugInteration" message="tns:ILisInterface_getDrug2DrugInteration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/getDrug2DrugInterationResponse" message="tns:ILisInterface_getDrug2DrugInteration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugDuplicate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/GetDrugDuplicate" message="tns:ILisInterface_GetDrugDuplicate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/GetDrugDuplicateResponse" message="tns:ILisInterface_GetDrugDuplicate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugHealth">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/GetDrugHealth" message="tns:ILisInterface_GetDrugHealth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/GetDrugHealthResponse" message="tns:ILisInterface_GetDrugHealth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugPregnacy">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/GetDrugPregnacy" message="tns:ILisInterface_GetDrugPregnacy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/GetDrugPregnacyResponse" message="tns:ILisInterface_GetDrugPregnacy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDrugLactaion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/getDrugLactaion" message="tns:ILisInterface_getDrugLactaion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/getDrugLactaionResponse" message="tns:ILisInterface_getDrugLactaion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPatientInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/getPatientInfo" message="tns:ILisInterface_getPatientInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/getPatientInfoResponse" message="tns:ILisInterface_getPatientInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getServicebyCompName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/getServicebyCompName" message="tns:ILisInterface_getServicebyCompName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/getServicebyCompNameResponse" message="tns:ILisInterface_getServicebyCompName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBBGroupCdbyName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/getBBGroupCdbyName" message="tns:ILisInterface_getBBGroupCdbyName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/getBBGroupCdbyNameResponse" message="tns:ILisInterface_getBBGroupCdbyName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BBIssueTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILisInterface/BBIssueTran" message="tns:ILisInterface_BBIssueTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILisInterface/BBIssueTranResponse" message="tns:ILisInterface_BBIssueTran_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILisInterface" type="tns:ILisInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/SetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrnData">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/GetPrnData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchVisit">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/FetchVisit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MergeVistSession">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/MergeVistSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberDetialswithPool">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/getMemberDetialswithPool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPoollst">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/getPoollst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadClaim">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/UploadClaim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="closeclaim">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/closeclaim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReactivateSession">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/ReactivateSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPoolNumberAmount">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/SetPoolNumberAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListofAddedCompany">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/getListofAddedCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getandSetVisitnumber">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/getandSetVisitnumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setotherCompanyData">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/setotherCompanyData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatientAuthorization">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/PatientAuthorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClaimUpload">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/ClaimUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitLST">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/GetUnitLST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitStoreLst">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/GetUnitStoreLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUnitTransferLst">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/getUnitTransferLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAckStatus">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/SaveAckStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitateTransaction">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/InitateTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPosMachLst">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/GetPosMachLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPosMachPaymodeLst">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/GetPosMachPaymodeLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentResponseMosombee">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/UpdatePaymentResponseMosombee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPosPaymentResponse">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/GetPosPaymentResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelTransaction">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/CancelTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalt">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/GetSalt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFSHOrderData">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/GetFSHOrderData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFSHResutl">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/SetFSHResutl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDrugInformationHtml">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/getDrugInformationHtml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDrug2DrugInteration">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/getDrug2DrugInteration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugDuplicate">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/GetDrugDuplicate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugHealth">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/GetDrugHealth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugPregnacy">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/GetDrugPregnacy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDrugLactaion">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/getDrugLactaion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPatientInfo">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/getPatientInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServicebyCompName">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/getServicebyCompName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBBGroupCdbyName">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/getBBGroupCdbyName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BBIssueTran">
+      <soap:operation soapAction="http://tempuri.org/ILisInterface/BBIssueTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LisInterface">
+    <wsdl:port name="BasicHttpBinding_ILisInterface" binding="tns:BasicHttpBinding_ILisInterface">
+      <soap:address location="http://192.168.1.3/WebLisInterFace/LisInterface.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

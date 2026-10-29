@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.SelectionList" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.SelectionList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfICUSugesText">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ICUSugesText" nillable="true" type="tns:ICUSugesText" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfICUSugesText" nillable="true" type="tns:ArrayOfICUSugesText" />
+  <xs:complexType name="ICUSugesText">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SUGTYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ICUSugesText" nillable="true" type="tns:ICUSugesText" />
+  <xs:complexType name="ArrayOfICUNPPlanning">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ICUNPPlanning" nillable="true" type="tns:ICUNPPlanning" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfICUNPPlanning" nillable="true" type="tns:ArrayOfICUNPPlanning" />
+  <xs:complexType name="ICUNPPlanning">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProbCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ICUNPPlanning" nillable="true" type="tns:ICUNPPlanning" />
+  <xs:complexType name="ArrayOfICUNPAssesment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ICUNPAssesment" nillable="true" type="tns:ICUNPAssesment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfICUNPAssesment" nillable="true" type="tns:ArrayOfICUNPAssesment" />
+  <xs:complexType name="ICUNPAssesment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProbCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ICUNPAssesment" nillable="true" type="tns:ICUNPAssesment" />
+  <xs:complexType name="ArrayOfICUNPExpectOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ICUNPExpectOut" nillable="true" type="tns:ICUNPExpectOut" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfICUNPExpectOut" nillable="true" type="tns:ArrayOfICUNPExpectOut" />
+  <xs:complexType name="ICUNPExpectOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProbCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ICUNPExpectOut" nillable="true" type="tns:ICUNPExpectOut" />
+  <xs:complexType name="ArrayOfICUCritiStepItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ICUCritiStepItem" nillable="true" type="tns:ICUCritiStepItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfICUCritiStepItem" nillable="true" type="tns:ArrayOfICUCritiStepItem" />
+  <xs:complexType name="ICUCritiStepItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ICUCritiStepItem" nillable="true" type="tns:ICUCritiStepItem" />
+  <xs:complexType name="ArrayOfICULineAndTube">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ICULineAndTube" nillable="true" type="tns:ICULineAndTube" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfICULineAndTube" nillable="true" type="tns:ArrayOfICULineAndTube" />
+  <xs:complexType name="ICULineAndTube">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Indicator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ICULineAndTube" nillable="true" type="tns:ICULineAndTube" />
+</xs:schema>

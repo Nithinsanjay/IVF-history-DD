@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.Outpatient" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.Outpatient" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="BL_CommonProp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CntrCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EditYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExcelYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FundSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrintYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rights" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShowYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranMode" type="xs:int" />
+      <xs:element minOccurs="0" name="TranNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranPrintYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cancelYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="verifyYn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_CommonProp" nillable="true" type="tns:BL_CommonProp" />
+</xs:schema>

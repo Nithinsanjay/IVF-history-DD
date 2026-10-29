@@ -1,0 +1,2320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/BL_Logic" />
+  <xs:element name="GetICDODiagnosisList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strICDODiagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetICDODiagnosisListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetICDODiagnosisListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSurgeryHistoryTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="b" nillable="true" type="q1:BL_SurgeryHistory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSurgeryHistoryTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveSurgeryHistoryTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSugeryHistoryDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSugeryHistoryDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSugeryHistoryDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrevProtocolList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMrNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrevProtocolListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPrevProtocolListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrevClinicalNotes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMrNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrevClinicalNotesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPrevClinicalNotesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatDiagVitalHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatDiagVitalHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPatDiagVitalHistoryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreqGeneric">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreqGenericResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFreqGenericResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGenericList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strGenericName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGenericListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetGenericListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrevRTList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMrNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrevRTListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPrevRTListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPACList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFromDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIPNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPACTranno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPACListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPACListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiagnosisChangeHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiagnosisChangeHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDiagnosisChangeHistoryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRTHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRTHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRTHistoryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRefNotesNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctorcode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRefNotesNotificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRefNotesNotificationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRefNotesAgainstPatient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctorcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TranNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRefNotesAgainstPatientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRefNotesAgainstPatientResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOutsideInvestigation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TranNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strXMLString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOutsideInvestigationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveOutsideInvestigationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutsideInvestigationResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOutsideInvestigationResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOutsideInvestigationResultResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemeStatusReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFromDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDoctorCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPreAuthStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchemeStatusReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSchemeStatusReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkPatientProgress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConsNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="markStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkPatientProgressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MarkPatientProgressResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPPatinetListForDoctor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sDoctorCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sCaseTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sAllPatYN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPPatinetListForDoctorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIPPatinetListForDoctorResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurgeryAdvicedList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurgeryAdvicedListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSurgeryAdvicedListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClinicByDoctorWithClinicType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctorCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClinicByDoctorWithClinicTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetClinicByDoctorWithClinicTypeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvestigationAdviceOrderStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sFromDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sToDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sDoctorCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvestigationAdviceOrderStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInvestigationAdviceOrderStatusResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFormRouteLink">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFormRouteLinkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFormRouteLinkResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctorRefList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctorRefListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDoctorRefListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPACLogHistoryList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strPACTranno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPACLogHistoryListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPACLogHistoryListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOncologyTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="clOncology" nillable="true" type="q2:BL_Oncology" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOncologyTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveOncologyTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTranData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTranDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTranDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPatName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMobileNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDoctorCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFromDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strClinicCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPatientDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatHist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strConsNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatHistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPatHistResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMainComplaintList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMainComplaintListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BL_Logic" minOccurs="0" name="GetMainComplaintListResult" nillable="true" type="q3:ArrayOfBL_GeneralFunctions.SelectLstThreeItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubComplaintList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubComplaintListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BL_Logic" minOccurs="0" name="GetSubComplaintListResult" nillable="true" type="q4:ArrayOfBL_GeneralFunctions.SelectLstThreeItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BL_Logic" minOccurs="0" name="GetTestResult" nillable="true" type="q5:ArrayOfBL_GeneralFunctions.SelectLstItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreqTest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTranno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreqTestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFreqTestResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMainComplaint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CLINICCODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TRANMODE" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMainComplaintResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveMainComplaintResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSubComplaint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GROUPCODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TRANMODE" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSubComplaintResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveSubComplaintResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDrugList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDrugName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDrugListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDrugListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatNote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strNotes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDoctName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strNoteType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strNoteCode" type="xs:int" />
+        <xs:element minOccurs="0" name="strTranMode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTagYN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePatNoteResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestResultData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFrmResultDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToRestDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strInvestCD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTestCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestResultDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTestResultDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDoctorDesk">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="clOncology" nillable="true" type="q6:BL_Oncology" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDoctorDeskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveDoctorDeskResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvestigations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTestcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFromDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvestigationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInvestigationsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDiagnosisAddItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CLINICCODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TRANMODE" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDiagnosisAddItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveDiagnosisAddItemResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiagnosisList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiagnosisListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BL_Logic" minOccurs="0" name="GetDiagnosisListResult" nillable="true" type="q7:ArrayOfBL_GeneralFunctions.SelectLstThreeItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctDesk">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TranNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctDeskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDoctDeskResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctDeskMedicine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TranNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DrugCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctDeskMedicineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDoctDeskMedicineResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreqMtrls">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreqMtrlsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFreqMtrlsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientConsList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMrNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientConsListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPatientConsListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMtrlIntake">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMtrlIntakeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMtrlIntakeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveIntakeAddItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intake" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tranMode" type="xs:int" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="unitCount" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveIntakeAddItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveIntakeAddItemResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatAdviceAddItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CLINICCODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TRANMODE" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatAdviceAddItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePatAdviceAddItemResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatAdviceList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strClinicCD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatAdviceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/BL_Logic" minOccurs="0" name="GetPatAdviceListResult" nillable="true" type="q8:ArrayOfBL_GeneralFunctions.SelectLstThreeItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClinicByDoctor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctorCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClinicByDoctorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="GetClinicByDoctorResult" nillable="true" type="q9:ArrayOfSelectLstItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChkLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPwd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChkLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChkLoginResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strUSerID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strNewPwd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChangePasswordResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLoginFormRights">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="struserid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLoginFormRightsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getLoginFormRightsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctLst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSearchString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctLstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="GetDoctLstResult" nillable="true" type="q10:ArrayOfDoctorSelLstItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRemarksAddItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CLINICCODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TRANMODE" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRemarksAddItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveRemarksAddItemResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRemarksList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRemarksListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/BL_Logic" minOccurs="0" name="GetRemarksListResult" nillable="true" type="q11:ArrayOfBL_GeneralFunctions.SelectLstThreeItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddictionList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddictionListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/BL_Logic" minOccurs="0" name="GetAddictionListResult" nillable="true" type="q12:ArrayOfBL_GeneralFunctions.SelectLstThreeItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiseaseList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiseaseListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/BL_Logic" minOccurs="0" name="GetDiseaseListResult" nillable="true" type="q13:ArrayOfBL_GeneralFunctions.SelectLstThreeItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAddiction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CLINICCODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TRANMODE" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAddictionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveAddictionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDisease">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CLINICCODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TRANMODE" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDiseaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveDiseaseResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchedTest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTestName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSrvType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTranno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchedTestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMatchedTestResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetICDDiagnosisList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strICDDiagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetICDDiagnosisListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetICDDiagnosisListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetICDDiagnFreqList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strClinicCD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetICDDiagnFreqListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetICDDiagnFreqListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPIN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strUSerID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strNewPIN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPINResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetPINResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChkPIN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPIN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChkPINResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChkPINResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SurgCostEstimationTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="s" nillable="true" type="q14:BL_SurgCostEstimation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SurgCostEstimationTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="SurgCostEstimationTranResult" nillable="true" type="q15:ArrayOfBL_TransactionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SurgList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SurgListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="SurgListResult" nillable="true" type="q16:ArrayOfSurgListItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurgCostEstiDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSurgCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strGIPSACode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurgCostEstiDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSurgCostEstiDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurgCostEstiCosts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strServList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBedCatgList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTariff" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTranYear" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurgCostEstiCostsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSurgCostEstiCostsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedCatgList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedCatgListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="GetBedCatgListResult" nillable="true" type="q17:ArrayOfSelectLstItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="GetServiceListResult" nillable="true" type="q18:ArrayOfSelectLstItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGIPSAList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGIPSAListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="GetGIPSAListResult" nillable="true" type="q19:ArrayOfSelectLstItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTranYrOFCrdComp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strCrdCmpCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTranYrOFCrdCompResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTranYrOFCrdCompResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurgeryList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurgeryListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="GetSurgeryListResult" nillable="true" type="q20:ArrayOfSurgListItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMasters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strClinicCD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMastersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMastersResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMasters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strXmlData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMastersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveMastersResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMastersNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CLINICCODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHindi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMarathi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strGujrati" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strField3Val" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMastersNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveMastersNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClinicLst">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClinicLstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="GetClinicLstResult" nillable="true" type="q21:ArrayOfSelectLstItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMainComplaintFreqList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strClinicCD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMainComplaintFreqListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMainComplaintFreqListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersDiseaseList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCIMYN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersDiseaseListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPersDiseaseListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDoctDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecialistnList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecialistnListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="GetSpecialistnListResult" nillable="true" type="q22:ArrayOfSelectLstItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersInvestigations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersInvestigationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPersInvestigationsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvestResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvestResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInvestResultResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVitalsData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMrnoNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVitalsDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetVitalsDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetComplaintByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strComplaint" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strClinicCD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetComplaintByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetComplaintByNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdviceByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAdvice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strClinicCD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdviceByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAdviceByNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServGrpList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServGrpListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="GetServGrpListResult" nillable="true" type="q23:ArrayOfServMainGrp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePersonalisedSetUp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="per" nillable="true" type="q24:BL_PersonalSetUp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePersonalisedSetUpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePersonalisedSetUpResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatNote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPatNoteResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPerformedTestList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFromDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPerformedTestListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPerformedTestListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAllergyQuestionnair">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="bl" nillable="true" type="q25:BL_Allergy" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAllergyQuestionnairResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveAllergyQuestionnairResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientAllergiesData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMrNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientAllergiesDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPatientAllergiesDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SPTReportingTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="bl" nillable="true" type="q26:BL_SPTReporting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SPTReportingTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SPTReportingTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSptReportingData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMrNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSptReportingDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSptReportingDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatSPTReportList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMrNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatSPTReportListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPatSPTReportListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatPrevAllergiesList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMrNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatPrevAllergiesListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPatPrevAllergiesListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersPatAdvices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersPatAdvicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPersPatAdvicesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersExamSetup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersExamSetupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPersExamSetupResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListBySetUpCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSetUpCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListBySetUpCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetListBySetUpCodeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientLst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSearchTxt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientLstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPatientLstResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NonFregqentDiagno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDiagno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strClinicCD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NonFregqentDiagnoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NonFregqentDiagnoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveFreeHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPerHis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMedHis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFamHis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUserId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveFreeHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveFreeHistoryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReFillMedData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strRefillNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMrNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReFillMedDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReFillMedDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WholeSetupTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="bl" nillable="true" type="q27:BL_PersonalSetUp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WholeSetupTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WholeSetupTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMasterSetUpLst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="age" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCimsYN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strGender" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMasterSetUpLstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMasterSetUpLstResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMasterSetUpData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSetUpCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMasterSetUpDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMasterSetUpDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreqMtrlsCIMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreqMtrlsCIMSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFreqMtrlsCIMSResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVaccinationLst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgeGrpCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVaccinationLstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetVaccinationLstResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgeGroupLst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ageGrpId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgeGroupLstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgeGroupLstResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAgeGrouop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ageGrp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="frmAge" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toAge" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="remark" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="seq" type="xs:int" />
+        <xs:element minOccurs="0" name="AgeGroupCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAgeGrouopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveAgeGrouopResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveVaccines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ageGrpCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="xmlString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveVaccinesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveVaccinesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgeGrpVaccineLnk">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgeGrpVaccineLnkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgeGrpVaccineLnkResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveVaccinTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMrno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strVaccineXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="birthWeigth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBldGrp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMotherGrp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vitminKYN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBirtHist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strApgar" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEDD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBirthTm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strApgar5min" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveVaccinTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveVaccinTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVaccineDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVaccineDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetVaccineDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllergyMstList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllergyMstListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="GetAllergyMstListResult" nillable="true" type="q28:ArrayOfAllergySelectLst" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAllergyMst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CLINICCODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TRANMODE" type="xs:int" />
+        <xs:element minOccurs="0" name="ALLERGYTYPE" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAllergyMstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveAllergyMstResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSignatory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="b" nillable="true" type="q29:BL_Signatory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSignatoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveSignatoryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSignatoryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSignatoryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSignatoryDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRoute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strClnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TRANMODE" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRouteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveRouteResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRouteList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRouteListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/BL_Logic" minOccurs="0" name="GetRouteListResult" nillable="true" type="q30:ArrayOfBL_GeneralFunctions.SelectLstItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTemplateResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFromDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTemplateResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTemplateResultResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAmendmentData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strResultNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAmendmentDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAmendmentDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPHMaterialInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strdrugid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPHMaterialInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="GetPHMaterialInfoResult" nillable="true" type="q31:bl_MaterialDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOPDBillInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strConsultNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBillNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOPDBillInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOPDBillInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FitnesCertiTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="f" nillable="true" type="q32:BL_FitnessCertificate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FitnesCertiTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FitnesCertiTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFitnessData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFitnessDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFitnessDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFitnessMRDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFitnessMRDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFitnessMRDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FitnesCertiTran2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="bl" nillable="true" type="q33:BL_FitnessCertificate2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FitnesCertiTran2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FitnesCertiTran2Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFitnessData2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDoctCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFitnessData2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFitnessData2Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoutineMedList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMrNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoutineMedListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRoutineMedListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCultureResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFromDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCultureResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCultureResultResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDisSumList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDisSumListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDisSumListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CallWaitPatSave">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="consNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TokenNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CallWaitPatSaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CallWaitPatSaveResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersICDSetupLst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersICDSetupLstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPersICDSetupLstResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersDiagSetupLst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctCD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersDiagSetupLstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPersDiagSetupLstResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechVerifiedData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFromDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLabDept" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TechVerify" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPatName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strContact" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTestName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSampleNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strRefDr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechVerifiedDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTechVerifiedDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTemplateResultToVerify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFromDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="resultNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTemplateResultToVerifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTemplateResultToVerifyResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyTemplateRpt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResultNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RptType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LabType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyTemplateRptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyTemplateRptResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTmplRptReject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResultNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RejRemarks" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTmplRptRejectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveTmplRptRejectResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMultiResultData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLabtype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strResultNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMultiResultDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMultiResultDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLabSignDet">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLabSignDetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLabSignDetResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePrintStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strResultNos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPrintBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEmailOrPrint" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePrintStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePrintStatusResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestMstList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLabDept" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUnit" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestMstListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTestMstListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurgeryAdviceList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sFromDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sToDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sDoctorCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sPatName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurgeryAdviceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSurgeryAdviceListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCalenderSurgeryAdviceDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strXMLstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCalenderSurgeryAdviceDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateCalenderSurgeryAdviceDateResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePACTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" minOccurs="0" name="bl" nillable="true" type="q34:BL_PAC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePACTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePACTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPACDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPACDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPACDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPACPatientList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDoctorCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strConsDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strClinicCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPACPatientListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPACPatientListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPACDetailsWithVisit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPACDetailsWithVisitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPACDetailsWithVisitResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPACPatientWaitList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSurgAdvDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sDoctorCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPACPatientWaitListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPACPatientWaitListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OTSurgeryBookApprovalTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OTBookingNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XMLString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ApprovalStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OTSurgeryBookApprovalTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OTSurgeryBookApprovalTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

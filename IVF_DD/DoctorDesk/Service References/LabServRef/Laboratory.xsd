@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.Laboratory" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.Laboratory" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+  <xs:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" />
+  <xs:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Outpatient" />
+  <xs:complexType name="BL_RISEquipment">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q1:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CurLocation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InterfaceCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabDept" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="port" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_RISEquipment" nillable="true" type="tns:BL_RISEquipment" />
+  <xs:complexType name="BL_NMPatientTracking">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" base="q2:BL_IPComProperty">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OrderNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StepNo" type="xs:int" />
+          <xs:element minOccurs="0" name="TestCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_NMPatientTracking" nillable="true" type="tns:BL_NMPatientTracking" />
+  <xs:complexType name="BL_RISMedPrescription">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" base="q3:BL_IPComProperty">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Labtype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MedXMLData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TestOrderno" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_RISMedPrescription" nillable="true" type="tns:BL_RISMedPrescription" />
+  <xs:complexType name="BL_RISVitalEntry">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" base="q4:BL_IPComProperty">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Height" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Oxygen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PainScore" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pulse" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RBS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RespiratoryRate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Temperature" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TestOrderNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_RISVitalEntry" nillable="true" type="tns:BL_RISVitalEntry" />
+  <xs:complexType name="BL_TestMaster">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentralMasterYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CollectionDuration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommonForAllUnitsYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CostPrice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Duration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Exttstyn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Instructnsyn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Intimationmsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAdress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mthdcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NABLAccredited" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreRequisit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Proviremark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PublishYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportAvailabilitySMSYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Restypecd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reverifyyorn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selectspeci" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeqNo" type="xs:int" />
+      <xs:element minOccurs="0" name="SpaceYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Spec_Qty" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Speccode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TestAbbrevation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Testcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Testtype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tstremark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValidDays" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValidYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_TestMaster" nillable="true" type="tns:BL_TestMaster" />
+  <xs:complexType name="BL_MicroOrganMst">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q5:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="InterfaceCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsoltnNo" type="xs:int" />
+          <xs:element minOccurs="0" name="OrgGrpCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_MicroOrganMst" nillable="true" type="tns:BL_MicroOrganMst" />
+  <xs:complexType name="BL_Investigation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentralMasterYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommonForAllUnitsYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FixedValRngXMLStr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FixedValXMLStr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormulaXMLStr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvestgnXMLStr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NormalValueXMLStr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TestCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_Investigation" nillable="true" type="tns:BL_Investigation" />
+  <xs:complexType name="BL_Technologist">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q6:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EmpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TechUserID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Technologist" nillable="true" type="tns:BL_Technologist" />
+  <xs:complexType name="BL_ProfileTestLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentralMasterYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommonForAllUnitsYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipaddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfTestCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlDsProfTstLnk" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_ProfileTestLink" nillable="true" type="tns:BL_ProfileTestLink" />
+  <xs:complexType name="BL_Signatory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentralMasterYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommonForAllUnitsYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefSignatory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeptCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Profile1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Profile2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Profile3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sign1" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Sign2" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Sign3" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_Signatory" nillable="true" type="tns:BL_Signatory" />
+  <xs:complexType name="BL_LabEquipInvstLnk">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentralMasterYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommonForAllUnitsYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvstCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TestCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlQuipLst" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_LabEquipInvstLnk" nillable="true" type="tns:BL_LabEquipInvstLnk" />
+  <xs:complexType name="BL_LabtemplateMst">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q7:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ImpressionDet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StudyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TemplateData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TemplateNM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TestCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_LabtemplateMst" nillable="true" type="tns:BL_LabtemplateMst" />
+  <xs:complexType name="BL_OrgnsmgrpAntiLnk">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentralMasterYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommonForAllUnitsYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrgGrpCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlAntiBioList" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_OrgnsmgrpAntiLnk" nillable="true" type="tns:BL_OrgnsmgrpAntiLnk" />
+  <xs:complexType name="BL_ReagentTestLnk">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentralMasterYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommonForAllUnitsYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReagenCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlReagTstLst" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_ReagentTestLnk" nillable="true" type="tns:BL_ReagentTestLnk" />
+  <xs:complexType name="BL_ReagentConsumptn">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q8:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Mtrlcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Startdt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Starttm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_ReagentConsumptn" nillable="true" type="tns:BL_ReagentConsumptn" />
+  <xs:complexType name="BL_OrderCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" base="q9:BL_IPComProperty">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abbrevations" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BedNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CollectionSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoOfBarCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Orderno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SamleColBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SamleRcvdBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlTestlist" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OrderCollection" nillable="true" type="tns:BL_OrderCollection" />
+  <xs:complexType name="BL_OrderAcceptance">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" base="q10:BL_IPComProperty">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AppointmntNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Bedno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BlBedCatg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BlTariffid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EquipCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IPChrgTranYear" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Orderno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProfileFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RefLabCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Roomno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Samlecolno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Servicesource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StrCrdCompCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XmlAccdet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="scheduleDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="scheduleTm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strRejRemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strSamplStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlDsTestLst" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OrderAcceptance" nillable="true" type="tns:BL_OrderAcceptance" />
+  <xs:complexType name="BL_ResultEntry">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/BL_Logic.Outpatient" base="q11:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abnormalyn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutoMthdYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BedNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BlockName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Commentdt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CultureRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExamDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExamEndDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExamEndTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExamTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Icdcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImpressionData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ipno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Labcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Labdptcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Labtype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="M" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MICQty" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MarkAsDone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="N" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NormStdCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Orderno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrganCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurposeFor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReDoRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RedoFreshCorelateYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RedoSameCorelateYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RedoWithFresh" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RedoWithSame" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReportDoct1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReportDoct2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReportDoct3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReportDoct4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReportDrCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reporttype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Resulttype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RptAmendDet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Samlecolno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SectionTempID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Speccode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpecimenNature" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StagingDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StainComment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SynopPathRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SynpSiteCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="T" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TempData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TempID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TestCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TypeOf" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strRerunRemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlBloclSlide" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlDsTestLst" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlICDDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlMicroBioData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlResultDetDs" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlSiteDet" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_ResultEntry" nillable="true" type="tns:BL_ResultEntry" />
+  <xs:complexType name="ArrayOfLabTempplateList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LabTempplateList" nillable="true" type="tns:LabTempplateList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLabTempplateList" nillable="true" type="tns:ArrayOfLabTempplateList" />
+  <xs:complexType name="LabTempplateList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ImpressionDet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Template" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LabTempplateList" nillable="true" type="tns:LabTempplateList" />
+  <xs:complexType name="ArrayOfMircroOrgItemList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MircroOrgItemList" nillable="true" type="tns:MircroOrgItemList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMircroOrgItemList" nillable="true" type="tns:ArrayOfMircroOrgItemList" />
+  <xs:complexType name="MircroOrgItemList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrganismGrpCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MircroOrgItemList" nillable="true" type="tns:MircroOrgItemList" />
+  <xs:complexType name="ArrayOfAntibioticListIten">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AntibioticListIten" nillable="true" type="tns:AntibioticListIten" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAntibioticListIten" nillable="true" type="tns:ArrayOfAntibioticListIten" />
+  <xs:complexType name="AntibioticListIten">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrganismGrpCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AntibioticListIten" nillable="true" type="tns:AntibioticListIten" />
+  <xs:complexType name="BL_ResultDelivery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IpAdress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlDelDet" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_ResultDelivery" nillable="true" type="tns:BL_ResultDelivery" />
+  <xs:complexType name="BL_NormalStudyLnk">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TempID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateLst" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_NormalStudyLnk" nillable="true" type="tns:BL_NormalStudyLnk" />
+  <xs:complexType name="BL_Reagent">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q12:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CentralMasterYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CommonForAllUnitsYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UnitStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strMtrlCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Reagent" nillable="true" type="tns:BL_Reagent" />
+  <xs:complexType name="BL_Comment">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q13:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NoteType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strNote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strOrderNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Comment" nillable="true" type="tns:BL_Comment" />
+  <xs:complexType name="BL_TestAppointmnt">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/BL_Logic.Outpatient" base="q14:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AmbuYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoOperative" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Consdate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Constime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeptCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiabeticYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Districtid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Division" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EnqTranNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EquipCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IPNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsArrival" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatTypeCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patcatg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patfname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patlname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patmname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patremarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patsex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phoneno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefDoct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefFrmOutYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SCHEDASPER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Salutation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Slotno" type="xs:int" />
+          <xs:element minOccurs="0" name="SrCreate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Strecher" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TestCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Visittype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Weekday" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_TestAppointmnt" nillable="true" type="tns:BL_TestAppointmnt" />
+  <xs:complexType name="Bl_Amendment">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/BL_Logic.Outpatient" base="q15:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AmendmentDet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AmendmntNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecordType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Bl_Amendment" nillable="true" type="tns:Bl_Amendment" />
+  <xs:complexType name="BL_TemplateHelperMst">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q16:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HelpDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_TemplateHelperMst" nillable="true" type="tns:BL_TemplateHelperMst" />
+  <xs:complexType name="BL_TherapistScheduleMaster">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/BL_Logic.Outpatient" base="q17:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClinicCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ScheduleList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TechCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_TherapistScheduleMaster" nillable="true" type="tns:BL_TherapistScheduleMaster" />
+  <xs:complexType name="BL_PhysioTemplate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/BL_Logic.Outpatient" base="q18:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Protocol" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_PhysioTemplate" nillable="true" type="tns:BL_PhysioTemplate" />
+  <xs:complexType name="BL_PhysioTherapist">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q19:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EmpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TechUserID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_PhysioTherapist" nillable="true" type="tns:BL_PhysioTherapist" />
+  <xs:complexType name="BL_SampleSentToRefLab">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/BL_Logic.Outpatient" base="q20:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="xmlSamplSentDS" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_SampleSentToRefLab" nillable="true" type="tns:BL_SampleSentToRefLab" />
+  <xs:complexType name="BL_LabDeptScheduleMaster">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" base="q21:BL_IPComProperty">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CentralMasterYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CommonForAllUnitsYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeptCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ScheduleList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UnitStatus" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_LabDeptScheduleMaster" nillable="true" type="tns:BL_LabDeptScheduleMaster" />
+  <xs:complexType name="BL_OrderDiscord">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" base="q22:BL_IPComProperty">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Orderno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlSamplDiscard" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OrderDiscord" nillable="true" type="tns:BL_OrderDiscord" />
+  <xs:complexType name="BL_SynopSiteTemplateMst">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q23:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SiteCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XMLString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_SynopSiteTemplateMst" nillable="true" type="tns:BL_SynopSiteTemplateMst" />
+  <xs:complexType name="BL_TemplateSection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q24:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HeadingXMLData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TestCodes" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_TemplateSection" nillable="true" type="tns:BL_TemplateSection" />
+</xs:schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="11805b61-63e5-4a5e-8ff0-bb690361d177" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://uat.himstccf.org:82/WEBHMISSERVICE/Security.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Security.xsd" MetadataType="Schema" ID="272d1c69-9915-47ac-99b2-acac834daeb6" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Security.svc?xsd=xsd1" />
+    <MetadataFile FileName="Security1.xsd" MetadataType="Schema" ID="5f35b729-c8df-4787-ad2a-49e5104fb899" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Security.svc?xsd=xsd0" />
+    <MetadataFile FileName="Security2.xsd" MetadataType="Schema" ID="4f018fd9-e01b-406a-93bd-0bf0d01b9451" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Security.svc?xsd=xsd3" />
+    <MetadataFile FileName="Security3.xsd" MetadataType="Schema" ID="df4843e9-f60e-40b0-ae5e-489f19d2d749" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Security.svc?xsd=xsd2" />
+    <MetadataFile FileName="Security.wsdl" MetadataType="Wsdl" ID="714e6028-8586-4b36-b313-8916bfe4f689" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Security.svc?wsdl" />
+    <MetadataFile FileName="Security.disco" MetadataType="Disco" ID="84643312-fc0c-402e-ad69-a17a8d324b23" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Security.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

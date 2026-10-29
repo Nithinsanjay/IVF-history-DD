@@ -1,0 +1,2181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Laboratory" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_ILaboratory_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.1.3/WebHMISServiceN/Laboratory.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebHMISServiceN/Laboratory.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebHMISServiceN/Laboratory.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Laboratory" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebHMISServiceN/Laboratory.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebHMISServiceN/Laboratory.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebHMISServiceN/Laboratory.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BL_Logic" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebHMISServiceN/Laboratory.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Outpatient" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebHMISServiceN/Laboratory.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebHMISServiceN/Laboratory.svc?xsd=xsd8" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILaboratory_TestMasterTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestMasterTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_TestMasterTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestMasterTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetMicroOrganMstRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMicroOrganMstRecords" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetMicroOrganMstRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMicroOrganMstRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_MicroOrgMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:MicroOrgMstTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_MicroOrgMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MicroOrgMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetInvestigationData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestigationData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetInvestigationData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestigationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetNormalValueData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNormalValueData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetNormalValueData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNormalValueDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetInvestigDataByTestCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestigDataByTestCode" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetInvestigDataByTestCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestigDataByTestCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_InvestigationTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvestigationTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_InvestigationTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvestigationTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_LabTechnoMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:LabTechnoMstTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_LabTechnoMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabTechnoMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetLabTechnoMstLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabTechnoMstLst" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetLabTechnoMstLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabTechnoMstLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetProfileTestLink_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileTestLink" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetProfileTestLink_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileTestLinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_ProfTestLnkTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProfTestLnkTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_ProfTestLnkTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProfTestLnkTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_LabSignatoryTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:LabSignatoryTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_LabSignatoryTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabSignatoryTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetLabSignDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabSignDet" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetLabSignDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabSignDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetInvstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvstList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetInvstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetInvestEquipmntList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestEquipmntList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetInvestEquipmntList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestEquipmntListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_EquipmntInvstLnkTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:EquipmntInvstLnkTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_EquipmntInvstLnkTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EquipmntInvstLnkTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_LabTemplateTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:LabTemplateTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_LabTemplateTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabTemplateTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetLabTemplateMstRec_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabTemplateMstRec" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetLabTemplateMstRec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabTemplateMstRecResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_OrgGrpAntiLnkTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrgGrpAntiLnkTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_OrgGrpAntiLnkTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrgGrpAntiLnkTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetOrgAntibLnkLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrgAntibLnkLst" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetOrgAntibLnkLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrgAntibLnkLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetReagentTestLnk_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReagentTestLnk" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetReagentTestLnk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReagentTestLnkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_ReagTestLnkTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReagTestLnkTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_ReagTestLnkTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReagTestLnkTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetReagConsumptnList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReagConsumptnList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetReagConsumptnList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReagConsumptnListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_ReagConsumpTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReagConsumpTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_ReagConsumpTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReagConsumpTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetMicrobiologyList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMicrobiologyList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetMicrobiologyList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMicrobiologyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_CollectOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CollectOrder" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_CollectOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CollectOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetFixedValData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFixedValData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetFixedValData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFixedValDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetFixValWithRngData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFixValWithRngData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetFixValWithRngData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFixValWithRngDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPendingOrderList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingOrderList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPendingOrderList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingOrderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPendingTestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTestList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPendingTestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetCollectedOrderList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCollectedOrderList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetCollectedOrderList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCollectedOrderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetCollectedTestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCollectedTestList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetCollectedTestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCollectedTestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetAcceptedOrderList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcceptedOrderList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetAcceptedOrderList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcceptedOrderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetAcceptedTestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcceptedTestList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetAcceptedTestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcceptedTestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPendingOrderToAccept_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingOrderToAccept" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPendingOrderToAccept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingOrderToAcceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPendingTestForAccept_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTestForAccept" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPendingTestForAccept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTestForAcceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_AcceptOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:AcceptOrder" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_AcceptOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AcceptOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetDataFrResultEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataFrResultEntry" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetDataFrResultEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataFrResultEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_ResultEntryTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResultEntryTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_ResultEntryTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResultEntryTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPendingOrderFrResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingOrderFrResult" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPendingOrderFrResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingOrderFrResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetReportedOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportedOrder" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetReportedOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportedOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetReportedTestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportedTestList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetReportedTestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportedTestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPendingTestForReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTestForReport" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPendingTestForReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTestForReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetResultEntryData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultEntryData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetResultEntryData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultEntryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetDataFrChangeResultEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataFrChangeResultEntry" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetDataFrChangeResultEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataFrChangeResultEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetVerifiedOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifiedOrder" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetVerifiedOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifiedOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetVerifiedTestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifiedTestList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetVerifiedTestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifiedTestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetLabTempList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabTempList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetLabTempList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabTempListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetMicroOrgList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMicroOrgList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetMicroOrgList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMicroOrgListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetAntibioticList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAntibioticList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetAntibioticList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAntibioticListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetResultList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetResultList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetAntiBioticListWithMIC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAntiBioticListWithMIC" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetAntiBioticListWithMIC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAntiBioticListWithMICResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPreviousResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreviousResult" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPreviousResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreviousResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetMultiResultData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMultiResultData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetMultiResultData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMultiResultDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_UpdatePrintStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrintStatus" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_UpdatePrintStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrintStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetResultDelList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultDelList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetResultDelList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultDelListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_UpdateDeliveryStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeliveryStatus" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_UpdateDeliveryStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeliveryStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_RCNTemplateTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:RCNTemplateTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_RCNTemplateTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RCNTemplateTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetRCNTemplateMstRec_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRCNTemplateMstRec" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetRCNTemplateMstRec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRCNTemplateMstRecResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_RCNormalStudyLnk_InputMessage">
+    <wsdl:part name="parameters" element="tns:RCNormalStudyLnk" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_RCNormalStudyLnk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RCNormalStudyLnkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTstNormStdLnk_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTstNormStdLnk" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTstNormStdLnk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTstNormStdLnkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetRCNPendingTestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRCNPendingTestList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetRCNPendingTestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRCNPendingTestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetRCNDataFrResultEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRCNDataFrResultEntry" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetRCNDataFrResultEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRCNDataFrResultEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetRevenueSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRevenueSummary" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetRevenueSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRevenueSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetOrderBookDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderBookDet" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetOrderBookDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderBookDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetInvestgnWithPanic_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestgnWithPanic" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetInvestgnWithPanic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestgnWithPanicResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTestStatusDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestStatusDetails" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTestStatusDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestStatusDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetMicroDataAnalysis_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMicroDataAnalysis" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetMicroDataAnalysis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMicroDataAnalysisResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetInvestgListData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestgListData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetInvestgListData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestgListDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetReagentList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReagentList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetReagentList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReagentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_LabReagentMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:LabReagentMstTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_LabReagentMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabReagentMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTATDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTATDet" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTATDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTATDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetProfileOrderList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileOrderList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetProfileOrderList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileOrderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetProfilOrderTestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfilOrderTestList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetProfilOrderTestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfilOrderTestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_CommentTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CommentTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_CommentTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CommentTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetComments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComments" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetComments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetAntibioMoniterData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAntibioMoniterData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetAntibioMoniterData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAntibioMoniterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetMtrlHlpUsrCntrlData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMtrlHlpUsrCntrlData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetMtrlHlpUsrCntrlData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMtrlHlpUsrCntrlDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetRNCSignDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRNCSignDet" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetRNCSignDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRNCSignDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_RNCSignatoryTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:RNCSignatoryTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_RNCSignatoryTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RNCSignatoryTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetRedoneList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedoneList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetRedoneList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedoneListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTestRateOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestRateOP" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTestRateOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestRateOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTestAptList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestAptList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTestAptList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestAptListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetDeptApmntSrchLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeptApmntSrchLst" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetDeptApmntSrchLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeptApmntSrchLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetDeptSlots_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeptSlots" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetDeptSlots_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeptSlotsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_TestAppointmntTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestAppointmntTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_TestAppointmntTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestAppointmntTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_CancelTestApmnt_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelTestApmnt" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_CancelTestApmnt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelTestApmntResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_SaveAmendmntDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAmendmntDet" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_SaveAmendmntDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAmendmntDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetAmendmentData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmendmentData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetAmendmentData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmendmentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetNonBillTestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonBillTestList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetNonBillTestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonBillTestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_TemplateHelperTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:TemplateHelperTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_TemplateHelperTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TemplateHelperTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTemplateHelper_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateHelper" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTemplateHelper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateHelperResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetHistoSpeciRemark_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoSpeciRemark" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetHistoSpeciRemark_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoSpeciRemarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetCommentData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetCommentData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetWorkList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetWorkList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTestInvestigations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestInvestigations" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTestInvestigations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestInvestigationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetLabTempListByTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabTempListByTest" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetLabTempListByTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabTempListByTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_RejectSampleTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:RejectSampleTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_RejectSampleTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RejectSampleTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetSampleReCollectData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSampleReCollectData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetSampleReCollectData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSampleReCollectDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_SampleCollectionDelayed_InputMessage">
+    <wsdl:part name="parameters" element="tns:SampleCollectionDelayed" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_SampleCollectionDelayed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SampleCollectionDelayedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_RerunSampleTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:RerunSampleTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_RerunSampleTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RerunSampleTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_PhysioScheduleTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhysioScheduleTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_PhysioScheduleTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhysioScheduleTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetScheduleData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetScheduleData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_SavePhysioTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePhysioTemplate" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_SavePhysioTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePhysioTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPhysioTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysioTemplate" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPhysioTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysioTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPhysioPendingOrderList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysioPendingOrderList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetPhysioPendingOrderList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysioPendingOrderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetScheduledOrderList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduledOrderList" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetScheduledOrderList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduledOrderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_PhysiotherapistMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhysiotherapistMstTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_PhysiotherapistMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhysiotherapistMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTherapistMstLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTherapistMstLst" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTherapistMstLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTherapistMstLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTestCDFrmBlankReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestCDFrmBlankReport" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetTestCDFrmBlankReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestCDFrmBlankReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_UpdateSentSampleToRefLab_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSentSampleToRefLab" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_UpdateSentSampleToRefLab_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSentSampleToRefLabResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_LabDeptScheduleTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:LabDeptScheduleTran" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_LabDeptScheduleTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabDeptScheduleTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetLabDeptScheduleData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabDeptScheduleData" />
+  </wsdl:message>
+  <wsdl:message name="ILaboratory_GetLabDeptScheduleData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabDeptScheduleDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILaboratory">
+    <wsdl:operation name="TestMasterTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/TestMasterTran" message="tns:ILaboratory_TestMasterTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/TestMasterTranResponse" message="tns:ILaboratory_TestMasterTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMicroOrganMstRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetMicroOrganMstRecords" message="tns:ILaboratory_GetMicroOrganMstRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetMicroOrganMstRecordsResponse" message="tns:ILaboratory_GetMicroOrganMstRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MicroOrgMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/MicroOrgMstTran" message="tns:ILaboratory_MicroOrgMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/MicroOrgMstTranResponse" message="tns:ILaboratory_MicroOrgMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestigationData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetInvestigationData" message="tns:ILaboratory_GetInvestigationData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetInvestigationDataResponse" message="tns:ILaboratory_GetInvestigationData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNormalValueData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetNormalValueData" message="tns:ILaboratory_GetNormalValueData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetNormalValueDataResponse" message="tns:ILaboratory_GetNormalValueData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestigDataByTestCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetInvestigDataByTestCode" message="tns:ILaboratory_GetInvestigDataByTestCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetInvestigDataByTestCodeResponse" message="tns:ILaboratory_GetInvestigDataByTestCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InvestigationTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/InvestigationTran" message="tns:ILaboratory_InvestigationTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/InvestigationTranResponse" message="tns:ILaboratory_InvestigationTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LabTechnoMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/LabTechnoMstTran" message="tns:ILaboratory_LabTechnoMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/LabTechnoMstTranResponse" message="tns:ILaboratory_LabTechnoMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabTechnoMstLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetLabTechnoMstLst" message="tns:ILaboratory_GetLabTechnoMstLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetLabTechnoMstLstResponse" message="tns:ILaboratory_GetLabTechnoMstLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileTestLink">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetProfileTestLink" message="tns:ILaboratory_GetProfileTestLink_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetProfileTestLinkResponse" message="tns:ILaboratory_GetProfileTestLink_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProfTestLnkTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/ProfTestLnkTran" message="tns:ILaboratory_ProfTestLnkTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/ProfTestLnkTranResponse" message="tns:ILaboratory_ProfTestLnkTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LabSignatoryTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/LabSignatoryTran" message="tns:ILaboratory_LabSignatoryTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/LabSignatoryTranResponse" message="tns:ILaboratory_LabSignatoryTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabSignDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetLabSignDet" message="tns:ILaboratory_GetLabSignDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetLabSignDetResponse" message="tns:ILaboratory_GetLabSignDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetInvstList" message="tns:ILaboratory_GetInvstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetInvstListResponse" message="tns:ILaboratory_GetInvstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestEquipmntList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetInvestEquipmntList" message="tns:ILaboratory_GetInvestEquipmntList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetInvestEquipmntListResponse" message="tns:ILaboratory_GetInvestEquipmntList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EquipmntInvstLnkTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/EquipmntInvstLnkTran" message="tns:ILaboratory_EquipmntInvstLnkTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/EquipmntInvstLnkTranResponse" message="tns:ILaboratory_EquipmntInvstLnkTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LabTemplateTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/LabTemplateTran" message="tns:ILaboratory_LabTemplateTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/LabTemplateTranResponse" message="tns:ILaboratory_LabTemplateTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabTemplateMstRec">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetLabTemplateMstRec" message="tns:ILaboratory_GetLabTemplateMstRec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetLabTemplateMstRecResponse" message="tns:ILaboratory_GetLabTemplateMstRec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrgGrpAntiLnkTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/OrgGrpAntiLnkTran" message="tns:ILaboratory_OrgGrpAntiLnkTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/OrgGrpAntiLnkTranResponse" message="tns:ILaboratory_OrgGrpAntiLnkTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrgAntibLnkLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetOrgAntibLnkLst" message="tns:ILaboratory_GetOrgAntibLnkLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetOrgAntibLnkLstResponse" message="tns:ILaboratory_GetOrgAntibLnkLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentTestLnk">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetReagentTestLnk" message="tns:ILaboratory_GetReagentTestLnk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetReagentTestLnkResponse" message="tns:ILaboratory_GetReagentTestLnk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReagTestLnkTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/ReagTestLnkTran" message="tns:ILaboratory_ReagTestLnkTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/ReagTestLnkTranResponse" message="tns:ILaboratory_ReagTestLnkTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReagConsumptnList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetReagConsumptnList" message="tns:ILaboratory_GetReagConsumptnList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetReagConsumptnListResponse" message="tns:ILaboratory_GetReagConsumptnList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReagConsumpTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/ReagConsumpTran" message="tns:ILaboratory_ReagConsumpTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/ReagConsumpTranResponse" message="tns:ILaboratory_ReagConsumpTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMicrobiologyList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetMicrobiologyList" message="tns:ILaboratory_GetMicrobiologyList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetMicrobiologyListResponse" message="tns:ILaboratory_GetMicrobiologyList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CollectOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/CollectOrder" message="tns:ILaboratory_CollectOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/CollectOrderResponse" message="tns:ILaboratory_CollectOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFixedValData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetFixedValData" message="tns:ILaboratory_GetFixedValData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetFixedValDataResponse" message="tns:ILaboratory_GetFixedValData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFixValWithRngData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetFixValWithRngData" message="tns:ILaboratory_GetFixValWithRngData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetFixValWithRngDataResponse" message="tns:ILaboratory_GetFixValWithRngData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingOrderList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetPendingOrderList" message="tns:ILaboratory_GetPendingOrderList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetPendingOrderListResponse" message="tns:ILaboratory_GetPendingOrderList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetPendingTestList" message="tns:ILaboratory_GetPendingTestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetPendingTestListResponse" message="tns:ILaboratory_GetPendingTestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollectedOrderList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetCollectedOrderList" message="tns:ILaboratory_GetCollectedOrderList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetCollectedOrderListResponse" message="tns:ILaboratory_GetCollectedOrderList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollectedTestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetCollectedTestList" message="tns:ILaboratory_GetCollectedTestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetCollectedTestListResponse" message="tns:ILaboratory_GetCollectedTestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceptedOrderList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetAcceptedOrderList" message="tns:ILaboratory_GetAcceptedOrderList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetAcceptedOrderListResponse" message="tns:ILaboratory_GetAcceptedOrderList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceptedTestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetAcceptedTestList" message="tns:ILaboratory_GetAcceptedTestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetAcceptedTestListResponse" message="tns:ILaboratory_GetAcceptedTestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingOrderToAccept">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetPendingOrderToAccept" message="tns:ILaboratory_GetPendingOrderToAccept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetPendingOrderToAcceptResponse" message="tns:ILaboratory_GetPendingOrderToAccept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTestForAccept">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetPendingTestForAccept" message="tns:ILaboratory_GetPendingTestForAccept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetPendingTestForAcceptResponse" message="tns:ILaboratory_GetPendingTestForAccept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AcceptOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/AcceptOrder" message="tns:ILaboratory_AcceptOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/AcceptOrderResponse" message="tns:ILaboratory_AcceptOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataFrResultEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetDataFrResultEntry" message="tns:ILaboratory_GetDataFrResultEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetDataFrResultEntryResponse" message="tns:ILaboratory_GetDataFrResultEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResultEntryTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/ResultEntryTran" message="tns:ILaboratory_ResultEntryTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/ResultEntryTranResponse" message="tns:ILaboratory_ResultEntryTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingOrderFrResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetPendingOrderFrResult" message="tns:ILaboratory_GetPendingOrderFrResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetPendingOrderFrResultResponse" message="tns:ILaboratory_GetPendingOrderFrResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportedOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetReportedOrder" message="tns:ILaboratory_GetReportedOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetReportedOrderResponse" message="tns:ILaboratory_GetReportedOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportedTestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetReportedTestList" message="tns:ILaboratory_GetReportedTestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetReportedTestListResponse" message="tns:ILaboratory_GetReportedTestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTestForReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetPendingTestForReport" message="tns:ILaboratory_GetPendingTestForReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetPendingTestForReportResponse" message="tns:ILaboratory_GetPendingTestForReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultEntryData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetResultEntryData" message="tns:ILaboratory_GetResultEntryData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetResultEntryDataResponse" message="tns:ILaboratory_GetResultEntryData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataFrChangeResultEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetDataFrChangeResultEntry" message="tns:ILaboratory_GetDataFrChangeResultEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetDataFrChangeResultEntryResponse" message="tns:ILaboratory_GetDataFrChangeResultEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifiedOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetVerifiedOrder" message="tns:ILaboratory_GetVerifiedOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetVerifiedOrderResponse" message="tns:ILaboratory_GetVerifiedOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifiedTestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetVerifiedTestList" message="tns:ILaboratory_GetVerifiedTestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetVerifiedTestListResponse" message="tns:ILaboratory_GetVerifiedTestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabTempList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetLabTempList" message="tns:ILaboratory_GetLabTempList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetLabTempListResponse" message="tns:ILaboratory_GetLabTempList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMicroOrgList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetMicroOrgList" message="tns:ILaboratory_GetMicroOrgList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetMicroOrgListResponse" message="tns:ILaboratory_GetMicroOrgList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAntibioticList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetAntibioticList" message="tns:ILaboratory_GetAntibioticList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetAntibioticListResponse" message="tns:ILaboratory_GetAntibioticList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetResultList" message="tns:ILaboratory_GetResultList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetResultListResponse" message="tns:ILaboratory_GetResultList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAntiBioticListWithMIC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetAntiBioticListWithMIC" message="tns:ILaboratory_GetAntiBioticListWithMIC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetAntiBioticListWithMICResponse" message="tns:ILaboratory_GetAntiBioticListWithMIC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreviousResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetPreviousResult" message="tns:ILaboratory_GetPreviousResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetPreviousResultResponse" message="tns:ILaboratory_GetPreviousResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiResultData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetMultiResultData" message="tns:ILaboratory_GetMultiResultData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetMultiResultDataResponse" message="tns:ILaboratory_GetMultiResultData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrintStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/UpdatePrintStatus" message="tns:ILaboratory_UpdatePrintStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/UpdatePrintStatusResponse" message="tns:ILaboratory_UpdatePrintStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultDelList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetResultDelList" message="tns:ILaboratory_GetResultDelList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetResultDelListResponse" message="tns:ILaboratory_GetResultDelList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeliveryStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/UpdateDeliveryStatus" message="tns:ILaboratory_UpdateDeliveryStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/UpdateDeliveryStatusResponse" message="tns:ILaboratory_UpdateDeliveryStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RCNTemplateTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/RCNTemplateTran" message="tns:ILaboratory_RCNTemplateTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/RCNTemplateTranResponse" message="tns:ILaboratory_RCNTemplateTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRCNTemplateMstRec">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetRCNTemplateMstRec" message="tns:ILaboratory_GetRCNTemplateMstRec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetRCNTemplateMstRecResponse" message="tns:ILaboratory_GetRCNTemplateMstRec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RCNormalStudyLnk">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/RCNormalStudyLnk" message="tns:ILaboratory_RCNormalStudyLnk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/RCNormalStudyLnkResponse" message="tns:ILaboratory_RCNormalStudyLnk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTstNormStdLnk">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetTstNormStdLnk" message="tns:ILaboratory_GetTstNormStdLnk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetTstNormStdLnkResponse" message="tns:ILaboratory_GetTstNormStdLnk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRCNPendingTestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetRCNPendingTestList" message="tns:ILaboratory_GetRCNPendingTestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetRCNPendingTestListResponse" message="tns:ILaboratory_GetRCNPendingTestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRCNDataFrResultEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetRCNDataFrResultEntry" message="tns:ILaboratory_GetRCNDataFrResultEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetRCNDataFrResultEntryResponse" message="tns:ILaboratory_GetRCNDataFrResultEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRevenueSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetRevenueSummary" message="tns:ILaboratory_GetRevenueSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetRevenueSummaryResponse" message="tns:ILaboratory_GetRevenueSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderBookDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetOrderBookDet" message="tns:ILaboratory_GetOrderBookDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetOrderBookDetResponse" message="tns:ILaboratory_GetOrderBookDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestgnWithPanic">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetInvestgnWithPanic" message="tns:ILaboratory_GetInvestgnWithPanic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetInvestgnWithPanicResponse" message="tns:ILaboratory_GetInvestgnWithPanic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestStatusDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetTestStatusDetails" message="tns:ILaboratory_GetTestStatusDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetTestStatusDetailsResponse" message="tns:ILaboratory_GetTestStatusDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMicroDataAnalysis">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetMicroDataAnalysis" message="tns:ILaboratory_GetMicroDataAnalysis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetMicroDataAnalysisResponse" message="tns:ILaboratory_GetMicroDataAnalysis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestgListData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetInvestgListData" message="tns:ILaboratory_GetInvestgListData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetInvestgListDataResponse" message="tns:ILaboratory_GetInvestgListData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetReagentList" message="tns:ILaboratory_GetReagentList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetReagentListResponse" message="tns:ILaboratory_GetReagentList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LabReagentMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/LabReagentMstTran" message="tns:ILaboratory_LabReagentMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/LabReagentMstTranResponse" message="tns:ILaboratory_LabReagentMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTATDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetTATDet" message="tns:ILaboratory_GetTATDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetTATDetResponse" message="tns:ILaboratory_GetTATDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileOrderList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetProfileOrderList" message="tns:ILaboratory_GetProfileOrderList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetProfileOrderListResponse" message="tns:ILaboratory_GetProfileOrderList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfilOrderTestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetProfilOrderTestList" message="tns:ILaboratory_GetProfilOrderTestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetProfilOrderTestListResponse" message="tns:ILaboratory_GetProfilOrderTestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CommentTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/CommentTran" message="tns:ILaboratory_CommentTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/CommentTranResponse" message="tns:ILaboratory_CommentTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComments">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetComments" message="tns:ILaboratory_GetComments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetCommentsResponse" message="tns:ILaboratory_GetComments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAntibioMoniterData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetAntibioMoniterData" message="tns:ILaboratory_GetAntibioMoniterData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetAntibioMoniterDataResponse" message="tns:ILaboratory_GetAntibioMoniterData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMtrlHlpUsrCntrlData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetMtrlHlpUsrCntrlData" message="tns:ILaboratory_GetMtrlHlpUsrCntrlData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetMtrlHlpUsrCntrlDataResponse" message="tns:ILaboratory_GetMtrlHlpUsrCntrlData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRNCSignDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetRNCSignDet" message="tns:ILaboratory_GetRNCSignDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetRNCSignDetResponse" message="tns:ILaboratory_GetRNCSignDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RNCSignatoryTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/RNCSignatoryTran" message="tns:ILaboratory_RNCSignatoryTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/RNCSignatoryTranResponse" message="tns:ILaboratory_RNCSignatoryTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRedoneList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetRedoneList" message="tns:ILaboratory_GetRedoneList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetRedoneListResponse" message="tns:ILaboratory_GetRedoneList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestRateOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetTestRateOP" message="tns:ILaboratory_GetTestRateOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetTestRateOPResponse" message="tns:ILaboratory_GetTestRateOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestAptList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetTestAptList" message="tns:ILaboratory_GetTestAptList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetTestAptListResponse" message="tns:ILaboratory_GetTestAptList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptApmntSrchLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetDeptApmntSrchLst" message="tns:ILaboratory_GetDeptApmntSrchLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetDeptApmntSrchLstResponse" message="tns:ILaboratory_GetDeptApmntSrchLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptSlots">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetDeptSlots" message="tns:ILaboratory_GetDeptSlots_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetDeptSlotsResponse" message="tns:ILaboratory_GetDeptSlots_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestAppointmntTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/TestAppointmntTran" message="tns:ILaboratory_TestAppointmntTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/TestAppointmntTranResponse" message="tns:ILaboratory_TestAppointmntTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelTestApmnt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/CancelTestApmnt" message="tns:ILaboratory_CancelTestApmnt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/CancelTestApmntResponse" message="tns:ILaboratory_CancelTestApmnt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAmendmntDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/SaveAmendmntDet" message="tns:ILaboratory_SaveAmendmntDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/SaveAmendmntDetResponse" message="tns:ILaboratory_SaveAmendmntDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmendmentData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetAmendmentData" message="tns:ILaboratory_GetAmendmentData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetAmendmentDataResponse" message="tns:ILaboratory_GetAmendmentData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNonBillTestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetNonBillTestList" message="tns:ILaboratory_GetNonBillTestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetNonBillTestListResponse" message="tns:ILaboratory_GetNonBillTestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TemplateHelperTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/TemplateHelperTran" message="tns:ILaboratory_TemplateHelperTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/TemplateHelperTranResponse" message="tns:ILaboratory_TemplateHelperTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateHelper">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetTemplateHelper" message="tns:ILaboratory_GetTemplateHelper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetTemplateHelperResponse" message="tns:ILaboratory_GetTemplateHelper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoSpeciRemark">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetHistoSpeciRemark" message="tns:ILaboratory_GetHistoSpeciRemark_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetHistoSpeciRemarkResponse" message="tns:ILaboratory_GetHistoSpeciRemark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetCommentData" message="tns:ILaboratory_GetCommentData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetCommentDataResponse" message="tns:ILaboratory_GetCommentData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetWorkList" message="tns:ILaboratory_GetWorkList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetWorkListResponse" message="tns:ILaboratory_GetWorkList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestInvestigations">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetTestInvestigations" message="tns:ILaboratory_GetTestInvestigations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetTestInvestigationsResponse" message="tns:ILaboratory_GetTestInvestigations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabTempListByTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetLabTempListByTest" message="tns:ILaboratory_GetLabTempListByTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetLabTempListByTestResponse" message="tns:ILaboratory_GetLabTempListByTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RejectSampleTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/RejectSampleTran" message="tns:ILaboratory_RejectSampleTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/RejectSampleTranResponse" message="tns:ILaboratory_RejectSampleTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSampleReCollectData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetSampleReCollectData" message="tns:ILaboratory_GetSampleReCollectData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetSampleReCollectDataResponse" message="tns:ILaboratory_GetSampleReCollectData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SampleCollectionDelayed">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/SampleCollectionDelayed" message="tns:ILaboratory_SampleCollectionDelayed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/SampleCollectionDelayedResponse" message="tns:ILaboratory_SampleCollectionDelayed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RerunSampleTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/RerunSampleTran" message="tns:ILaboratory_RerunSampleTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/RerunSampleTranResponse" message="tns:ILaboratory_RerunSampleTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhysioScheduleTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/PhysioScheduleTran" message="tns:ILaboratory_PhysioScheduleTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/PhysioScheduleTranResponse" message="tns:ILaboratory_PhysioScheduleTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetScheduleData" message="tns:ILaboratory_GetScheduleData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetScheduleDataResponse" message="tns:ILaboratory_GetScheduleData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePhysioTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/SavePhysioTemplate" message="tns:ILaboratory_SavePhysioTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/SavePhysioTemplateResponse" message="tns:ILaboratory_SavePhysioTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysioTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetPhysioTemplate" message="tns:ILaboratory_GetPhysioTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetPhysioTemplateResponse" message="tns:ILaboratory_GetPhysioTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysioPendingOrderList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetPhysioPendingOrderList" message="tns:ILaboratory_GetPhysioPendingOrderList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetPhysioPendingOrderListResponse" message="tns:ILaboratory_GetPhysioPendingOrderList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduledOrderList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetScheduledOrderList" message="tns:ILaboratory_GetScheduledOrderList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetScheduledOrderListResponse" message="tns:ILaboratory_GetScheduledOrderList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhysiotherapistMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/PhysiotherapistMstTran" message="tns:ILaboratory_PhysiotherapistMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/PhysiotherapistMstTranResponse" message="tns:ILaboratory_PhysiotherapistMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTherapistMstLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetTherapistMstLst" message="tns:ILaboratory_GetTherapistMstLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetTherapistMstLstResponse" message="tns:ILaboratory_GetTherapistMstLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestCDFrmBlankReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetTestCDFrmBlankReport" message="tns:ILaboratory_GetTestCDFrmBlankReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetTestCDFrmBlankReportResponse" message="tns:ILaboratory_GetTestCDFrmBlankReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSentSampleToRefLab">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/UpdateSentSampleToRefLab" message="tns:ILaboratory_UpdateSentSampleToRefLab_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/UpdateSentSampleToRefLabResponse" message="tns:ILaboratory_UpdateSentSampleToRefLab_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LabDeptScheduleTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/LabDeptScheduleTran" message="tns:ILaboratory_LabDeptScheduleTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/LabDeptScheduleTranResponse" message="tns:ILaboratory_LabDeptScheduleTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabDeptScheduleData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILaboratory/GetLabDeptScheduleData" message="tns:ILaboratory_GetLabDeptScheduleData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILaboratory/GetLabDeptScheduleDataResponse" message="tns:ILaboratory_GetLabDeptScheduleData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILaboratory" type="tns:ILaboratory">
+    <wsp:PolicyReference URI="#BasicHttpBinding_ILaboratory_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestMasterTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/TestMasterTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMicroOrganMstRecords">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetMicroOrganMstRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MicroOrgMstTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/MicroOrgMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestigationData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetInvestigationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNormalValueData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetNormalValueData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestigDataByTestCode">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetInvestigDataByTestCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvestigationTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/InvestigationTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabTechnoMstTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/LabTechnoMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabTechnoMstLst">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetLabTechnoMstLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileTestLink">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetProfileTestLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProfTestLnkTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/ProfTestLnkTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabSignatoryTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/LabSignatoryTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabSignDet">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetLabSignDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvstList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetInvstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestEquipmntList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetInvestEquipmntList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EquipmntInvstLnkTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/EquipmntInvstLnkTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabTemplateTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/LabTemplateTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabTemplateMstRec">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetLabTemplateMstRec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrgGrpAntiLnkTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/OrgGrpAntiLnkTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrgAntibLnkLst">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetOrgAntibLnkLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentTestLnk">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetReagentTestLnk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReagTestLnkTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/ReagTestLnkTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReagConsumptnList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetReagConsumptnList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReagConsumpTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/ReagConsumpTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMicrobiologyList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetMicrobiologyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectOrder">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/CollectOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFixedValData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetFixedValData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFixValWithRngData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetFixValWithRngData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingOrderList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetPendingOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTestList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetPendingTestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollectedOrderList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetCollectedOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollectedTestList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetCollectedTestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceptedOrderList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetAcceptedOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceptedTestList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetAcceptedTestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingOrderToAccept">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetPendingOrderToAccept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTestForAccept">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetPendingTestForAccept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcceptOrder">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/AcceptOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataFrResultEntry">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetDataFrResultEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResultEntryTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/ResultEntryTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingOrderFrResult">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetPendingOrderFrResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportedOrder">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetReportedOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportedTestList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetReportedTestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTestForReport">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetPendingTestForReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultEntryData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetResultEntryData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataFrChangeResultEntry">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetDataFrChangeResultEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifiedOrder">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetVerifiedOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifiedTestList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetVerifiedTestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabTempList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetLabTempList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMicroOrgList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetMicroOrgList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAntibioticList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetAntibioticList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetResultList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAntiBioticListWithMIC">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetAntiBioticListWithMIC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreviousResult">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetPreviousResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiResultData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetMultiResultData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrintStatus">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/UpdatePrintStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultDelList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetResultDelList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeliveryStatus">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/UpdateDeliveryStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RCNTemplateTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/RCNTemplateTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRCNTemplateMstRec">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetRCNTemplateMstRec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RCNormalStudyLnk">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/RCNormalStudyLnk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTstNormStdLnk">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetTstNormStdLnk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRCNPendingTestList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetRCNPendingTestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRCNDataFrResultEntry">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetRCNDataFrResultEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRevenueSummary">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetRevenueSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderBookDet">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetOrderBookDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestgnWithPanic">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetInvestgnWithPanic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestStatusDetails">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetTestStatusDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMicroDataAnalysis">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetMicroDataAnalysis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestgListData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetInvestgListData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetReagentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabReagentMstTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/LabReagentMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTATDet">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetTATDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileOrderList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetProfileOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfilOrderTestList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetProfilOrderTestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommentTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/CommentTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComments">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAntibioMoniterData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetAntibioMoniterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMtrlHlpUsrCntrlData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetMtrlHlpUsrCntrlData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRNCSignDet">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetRNCSignDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RNCSignatoryTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/RNCSignatoryTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRedoneList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetRedoneList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestRateOP">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetTestRateOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestAptList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetTestAptList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptApmntSrchLst">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetDeptApmntSrchLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptSlots">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetDeptSlots" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestAppointmntTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/TestAppointmntTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelTestApmnt">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/CancelTestApmnt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAmendmntDet">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/SaveAmendmntDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmendmentData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetAmendmentData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonBillTestList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetNonBillTestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TemplateHelperTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/TemplateHelperTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateHelper">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetTemplateHelper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoSpeciRemark">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetHistoSpeciRemark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetCommentData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetWorkList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestInvestigations">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetTestInvestigations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabTempListByTest">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetLabTempListByTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RejectSampleTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/RejectSampleTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSampleReCollectData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetSampleReCollectData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SampleCollectionDelayed">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/SampleCollectionDelayed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RerunSampleTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/RerunSampleTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PhysioScheduleTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/PhysioScheduleTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetScheduleData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePhysioTemplate">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/SavePhysioTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysioTemplate">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetPhysioTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysioPendingOrderList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetPhysioPendingOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduledOrderList">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetScheduledOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PhysiotherapistMstTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/PhysiotherapistMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTherapistMstLst">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetTherapistMstLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestCDFrmBlankReport">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetTestCDFrmBlankReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSentSampleToRefLab">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/UpdateSentSampleToRefLab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabDeptScheduleTran">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/LabDeptScheduleTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabDeptScheduleData">
+      <soap:operation soapAction="http://tempuri.org/ILaboratory/GetLabDeptScheduleData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Laboratory">
+    <wsdl:port name="BasicHttpBinding_ILaboratory" binding="tns:BasicHttpBinding_ILaboratory">
+      <soap:address location="http://192.168.1.3/WebHMISServiceN/Laboratory.svc/Laboratory.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

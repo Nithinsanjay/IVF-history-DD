@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BL_Logic" />
+  <xs:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" />
+  <xs:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+  <xs:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Oncology" />
+  <xs:element name="SaveUpdateAdmission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ip" nillable="true" type="tns:BL_IPAdmission" />
+        <xs:element minOccurs="0" name="xmlDSDepositInfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BL_IPAdmission">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdharName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdharNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdmnDoct3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Admndoct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Admndoct2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Admnsource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Admntype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Areaid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Authby" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Authremark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BedAlocRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bedcatgcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bedno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Blbedcatg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CanRemarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Casetypecd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cityid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cntrcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Complimit" type="xs:double" />
+      <xs:element minOccurs="0" name="ConsDoct3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Conscatg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Conscatproof" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Consdoct2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Consdoctor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Countryid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Crdcompcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Crdempid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Deptcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Districtid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DraftUniqueId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpDepndntCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Empid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Empname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fundsource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hospunit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Icdcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Insurcompcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipaddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Medrecno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MemberId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mlcremarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mlcyorn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moduleid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NokAreacd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NokDistcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokaddr1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokaddr2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokaddr3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokcitycd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokcntrcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokmobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokophone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokpincode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokregncd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokrelatn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokrphone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nurscode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PANHolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PANNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatAge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatCareType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pataddr1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pataddr2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pataddr3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patcatgcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patmobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patophone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatpAreacd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatpDistcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patpaddr1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patpaddr2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patpaddr3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patpcitycd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patpcntrcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patpmobl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patpphon1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patpphon2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patpregncd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patrphone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Paytype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ppincode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prbedcatg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RebateYn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RefCompCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Refhosp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Refrdoctor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Regionid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Roomno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SchemeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpecialNeed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpecialNeedYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tariffid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranMode" type="xs:int" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlAppliedSchemes" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_IPAdmission" nillable="true" type="tns:BL_IPAdmission" />
+  <xs:element name="SaveUpdateAdmissionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BL_Logic" minOccurs="0" name="SaveUpdateAdmissionResult" nillable="true" type="q1:ArrayOfBL_TransactionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateNBAdmn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NB" nillable="true" type="tns:BL_NBAdmission" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BL_NBAdmission">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Addr1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Addr2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Addr3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Admnbedno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Admnroomno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Admntype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Babyage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Babydob" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Babyname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Babysex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Babywt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bedcatgcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Birthtime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Casetypecd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cityid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cntrcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Consdoctor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Countryid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Deptcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Districtid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Doctcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fathername" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fundsource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gravida" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HealthStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hospunit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MotherMRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Motheripno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mrno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nationlity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nbremarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nokrelatn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NursCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ophone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Para" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patcatgcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patfname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patlname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patmname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patreligin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pattypcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Paytype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Regionid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rphone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Salutation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tariffid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tranmode" type="xs:int" />
+      <xs:element minOccurs="0" name="Twinsyn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_NBAdmission" nillable="true" type="tns:BL_NBAdmission" />
+  <xs:element name="SaveUpdateNBAdmnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUpdateNBAdmnResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDoctorTransfer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="transf" nillable="true" type="tns:BL_TransferDoctor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BL_TransferDoctor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FrmAdmndoct2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FrmConsDoct2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Frmdept" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromConsDoct3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromDoct3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipaddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moduleid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAdmndoct2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToConsDoct2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToConsDoct3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToDoct3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Toadmndoct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Toconsdr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Todept" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Trandate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Trantime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="frmAdmndoct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="frmConsdoct" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_TransferDoctor" nillable="true" type="tns:BL_TransferDoctor" />
+  <xs:element name="SaveDoctorTransferResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveDoctorTransferResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOrUpdateRoomReserv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reserv" nillable="true" type="tns:BL_RoomReservation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BL_RoomReservation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_IPComProperty">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Bedcatgcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Bedno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Doctcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reservedon" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reservno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Roomno" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_RoomReservation" nillable="true" type="tns:BL_RoomReservation" />
+  <xs:complexType name="BL_IPComProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CntrCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EditYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExcelYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FundSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hospunit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrintYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rights" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShowYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranMode" type="xs:int" />
+      <xs:element minOccurs="0" name="TranNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranPrintYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cancelYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="verifyYn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_IPComProperty" nillable="true" type="tns:BL_IPComProperty" />
+  <xs:element name="SaveOrUpdateRoomReservResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveOrUpdateRoomReservResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelRoomReserv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reser" nillable="true" type="tns:BL_RoomReservation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelRoomReservResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelRoomReservResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTransferBed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" minOccurs="0" name="transf" nillable="true" type="q2:BL_BedTransfer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTransferBedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BL_Logic" minOccurs="0" name="SaveTransferBedResult" nillable="true" type="q3:ArrayOfBL_TransactionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoomReservDet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFrmBookdt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToBookDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFrmReservDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToReservDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPatname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strReservStat" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strReservNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoomReservDetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRoomReservDetResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPRegistDet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIPNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPRegistDetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIPRegistDetResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewBornDet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIPno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFrmDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPatname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewBornDetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNewBornDetResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTwinbabyName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRNO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMotherName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTwinbabyNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTwinbabyNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BedMaintainTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTranType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strXMLBedList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BedMaintainTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BedMaintainTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BedIsolationTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIPNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTranType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strXMLBedList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BedIsolationTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BedIsolationTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCancelDischrg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="trn" nillable="true" type="tns:BL_DischargeTran" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BL_DischargeTran">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bedno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Diagnosis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Disdest" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Disdoct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dishrgdt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Disreqno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Disslno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Disstatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hospunit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipaddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moduleid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mrno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notifydate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tranmode" type="xs:int" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Wardno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_DischargeTran" nillable="true" type="tns:BL_DischargeTran" />
+  <xs:element name="SaveCancelDischrgResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveCancelDischrgResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BedHoldingTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIPNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTranType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBedNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strWardNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BedHoldingTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BedHoldingTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDischargeList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIPNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPatName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDisFrmDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDisToDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStaus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDisSlNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDischrgType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strNursCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDischargeListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDischargeListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateDpstReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="req" nillable="true" type="tns:BL_DepositRequisition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BL_DepositRequisition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:double" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Deposittype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipaddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moduleid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mrno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REMARK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Requestno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tranmode" type="xs:int" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_DepositRequisition" nillable="true" type="tns:BL_DepositRequisition" />
+  <xs:element name="SaveUpdateDpstReqResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUpdateDpstReqResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepstReqList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIPNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFrmDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strReqNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPatName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strReqfrmAdmnYN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepstReqListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDepstReqListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IPAuthTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="tns:BL_IPAuthorization" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BL_IPAuthorization">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Authdate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Authno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Authtime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Authuserid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvestAuthyn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipaddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modulid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mrno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PHAuthyn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tranmode" type="xs:int" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_IPAuthorization" nillable="true" type="tns:BL_IPAuthorization" />
+  <xs:element name="IPAuthTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IPAuthTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonorRegisTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="don" nillable="true" type="tns:BL_DonorRegistration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BL_DonorRegistration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Donoripno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Donormrno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipaddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moduleid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Recpntipno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Recpntmrno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tranmode" type="xs:int" />
+      <xs:element minOccurs="0" name="Tranno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_DonorRegistration" nillable="true" type="tns:BL_DonorRegistration" />
+  <xs:element name="DonorRegisTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DonorRegisTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIpMoveDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIPNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIpMoveDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIpMoveDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPPatientVisitDet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPPatientVisitDetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIPPatientVisitDetResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDonorRegiList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDonIpNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strReciIPNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFrmDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDonorName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strReciName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDonorRegiListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDonorRegiListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPOverDueAuthList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAuthNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFrmDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTodate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIPNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPatname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPOverDueAuthListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIPOverDueAuthListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWardWiseAdmnPerHr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFrmDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strWard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strNusringStn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWardWiseAdmnPerHrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetWardWiseAdmnPerHrResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdmnAndDiscEnqData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFrmDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strNursCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBedCatgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDischrgType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAdmnOrDisc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdmnAndDiscEnqDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAdmnAndDiscEnqDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillAmtByIP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIPNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillAmtByIPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBillAmtByIPResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdmnAndDiscEnqSumData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFrmDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strNursCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBedCatgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDischrgType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAdmnOrDisc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdmnAndDiscEnqSumDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAdmnAndDiscEnqSumDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IPRefundReqTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="req" nillable="true" type="tns:BL_RefundRequisition" />
+        <xs:element minOccurs="0" name="strXMLReqListDt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BL_RefundRequisition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:double" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipaddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moduleid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mrno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Requestno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tranmode" type="xs:int" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_RefundRequisition" nillable="true" type="tns:BL_RefundRequisition" />
+  <xs:element name="IPRefundReqTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BL_Logic" minOccurs="0" name="IPRefundReqTranResult" nillable="true" type="q4:ArrayOfBL_TransactionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedOccupDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strNurstCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBedCatgcd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDeptCD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strExcldEmergBedsYN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedOccupDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBedOccupDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPRefReqList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIPNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFrmDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strReqNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPatName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPRefReqListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIPRefReqListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPRefReqDt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strRequestNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPRefReqDtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIPRefReqDtResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPDpstListToTransfer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIPNO" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPDpstListToTransferResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIPDpstListToTransferResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IPDpstTransfTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="transf" nillable="true" type="tns:BL_IPDepositTranfer" />
+        <xs:element minOccurs="0" name="xmlDpstList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="xmlPaymodeLst" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BL_IPDepositTranfer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cntrcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Finyear" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Frmipno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Frmmrno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fundsource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipaddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moduleid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rcvdfrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tansferamt" type="xs:double" />
+      <xs:element minOccurs="0" name="Tomrno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Trnsfrno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_IPDepositTranfer" nillable="true" type="tns:BL_IPDepositTranfer" />
+  <xs:element name="IPDpstTransfTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BL_Logic" minOccurs="0" name="IPDpstTransfTranResult" nillable="true" type="q5:ArrayOfBL_TransactionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPDpstTransferList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMrno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTrnFrmDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTrnToDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPatName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCounter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTransferNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToIPNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToPatname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFrmIPNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPDpstTransferListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIPDpstTransferListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPDpstTransfDT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTransferNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPDpstTransfDTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIPDpstTransfDTResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotificationData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotificationDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNotificationDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReferralHospitalMstTran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" minOccurs="0" name="r" nillable="true" type="q6:BL_ReferralHospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReferralHospitalMstTranResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReferralHospitalMstTranResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastIPOPFeedByMRNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastIPOPFeedByMRNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLastIPOPFeedByMRNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedChart">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedChartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBedChartResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDischargeTAT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFromDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToFromDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strNursingCD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDoctroCD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPatCatgCD" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDischargeTATResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDischargeTATResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CorrectAdmisisonDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bL_Correction" nillable="true" type="tns:BL_Correction_Admission" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BL_Correction_Admission">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_IPComProperty">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdmDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AdmTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiscDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiscTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientAge" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Correction_Admission" nillable="true" type="tns:BL_Correction_Admission" />
+  <xs:element name="CorrectAdmisisonDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CorrectAdmisisonDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateChemoSchedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BL_Logic.Oncology" minOccurs="0" name="bl" nillable="true" type="q7:BL_ChemoScheduling" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateChemoScheduleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUpdateChemoScheduleResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNSAvailableBedSlots">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strForDates" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strForNSCodes" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNSAvailableBedSlotsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNSAvailableBedSlotsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChemoPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strPlanNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChemoPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetChemoPlanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChemoScheduleList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFromDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strToDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSearchDateType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChemoScheduleListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetChemoScheduleListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAdmission_Draft">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bl" nillable="true" type="tns:BL_IPAdmission" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAdmission_DraftResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveAdmission_DraftResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdmissionDraftList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMRNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUniqueId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdmissionDraftListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAdmissionDraftListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdmissionSavedCheckList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strIPNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdmissionSavedCheckListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAdmissionSavedCheckListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllocatSchemeToIPNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bl" nillable="true" type="tns:BL_IPAdmission" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllocatSchemeToIPNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AllocatSchemeToIPNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

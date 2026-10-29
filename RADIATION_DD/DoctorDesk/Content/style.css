@@ -1,0 +1,1655 @@
+﻿    
+.lblImg {
+ 
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.parent :not(.selectable-all) {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: text;
+}
+.lblImg:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: -11px;
+  left: -5px;
+  width: 23px;
+  height: 23px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+.lblImage {
+  height: 40px;
+  width: 40px;
+  transition-duration: 0.2s;
+     transform-origin: 50% 75%;
+}
+
+.lblImage1 {
+  height: 40px;
+  width: 40px;
+  transition-duration: 0.2s;
+     transform-origin: 50% 75%;
+}
+
+:checked + label {
+      border: 1px solid grey;
+  border-color: #c1f258;
+}
+    
+:checked + label:before {
+  content: "✓";
+  background-color: green;
+  transform: scale(0.7);
+}
+
+:checked + label img {
+  transform: scale(0.7);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
+}
+
+
+         .liSeparator
+        {
+            color: dimgray;
+            margin-left: -30px;
+            margin-top: 3px;
+            margin-bottom: 0px;
+            border-top: 2px solid #d6d2d2;
+        }
+
+       .liIconSpan
+        {
+            padding-right:10px;
+             /*padding-left:17px;*/
+        }
+
+      .rightPanelul .list:hover{
+                background: #7575722e;
+                border-radius:11px 11px 11px 11px;/*30 oct 2018*/
+            }
+        .lblCnt
+       {
+           float:right;
+           color:brown;
+           padding-right: 5px;
+       }
+        /*------------start-----added in all masters------ Meenakshi to apply a slim scroll ---------*/
+        ::-webkit-scrollbar {
+    width: 6px;
+       height:6PX;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background: rgba(255,0,0,0.8);
+    width: 10px;
+}
+
+ /*------------end----------- Meenakshi to apply a slim scroll ---------*/
+   .rightPanelul{
+    line-height: 20px;
+    font-weight: bold;
+    color: #595454;
+    /*text-shadow: 0.4px 0px 0.4px #537c94;*/
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    cursor:pointer;
+    margin-left:-20px;
+            }
+        .navbar-nav > .user-menu > .dropdown-menu {
+            /*width: 450px;*/
+        }
+
+        #lnkNewNotes:hover, #lnkAddComp:hover {
+            cursor: pointer !important;
+        }
+        a{
+            /*color: #3c8dbc;
+    text-decoration: none;*/
+    text-shadow: 1px 0px 1px;
+    letter-spacing: 1px;
+    /*font-size: 12px;*/
+        }
+        .dropbtn {
+            background-color: transparent;
+            color: black;
+            padding: 5px;
+            font-size: 13px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            outline: 0;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 3px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            height: 35px;
+        }
+
+        .dropdown:hover .dropbtn {
+        }
+
+        .sdList {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            right: 0;
+            top: 0;
+            width: 57%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            -webkit-animation-name: fadeIn; /* Fade in the background */
+            -webkit-animation-duration: 0.4s;
+            animation-name: fadeIn;
+            animation-duration: 0.4s;
+            margin-top: 47px;
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            /*width: 85%; */ /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            -webkit-animation-name: fadeIn; /* Fade in the background */
+            -webkit-animation-duration: 0.4s;
+            animation-name: fadeIn;
+            animation-duration: 0.4s;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: fixed;
+            bottom: 0;
+            background-color: #fefefe;
+            width: 230px;
+            -webkit-animation-name: slideIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name: slideIn;
+            animation-duration: 0.4s;
+        }
+
+        .menuButton {
+            background-color: transparent;
+            color: white;
+            /*padding: 14px;font-size: 12px;*/
+              padding: 8px;  /*//25-11-2019 12:07*/
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .w3-circle {
+            border-radius: 50%;
+            margin-left: 5px;
+        }
+
+        .signOut {            
+            width: 10%;
+           
+        }
+
+         /*added by vijeta on 17th april 2018*/
+         .row1
+        {
+	        border:none;
+	        height: 50px;
+	        width: 200px;
+	        margin: 10px;
+            text-align:center;
+            position:relative;
+        }
+
+        .circle
+        {
+	
+	        height: 50px;
+	        width: 50px;
+	        border-radius: 40px;
+           position:relative;
+            margin:10px auto;
+           display:inline-block;
+        }
+
+
+        .sideLstMenuIcon
+        {
+            min-height:48px;
+        }
+
+        /*#ShortCutPrescription{
+            margin-left:-10px;
+        }*/
+         #prescrpMaster{
+            margin-left:-10px;
+        }
+
+
+         .sideShortMenu  {
+             /*background-color: #e7e7f3;*/
+              background: linear-gradient(to left, #ff8008, #ffc837);
+             color:black;
+         }
+
+         .sideShortAlertnateMenu  {
+             /*background-color: #e7e7f3;*/
+              background: linear-gradient(to left, #60ce76, #abfbd2);
+             color:black;
+         }
+
+        /*.sideShortMenu :hover {
+            background-color: #eaeaf9;
+            color:black;
+        }*/
+
+        .divIcon:hover
+        {
+            border: 1px solid #0c11ed !important;
+    box-shadow: -6px 0px 12px 0px;
+        }
+       
+        .sideShortCutMenuLable {
+            line-height: 41px;
+            padding-left: 34px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            width: 100%;
+            margin-left:-4px;
+        }
+
+         
+        /*-------------------------------------------*/
+      
+        .leftColumn{
+            border-radius:50%;cursor:pointer;width:32px;height:32px;float:left;margin-left:-12px;margin-top:4px;
+        }
+        .shortCutMenuCaptionLeft
+        {
+           margin-top:11px;font-size:12px;width:90px;color:black;
+        }
+        .shortCutMenuCaptionRight
+        {
+            margin-top:11px;font-size:12px;width:88px;color:black;
+        }
+
+         .divIcon {
+                margin-left: -4px;
+                height:40px
+            }
+          
+       #txtNotes{          
+         height: 60px; 
+         overflow-y: scroll;
+         width: 283px; 
+         font-size: 14px;
+       }
+        
+            .PatName{
+                 font-size: 8px;
+            }
+
+             
+	 .underline{
+               border-bottom:1px solid black !important;
+               padding-bottom:2px;
+            }
+
+             /*kavita 17-8-18  */
+           .altText{ 
+		        display:none;/*kavita 29-8-18*/
+                 color:gray;
+                 /*margin-left:100px;*/
+                 margin-top:2px;
+                 float:right;
+                 padding-right:6px;   
+                 font-size:11px;
+                 font-weight:100;
+             }
+
+	 /* kavita 22-8-18*/
+           #menuDots{
+               display:none;
+           }
+
+            /*added by vijeta on 27th sep 2018*/
+           .nav-tabs li{
+            float: left;            
+            width: 110px;
+            text-align: center;
+            font-size: 11px;
+            /*color: #882525;*/
+            }
+
+           .nav  li  a {
+            position: relative;
+    display: block;
+    padding: 10px 11px;
+    color: rgb(255, 255, 255);
+    background-color: #61788d;
+   
+            }
+
+           .tabcontainer{
+               margin-left:141px;
+                margin-top:6px;
+           }
+
+            /*added by vij on 1st oct 2018*/
+           .SetupsDiv{
+               margin-left:0px;
+               background-color:rgb(241, 243, 243);
+               box-shadow:rgb(103, 103, 97) 0px -1px 14px 4px;
+               height:200px;
+               width:142px;
+               overflow:auto;
+           }
+
+             /*added by vij on 1st oct 2018*/
+           .setUpHeading{
+               margin-left:0px;
+               background-color:#676161;
+               width:142px;; 
+               text-align: center;
+               font-size: 14px;
+               font-weight: bolder;
+               color: aliceblue;    
+                         background: linear-gradient(to bottom, #00d2a6 0%, #003529 100%);
+           }
+
+            /*by vijeta on 10th nov 2018*/
+             /*#showNotesDiv
+            {
+                overflow:scroll;height:180px;
+            }*/
+
+	    @media only screen and (min-width : 360px){
+                 /*kavita 17-8-18  */
+                .altText {
+                    display: none;
+                }
+
+
+		 /* kavita 22-8-18*/
+               #menuDots{
+               display:block;
+              }
+		 /* kavita 29-8-18*/
+
+            #tblHistDiv {
+                width: 95%;
+                margin-left: 0%;
+            }
+             #tblTumorDiv {
+                width: 95%;
+                margin-left: 0%;
+            }
+            #tblRefDrNotesDiv {
+                width: 95%;
+                margin-left: 0%;
+            }
+        #txtNotes{
+           
+        height:100px;
+        overflow-y: scroll;
+        width: 270px;
+        font-size: 14px;
+       }
+
+         /*added by vij on 1st oct 2018*/
+           .SetupsDiv{
+               margin-left:0px;
+               background-color:rgb(241, 243, 243);
+               box-shadow:rgb(103, 103, 97) 0px -1px 14px 4px;
+               height:200px;
+               width:142px;
+               overflow:auto;
+           }
+
+             /*added by vij on 1st oct 2018*/
+           .setUpHeading{
+               margin-left:0px;
+               background-color:#676161;
+               width:142px; 
+               text-align: center;
+               font-size: 14px;
+               font-weight: bolder;
+               color: aliceblue;
+                   background: linear-gradient(to bottom, #00d2a6 0%, #003529 100%);          
+           }
+		
+            /*by vijeta on 10th nov 2018*/
+             /*#showNotesDiv
+            {
+                overflow:scroll;height:200px;
+            }*/
+            }
+
+        @media only screen and (min-width : 768px) {
+            /* tablet*/
+
+            /*.row {
+                margin-right: 170px;
+                margin-left: 170px;
+            }*/
+
+           /*added by vijeta on 17th april 2018*/
+
+            #tblHistDiv{
+                width:65%;
+                margin-left:20%;
+            }
+            #tblTumorDiv{
+                width:65%;
+                margin-left:20%;
+            }
+
+            #tblRefDrNotesDiv {
+                width: 65%;
+                margin-left: 20%;
+            }
+        .row1
+        {
+	        border:none;
+	        height: 50px;
+	        width: 300px;
+	        margin: 10px;
+            text-align:center;
+            position:relative;
+        }
+         /*added by vijeta on 16th may 2018*/
+        #txtNotes{
+             height: 100px;/*kavita 29-8-18*/
+             overflow-y: scroll;
+             width: 300px;
+             font-size: 14px;
+            }
+
+          /*added by vijeta on 13th Aug 2018*/
+            .PatName{
+                 font-size: 12px;
+            }
+	   /* kavita 17-8-18 */
+        .altText{
+                display:none;
+             }
+
+	 /* kavita 22-8-18*/
+           #menuDots{
+               display:block;
+           }
+
+           /*added by vij on 1st oct 2018*/
+           .SetupsDiv{
+               margin-left:0px;
+               background-color:rgb(241, 243, 243);
+               box-shadow:rgb(103, 103, 97) 0px -1px 14px 4px;
+               height:200px;
+               width:142px;
+               overflow:auto;
+           }
+
+             /*added by vij on 1st oct 2018*/
+           .setUpHeading{
+               margin-left:0px;
+               background-color:#676161;
+               width:142px; 
+               text-align: center;
+               font-size: 14px;
+               font-weight: bolder;
+               color: aliceblue;         
+                   background: linear-gradient(to bottom, #00d2a6 0%, #003529 100%); 
+           }
+
+              /*by vijeta on 10th nov 2018*/
+             /*#showNotesDiv
+            {
+                overflow:scroll;height:250px;
+            }*/
+        }
+
+        @media screen and (min-width: 480px) and (max-width: 767px) {
+            /*mobile landscape*/
+            /*.row {
+                margin-right: 90px;
+                margin-left: 85px;
+            }*/
+
+            /*added by vijeta on 17th april 2018*/
+
+             #tblHistDiv{
+                width:60%;
+                margin-left:20%;
+            }
+             #tblTumorDiv{
+                width:60%;
+                margin-left:20%;
+            }
+            #tblRefDrNotesDiv {
+                width: 60%;
+                margin-left: 20%;
+            }
+        .row1
+        {
+	        border:none;
+	        height: 50px;
+	        width: 300px;
+	        margin: 10px;
+            text-align:center;
+            position:relative;
+        }
+
+        /*added by vijeta on 16th may 2018*/
+        #txtNotes{
+            height: 100px;/* kavita 29-8-18*/
+            overflow-y: scroll;
+            width: 270px;
+            font-size: 14px;
+         }
+         /*added by vijeta on 13th Aug 2018*/
+            .PatName{
+                 font-size: 12px;
+            }
+
+	    /* kavita 17-8-18 */
+        .altText{
+                display:none;
+             }
+		  /* kavita 22-8-18*/
+           #menuDots{
+               display:block;
+           }
+
+           /*added by vij on 1st oct 2018*/
+           .SetupsDiv{
+               margin-left:0px;
+               background-color:rgb(241, 243, 243);
+               box-shadow:rgb(103, 103, 97) 0px -1px 14px 4px;
+               height:200px;
+               width:142px;
+               overflow:auto;
+           }
+
+             /*added by vij on 1st oct 2018*/
+           .setUpHeading{
+               margin-left:0px;
+               background-color:#676161;
+               width:142px; 
+               text-align: center;
+               font-size: 14px;
+               font-weight: bolder;
+               color: aliceblue;        
+                   background: linear-gradient(to bottom, #00d2a6 0%, #003529 100%);  
+           }
+        }
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .sdList {
+        width: 16%;
+        height: 100%;
+        margin-top: 90px;
+    }
+}
+@media only screen and (max-width : 992px) {
+    #patList{
+            margin-top: 25px;
+    }
+    .form-control-feedback{
+        margin-top: 0px !important;
+    }
+}
+
+        @media only screen and (min-width : 992px) {
+             #tblHistDiv{
+                width:60%;
+                margin-left:20%;
+            }
+              #tblTumorDiv{
+                width:39%;
+                margin-left:24%;
+            }
+            #tblRefDrNotesDiv {
+                width:60%;
+                margin-left:20%;
+            }
+            .content-wrapper {
+                   width: 63.8%;
+                    margin-left: 290px;
+            }
+
+            .modal {
+                width: 20%;
+                margin-top: 46px;
+            }
+
+            /*.content {
+                width: 70%;
+            }*/
+
+            /*.row {
+                margin-right: -190px;
+                margin-left: 130px;
+            }*/
+
+            .panel-primary {
+                /*width: 6vw;
+                height: 5vw;*/
+                  width: 5vw;
+                height: 5vw;
+            }
+
+            .panel-body{
+
+                 width: 5vw;
+                height: 5vw;
+            }
+
+            .sdList {
+                width: 16%;
+                height: 100%;
+                margin-top: 49px;
+                /*margin-top: 71px;*/
+            }
+
+            .close {
+                display: none;
+            }
+
+              .signOut {               
+                float: right;
+                margin-top: 10px;
+                width: 10%;
+            }
+
+            .pevPrescrp {
+                margin-left: 255px;
+            }
+
+            .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+                line-height: 1.2;
+            }
+
+            .contentHoldClass {
+                /*width: 845px;*/
+                width: 715px;
+            }
+
+            .clickRw {
+                font-size: 13px;
+            }
+
+            #tblDoctors {
+                width: 64%;
+                margin-left: 115px;
+            }
+           
+    /*added by vijeta on 17th april 2018*/
+            .row1
+        {
+	        border:none;
+	        height: 50px;
+	        width: 300px;
+	        margin: 10px;
+            text-align:center;
+            position:relative;
+        }
+            /*added by vijeta on 16th may 2018*/
+             #txtNotes{
+                height: 100px;
+                overflow-y: scroll;
+                width: 300px;
+                font-size: 14px;
+            }
+
+             /*added by vijeta on 13th Aug 2018*/
+            .PatName{
+                 font-size: 12px;
+            }
+	/* kavita 17-8-18 */
+             .altText{
+                display:block;
+             }
+	
+         /* kavita 22-8-18*/
+           #menuDots{
+               display:none;
+           }
+
+            /*added by vij on 1st oct 2018*/
+           .SetupsDiv{
+               margin-left:0px;
+               background-color:rgb(241, 243, 243);
+               box-shadow:rgb(103, 103, 97) 0px -1px 14px 4px;
+               height:300px;
+               width:210px;
+               overflow:auto;
+           }
+
+             /*added by vij on 1st oct 2018*/
+           .setUpHeading{
+               margin-left:0px;
+               background-color:#676161;
+               width:210px; 
+               text-align: center;
+               font-size: 14px;
+               font-weight: bolder;
+               color: aliceblue;     
+                   background: linear-gradient(to bottom, #00d2a6 0%, #003529 100%);     
+           }
+            
+           /*by vijeta on 10th nov 2018*/
+            /*#showNotesDiv
+            {
+                overflow:scroll;height:280px;
+            }*/
+        }
+
+         @media only screen and (min-width: 1024px) {
+
+            #tblHistDiv {
+                width: 30%;
+                margin-left: 45.8%;
+                top: 3% !important;
+            }
+            #tblRefDrNotesDiv {
+                width: 30%;
+                margin-left: 45.8%;
+                top: 3% !important;
+            }
+
+             #NotesNShortCuts{
+                  margin-left:0px;
+              }/*//*/
+             
+            .content-wrapper {
+                width: 63.6%;
+                margin-left: 205px;
+            }
+              .modal {
+                width: 20.33%;
+                margin-top: 46px;
+            }
+            .tabcontainer {
+                margin-left: 142px;
+                margin-top: 6px;
+            }
+              /*.row {
+                margin-left: 50px;
+            }*/
+                .rightPanelul {
+                /*margin-left: -34px;*/
+            } /*4/10/19*/
+       /*added by vijeta on 17th april 2018*/
+       .row1
+        {
+	        border:none;
+	        height: 50px;
+	        width: 300px;
+	        margin: 10px;
+            text-align:center;
+            position:relative;
+        }
+        /*added by vijeta on 18th april 2018*/
+            .sideShortCutMenuLable {
+                line-height: 35px;
+                padding-left: 30px;
+                cursor: pointer;
+                font-size: 9px;
+                font-weight: bold;
+                width: 100%;
+                margin-left: -5px;
+            }
+
+            .divIcon {
+                margin-left: -4px;
+                height:40px
+            }
+            .shortCutMenuCaptionLeft
+                 {
+           margin-top:11px;font-size:11px;width:90px;color:black;
+                    }
+
+         .shortCutMenuCaptionRight
+                {
+            margin-top:11px;font-size:11px;width:88px;color:black;
+             }
+            /*------------------------------------*/
+
+            /*added by vijeta on 16th may 2018*/           
+             #txtNotes{
+                height:100px;
+                width:300px;
+                overflow-y:scroll;
+                font-size: 14px;
+             }
+
+             /*added by vijeta on 13th Aug 2018*/
+            .PatName{
+                 font-size: 9px;/*//*/
+            }
+	     /* kavita 17-8-18 */
+             .altText{
+                display:block;
+             }
+	 /* kavita 22-8-18*/
+           #menuDots{
+               display:none;
+           }
+      
+            /*added by vij on 1st oct 2018*/
+           .SetupsDiv{
+               margin-left:0px;
+               background-color:rgb(241, 243, 243);
+               box-shadow:rgb(103, 103, 97) 0px -1px 14px 4px;
+               height:300px;
+               width:210px;
+               overflow:auto;
+           }
+             /*added by vij on 1st oct 2018*/
+           .setUpHeading{
+               margin-left:0px;
+               background-color:#676161;
+               width:210px;   
+               text-align: center;
+               font-size: 14px;
+               font-weight: bolder;
+              color: aliceblue;    
+                  background: linear-gradient(to bottom, #00d2a6 0%, #003529 100%);    
+           }
+
+            /*by vijeta on 10th nov 2018*/
+            /*#showNotesDiv
+            {
+                overflow:scroll;height:228px;
+            }*/
+
+             .nav-tabs li {
+                 float: left;
+                 width:fit-content;            
+                 text-align: center;
+                 font-size: 12px ;            
+               }
+
+            .tabcontainer {
+                 margin-left: 45px;
+                 margin-top: 6px;
+             }
+              .contentHoldClass {              
+                width: 675px;
+            }
+        }
+
+          @media only screen and (min-width: 1366px) {
+            #tblHistDiv {
+                width: 30%;
+                margin-left: 45.8%;
+            }
+
+            #tblRefDrNotesDiv {
+                width: 30%;
+                margin-left: 45.8%;
+            }
+
+            .content-wrapper {
+                width: 63.5%;
+                margin-left: 278px;
+            }
+
+            /*.row {
+                margin-left: 120px;
+            }*/
+
+            /*added by vijeta on 17th april 2018*/
+            .row1 {
+                border: none;
+                height: 50px;
+                width: 300px;
+                margin: 10px;
+                text-align: center;
+                position: relative;
+            }
+
+            /*added by vijeta on 18th april 2018*/
+            .sideShortCutMenuLable {
+                line-height: 35px;
+                padding-left: 30px;
+                cursor: pointer;
+                font-size: 9px;
+                font-weight: bold;
+                width: 100%;
+                margin-left: -5px;
+            }
+
+            .divIcon {
+                margin-left: -4px;
+                height: 40px;
+            }
+
+            .shortCutMenuCaptionLeft {
+                margin-top: 11px;
+                font-size: 11px;
+                width: 90px;
+                color: black;
+            }
+
+            .shortCutMenuCaptionRight {
+                margin-top: 11px;
+                font-size: 11px;
+                width: 88px;
+                color: black;
+            }
+            /*------------------------------------*/
+
+            /*added by vijeta on 16th may 2018*/
+            #txtNotes {
+                height: 100px;
+                width: 300px;
+                overflow-y: scroll;
+                font-size: 14px;
+            }
+
+            /*added by vijeta on 13th Aug 2018*/
+            .PatName {
+                font-size: 12px;
+            }
+            /* kavita 17-8-18 */
+            .altText {
+                display: none;
+            }
+            /* kavita 22-8-18*/
+            #menuDots {
+                display: none;
+            }
+
+            /*added by vij on 1st oct 2018*/
+            .SetupsDiv {
+                margin-left: 0px;
+                background-color: rgb(241, 243, 243);
+                box-shadow: rgb(103, 103, 97) 0px -1px 14px 4px;
+                height: 300px;
+                width: 210px;
+                overflow: auto;
+            }
+            /*added by vij on 1st oct 2018*/
+            .setUpHeading {
+                margin-left: 0px;
+                background-color: #676161;
+                width: 210px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: bolder;
+                color: aliceblue;
+                    background: linear-gradient(to bottom, #00d2a6 0%, #003529 100%);
+            }
+
+                 /*by vijeta on 10th nov 2018*/
+      /*#dialog {
+            position: relative;
+            border: 0;
+            padding: .5em 1em;
+            background: none;
+            overflow:hidden;
+            width:320px;
+            height:387px;
+        }*/
+
+     /*by vijeta on 10th nov 2018*/
+            /*#showNotesDiv
+            {
+                overflow:scroll;height:285px;
+            }*/
+
+              .nav-tabs li {
+                 float: left;
+                 width:fit-content;            
+                 text-align: center;
+                 font-size: 12px;          
+                }
+
+              .tabcontainer {
+                 margin-left: 130px;
+                 margin-top: 6px;
+              }
+
+            .contentHoldClass {              
+                width: 694px;
+            }
+        }
+
+        @media only screen and (min-width:1400px) {
+
+            #tblHistDiv {
+                width: 30%;
+                margin-left: 46.8%;
+                top: 5%;
+            }
+              #tblTumorDiv {
+                width: 30%;
+                margin-left: 36.8%;
+                top: 5%;
+            }
+
+            #tblRefDrNotesDiv {
+                width: 30%;
+                margin-left: 46.8%;
+                top: 5%;
+            }
+
+             #NotesNShortCuts{
+                  margin-left:10px;
+              } /**/
+
+           .content-wrapper {
+                width: 63.6%;
+                margin-left: 292px;
+            }
+         
+            /*.row {
+                margin-left: 150px;
+            }*/
+
+      /*added by vijeta on 17th april 2018*/
+       .row1
+        {
+	        border:none;
+	        height: 50px;
+	        width: 300px;
+	        margin: 10px;
+            text-align:center;
+            position:relative;
+        }
+
+       /*added by vijeta on 18th april 2018*/
+            .sideShortCutMenuLable {
+            line-height: 41px;
+            padding-left: 34px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            width: 100%;
+            margin-left:-4px;
+        }
+            /*------------------------------------*/
+
+             .shortCutMenuCaptionLeft
+             {
+                margin-top:11px;font-size:12px;width:90px;color:black;
+               }
+
+            .shortCutMenuCaptionRight
+             {
+            margin-top:11px;font-size:12px;width:88px;color:black;
+             }
+
+            /*added by vijeta on 16th may 2018*/
+             /*changed by Suchita on 18th feb 2018*/
+             #txtNotes{
+                    height:145px;
+                    width:350px;
+                    overflow-y:scroll;
+                    font-size: 14px;
+            }
+
+              /*added by vijeta on 13th Aug 2018*/
+            .PatName{
+                 font-size: 12px;
+            }
+	 .altText{
+                display:block;
+             }
+
+	/* kavita 22-8-18*/
+           #menuDots{
+               display:none;
+           }
+            /*added by vij on 1st oct 2018*/
+           .SetupsDiv{
+               margin-left:0px;
+               background-color:rgb(241, 243, 243);
+               box-shadow:rgb(103, 103, 97) 0px -1px 14px 4px;
+               height:300px;
+               width:210px;
+               overflow:auto;
+           }
+
+             /*added by vij on 1st oct 2018*/
+           .setUpHeading{
+               margin-left:0px;
+               background-color:#676161;     
+               width:210px;
+               text-align: center;
+               font-size: 14px;
+              font-weight: bolder;
+              color: aliceblue; 
+                  background: linear-gradient(to bottom, #00d2a6 0%, #003529 100%);          
+           }
+
+            /*by vijeta on 10th nov 2018*/
+            /*#showNotesDiv
+            {
+                overflow:scroll;height:290px;
+            }*/
+            .tabcontainer {
+                 margin-left: 142px;
+                 margin-top: 6px;
+             }
+
+
+             .contentHoldClass {               
+                width: 694px;
+            }
+        }
+
+       .RightMenuSelectedOption{
+          background-color: #fce8e6;
+            border-radius: 11px 11px 11px 11px;
+            color:#d93025;
+        }/*//*/
+        .lblRightMenu
+       {
+           letter-spacing:1px;
+           cursor:pointer;
+      }
+
+        /*.divPlusNote:hover {
+            background-color: #80808063;
+            border-radius: 50%;           
+        }*/
+        /*by vijeta on 11th nov*/
+        #dialog+div+div.ui-resizable-handle.ui-resizable-e::before, #dialog+div+div.ui-resizable-handle.ui-resizable-e::after 
+        {
+     content: "";
+     width: 0;
+     height: 0;
+     position: absolute;
+     left: 2px;
+     border-style: solid;
+     border-width: 10px;
+        }
+
+ #dialog+div+div.ui-resizable-handle.ui-resizable-e::before {
+  
+    border: 10px solid;
+    border-color: transparent transparent transparent  #aaa;   
+    top: 247px;    
+   
+    }
+
+ #dialog+div+div.ui-resizable-handle.ui-resizable-e::after {
+    border-color: transparent transparent transparent  #fff;
+    top: 247px;    
+}
+
+
+#tblNotesList tr{
+    border-bottom:1px solid #80808045; border-right: 1px solid #80808045;
+}
+#tblNotesList td{
+   padding:4px;
+}
+
+.NoteTrActive{
+   border:1px solid gray;
+}
+/*#tblNotesList td:nth-child(1){
+width:80%;
+}*/
+
+ /*by vijeta on 14th nov 2018*/
+      #dialog {
+            position: relative;
+            border: 0;
+            padding: .5em 1em;
+            background: none;
+            overflow:hidden;         
+        }
+
+       /*by vijeta on 17th nov 2018*/
+         .nopadding 
+        {
+             padding: 0 !important;
+            margin: 0 !important;
+        }
+
+          #searchPatDialog {
+            position: relative;
+            border: 0;
+            padding: .5em 1em;
+            background: none;
+            overflow:hidden;          
+        }
+
+   #searchPatDialog+div+div.ui-resizable-handle.ui-resizable-e::before, #searchPatDialog+div+div.ui-resizable-handle.ui-resizable-e::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 2px;
+    border-style: solid;
+    border-width: 10px;
+}
+
+ #searchPatDialog+div+div.ui-resizable-handle.ui-resizable-e::before {
+  
+    border: 10px solid;
+    border-color: transparent transparent transparent  #aaa;   
+    top: 208px;    
+   
+}
+
+ #searchPatDialog+div+div.ui-resizable-handle.ui-resizable-e::after {
+    border-color: transparent transparent transparent  #fff;
+    top: 208px;    
+}
+ .spanSearchPatCls{
+      pointer-events: auto; cursor: pointer;
+ }
+  .square {
+            height: 10px;
+            width: 10px;
+            background-color:#ffc0cbc2;
+            float: left;
+            margin-top: 4px;
+            margin-left: -7px;/*Suchita 18-02-2019 */
+            border:1px #333 solid;
+        }
+/*by vijeta on 11th nov*/
+/*Suchita*/
+ .lbls{
+     cursor:pointer;
+ }
+ .lblActive{
+     color:red;
+ }
+  .more-less {
+        float: left;
+        color: #212121;
+        margin-top: -5%;
+    }
+  /*Suchita 18-02-2019*/
+  .moreless{
+      padding-right:6px;
+      margin-left:2%;
+  }
+ 
+   /*#tblMedicineList > tbody > tr.active > td:not(.MaterialName):not(.tdRemark){   
+     border-left:1px solid #bbbbbb;
+    
+     padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 3px;
+    padding-bottom: 0px;
+     text-align: center;
+    vertical-align: middle;
+ }*/ 
+        .table > tbody > tr.active > td > a {
+            width: 100%;
+            display: table;
+        }
+        
+                  /*4/11/19*/    
+.HeadPatTab { min-width: 100%; }
+
+.HeadPatTab > thead,
+.HeadPatTab > tbody >tr{
+/*thead, tbody tr {*/
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.HeadPatTab > tbody{
+    display: block;
+    max-height: 480px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.HeadPatTab > tbody > tr > td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.HeadPatTab > thead > tr > th{
+    text-align:center;
+    border: 1px solid #ede4e4;
+      height: 22px;
+      font-size:12px;
+}
+
+/*thead th {
+    height: 22px;
+    text-align: left;
+}*/
+.HeadPatTab > thead > tr,
+.HeadPatTab > tbody > tr
+{
+    width:100%;
+}
+        @media (min-width: 1400px) {
+            .HeadPatTab  { min-width: 600px; }
+            .HeadPatTab > tbody {
+    display: block;
+    max-height: 550px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+        }
+         /**/ 
+          /*4/22/19 end*/  
+
+          /*vijeta 30/4/19*/
+  .anchorHeadCls{
+      border: 1px solid #d8acc6;
+      color: #8e0e5a;
+      text-align:left;
+      font-size:13px;
+      border-radius: 2px;
+      background-color: #f9ddedcc;
+      text-decoration: none;
+      margin-left:4px;
+      width:99%;
+      text-decoration: none !important;
+  }
+
+   /*vijeta 30/4/19*/ 
+  .NoDataTD{
+      /*font-weight:bold !important;  Meenakshi modified on 2019/10/17*/
+         padding: 3px 23px 3px !important;
+    background-color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+    FONT-SIZE: 12PX;
+    font-family: verdana;
+  }
+
+   /*vijeta 30/4/19*/
+  .tblMediNfo td{
+      padding:4px;
+      border: 1px solid gray;
+      /*font-size: 13px;
+      font-weight: bold;*/   /*Meenakshi on  2019/10/17*/
+  }
+  /*added by vijeta 19/6/19*/
+  #tblPersInvestigationlist td
+  {
+      border:1px solid #ddd;
+  }
+
+    /*kavita 12-aug-2019*/
+      .rotateArrow {
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+}
+.rotateArrow.up {
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
+ /**/
+a.fa-globe {
+  position: relative;
+  font-size: 2em;
+  color: grey;
+  cursor: pointer;
+}
+span.fa-comment {
+  position: absolute;
+    font-size:0.8em;
+    top: -5px;
+    color: red;
+    right: -16px;
+     /*11-11-2019*/
+       -webkit-animation: blink 1s step-end infinite;
+		       animation: blink 1s step-end infinite;
+}
+span.num {
+ position: absolute;
+    font-size:0.4em;
+    top: -1px;
+    color: #fff;
+    right: -9px;
+     /*11-11-2019*/
+     -webkit-animation: blink1 1s step-end infinite;
+		       animation: blink1 1s step-end infinite;
+}
+ /*11-11-2019*/
+  /*@-webkit-keyframes blink1 {  
+               0% { 
+                     color: white;
+               }
+               50% {
+                color: black ;
+                  }  
+                  }
+
+      
+        @-webkit-keyframes blink {  
+               0% { 
+                     color: red;
+               }
+               50% {
+                color: #fbd700 ;
+                  }  
+                  }*/
+
+
+  @-webkit-keyframes blink1 {  
+               0% { 
+                     color: black;
+               }
+               50% {
+                color: black ;
+                  }  
+                  }
+
+      
+        @-webkit-keyframes blink {  
+               0% { 
+                     color: #ff0101;
+               }
+               50% {
+                color: #fef4d1 ;
+                  }  
+                  }
+
+         /*---pradnya-----*/
+
+
+/*Meenakshi*/
+
+.MedicalInfo
+{
+    padding: 3px;
+color: white;
+font-size: 14px;
+font-family: cambria;
+}
+.MedicalInfo:hover {
+    color: white;
+    text-decoration:underline;
+}
+
+/*end*/
+ /*/................. 10-12-19 for Back Button.....................*/
+
+strong {
+	 font-weight: bold;
+}
+ .button1 {
+    background-color: rgba(242, 242, 242, 1);
+    background-image: linear-gradient(to bottom, rgba(242, 242, 242, 1), rgba(242, 242, 242, 1));
+    border: 1px solid rgba(191, 191, 191, 1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), inset 0 -1px 0 rgba(217, 217, 217, 1), inset 0 0 0 1px rgba(242, 242, 242, 1), 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: rgba(140, 140, 140, 1);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    border-radius: 11px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+     padding:3px 15px 2px 15px;
+    /*margin: 16px 0 0 16px;*/
+    transition: all 20ms ease-out;
+    vertical-align: top;
+}
+ .button1:hover, .button1:focus {
+	 background: rgba(242, 242, 242, 1);
+	 border-color: rgba(140, 140, 140, 1);
+	 box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), inset 0 -1px 0 rgba(217, 217, 217, 1), inset 0 0 0 1px rgba(242, 242, 242, 1);
+}
+ .button1:active {
+	 background: rgba(242, 242, 242, 1);
+	 box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+ .button1 .fa {
+	 color: rgba(191, 191, 191, 1);
+	 text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+ 
+.button1-green {
+    background-color: rgb(57, 142, 190);
+   background-image: linear-gradient(to bottom, rgb(86, 135, 162), rgb(118, 185, 222));
+    border: 1px solid rgb(57, 142, 190);
+    box-shadow: inset 0 1px 0 rgb(52, 123, 165), inset 0 -1px 0 rgb(51, 127, 171), inset 0 0 0 1px rgb(48, 124, 167), 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fdf9f9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+ .button1-green:hover, .button1-green:focus {
+	 background: rgb(57, 142, 190);
+	 border-color: rgba(50, 102, 18, 1);
+	 box-shadow: inset 0 1px 0 rgba(198, 230, 179, 1), inset 0 -1px 0 rgba(121, 179, 86, 1), inset 0 0 0 1px rgba(0, 0, 0, 1);
+}
+
+
+     
+ .button1-green:active {
+	 background: rgb(57, 142, 190);
+	 box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+ .button1-green .fa {
+     color: rgb(78, 78, 78);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+
+ /*//...........................*/
+ .button1-Addnew {
+   background-color: rgb(244, 133, 23);
+    background-image: linear-gradient(to bottom, rgb(244, 123, 2), rgb(251, 204, 158));
+    border: 1px solid rgb(245, 141, 37);
+    box-shadow: inset 0 1px 0 rgb(245, 134, 23), inset 0 -1px 0 rgb(245, 141, 37), inset 0 0 0 1px rgb(244, 128, 11), 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fdf9f9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+ .button1-Addnew:hover, .button1-green:focus {
+	 background:  rgb(244, 133, 23);
+	 border-color: rgb(245, 141, 37);
+	 box-shadow: inset 0 1px 0 rgba(198, 230, 179, 1), inset 0 -1px 0 rgba(121, 179, 86, 1), inset 0 0 0 1px rgba(0, 0, 0, 1);
+}
+
+
+     
+ .button1-Addnew:active {
+	 background:  rgb(244, 133, 23);
+	 box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+ .button1-Addnew .fa {
+     color: rgb(78, 78, 78);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+ /*//........................*/
+ 
+ .button1 .fa {
+	 float: left;
+	 font-size: 14px;
+	 line-height: 20px;
+	 margin: -1px 8px 0 -4px;
+	 vertical-align: top;
+}
+/*/................end......................*/
+ .tabcontainer .nav > li > a:focus {
+
+            color: rgb(255, 255, 255) !important;
+            background-color: #61788d !important;
+        } /*//19-12-19*/
+
+
+
+.HeadDivMaster
+{
+     padding:2px  1px 1px 1px; 
+    border-style:none;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size: 12px; font-weight: bold;
+    color:#e1e9f1;
+    height:22px;
+    background: #163256;
+    /*width:99.5%;*/
+}
+
+.divHistory 
+{
+    padding: 0.2rem;
+    border-bottom: 0.2px solid #6a6a6a;
+    border-left-width: 0.25rem;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    /* font-size: small; */
+    font-size: 13px;
+    color: #fbf3a9;
+    
+    font-weight: bold;
+}

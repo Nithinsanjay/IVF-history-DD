@@ -1,0 +1,40 @@
+.tabulator {
+    background-color: #f9fbfc;
+    border: 1px solid #cbd5e0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+    .tabulator .tabulator-header {
+        background-color: #3a6ea5;
+        color: #ffffff;
+        font-weight: 600;
+        border-bottom: 2px solid #2f5d8a;
+    }
+
+        .tabulator .tabulator-header .tabulator-col {
+            border-right: 1px solid #cbd5e0;
+            background-color: #3a6ea5;
+            color: #ffffff;
+            font-weight: 600;
+            border-bottom: 2px solid #2f5d8a;
+        }
+
+.tabulator-row {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+    .tabulator-row.tabulator-row-even {
+        background-color: #edf6f9;
+    }
+
+    .tabulator-row.tabulator-selectable:hover {
+        background-color: #d6eaf8;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .tabulator-row.tabulator-selected {
+        background-color: #a8dadc;
+        color: #000000;
+    }

@@ -1,0 +1,409 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="<%=ResolveUrl("/Images/favicon.ico")%>">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Doctor Desk</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <%-- JQuery --%>
+    <script src="<%=ResolveUrl("~/Scripts/jquery-1-10-2.js")%>"></script>
+    <script src="<%=ResolveUrl("~/Scripts/jquery-1-12-1.js")%>"></script>
+    <%-- Tabulator --%>
+    <link href="../css/TabulatorGrid/dist/css/tabulator.css" rel="stylesheet" />
+    <link href="../css/TabulatorGrid/dist/css/CustomTabulator.css" rel="stylesheet" />
+    <link href="../css/TabulatorGrid/dist/css/CustomTabulator.css" rel="stylesheet" />
+    <script src="<%=ResolveUrl("~/css/TabulatorGrid/dist/js/tabulator.js")%>"></script>
+    <script src="<%=ResolveUrl("~/css/TabulatorGrid/dist/js/Custom.js")%>"></script>
+    <script src="../css/TabulatorGrid/dist/js/tabulator.js"></script>
+    <%-- DatePicker --%>
+    <link href="<%=ResolveUrl("~/JQueryUi/jquery.ui.theme.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/JQueryUi/jquery.ui.css")%>" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="<%=ResolveUrl("~/font-awesome/css/font-awesome.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/font-awesome/css/font-awesome.min.css")%>" rel="stylesheet" />
+    <%-- Bootstrap --%>
+    <link href="../css/Bootstrap-5.3.8/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="<%=ResolveUrl("~/css/Bootstrap-5.3.8/dist/js/bootstrap.js")%>"></script>
+    <script src="<%=ResolveUrl("~/css/Bootstrap-5.3.8/dist/js/bootstrap.bundle.js")%>"></script>
+    <%-- Toaster --%>
+    <script src="<%=ResolveUrl("~/css/Toaster/dist/main.js")%>"></script>
+    <script src="<%=ResolveUrl("~/css/Toaster/src/Toast.js")%>"></script>
+    <link href="../css/Toaster/src/toasts.css" rel="stylesheet" />
+    <%-- Session --%>
+    <script type="text/javascript"
+        src="<%= Url.Content("~/Scripts/SinglePage/SessionMaintain.js") %>?v=<%= System.IO.File.GetLastWriteTime(Server.MapPath("~/Scripts/SinglePage/SessionMaintain.js")).Ticks %>">
+    </script>
+    <%-- Minimise and Maximum Popup --%>
+    <script src="<%=ResolveUrl("~/Scripts/SinglePage/MiniMaxPopup.js")%>"></script>
+    <link href="../css/Bootstrap-5.3.8/dist/css/PopupMiniMax.css" rel="stylesheet" />
+    <%-- History Popup --%>
+    <script src="<%=ResolveUrl("~/Scripts/SinglePage/PopupForHistory.js")%>"></script>
+    <%-- Loader --%>
+    <script src="<%=ResolveUrl("~/css/Loader/Loader.js")%>"></script>
+    <link href="../css/Loader/Loader.css" rel="stylesheet" />
+    <%-- Alert --%>
+    <script src="<%=ResolveUrl("~/css/Alert/Alert.js")%>"></script>
+    <link href="../css/Alert/Alert.css" rel="stylesheet" />
+    <%-- Setup Popup --%>
+    <script src="<%=ResolveUrl("~/Scripts/SinglePage/PopupForSetupList.js")%>"></script>
+    <link href="../css/SetupPopup.css" rel="stylesheet" />
+    <%-- Right Menu Slide --%>
+    <script src="<%=ResolveUrl("~/Scripts/SinglePage/RightMenuSlide.js")%>"></script>
+    <link href="../css/RightMenu.css" rel="stylesheet" />
+    <%-- New Item --%>
+    <script src="<%=ResolveUrl("~/Scripts/SinglePage/PopupForNewItem.js")%>"></script>
+    <%-- Apply Master Setup  --%>
+    <script src="<%=ResolveUrl("~/Scripts/SinglePage/ApplySetup.js")%>"></script>
+    <%-- Other --%>
+    <script src="../js/canvasjs.min.js"></script>
+    <script src="../js/SinglePage/luxon.js"></script>
+    <script src="../plugins/chartjs/chart.min.js"></script>
+    <link href="../css/SPStyle.css" rel="stylesheet" />
+    <script type="text/javascript"
+        src="<%= Url.Content("~/Scripts/SinglePage/PrescriptionPrint.js") %>?v=<%= System.IO.File.GetLastWriteTime(Server.MapPath("~/Scripts/SinglePage/PrescriptionPrint.js")).Ticks %>">
+    </script>
+    <%-- Document Popup --%>
+    <script src="<%=ResolveUrl("~/Scripts/SinglePage/PopupForDocumentUpload.js")%>"></script>
+    <%-- Added By Priyanka - For Multiple CKEditor --%>
+    <script src="<%=ResolveUrl("~/Scripts/ckeditor/ckeditor.js")%>"></script>
+    <%-- Added By Priyanka - For Multiple CKEditor --%>
+    <script src="<%=ResolveUrl("~/Scripts/SinglePage/MultipleCKEditor.js" )%>"></script>
+    <%-- Input Mask --%>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.date.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.regex.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.extensions.js")%>"></script>
+    <link href="../Content/MultipleCKEditor.css" rel="stylesheet" type="text/css" />
+    <%--Abhishesh || 20260713--%>
+    <%-- Select2 --%>
+    <link href="<%=ResolveUrl("~/plugins/select2/select2.css")%>" rel="stylesheet" />
+    <script src="<%=ResolveUrl("~/plugins/select2/select2.full.min.js")%>"></script>
+    <%--End--%>
+    <script type="text/javascript">
+        var UnitCd = '<%: Session["UNITCODE"] ?? "" %>';
+        var gDoctId = '<%: Session["gOncoUserId"] ?? "" %>';
+        var gDoctName = '<%: Session["gDoctName"] ?? "" %>';
+        var gClinicCode = '<%: Session["CLINICCODE"] ?? "" %>';
+        var gDoctCode = '<%: Session["gDoctCode"] ?? ""%>';
+        var gCIMSYN = '<%: Session["CIMYN"] ?? ""%>';
+        var CalcQtyYN = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("CALCQTYBASEDFREQRX")%>';
+        var PrecriptionPrintTemp = '<%:OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("PrecriptionPrintTemp")%>';
+        var DisplayCertificateYN = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("CERTIFICATESHOWYN")%>';
+        var Certificate2 = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("YARAFITNESSCERTIFICATE")%>';
+        BottomLine1 = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("PrescBottomLine1")%>';
+        BottomLine2 = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("PrescBottomLine2")%>'
+        var QMSCall = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("QMSENABLE")%>';
+        var ISICDDiagReq = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("isICDDiagnoReq")%>';
+        var ISDiagnoMandatory = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("DiagnosisMandatory")%>';
+        var GeneralWiseYN = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("GENERICWISEDATAYN")%>';
+        var ShowVitalsInPrescPrintYN = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("ShowVitalsExtraFieldsinPrescPrint")%>';
+        var AllowMailBeforePrescriptionCompl = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("AllowMailBeforePrescriptionCompl")%>';
+        var DispSrchCritInMedHistory = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("DispSrchCritInMedHistory")%>';
+        var HideECGRow = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("HideECGRow")%>';
+        var MaxUpldSignatureWidth = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("MAXUPLOADSIGNWIDTH")%>';
+        var MaxUpldSignatureHeight = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("MAXUPLOADSIGNHEIGHT")%>';
+        var MaxUpldSignatureSizeKB = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("MAXUPLOADSIGNSIZEKB")%>';
+        var DoseMandatoryYN = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("DoseMandatoryYN")%>';
+        var CareTypeShowYN = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("PRESCRIPTIONCARETYPESHOWYN")%>';
+        var PrintWithLetterHead = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("PWLH")%>';
+        var ShowRefDoct = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("showRefToDoctor")%>';
+        var ShowGoogleRating = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("ShowGoogleRating")%>';
+        var ShowTempPrescPrint = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("AdviceShowTempPrint")%>';
+        var ShowroutineFeature = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("ShowRoutinefeature")%>';
+        var FamilyHistoryMandatoryYN = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("FamHistMandatoryCheck")%>';
+        var PopupNoFunc = "closePopup()";
+        var isCheckingUnit = false;
+        var SkipUnitSession = false;
+        var ErrorType = "";
+        var RedirectToHMIS = '<%: Session["REDIRECTHMIS"] ?? "" %>'; //priyanka 06/03/2026
+        var RedirectToDD = '<%: Session["RedirectToDD"] ?? "" %>'; 
+        var OPDLocalDicomURL = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("LocalDicomURL")%>';//priyanka 14/03/2026
+        var YFunc = "Signout()";
+        var IsClinicNotesFreeTxtVisible = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("ShowClinicalNotesFreeText")%>';//priyanka 10/04/2026
+        // Added by Dhananjay 20260407 
+        var CIMS_BLINKING_ENABLE_FORMS = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("CIMS_BLINKING_ENABLE_FORMS")%>';
+        var SESSIONTIMEOUT =parseInt('<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("SESSIONTIMEOUT")%>');
+        var SESSIONINFOTIME = parseInt('<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("SESSIONINFOTIME")%>');
+        var PINGSERVERTIME = parseInt('<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("PINGSERVERTIME")%>');        
+        //Added By Devendra
+        var ChemoPlanningEditYN = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("ChemoPlanningEditYN")%>';
+        var FollowUpPrintText = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("FollowUpPrintText")%>';
+        var IsModifyPlanningEnabled = true;
+        
+        $(document).ready(function (e) {
+            if (gDoctId == "") {
+                openPopup("Information", "Session Timeout. Please Login Again", YFunc, "");
+            }
+        });
+        $(window).on('load', function () {
+            if (gDoctId == "") {
+                var YFunc = "Signout()";
+                openPopup("Information", "Session Timeout. Please Login Again", YFunc, "");
+            }
+        });
+        function closeMiniDrawer() {
+            document.getElementById('miniDrawer').style.right = '-280px';
+        }
+        function openMiniDrawer() {
+            document.getElementById('miniDrawer').style.right = '0px';
+        }
+        function OPDDicom() {
+            var GetURL = RedirectToDICOM();
+            var MrNo = GetSessionMRNO();
+            var SetURL = GetURL + MrNo;
+            window.open(SetURL, "_blank");
+        }
+
+        function GoToHome(FormName) {
+            var curURL = ("" + '<%= Request.UrlReferrer %>').toString().toUpperCase().trim();
+                var splitURL = curURL.split('/');
+                var HTTPorHTTPS = curURL.toUpperCase().includes("HTTPS") ? "https" : "http";
+                if (curURL.indexOf("TESTWEBHMIS") != -1) {
+                    window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/TestWebHmis/Account/" + FormName;
+                }
+                else if (curURL.indexOf("WEBHMIS") != -1) {
+                    window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/WebHmis/Account/" + FormName;
+                }
+                else if (curURL.indexOf("TESTOTCATH") != -1) {
+                    window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/TestWebHmis/Account/" + FormName;
+                }
+                else if (curURL.indexOf("WEBOTCATH") != -1) {
+                    window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/WebHmis/Account/" + FormName;
+                }
+                else if (curURL.indexOf("HMIS") != -1) {
+                    window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/HMIS/Account/" + FormName;
+                }
+                else if (curURL.indexOf("WEBEHR") != -1) {
+                    window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/WebHmis/Account/" + FormName;
+                }
+            }
+    </script>
+        <%-- Session Timeout --%>
+    <script type="text/javascript"
+        src="<%= Url.Content("~/Scripts/SinglePage/SessionTimeoutMaintain.js") %>?v=<%= System.IO.File.GetLastWriteTime(Server.MapPath("~/Scripts/SinglePage/SessionTimeoutMaintain.js")).Ticks %>">
+    </script>
+   <link href="../content/SessionTimeOut.css" rel="stylesheet" />
+</head>
+<body class="MainBody">
+<%  if ((Session["gDoctCode"] != null && Session["gDoctCode"].ToString() != "" )||
+        (Session["RMOYN"] != null && Session["RMOYN"].ToString() == "Y" ) || 
+        (Session["AUTHYN"] != null && Session["AUTHYN"].ToString() == "Y" ))
+    {  %>
+    <% OncologyEMR.Models.formrights frmRights = new OncologyEMR.Models.formrights(); %>
+    <!-- Main Header -->
+    <div id="MainSectHeader" class="DivMainSectHeader">
+        <%: Html.Action("HeaderControl", "SinglePage") %>
+    </div>
+    <!-- Main Content -->
+    <div class="DivMainSectContent">
+        <div id="MainSectContent" class="DivSectContent">
+            <asp:ContentPlaceHolder runat="server" ID="Head"></asp:ContentPlaceHolder>
+            <!-- View content -->
+            <asp:ContentPlaceHolder runat="server" ID="MainContent"></asp:ContentPlaceHolder>
+        </div>
+        <%-- Right Menu List --%>
+        <%  if (frmRights.FormRightsCheck("InvestigationReport") || frmRights.FormRightsCheck("DICOM") ||
+                  frmRights.FormRightsCheck("HistoryReport") ||frmRights.FormRightsCheck("DDClinicalHistory") ||
+                  frmRights.FormRightsCheck("PatientClinicalHistory")|| frmRights.FormRightsCheck("ApplySetup") ||
+                  frmRights.FormRightsCheck("OutsideInvestigation"))
+            {  %>
+        <div id="MainSectRightMenu" class="DivMainSectRightMenu" style="width: fit-content;">
+
+            <div class="IconForRightMenu" onclick="openMiniDrawer();" title="SideBar">
+                <img src="../Images/SinglePage/Sidebar-icon.PNG" class="IconForRightMenuPatClinicHist" />
+            </div>
+            <div class="RightIconSeparate"></div>
+
+            <%  if (frmRights.FormRightsCheck("InvestigationReport"))
+                {  %>
+            <div class="IconForRightMenu" onclick="openRightMenu('../SinglePage/InvestigationReport','','InvestigationReport')" title="Investigation Report">
+                <img src="../Images/SinglePage/ReportIcon.PNG" class="IconForRightMenuInvestigationHist" />
+            </div>
+            <div class="RightIconSeparate"></div>
+            <%} %>
+
+            <%  if (frmRights.FormRightsCheck("DICOM"))
+                {  %>
+            <div class="IconForRightMenu" title="DICOM"  id="OPDDICOMICON" onclick="OPDDicom()">
+                <img src="../Images/SinglePage/dicom-icon.PNG" class="IconForRightMenuOPDClinicalHist" />
+            </div>
+            <div class="RightIconSeparate"></div>
+            <%} %>
+
+            <%  if (frmRights.FormRightsCheck("HistoryReport"))
+                {  %>
+            <div class="IconForRightMenu" onclick="openRightMenu('../SinglePage/History','','HistoryReport')" title="History">
+                <img src="../Images/SinglePage/history-icon.PNG" class="IconForRightMenuInvestigationHist" />
+            </div>
+            <div class="RightIconSeparate"></div>
+            <%} %>
+
+            <%  if (frmRights.FormRightsCheck("DDClinicalHistory"))
+                {  %>
+            <div class="IconForRightMenu" onclick="openRightMenu('../SinglePage/OPDClinicalHistory','','DDClinicalHistory')" title="OPD Clinical History">
+                <img src="../Images/SinglePage/OPDReportIcon.PNG" class="IconForRightMenuOPDClinicalHist" />
+            </div>
+            <div class="RightIconSeparate"></div>
+            <%} %>
+
+            <%  if (frmRights.FormRightsCheck("PatientClinicalHistory"))
+                {  %>
+            <div class="IconForRightMenu" onclick="openRightMenu('../SinglePage/PatientClinicalHistory','','PatientClinicalHistory')" title="Patient Clinical Details">
+                <img src="../Images/SinglePage/PatientClinicalHist.PNG" class="IconForRightMenuPatClinicHist" />
+            </div>
+            <div class="RightIconSeparate"></div>
+            <%} %>
+
+            <%  if (frmRights.FormRightsCheck("ApplySetup"))
+                {  %>
+            <div class="IconForRightMenu" onclick="OpenMasterApplySetup('Apply Setup' , 'ApplySetup' , true)" title="Apply Setup">
+                <img src="../Images/SinglePage/apply-setup.PNG" class="IconForRightMenuPatClinicHist" />
+            </div>
+            <div class="RightIconSeparate"></div>
+            <%} %>
+            <%  if (frmRights.FormRightsCheck("OutsideInvestigation"))
+                {  %>
+            <div class="IconForRightMenu" onclick="openRightMenu('../SinglePage/OutsideInvestReport','','OutsideInvestigation')" title="Outside Investigation">
+                <img src="../Images/SinglePage/outside-invst.PNG" class="IconForRightMenuPatClinicHist" />
+            </div>
+            <div class="RightIconSeparate"></div>
+            <%} %>
+            <%  if (frmRights.FormRightsCheck("DMSList"))
+                {  %>
+            <div class="IconForRightMenu" onclick="OpenCenterPopup('Document Upload', 'DocUpload', '../SinglePage/DocumentUpload', true)" title="DMS Attachments">
+                <img src="../Images/SinglePage/DMSDocUpload.PNG" class="IconForRightMenuPatClinicHist" />
+            </div>
+            <div class="RightIconSeparate"></div>
+            <%} %>
+        </div>
+        <%} %>
+        <%-- Right Menu Slide Popup Container --%>
+        <div id="RightMenuFormSlidePopup" class="DivRightMenuFormSlidePopup"></div>
+        <%-- Toaster Container --%>
+        <div id="ToasterContainer" class="DivToasterContainer" style="display: none"></div>
+    </div>
+    <%-- Popup Container For Mini and Max Popup --%>
+    <div id="minimizedContainer" style="display: none"></div>
+    <%-- Popup Overlay --%>
+    <div id="popupOverlay" style="display: none"></div>
+    <!-- Loading Popup -->
+    <div id="Div-loading-screen" class="loading-screen"></div>
+
+    <div id="miniDrawer" class="miniDrawerDiv">
+        <%  if (frmRights.FormRightsCheck("InvestigationReport") || frmRights.FormRightsCheck("DICOM") ||
+                  frmRights.FormRightsCheck("HistoryReport") || frmRights.FormRightsCheck("DDClinicalHistory") ||
+                  frmRights.FormRightsCheck("PatientClinicalHistory") || frmRights.FormRightsCheck("ApplySetup") ||
+                  frmRights.FormRightsCheck("OutsideInvestigation"))
+            {  %>
+            <div class="IconForRightMenu" onclick="closeMiniDrawer();" title="SideBar" style="text-align-last:end;">
+                <img src="../Images/SinglePage/Sidebar-icon.PNG" class="IconForRightMenuPatClinicHist" />
+                
+            </div>
+            <div class="RightIconSeparate"></div>
+            <%} %>
+            <%  if (frmRights.FormRightsCheck("InvestigationReport"))
+            {  %>
+                <div class="IconForRightMenu" onclick="openRightMenu('../SinglePage/InvestigationReport','','InvestigationReport')" title="Investigation Report">
+                  <img src="../Images/SinglePage/ReportIcon.PNG" class="IconForRightMenuInvestigationHist" />
+                    <span id="InvestigationReportspan">Investigation Report</span>
+                </div>
+                <div class="RightIconSeparate"></div>
+            <%} %>
+
+            <%  if (frmRights.FormRightsCheck("DICOM"))
+                {  %>
+            <div class="IconForRightMenu"  title="DICOM">
+                <img src="../Images/SinglePage/dicom-icon.PNG" class="IconForRightMenuOPDClinicalHist" />
+                <span id="DICOMspan">DICOM</span>
+            </div>
+            <div class="RightIconSeparate"></div>
+            <%} %>
+
+            <%  if (frmRights.FormRightsCheck("HistoryReport"))
+            {  %>
+                <div class="IconForRightMenu" onclick="openRightMenu('../SinglePage/History','','HistoryReport')" title="History">
+                  <img src="../Images/SinglePage/history-icon.PNG" class="IconForRightMenuInvestigationHist" />
+                     <span id="Historyspan">History</span>
+                </div>
+                <div class="RightIconSeparate"></div>
+            <%} %>
+
+            <%  if (frmRights.FormRightsCheck("DDClinicalHistory"))
+                {  %>
+            <div class="IconForRightMenu" onclick="openRightMenu('../SinglePage/OPDClinicalHistory','','DDClinicalHistory')" title="OPD Clinical History">
+                <img src="../Images/SinglePage/OPDReportIcon.PNG" class="IconForRightMenuOPDClinicalHist" />
+                <span id="ClinicalHistoryspan">OPD Clinical History</span>
+            </div>
+            <div class="RightIconSeparate"></div>
+            <%} %>
+            <%  if (frmRights.FormRightsCheck("PatientClinicalHistory"))
+                {  %>
+            <div class="IconForRightMenu" onclick="openRightMenu('../SinglePage/PatientClinicalHistory','','PatientClinicalHistory')" title="Patient Clinical Details">
+                <img src="../Images/SinglePage/PatientClinicalHist.PNG" class="IconForRightMenuPatClinicHist" />
+                <span id="Clinicalspan">Patient Clinical Details</span>
+            </div>
+            <div class="RightIconSeparate"></div>
+            <%} %>
+             <%  if (frmRights.FormRightsCheck("ApplySetup"))
+                {  %>
+            <div class="IconForRightMenu" onclick="OpenMasterApplySetup('Apply Setup' , 'ApplySetup' , true)" title="Apply Setup">
+                <img src="../Images/SinglePage/apply-setup.PNG" class="IconForRightMenuPatClinicHist" />
+                <span id="Setupspan">Apply Setup</span>
+            </div>
+            <div class="RightIconSeparate"></div>
+            <%} %>
+            <%  if (frmRights.FormRightsCheck("OutsideInvestigation"))
+                {  %>
+            <div class="IconForRightMenu" onclick="openRightMenu('../SinglePage/OutsideInvestReport','','OutsideInvestigation')" title="Outside Investigation">
+                <img src="../Images/SinglePage/outside-invst.PNG" class="IconForRightMenuPatClinicHist" />
+                <span id="Invstspan">Outside Investigation</span>
+            </div>
+            <%} %>
+            <%  if (frmRights.FormRightsCheck("DMSList"))
+                {  %>
+        <div class="IconForRightMenu" onclick="OpenCenterPopup('Document Upload', 'DocUpload', '../SinglePage/DocumentUpload', true)" title="DMS Attachments">
+            <img src="../Images/SinglePage/DMSDocUpload.PNG" class="IconForRightMenuPatClinicHist" />
+            <span id="DMSDocSpan">DMS Attachments</span> <%--priyanka 11/04/2026--%>
+        </div>
+        <div class="RightIconSeparate"></div>
+            <%} %>
+
+</div>
+<%} %>
+        <!-- Popup Overlay For Alert -->
+    <div id="popupAlertOverlay" class="popup-overlay" style="display: none"></div>
+       <!-- Session Timeout Popup-->
+   <div id="sessionPopupOverlay">
+
+       <div id="sessionPopupBox">
+
+           <div id="sessionPopupMessage">
+               Your session will expire in
+
+           <span id="sessionTimer">30</span>
+
+               seconds.
+
+           <br />
+               <br />
+
+               Perform any action to remain logged in.
+
+           </div>
+
+           <button id="sessionPopupBtn"
+               onclick="closeSessionPopup()"
+               style="display: none;">
+               OK
+
+           </button>
+
+       </div>
+
+   </div>
+   
+ </body>
+</html>

@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Security" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_ISecurity_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Security.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Security.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Security.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Security" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Security.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISecurity_ModuleTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModuleTran" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_ModuleTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModuleTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetModuleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModuleList" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetModuleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModuleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetModuleFormList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModuleFormList" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetModuleFormList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModuleFormListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_ModuleFormTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModuleFormTran" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_ModuleFormTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModuleFormTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UserProfileTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserProfileTran" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UserProfileTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserProfileTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetUsrProfileList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsrProfileList" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetUsrProfileList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsrProfileListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_HISUserTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:HISUserTran" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_HISUserTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HISUserTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetUserList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserList" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetUserList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UserModuleTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserModuleTran" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UserModuleTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserModuleTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetUserModuleLnk_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserModuleLnk" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetUserModuleLnk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserModuleLnkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetFrmCategoryLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFrmCategoryLst" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetFrmCategoryLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFrmCategoryLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UserFormRightTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserFormRightTran" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UserFormRightTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserFormRightTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetUserFormLnkList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFormLnkList" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetUserFormLnkList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFormLnkListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_ApplySimilarRights_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplySimilarRights" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_ApplySimilarRights_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplySimilarRightsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPassword" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_getLoginFormRight_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLoginFormRight" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_getLoginFormRight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLoginFormRightResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_DecryptPwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptPwd" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_DecryptPwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetUserProfileDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfileDet" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetUserProfileDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfileDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_ProfModuleTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProfModuleTran" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_ProfModuleTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProfModuleTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetProfModuleLnk_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfModuleLnk" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetProfModuleLnk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfModuleLnkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_ProfFormRightTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProfFormRightTran" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_ProfFormRightTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProfFormRightTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetProfFormLnk_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfFormLnk" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetProfFormLnk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfFormLnkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetProfileFormDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileFormDet" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetProfileFormDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileFormDetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISecurity">
+    <wsdl:operation name="ModuleTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/ModuleTran" message="tns:ISecurity_ModuleTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/ModuleTranResponse" message="tns:ISecurity_ModuleTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetModuleList" message="tns:ISecurity_GetModuleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetModuleListResponse" message="tns:ISecurity_GetModuleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleFormList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetModuleFormList" message="tns:ISecurity_GetModuleFormList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetModuleFormListResponse" message="tns:ISecurity_GetModuleFormList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModuleFormTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/ModuleFormTran" message="tns:ISecurity_ModuleFormTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/ModuleFormTranResponse" message="tns:ISecurity_ModuleFormTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserProfileTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/UserProfileTran" message="tns:ISecurity_UserProfileTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/UserProfileTranResponse" message="tns:ISecurity_UserProfileTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsrProfileList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetUsrProfileList" message="tns:ISecurity_GetUsrProfileList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetUsrProfileListResponse" message="tns:ISecurity_GetUsrProfileList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HISUserTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/HISUserTran" message="tns:ISecurity_HISUserTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/HISUserTranResponse" message="tns:ISecurity_HISUserTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetUserList" message="tns:ISecurity_GetUserList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetUserListResponse" message="tns:ISecurity_GetUserList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserModuleTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/UserModuleTran" message="tns:ISecurity_UserModuleTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/UserModuleTranResponse" message="tns:ISecurity_UserModuleTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserModuleLnk">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetUserModuleLnk" message="tns:ISecurity_GetUserModuleLnk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetUserModuleLnkResponse" message="tns:ISecurity_GetUserModuleLnk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFrmCategoryLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetFrmCategoryLst" message="tns:ISecurity_GetFrmCategoryLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetFrmCategoryLstResponse" message="tns:ISecurity_GetFrmCategoryLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserFormRightTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/UserFormRightTran" message="tns:ISecurity_UserFormRightTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/UserFormRightTranResponse" message="tns:ISecurity_UserFormRightTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFormLnkList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetUserFormLnkList" message="tns:ISecurity_GetUserFormLnkList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetUserFormLnkListResponse" message="tns:ISecurity_GetUserFormLnkList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplySimilarRights">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/ApplySimilarRights" message="tns:ISecurity_ApplySimilarRights_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/ApplySimilarRightsResponse" message="tns:ISecurity_ApplySimilarRights_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetPassword" message="tns:ISecurity_GetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetPasswordResponse" message="tns:ISecurity_GetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLoginFormRight">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/getLoginFormRight" message="tns:ISecurity_getLoginFormRight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/getLoginFormRightResponse" message="tns:ISecurity_getLoginFormRight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DecryptPwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/DecryptPwd" message="tns:ISecurity_DecryptPwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/DecryptPwdResponse" message="tns:ISecurity_DecryptPwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/ChangePassword" message="tns:ISecurity_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/ChangePasswordResponse" message="tns:ISecurity_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfileDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetUserProfileDet" message="tns:ISecurity_GetUserProfileDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetUserProfileDetResponse" message="tns:ISecurity_GetUserProfileDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProfModuleTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/ProfModuleTran" message="tns:ISecurity_ProfModuleTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/ProfModuleTranResponse" message="tns:ISecurity_ProfModuleTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfModuleLnk">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetProfModuleLnk" message="tns:ISecurity_GetProfModuleLnk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetProfModuleLnkResponse" message="tns:ISecurity_GetProfModuleLnk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProfFormRightTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/ProfFormRightTran" message="tns:ISecurity_ProfFormRightTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/ProfFormRightTranResponse" message="tns:ISecurity_ProfFormRightTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfFormLnk">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetProfFormLnk" message="tns:ISecurity_GetProfFormLnk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetProfFormLnkResponse" message="tns:ISecurity_GetProfFormLnk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileFormDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetProfileFormDet" message="tns:ISecurity_GetProfileFormDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetProfileFormDetResponse" message="tns:ISecurity_GetProfileFormDet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISecurity" type="tns:ISecurity">
+    <wsp:PolicyReference URI="#BasicHttpBinding_ISecurity_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ModuleTran">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/ModuleTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleList">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetModuleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleFormList">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetModuleFormList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModuleFormTran">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/ModuleFormTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserProfileTran">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/UserProfileTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsrProfileList">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetUsrProfileList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HISUserTran">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/HISUserTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserList">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetUserList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserModuleTran">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/UserModuleTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserModuleLnk">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetUserModuleLnk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFrmCategoryLst">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetFrmCategoryLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserFormRightTran">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/UserFormRightTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFormLnkList">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetUserFormLnkList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplySimilarRights">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/ApplySimilarRights" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoginFormRight">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/getLoginFormRight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptPwd">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/DecryptPwd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfileDet">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetUserProfileDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProfModuleTran">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/ProfModuleTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfModuleLnk">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetProfModuleLnk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProfFormRightTran">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/ProfFormRightTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfFormLnk">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetProfFormLnk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfileFormDet">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetProfileFormDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Security">
+    <wsdl:port name="BasicHttpBinding_ISecurity" binding="tns:BasicHttpBinding_ISecurity">
+      <soap:address location="http://uat.himstccf.org:82/WebHMISService/Security.svc/Security.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

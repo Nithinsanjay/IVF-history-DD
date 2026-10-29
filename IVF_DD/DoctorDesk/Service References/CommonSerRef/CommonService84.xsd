@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.SelectionList" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.SelectionList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfSelectLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SelectLstItem" nillable="true" type="tns:SelectLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSelectLstItem" nillable="true" type="tns:ArrayOfSelectLstItem" />
+  <xs:complexType name="SelectLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectLstItem" nillable="true" type="tns:SelectLstItem" />
+  <xs:complexType name="ArrayOfTariffList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TariffList" nillable="true" type="tns:TariffList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTariffList" nillable="true" type="tns:ArrayOfTariffList" />
+  <xs:complexType name="TariffList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplyTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TariffList" nillable="true" type="tns:TariffList" />
+  <xs:complexType name="ArrayOfDietTimeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DietTimeLstItem" nillable="true" type="tns:DietTimeLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDietTimeLstItem" nillable="true" type="tns:ArrayOfDietTimeLstItem" />
+  <xs:complexType name="DietTimeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeSeq" type="xs:int" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DietTimeLstItem" nillable="true" type="tns:DietTimeLstItem" />
+  <xs:complexType name="ArrayOfOTCathSurgery">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OTCathSurgery" nillable="true" type="tns:OTCathSurgery" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOTCathSurgery" nillable="true" type="tns:ArrayOfOTCathSurgery" />
+  <xs:complexType name="OTCathSurgery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Duration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Level" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OTCathSurgery" nillable="true" type="tns:OTCathSurgery" />
+  <xs:complexType name="ArrayOfPHUnitLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PHUnitLstItem" nillable="true" type="tns:PHUnitLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPHUnitLstItem" nillable="true" type="tns:ArrayOfPHUnitLstItem" />
+  <xs:complexType name="PHUnitLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConvFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PHUnitLstItem" nillable="true" type="tns:PHUnitLstItem" />
+  <xs:complexType name="ArrayOfPHSellPerFrTranUnt">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PHSellPerFrTranUnt" nillable="true" type="tns:PHSellPerFrTranUnt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPHSellPerFrTranUnt" nillable="true" type="tns:ArrayOfPHSellPerFrTranUnt" />
+  <xs:complexType name="PHSellPerFrTranUnt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FrmStore" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToStore" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PHSellPerFrTranUnt" nillable="true" type="tns:PHSellPerFrTranUnt" />
+  <xs:complexType name="ArrayOfPHStoreLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PHStoreLstItem" nillable="true" type="tns:PHStoreLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPHStoreLstItem" nillable="true" type="tns:ArrayOfPHStoreLstItem" />
+  <xs:complexType name="PHStoreLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BranchCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPReturn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PHStoreLstItem" nillable="true" type="tns:PHStoreLstItem" />
+  <xs:complexType name="ArrayOfOTSpecRequiremnt">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OTSpecRequiremnt" nillable="true" type="tns:OTSpecRequiremnt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOTSpecRequiremnt" nillable="true" type="tns:ArrayOfOTSpecRequiremnt" />
+  <xs:complexType name="OTSpecRequiremnt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReqType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OTSpecRequiremnt" nillable="true" type="tns:OTSpecRequiremnt" />
+  <xs:complexType name="ArrayOfSurgListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SurgListItem" nillable="true" type="tns:SurgListItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSurgListItem" nillable="true" type="tns:ArrayOfSurgListItem" />
+  <xs:complexType name="SurgListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SurgListItem" nillable="true" type="tns:SurgListItem" />
+  <xs:complexType name="ArrayOfICUBundlChkLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ICUBundlChkLstItem" nillable="true" type="tns:ICUBundlChkLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfICUBundlChkLstItem" nillable="true" type="tns:ArrayOfICUBundlChkLstItem" />
+  <xs:complexType name="ICUBundlChkLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BundleType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ICUBundlChkLstItem" nillable="true" type="tns:ICUBundlChkLstItem" />
+  <xs:complexType name="ArrayOfRefDoctListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RefDoctListItem" nillable="true" type="tns:RefDoctListItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRefDoctListItem" nillable="true" type="tns:ArrayOfRefDoctListItem" />
+  <xs:complexType name="RefDoctListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RefDoctListItem" nillable="true" type="tns:RefDoctListItem" />
+  <xs:complexType name="ArrayOfCancerSite">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CancerSite" nillable="true" type="tns:CancerSite" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCancerSite" nillable="true" type="tns:ArrayOfCancerSite" />
+  <xs:complexType name="CancerSite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CancerGrp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CancerSite" nillable="true" type="tns:CancerSite" />
+  <xs:complexType name="ArrayOfEvalOutLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EvalOutLstItem" nillable="true" type="tns:EvalOutLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEvalOutLstItem" nillable="true" type="tns:ArrayOfEvalOutLstItem" />
+  <xs:complexType name="EvalOutLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PROBCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EvalOutLstItem" nillable="true" type="tns:EvalOutLstItem" />
+  <xs:complexType name="ArrayOfInfusionDrugLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InfusionDrugLstItem" nillable="true" type="tns:InfusionDrugLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInfusionDrugLstItem" nillable="true" type="tns:ArrayOfInfusionDrugLstItem" />
+  <xs:complexType name="InfusionDrugLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dose" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HighAlert" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InfusionRate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfusionDrugLstItem" nillable="true" type="tns:InfusionDrugLstItem" />
+  <xs:complexType name="ArrayOfSelectDentalLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SelectDentalLstItem" nillable="true" type="tns:SelectDentalLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSelectDentalLstItem" nillable="true" type="tns:ArrayOfSelectDentalLstItem" />
+  <xs:complexType name="SelectDentalLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectDentalLstItem" nillable="true" type="tns:SelectDentalLstItem" />
+  <xs:complexType name="ArrayOfConsultantListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConsultantListItem" nillable="true" type="tns:ConsultantListItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConsultantListItem" nillable="true" type="tns:ArrayOfConsultantListItem" />
+  <xs:complexType name="ConsultantListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultantListItem" nillable="true" type="tns:ConsultantListItem" />
+  <xs:complexType name="ArrayOfMaterialList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MaterialList" nillable="true" type="tns:MaterialList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaterialList" nillable="true" type="tns:ArrayOfMaterialList" />
+  <xs:complexType name="MaterialList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Form" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GenericID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GenericName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainGrp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubGrp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MaterialList" nillable="true" type="tns:MaterialList" />
+  <xs:complexType name="ArrayOfModuleFormLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModuleFormLstItem" nillable="true" type="tns:ModuleFormLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModuleFormLstItem" nillable="true" type="tns:ArrayOfModuleFormLstItem" />
+  <xs:complexType name="ModuleFormLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModuleFormLstItem" nillable="true" type="tns:ModuleFormLstItem" />
+  <xs:complexType name="ArrayOfLaboratoryLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LaboratoryLstItem" nillable="true" type="tns:LaboratoryLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLaboratoryLstItem" nillable="true" type="tns:ArrayOfLaboratoryLstItem" />
+  <xs:complexType name="LaboratoryLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeptCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LaboratoryLstItem" nillable="true" type="tns:LaboratoryLstItem" />
+  <xs:complexType name="ArrayOfIMEIListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMEIListItem" nillable="true" type="tns:IMEIListItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMEIListItem" nillable="true" type="tns:ArrayOfIMEIListItem" />
+  <xs:complexType name="IMEIListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Counter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMEIListItem" nillable="true" type="tns:IMEIListItem" />
+  <xs:complexType name="ArrayOfBagTypeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BagTypeLstItem" nillable="true" type="tns:BagTypeLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBagTypeLstItem" nillable="true" type="tns:ArrayOfBagTypeLstItem" />
+  <xs:complexType name="BagTypeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Qty" type="xs:int" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StorageType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BagTypeLstItem" nillable="true" type="tns:BagTypeLstItem" />
+  <xs:complexType name="ArrayOfNoteType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NoteType" nillable="true" type="tns:NoteType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNoteType" nillable="true" type="tns:ArrayOfNoteType" />
+  <xs:complexType name="NoteType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CNorDN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NoteType" nillable="true" type="tns:NoteType" />
+  <xs:complexType name="ArrayOfSectionLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SectionLstItem" nillable="true" type="tns:SectionLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSectionLstItem" nillable="true" type="tns:ArrayOfSectionLstItem" />
+  <xs:complexType name="SectionLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AreaCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeptCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiviCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SECNHEAD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SectionLstItem" nillable="true" type="tns:SectionLstItem" />
+  <xs:complexType name="ArrayOfNormStudyLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NormStudyLstItem" nillable="true" type="tns:NormStudyLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNormStudyLstItem" nillable="true" type="tns:ArrayOfNormStudyLstItem" />
+  <xs:complexType name="NormStudyLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LabType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NormStudyLstItem" nillable="true" type="tns:NormStudyLstItem" />
+  <xs:complexType name="ArrayOfMemoTypeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MemoTypeLstItem" nillable="true" type="tns:MemoTypeLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMemoTypeLstItem" nillable="true" type="tns:ArrayOfMemoTypeLstItem" />
+  <xs:complexType name="MemoTypeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MemoDescript" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MemoType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MemoTypeLstItem" nillable="true" type="tns:MemoTypeLstItem" />
+  <xs:complexType name="BL_AddAttachments">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocNotes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocTypeCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_AddAttachments" nillable="true" type="tns:BL_AddAttachments" />
+  <xs:complexType name="ArrayOfLeaveTypeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LeaveTypeLstItem" nillable="true" type="tns:LeaveTypeLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLeaveTypeLstItem" nillable="true" type="tns:ArrayOfLeaveTypeLstItem" />
+  <xs:complexType name="LeaveTypeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Applicable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChkBalYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DebitYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HalfDayYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxLimitFrAppln" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxlLeave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MinLeave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LeaveTypeLstItem" nillable="true" type="tns:LeaveTypeLstItem" />
+  <xs:complexType name="ArrayOfRCNTemplateLstitem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RCNTemplateLstitem" nillable="true" type="tns:RCNTemplateLstitem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRCNTemplateLstitem" nillable="true" type="tns:ArrayOfRCNTemplateLstitem" />
+  <xs:complexType name="RCNTemplateLstitem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ENCODEDYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudyID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Template" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RCNTemplateLstitem" nillable="true" type="tns:RCNTemplateLstitem" />
+  <xs:complexType name="ArrayOfServicePrviderSelectLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServicePrviderSelectLstItem" nillable="true" type="tns:ServicePrviderSelectLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServicePrviderSelectLstItem" nillable="true" type="tns:ArrayOfServicePrviderSelectLstItem" />
+  <xs:complexType name="ServicePrviderSelectLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContPerMobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServicePrviderSelectLstItem" nillable="true" type="tns:ServicePrviderSelectLstItem" />
+  <xs:complexType name="ArrayOfAprslQuestLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AprslQuestLstItem" nillable="true" type="tns:AprslQuestLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAprslQuestLstItem" nillable="true" type="tns:ArrayOfAprslQuestLstItem" />
+  <xs:complexType name="AprslQuestLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QuestType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AprslQuestLstItem" nillable="true" type="tns:AprslQuestLstItem" />
+  <xs:complexType name="ArrayOfEmployeeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmployeeLstItem" nillable="true" type="tns:EmployeeLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployeeLstItem" nillable="true" type="tns:ArrayOfEmployeeLstItem" />
+  <xs:complexType name="EmployeeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Department" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Designation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HOD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NURSYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmployeeLstItem" nillable="true" type="tns:EmployeeLstItem" />
+  <xs:complexType name="ArrayOfServListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServListItem" nillable="true" type="tns:ServListItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServListItem" nillable="true" type="tns:ArrayOfServListItem" />
+  <xs:complexType name="ServListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeptCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServBillGrpCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServMainGrpCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServSubGrpCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServTypeCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServListItem" nillable="true" type="tns:ServListItem" />
+  <xs:complexType name="ArrayOfPatSource">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PatSource" nillable="true" type="tns:PatSource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatSource" nillable="true" type="tns:ArrayOfPatSource" />
+  <xs:complexType name="PatSource">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PatSource" nillable="true" type="tns:PatSource" />
+  <xs:complexType name="ArrayOfPHMtrlGrpItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PHMtrlGrpItem" nillable="true" type="tns:PHMtrlGrpItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPHMtrlGrpItem" nillable="true" type="tns:ArrayOfPHMtrlGrpItem" />
+  <xs:complexType name="PHMtrlGrpItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Storecode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PHMtrlGrpItem" nillable="true" type="tns:PHMtrlGrpItem" />
+  <xs:complexType name="ArrayOfPHMtrlSubGrpItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PHMtrlSubGrpItem" nillable="true" type="tns:PHMtrlSubGrpItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPHMtrlSubGrpItem" nillable="true" type="tns:ArrayOfPHMtrlSubGrpItem" />
+  <xs:complexType name="PHMtrlSubGrpItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MtrlGrpCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PHMtrlSubGrpItem" nillable="true" type="tns:PHMtrlSubGrpItem" />
+  <xs:complexType name="ArrayOfGuidelinesLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GuidelinesLstItem" nillable="true" type="tns:GuidelinesLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGuidelinesLstItem" nillable="true" type="tns:ArrayOfGuidelinesLstItem" />
+  <xs:complexType name="GuidelinesLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GuideCatgCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GuidelinesLstItem" nillable="true" type="tns:GuidelinesLstItem" />
+  <xs:complexType name="ArrayOfDoctorSelLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DoctorSelLstItem" nillable="true" type="tns:DoctorSelLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDoctorSelLstItem" nillable="true" type="tns:ArrayOfDoctorSelLstItem" />
+  <xs:complexType name="DoctorSelLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdmnRight" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AnesthYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Department" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OPDLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfFeeYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Specialization" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SurgYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DoctorSelLstItem" nillable="true" type="tns:DoctorSelLstItem" />
+  <xs:complexType name="ArrayOfDeptLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeptLstItem" nillable="true" type="tns:DeptLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeptLstItem" nillable="true" type="tns:ArrayOfDeptLstItem" />
+  <xs:complexType name="DeptLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LabType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeptLstItem" nillable="true" type="tns:DeptLstItem" />
+  <xs:complexType name="ArrayOfExempCatgLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExempCatgLstItem" nillable="true" type="tns:ExempCatgLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExempCatgLstItem" nillable="true" type="tns:ArrayOfExempCatgLstItem" />
+  <xs:complexType name="ExempCatgLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PaymentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExempCatgLstItem" nillable="true" type="tns:ExempCatgLstItem" />
+  <xs:complexType name="ArrayOfSalutationLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalutationLstItem" nillable="true" type="tns:SalutationLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalutationLstItem" nillable="true" type="tns:ArrayOfSalutationLstItem" />
+  <xs:complexType name="SalutationLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DefGender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalutationLstItem" nillable="true" type="tns:SalutationLstItem" />
+  <xs:complexType name="ArrayOfPatCatgList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PatCatgList" nillable="true" type="tns:PatCatgList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatCatgList" nillable="true" type="tns:ArrayOfPatCatgList" />
+  <xs:complexType name="PatCatgList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PayType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TariffCatgCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PatCatgList" nillable="true" type="tns:PatCatgList" />
+  <xs:complexType name="ArrayOfCompanySelLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanySelLstItem" nillable="true" type="tns:CompanySelLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanySelLstItem" nillable="true" type="tns:ArrayOfCompanySelLstItem" />
+  <xs:complexType name="CompanySelLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsComp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TariffID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompanySelLstItem" nillable="true" type="tns:CompanySelLstItem" />
+  <xs:complexType name="ArrayOfCityList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CityList" nillable="true" type="tns:CityList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCityList" nillable="true" type="tns:ArrayOfCityList" />
+  <xs:complexType name="CityList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="District" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CityList" nillable="true" type="tns:CityList" />
+  <xs:complexType name="ArrayOfAreaList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AreaList" nillable="true" type="tns:AreaList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAreaList" nillable="true" type="tns:ArrayOfAreaList" />
+  <xs:complexType name="AreaList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="District" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AreaList" nillable="true" type="tns:AreaList" />
+  <xs:complexType name="ArrayOfDistLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DistLstItem" nillable="true" type="tns:DistLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDistLstItem" nillable="true" type="tns:ArrayOfDistLstItem" />
+  <xs:complexType name="DistLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DistLstItem" nillable="true" type="tns:DistLstItem" />
+  <xs:complexType name="ArrayOfStateLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StateLstItem" nillable="true" type="tns:StateLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStateLstItem" nillable="true" type="tns:ArrayOfStateLstItem" />
+  <xs:complexType name="StateLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StateLstItem" nillable="true" type="tns:StateLstItem" />
+  <xs:complexType name="ArrayOfWardLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WardLstItem" nillable="true" type="tns:WardLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWardLstItem" nillable="true" type="tns:ArrayOfWardLstItem" />
+  <xs:complexType name="WardLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NursingStn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WardLstItem" nillable="true" type="tns:WardLstItem" />
+  <xs:complexType name="ArrayOfDpstTypeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DpstTypeLstItem" nillable="true" type="tns:DpstTypeLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDpstTypeLstItem" nillable="true" type="tns:ArrayOfDpstTypeLstItem" />
+  <xs:complexType name="DpstTypeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Display" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DpstTypeLstItem" nillable="true" type="tns:DpstTypeLstItem" />
+  <xs:complexType name="ArrayOfAuthorizeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AuthorizeLstItem" nillable="true" type="tns:AuthorizeLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAuthorizeLstItem" nillable="true" type="tns:ArrayOfAuthorizeLstItem" />
+  <xs:complexType name="AuthorizeLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthorizeLstItem" nillable="true" type="tns:AuthorizeLstItem" />
+  <xs:complexType name="ArrayOfCounterSelItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CounterSelItem" nillable="true" type="tns:CounterSelItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCounterSelItem" nillable="true" type="tns:ArrayOfCounterSelItem" />
+  <xs:complexType name="CounterSelItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CntrType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrinterName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CounterSelItem" nillable="true" type="tns:CounterSelItem" />
+  <xs:complexType name="ArrayOfUserLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserLstItem" nillable="true" type="tns:UserLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserLstItem" nillable="true" type="tns:ArrayOfUserLstItem" />
+  <xs:complexType name="UserLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DoctCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICUAuthYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserLstItem" nillable="true" type="tns:UserLstItem" />
+  <xs:complexType name="ArrayOfServMainGrp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServMainGrp" nillable="true" type="tns:ServMainGrp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServMainGrp" nillable="true" type="tns:ArrayOfServMainGrp" />
+  <xs:complexType name="ServMainGrp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillGrpCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServMainGrp" nillable="true" type="tns:ServMainGrp" />
+  <xs:complexType name="ArrayOfServSubGrp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServSubGrp" nillable="true" type="tns:ServSubGrp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServSubGrp" nillable="true" type="tns:ArrayOfServSubGrp" />
+  <xs:complexType name="ServSubGrp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MainGrp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServSubGrp" nillable="true" type="tns:ServSubGrp" />
+  <xs:complexType name="ArrayOfBranchLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BranchLstItem" nillable="true" type="tns:BranchLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBranchLstItem" nillable="true" type="tns:ArrayOfBranchLstItem" />
+  <xs:complexType name="BranchLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BankCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BranchLstItem" nillable="true" type="tns:BranchLstItem" />
+  <xs:complexType name="ArrayOfReagentList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReagentList" nillable="true" type="tns:ReagentList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReagentList" nillable="true" type="tns:ArrayOfReagentList" />
+  <xs:complexType name="ReagentList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MtrlCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReagentList" nillable="true" type="tns:ReagentList" />
+  <xs:complexType name="ArrayOfTestListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TestListItem" nillable="true" type="tns:TestListItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTestListItem" nillable="true" type="tns:ArrayOfTestListItem" />
+  <xs:complexType name="TestListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LabCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabDeptCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TestType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TestListItem" nillable="true" type="tns:TestListItem" />
+  <xs:complexType name="ArrayOfLabDeptLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LabDeptLstItem" nillable="true" type="tns:LabDeptLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLabDeptLstItem" nillable="true" type="tns:ArrayOfLabDeptLstItem" />
+  <xs:complexType name="LabDeptLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeptCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LabDeptLstItem" nillable="true" type="tns:LabDeptLstItem" />
+  <xs:complexType name="ArrayOfLabTechnoLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LabTechnoLstItem" nillable="true" type="tns:LabTechnoLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLabTechnoLstItem" nillable="true" type="tns:ArrayOfLabTechnoLstItem" />
+  <xs:complexType name="LabTechnoLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmpID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LABTYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LabTechnoLstItem" nillable="true" type="tns:LabTechnoLstItem" />
+  <xs:complexType name="ArrayOfBBScrnTypeLst">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BBScrnTypeLst" nillable="true" type="tns:BBScrnTypeLst" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBBScrnTypeLst" nillable="true" type="tns:ArrayOfBBScrnTypeLst" />
+  <xs:complexType name="BBScrnTypeLst">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MethodCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BBScrnTypeLst" nillable="true" type="tns:BBScrnTypeLst" />
+  <xs:complexType name="ArrayOfBBQuestMstLst">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BBQuestMstLst" nillable="true" type="tns:BBQuestMstLst" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBBQuestMstLst" nillable="true" type="tns:ArrayOfBBQuestMstLst" />
+  <xs:complexType name="BBQuestMstLst">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExpectedAns" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuestCatg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BBQuestMstLst" nillable="true" type="tns:BBQuestMstLst" />
+  <xs:complexType name="ArrayOfICDLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ICDLstItem" nillable="true" type="tns:ICDLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfICDLstItem" nillable="true" type="tns:ArrayOfICDLstItem" />
+  <xs:complexType name="ICDLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IndxType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ICDLstItem" nillable="true" type="tns:ICDLstItem" />
+</xs:schema>

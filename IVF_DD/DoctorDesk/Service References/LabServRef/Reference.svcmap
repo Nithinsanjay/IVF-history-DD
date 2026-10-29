@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="d25dbc84-c3d6-482c-864f-25f2d67b912e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://uat.himstccf.org:82/WEBHMISSERVICE/Laboratory.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Laboratory.xsd" MetadataType="Schema" ID="b109656e-1569-4c56-9dcb-b062ed376e7f" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?xsd=xsd2" />
+    <MetadataFile FileName="Laboratory.disco" MetadataType="Disco" ID="c4698316-6e68-47bb-a0f8-a4b155262be1" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?disco" />
+    <MetadataFile FileName="Laboratory.wsdl" MetadataType="Wsdl" ID="cda4e2d0-3446-4004-bd32-831bfe792412" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?wsdl" />
+    <MetadataFile FileName="Laboratory1.xsd" MetadataType="Schema" ID="7c4a27e7-2f83-4466-9f70-70167d94ac56" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?xsd=xsd8" />
+    <MetadataFile FileName="Laboratory2.xsd" MetadataType="Schema" ID="40bf567a-94af-46f1-8951-f4e570801b8f" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?xsd=xsd5" />
+    <MetadataFile FileName="Laboratory3.xsd" MetadataType="Schema" ID="c3356b55-aab4-4586-93b4-8f964002c58a" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?xsd=xsd4" />
+    <MetadataFile FileName="Laboratory4.xsd" MetadataType="Schema" ID="c4b1cdb2-9ecb-4b4b-896e-b123077dfd66" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?xsd=xsd7" />
+    <MetadataFile FileName="Laboratory5.xsd" MetadataType="Schema" ID="adff1519-ef26-4757-ada9-cdb09f789b77" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?xsd=xsd6" />
+    <MetadataFile FileName="Laboratory6.xsd" MetadataType="Schema" ID="6169bd86-2f0b-4c12-b47d-2187b86ebe60" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?xsd=xsd1" />
+    <MetadataFile FileName="Laboratory7.xsd" MetadataType="Schema" ID="fb6db8d1-7ea4-40c2-ad91-f320709eacfa" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?xsd=xsd0" />
+    <MetadataFile FileName="Laboratory8.xsd" MetadataType="Schema" ID="5843ca4f-15a9-40bd-a21c-bfdd19e1aa8b" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Laboratory.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.Laboratory" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.Laboratory" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://uat.himstccf.org:83/WebEMRService/ICU.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+  <xs:complexType name="BL_Comment">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q1:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NoteType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strNote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strOrderNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strTranNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Comment" nillable="true" type="tns:BL_Comment" />
+</xs:schema>

@@ -1,0 +1,2347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Personal" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IPersonal_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.1.3/WebHRMSServiceNUnit/Personal.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebHRMSServiceNUnit/Personal.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebHRMSServiceNUnit/Personal.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Personal" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebHRMSServiceNUnit/Personal.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPersonal_GetShift_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShift" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetShift_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_ShiftsTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShiftsTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_ShiftsTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShiftsTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetShiftList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetShiftList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShiftListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_OnCallDoctorTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnCallDoctorTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_OnCallDoctorTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OnCallDoctorTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetOnCallDoctorList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnCallDoctorList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetOnCallDoctorList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnCallDoctorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_HolidayTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:HolidayTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_HolidayTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HolidayTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetHolidayList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetHolidayList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_PayScaleTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PayScaleTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_PayScaleTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PayScaleTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetPayScaleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayScaleList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetPayScaleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayScaleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_TrainingTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrainingTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_TrainingTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrainingTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetTrainingList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetTrainingList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_MemoTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:MemoTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_MemoTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MemoTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetMemoList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemoList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetMemoList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_EmpTypeTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmpTypeTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_EmpTypeTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmpTypeTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpTypeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpTypeList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpTypeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_LeaveTypeTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeaveTypeTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_LeaveTypeTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeaveTypeTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveTypeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveTypeList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveTypeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_ResignationTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResignationTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_ResignationTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResignationTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_ContractorsTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractorsTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_ContractorsTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractorsTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetContractorList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractorList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetContractorList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetResigntionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResigntionList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetResigntionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResigntionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetResigDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResigDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetResigDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResigDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_ContractTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_ContractTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetContractList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetContractList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetContractDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetContractDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_TransferEmpTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransferEmpTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_TransferEmpTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransferEmpTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_IncidentTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncidentTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_IncidentTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncidentTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_EmpContractReviewTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmpContractReviewTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_EmpContractReviewTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmpContractReviewTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_EmpDisciplineTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmpDisciplineTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_EmpDisciplineTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmpDisciplineTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpTranferDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpTranferDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpTranferDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpTranferDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetIncidentList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIncidentList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetIncidentList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIncidentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetIncidentDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIncidentDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetIncidentDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIncidentDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_JobApplicationTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:JobApplicationTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_JobApplicationTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JobApplicationTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_MemoPrepareTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:MemoPrepareTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_MemoPrepareTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MemoPrepareTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetDisciplinList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisciplinList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetDisciplinList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisciplinListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpContExtList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpContExtList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpContExtList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpContExtListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpContExtDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpContExtDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpContExtDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpContExtDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpContPreDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpContPreDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpContPreDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpContPreDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetDisciplinDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisciplinDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetDisciplinDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisciplinDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_ApplicationTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplicationTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_ApplicationTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplicationTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetJobApplList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobApplList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetJobApplList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobApplListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetContractorInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractorInfo" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetContractorInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractorInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetMemoPrepDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemoPrepDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetMemoPrepDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemoPrepDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetMemoPrepList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemoPrepList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetMemoPrepList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemoPrepListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_LocumDoctoTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocumDoctoTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_LocumDoctoTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocumDoctoTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetJobApplDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobApplDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetJobApplDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobApplDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_TrainingDetTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrainingDetTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_TrainingDetTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrainingDetTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetOPDrRoastList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDrRoastList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetOPDrRoastList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDrRoastListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetOPDrRoastDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDrRoastDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetOPDrRoastDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDrRoastDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetTrangDetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrangDetList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetTrangDetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrangDetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetTrainingDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetTrainingDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveEntry" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SaveLeaveEntryData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLeaveEntryData" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SaveLeaveEntryData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLeaveEntryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SectionTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SectionTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SectionTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SectionTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SaveShiftEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveShiftEntry" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SaveShiftEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveShiftEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_LeaveApplicatTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeaveApplicatTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_LeaveApplicatTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeaveApplicatTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_EmployeeInfoTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmployeeInfoTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_EmployeeInfoTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmployeeInfoTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetSectionLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSectionLst" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetSectionLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSectionLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetWeekOff_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeekOff" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetWeekOff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeekOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetOtherApplications_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherApplications" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetOtherApplications_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherApplicationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetOtherEmployeLvAppl_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherEmployeLvAppl" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetOtherEmployeLvAppl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherEmployeLvApplResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveApplList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveApplList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveApplList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveApplListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveApplDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveApplDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveApplDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveApplDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetDepartDesigWiseStrength_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartDesigWiseStrength" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetDepartDesigWiseStrength_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartDesigWiseStrengthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmployeeDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDetails" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmployeeDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetAgeWiseEmpTotalSum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgeWiseEmpTotalSum" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetAgeWiseEmpTotalSum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgeWiseEmpTotalSumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetAgeWiseEmpList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgeWiseEmpList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetAgeWiseEmpList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgeWiseEmpListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetRetiringEmpList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetiringEmpList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetRetiringEmpList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetiringEmpListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetApplListToCredit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplListToCredit" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetApplListToCredit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplListToCreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_DebitLeaveTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DebitLeaveTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_DebitLeaveTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DebitLeaveTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_CreditLeaveTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreditLeaveTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_CreditLeaveTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreditLeaveTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetQualExpDepeEmpList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQualExpDepeEmpList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetQualExpDepeEmpList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQualExpDepeEmpListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetDebitCreditLvList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDebitCreditLvList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetDebitCreditLvList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDebitCreditLvListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetDebitCreditLvDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDebitCreditLvDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetDebitCreditLvDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDebitCreditLvDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveRegisterDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveRegisterDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveRegisterDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveRegisterDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveSumDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveSumDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveSumDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveSumDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetResignEmpList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResignEmpList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetResignEmpList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResignEmpListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_AppraisalTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:AppraisalTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_AppraisalTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AppraisalTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetApraisalList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApraisalList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetApraisalList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApraisalListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetApraisalDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApraisalDet" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetApraisalDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApraisalDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmployeeRoster_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRoster" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmployeeRoster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRosterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SaveEmployeeRoster_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployeeRoster" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SaveEmployeeRoster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployeeRosterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetTrngFeedbkQuestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrngFeedbkQuestList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetTrngFeedbkQuestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrngFeedbkQuestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_FeedbkQuestTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:FeedbkQuestTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_FeedbkQuestTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FeedbkQuestTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_TraingFeedbkTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:TraingFeedbkTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_TraingFeedbkTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TraingFeedbkTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_HODAllocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:HODAllocation" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_HODAllocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HODAllocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_EmpLeaveValidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmpLeaveValidate" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_EmpLeaveValidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmpLeaveValidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveAndCO_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveAndCO" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveAndCO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveAndCOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetPortalTraing_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortalTraing" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetPortalTraing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortalTraingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpPortalDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpPortalDetails" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpPortalDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpPortalDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetDepartmentList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartmentList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetDepartmentList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartmentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_DeptMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeptMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_DeptMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeptMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SaveApprQMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveApprQMaster" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SaveApprQMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveApprQMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetApprQMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApprQMaster" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetApprQMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApprQMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpAppraisalReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpAppraisalReport" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpAppraisalReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpAppraisalReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpAppr_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpAppr" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpAppr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpApprResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpAppraisalWeightageReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpAppraisalWeightageReport" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpAppraisalWeightageReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpAppraisalWeightageReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpApprFinalRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpApprFinalRate" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmpApprFinalRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpApprFinalRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_AbscondTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:AbscondTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_AbscondTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AbscondTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetAbscondList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbscondList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetAbscondList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbscondListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveBalance" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeaveBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeaveBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_HodLstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:HodLstTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_HodLstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HodLstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetHodList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHodList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetHodList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHodListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SaveEmployeeRosternEW_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployeeRosternEW" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SaveEmployeeRosternEW_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployeeRosternEWResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmployeeRosterVRY_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRosterVRY" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetEmployeeRosterVRY_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRosterVRYResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetnwHodList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetnwHodList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetnwHodList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetnwHodListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_getLeaveAlert_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLeaveAlert" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_getLeaveAlert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLeaveAlertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_Isadmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:Isadmin" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_Isadmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsadminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetNotifiList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotifiList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetNotifiList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotifiListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_saveoncallTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveoncallTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_saveoncallTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveoncallTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetoncallTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetoncallTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetoncallTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetoncallTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_savecoAPPROVAL_InputMessage">
+    <wsdl:part name="parameters" element="tns:savecoAPPROVAL" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_savecoAPPROVAL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:savecoAPPROVALResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetcoAPPROVAL_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetcoAPPROVAL" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetcoAPPROVAL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetcoAPPROVALResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_saveSNAPPROVAL_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveSNAPPROVAL" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_saveSNAPPROVAL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveSNAPPROVALResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetSNAPPROVAL_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSNAPPROVAL" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetSNAPPROVAL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSNAPPROVALResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_saveLATEAPPROVAL_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveLATEAPPROVAL" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_saveLATEAPPROVAL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveLATEAPPROVALResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLATEAPPROVAL_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLATEAPPROVAL" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLATEAPPROVAL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLATEAPPROVALResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetCicularLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCicularLst" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetCicularLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCicularLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_CircularTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CircularTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_CircularTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CircularTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeavsToPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeavsToPost" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_GetLeavsToPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeavsToPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_LeavePostTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeavePostTran" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_LeavePostTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeavePostTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SaveChangeRoster_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangeRoster" />
+  </wsdl:message>
+  <wsdl:message name="IPersonal_SaveChangeRoster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangeRosterResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPersonal">
+    <wsdl:operation name="GetShift">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetShift" message="tns:IPersonal_GetShift_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetShiftResponse" message="tns:IPersonal_GetShift_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShiftsTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/ShiftsTran" message="tns:IPersonal_ShiftsTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/ShiftsTranResponse" message="tns:IPersonal_ShiftsTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetShiftList" message="tns:IPersonal_GetShiftList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetShiftListResponse" message="tns:IPersonal_GetShiftList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnCallDoctorTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/OnCallDoctorTran" message="tns:IPersonal_OnCallDoctorTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/OnCallDoctorTranResponse" message="tns:IPersonal_OnCallDoctorTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnCallDoctorList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetOnCallDoctorList" message="tns:IPersonal_GetOnCallDoctorList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetOnCallDoctorListResponse" message="tns:IPersonal_GetOnCallDoctorList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HolidayTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/HolidayTran" message="tns:IPersonal_HolidayTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/HolidayTranResponse" message="tns:IPersonal_HolidayTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidayList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetHolidayList" message="tns:IPersonal_GetHolidayList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetHolidayListResponse" message="tns:IPersonal_GetHolidayList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PayScaleTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/PayScaleTran" message="tns:IPersonal_PayScaleTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/PayScaleTranResponse" message="tns:IPersonal_PayScaleTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPayScaleList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetPayScaleList" message="tns:IPersonal_GetPayScaleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetPayScaleListResponse" message="tns:IPersonal_GetPayScaleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrainingTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/TrainingTran" message="tns:IPersonal_TrainingTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/TrainingTranResponse" message="tns:IPersonal_TrainingTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetTrainingList" message="tns:IPersonal_GetTrainingList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetTrainingListResponse" message="tns:IPersonal_GetTrainingList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MemoTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/MemoTran" message="tns:IPersonal_MemoTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/MemoTranResponse" message="tns:IPersonal_MemoTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemoList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetMemoList" message="tns:IPersonal_GetMemoList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetMemoListResponse" message="tns:IPersonal_GetMemoList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmpTypeTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/EmpTypeTran" message="tns:IPersonal_EmpTypeTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/EmpTypeTranResponse" message="tns:IPersonal_EmpTypeTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpTypeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetEmpTypeList" message="tns:IPersonal_GetEmpTypeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetEmpTypeListResponse" message="tns:IPersonal_GetEmpTypeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeaveTypeTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/LeaveTypeTran" message="tns:IPersonal_LeaveTypeTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/LeaveTypeTranResponse" message="tns:IPersonal_LeaveTypeTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveTypeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetLeaveTypeList" message="tns:IPersonal_GetLeaveTypeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetLeaveTypeListResponse" message="tns:IPersonal_GetLeaveTypeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResignationTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/ResignationTran" message="tns:IPersonal_ResignationTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/ResignationTranResponse" message="tns:IPersonal_ResignationTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractorsTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/ContractorsTran" message="tns:IPersonal_ContractorsTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/ContractorsTranResponse" message="tns:IPersonal_ContractorsTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractorList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetContractorList" message="tns:IPersonal_GetContractorList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetContractorListResponse" message="tns:IPersonal_GetContractorList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResigntionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetResigntionList" message="tns:IPersonal_GetResigntionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetResigntionListResponse" message="tns:IPersonal_GetResigntionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResigDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetResigDet" message="tns:IPersonal_GetResigDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetResigDetResponse" message="tns:IPersonal_GetResigDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/ContractTran" message="tns:IPersonal_ContractTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/ContractTranResponse" message="tns:IPersonal_ContractTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetContractList" message="tns:IPersonal_GetContractList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetContractListResponse" message="tns:IPersonal_GetContractList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetContractDet" message="tns:IPersonal_GetContractDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetContractDetResponse" message="tns:IPersonal_GetContractDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferEmpTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/TransferEmpTran" message="tns:IPersonal_TransferEmpTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/TransferEmpTranResponse" message="tns:IPersonal_TransferEmpTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncidentTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/IncidentTran" message="tns:IPersonal_IncidentTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/IncidentTranResponse" message="tns:IPersonal_IncidentTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmpContractReviewTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/EmpContractReviewTran" message="tns:IPersonal_EmpContractReviewTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/EmpContractReviewTranResponse" message="tns:IPersonal_EmpContractReviewTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmpDisciplineTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/EmpDisciplineTran" message="tns:IPersonal_EmpDisciplineTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/EmpDisciplineTranResponse" message="tns:IPersonal_EmpDisciplineTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpTranferDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetEmpTranferDet" message="tns:IPersonal_GetEmpTranferDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetEmpTranferDetResponse" message="tns:IPersonal_GetEmpTranferDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidentList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetIncidentList" message="tns:IPersonal_GetIncidentList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetIncidentListResponse" message="tns:IPersonal_GetIncidentList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidentDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetIncidentDet" message="tns:IPersonal_GetIncidentDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetIncidentDetResponse" message="tns:IPersonal_GetIncidentDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JobApplicationTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/JobApplicationTran" message="tns:IPersonal_JobApplicationTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/JobApplicationTranResponse" message="tns:IPersonal_JobApplicationTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MemoPrepareTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/MemoPrepareTran" message="tns:IPersonal_MemoPrepareTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/MemoPrepareTranResponse" message="tns:IPersonal_MemoPrepareTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDisciplinList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetDisciplinList" message="tns:IPersonal_GetDisciplinList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetDisciplinListResponse" message="tns:IPersonal_GetDisciplinList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpContExtList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetEmpContExtList" message="tns:IPersonal_GetEmpContExtList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetEmpContExtListResponse" message="tns:IPersonal_GetEmpContExtList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpContExtDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetEmpContExtDet" message="tns:IPersonal_GetEmpContExtDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetEmpContExtDetResponse" message="tns:IPersonal_GetEmpContExtDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpContPreDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetEmpContPreDet" message="tns:IPersonal_GetEmpContPreDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetEmpContPreDetResponse" message="tns:IPersonal_GetEmpContPreDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDisciplinDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetDisciplinDet" message="tns:IPersonal_GetDisciplinDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetDisciplinDetResponse" message="tns:IPersonal_GetDisciplinDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplicationTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/ApplicationTran" message="tns:IPersonal_ApplicationTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/ApplicationTranResponse" message="tns:IPersonal_ApplicationTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobApplList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetJobApplList" message="tns:IPersonal_GetJobApplList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetJobApplListResponse" message="tns:IPersonal_GetJobApplList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractorInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetContractorInfo" message="tns:IPersonal_GetContractorInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetContractorInfoResponse" message="tns:IPersonal_GetContractorInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemoPrepDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetMemoPrepDet" message="tns:IPersonal_GetMemoPrepDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetMemoPrepDetResponse" message="tns:IPersonal_GetMemoPrepDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemoPrepList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetMemoPrepList" message="tns:IPersonal_GetMemoPrepList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetMemoPrepListResponse" message="tns:IPersonal_GetMemoPrepList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocumDoctoTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/LocumDoctoTran" message="tns:IPersonal_LocumDoctoTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/LocumDoctoTranResponse" message="tns:IPersonal_LocumDoctoTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobApplDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetJobApplDet" message="tns:IPersonal_GetJobApplDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetJobApplDetResponse" message="tns:IPersonal_GetJobApplDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrainingDetTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/TrainingDetTran" message="tns:IPersonal_TrainingDetTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/TrainingDetTranResponse" message="tns:IPersonal_TrainingDetTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDrRoastList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetOPDrRoastList" message="tns:IPersonal_GetOPDrRoastList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetOPDrRoastListResponse" message="tns:IPersonal_GetOPDrRoastList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDrRoastDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetOPDrRoastDet" message="tns:IPersonal_GetOPDrRoastDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetOPDrRoastDetResponse" message="tns:IPersonal_GetOPDrRoastDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrangDetList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetTrangDetList" message="tns:IPersonal_GetTrangDetList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetTrangDetListResponse" message="tns:IPersonal_GetTrangDetList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetTrainingDet" message="tns:IPersonal_GetTrainingDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetTrainingDetResponse" message="tns:IPersonal_GetTrainingDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetLeaveEntry" message="tns:IPersonal_GetLeaveEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetLeaveEntryResponse" message="tns:IPersonal_GetLeaveEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveLeaveEntryData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/SaveLeaveEntryData" message="tns:IPersonal_SaveLeaveEntryData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/SaveLeaveEntryDataResponse" message="tns:IPersonal_SaveLeaveEntryData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SectionTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/SectionTran" message="tns:IPersonal_SectionTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/SectionTranResponse" message="tns:IPersonal_SectionTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveShiftEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/SaveShiftEntry" message="tns:IPersonal_SaveShiftEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/SaveShiftEntryResponse" message="tns:IPersonal_SaveShiftEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeaveApplicatTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/LeaveApplicatTran" message="tns:IPersonal_LeaveApplicatTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/LeaveApplicatTranResponse" message="tns:IPersonal_LeaveApplicatTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeInfoTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/EmployeeInfoTran" message="tns:IPersonal_EmployeeInfoTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/EmployeeInfoTranResponse" message="tns:IPersonal_EmployeeInfoTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSectionLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetSectionLst" message="tns:IPersonal_GetSectionLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetSectionLstResponse" message="tns:IPersonal_GetSectionLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeekOff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetWeekOff" message="tns:IPersonal_GetWeekOff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetWeekOffResponse" message="tns:IPersonal_GetWeekOff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherApplications">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetOtherApplications" message="tns:IPersonal_GetOtherApplications_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetOtherApplicationsResponse" message="tns:IPersonal_GetOtherApplications_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherEmployeLvAppl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetOtherEmployeLvAppl" message="tns:IPersonal_GetOtherEmployeLvAppl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetOtherEmployeLvApplResponse" message="tns:IPersonal_GetOtherEmployeLvAppl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveApplList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetLeaveApplList" message="tns:IPersonal_GetLeaveApplList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetLeaveApplListResponse" message="tns:IPersonal_GetLeaveApplList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveApplDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetLeaveApplDet" message="tns:IPersonal_GetLeaveApplDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetLeaveApplDetResponse" message="tns:IPersonal_GetLeaveApplDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartDesigWiseStrength">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetDepartDesigWiseStrength" message="tns:IPersonal_GetDepartDesigWiseStrength_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetDepartDesigWiseStrengthResponse" message="tns:IPersonal_GetDepartDesigWiseStrength_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetEmployeeDetails" message="tns:IPersonal_GetEmployeeDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetEmployeeDetailsResponse" message="tns:IPersonal_GetEmployeeDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgeWiseEmpTotalSum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetAgeWiseEmpTotalSum" message="tns:IPersonal_GetAgeWiseEmpTotalSum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetAgeWiseEmpTotalSumResponse" message="tns:IPersonal_GetAgeWiseEmpTotalSum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgeWiseEmpList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetAgeWiseEmpList" message="tns:IPersonal_GetAgeWiseEmpList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetAgeWiseEmpListResponse" message="tns:IPersonal_GetAgeWiseEmpList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRetiringEmpList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetRetiringEmpList" message="tns:IPersonal_GetRetiringEmpList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetRetiringEmpListResponse" message="tns:IPersonal_GetRetiringEmpList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplListToCredit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetApplListToCredit" message="tns:IPersonal_GetApplListToCredit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetApplListToCreditResponse" message="tns:IPersonal_GetApplListToCredit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DebitLeaveTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/DebitLeaveTran" message="tns:IPersonal_DebitLeaveTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/DebitLeaveTranResponse" message="tns:IPersonal_DebitLeaveTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditLeaveTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/CreditLeaveTran" message="tns:IPersonal_CreditLeaveTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/CreditLeaveTranResponse" message="tns:IPersonal_CreditLeaveTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQualExpDepeEmpList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetQualExpDepeEmpList" message="tns:IPersonal_GetQualExpDepeEmpList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetQualExpDepeEmpListResponse" message="tns:IPersonal_GetQualExpDepeEmpList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDebitCreditLvList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetDebitCreditLvList" message="tns:IPersonal_GetDebitCreditLvList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetDebitCreditLvListResponse" message="tns:IPersonal_GetDebitCreditLvList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDebitCreditLvDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetDebitCreditLvDetail" message="tns:IPersonal_GetDebitCreditLvDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetDebitCreditLvDetailResponse" message="tns:IPersonal_GetDebitCreditLvDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveRegisterDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetLeaveRegisterDet" message="tns:IPersonal_GetLeaveRegisterDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetLeaveRegisterDetResponse" message="tns:IPersonal_GetLeaveRegisterDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveSumDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetLeaveSumDet" message="tns:IPersonal_GetLeaveSumDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetLeaveSumDetResponse" message="tns:IPersonal_GetLeaveSumDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResignEmpList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetResignEmpList" message="tns:IPersonal_GetResignEmpList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetResignEmpListResponse" message="tns:IPersonal_GetResignEmpList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AppraisalTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/AppraisalTran" message="tns:IPersonal_AppraisalTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/AppraisalTranResponse" message="tns:IPersonal_AppraisalTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApraisalList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetApraisalList" message="tns:IPersonal_GetApraisalList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetApraisalListResponse" message="tns:IPersonal_GetApraisalList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApraisalDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetApraisalDet" message="tns:IPersonal_GetApraisalDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetApraisalDetResponse" message="tns:IPersonal_GetApraisalDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRoster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetEmployeeRoster" message="tns:IPersonal_GetEmployeeRoster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetEmployeeRosterResponse" message="tns:IPersonal_GetEmployeeRoster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployeeRoster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/SaveEmployeeRoster" message="tns:IPersonal_SaveEmployeeRoster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/SaveEmployeeRosterResponse" message="tns:IPersonal_SaveEmployeeRoster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrngFeedbkQuestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetTrngFeedbkQuestList" message="tns:IPersonal_GetTrngFeedbkQuestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetTrngFeedbkQuestListResponse" message="tns:IPersonal_GetTrngFeedbkQuestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FeedbkQuestTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/FeedbkQuestTran" message="tns:IPersonal_FeedbkQuestTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/FeedbkQuestTranResponse" message="tns:IPersonal_FeedbkQuestTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TraingFeedbkTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/TraingFeedbkTran" message="tns:IPersonal_TraingFeedbkTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/TraingFeedbkTranResponse" message="tns:IPersonal_TraingFeedbkTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HODAllocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/HODAllocation" message="tns:IPersonal_HODAllocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/HODAllocationResponse" message="tns:IPersonal_HODAllocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmpLeaveValidate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/EmpLeaveValidate" message="tns:IPersonal_EmpLeaveValidate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/EmpLeaveValidateResponse" message="tns:IPersonal_EmpLeaveValidate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveAndCO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetLeaveAndCO" message="tns:IPersonal_GetLeaveAndCO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetLeaveAndCOResponse" message="tns:IPersonal_GetLeaveAndCO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalTraing">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetPortalTraing" message="tns:IPersonal_GetPortalTraing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetPortalTraingResponse" message="tns:IPersonal_GetPortalTraing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpPortalDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetEmpPortalDetails" message="tns:IPersonal_GetEmpPortalDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetEmpPortalDetailsResponse" message="tns:IPersonal_GetEmpPortalDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetDepartmentList" message="tns:IPersonal_GetDepartmentList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetDepartmentListResponse" message="tns:IPersonal_GetDepartmentList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeptMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/DeptMstTran" message="tns:IPersonal_DeptMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/DeptMstTranResponse" message="tns:IPersonal_DeptMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveApprQMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/SaveApprQMaster" message="tns:IPersonal_SaveApprQMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/SaveApprQMasterResponse" message="tns:IPersonal_SaveApprQMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApprQMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetApprQMaster" message="tns:IPersonal_GetApprQMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetApprQMasterResponse" message="tns:IPersonal_GetApprQMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpAppraisalReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetEmpAppraisalReport" message="tns:IPersonal_GetEmpAppraisalReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetEmpAppraisalReportResponse" message="tns:IPersonal_GetEmpAppraisalReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpAppr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetEmpAppr" message="tns:IPersonal_GetEmpAppr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetEmpApprResponse" message="tns:IPersonal_GetEmpAppr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpAppraisalWeightageReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetEmpAppraisalWeightageReport" message="tns:IPersonal_GetEmpAppraisalWeightageReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetEmpAppraisalWeightageReportResponse" message="tns:IPersonal_GetEmpAppraisalWeightageReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpApprFinalRate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetEmpApprFinalRate" message="tns:IPersonal_GetEmpApprFinalRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetEmpApprFinalRateResponse" message="tns:IPersonal_GetEmpApprFinalRate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AbscondTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/AbscondTran" message="tns:IPersonal_AbscondTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/AbscondTranResponse" message="tns:IPersonal_AbscondTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAbscondList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetAbscondList" message="tns:IPersonal_GetAbscondList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetAbscondListResponse" message="tns:IPersonal_GetAbscondList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetLeaveBalance" message="tns:IPersonal_GetLeaveBalance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetLeaveBalanceResponse" message="tns:IPersonal_GetLeaveBalance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HodLstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/HodLstTran" message="tns:IPersonal_HodLstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/HodLstTranResponse" message="tns:IPersonal_HodLstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHodList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetHodList" message="tns:IPersonal_GetHodList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetHodListResponse" message="tns:IPersonal_GetHodList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployeeRosternEW">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/SaveEmployeeRosternEW" message="tns:IPersonal_SaveEmployeeRosternEW_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/SaveEmployeeRosternEWResponse" message="tns:IPersonal_SaveEmployeeRosternEW_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRosterVRY">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetEmployeeRosterVRY" message="tns:IPersonal_GetEmployeeRosterVRY_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetEmployeeRosterVRYResponse" message="tns:IPersonal_GetEmployeeRosterVRY_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetnwHodList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetnwHodList" message="tns:IPersonal_GetnwHodList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetnwHodListResponse" message="tns:IPersonal_GetnwHodList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLeaveAlert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/getLeaveAlert" message="tns:IPersonal_getLeaveAlert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/getLeaveAlertResponse" message="tns:IPersonal_getLeaveAlert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Isadmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/Isadmin" message="tns:IPersonal_Isadmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/IsadminResponse" message="tns:IPersonal_Isadmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotifiList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetNotifiList" message="tns:IPersonal_GetNotifiList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetNotifiListResponse" message="tns:IPersonal_GetNotifiList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveoncallTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/saveoncallTran" message="tns:IPersonal_saveoncallTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/saveoncallTranResponse" message="tns:IPersonal_saveoncallTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetoncallTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetoncallTran" message="tns:IPersonal_GetoncallTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetoncallTranResponse" message="tns:IPersonal_GetoncallTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="savecoAPPROVAL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/savecoAPPROVAL" message="tns:IPersonal_savecoAPPROVAL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/savecoAPPROVALResponse" message="tns:IPersonal_savecoAPPROVAL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetcoAPPROVAL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetcoAPPROVAL" message="tns:IPersonal_GetcoAPPROVAL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetcoAPPROVALResponse" message="tns:IPersonal_GetcoAPPROVAL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveSNAPPROVAL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/saveSNAPPROVAL" message="tns:IPersonal_saveSNAPPROVAL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/saveSNAPPROVALResponse" message="tns:IPersonal_saveSNAPPROVAL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSNAPPROVAL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetSNAPPROVAL" message="tns:IPersonal_GetSNAPPROVAL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetSNAPPROVALResponse" message="tns:IPersonal_GetSNAPPROVAL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveLATEAPPROVAL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/saveLATEAPPROVAL" message="tns:IPersonal_saveLATEAPPROVAL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/saveLATEAPPROVALResponse" message="tns:IPersonal_saveLATEAPPROVAL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLATEAPPROVAL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetLATEAPPROVAL" message="tns:IPersonal_GetLATEAPPROVAL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetLATEAPPROVALResponse" message="tns:IPersonal_GetLATEAPPROVAL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCicularLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetCicularLst" message="tns:IPersonal_GetCicularLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetCicularLstResponse" message="tns:IPersonal_GetCicularLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CircularTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/CircularTran" message="tns:IPersonal_CircularTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/CircularTranResponse" message="tns:IPersonal_CircularTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLeavsToPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/GetLeavsToPost" message="tns:IPersonal_GetLeavsToPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/GetLeavsToPostResponse" message="tns:IPersonal_GetLeavsToPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeavePostTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/LeavePostTran" message="tns:IPersonal_LeavePostTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/LeavePostTranResponse" message="tns:IPersonal_LeavePostTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangeRoster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonal/SaveChangeRoster" message="tns:IPersonal_SaveChangeRoster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonal/SaveChangeRosterResponse" message="tns:IPersonal_SaveChangeRoster_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPersonal" type="tns:IPersonal">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IPersonal_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetShift">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetShift" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShiftsTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/ShiftsTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShiftList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetShiftList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnCallDoctorTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/OnCallDoctorTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnCallDoctorList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetOnCallDoctorList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HolidayTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/HolidayTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidayList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetHolidayList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayScaleTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/PayScaleTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayScaleList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetPayScaleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrainingTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/TrainingTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetTrainingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MemoTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/MemoTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemoList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetMemoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpTypeTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/EmpTypeTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpTypeList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetEmpTypeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeaveTypeTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/LeaveTypeTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveTypeList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetLeaveTypeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResignationTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/ResignationTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractorsTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/ContractorsTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractorList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetContractorList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResigntionList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetResigntionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResigDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetResigDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/ContractTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetContractList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetContractDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferEmpTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/TransferEmpTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncidentTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/IncidentTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpContractReviewTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/EmpContractReviewTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpDisciplineTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/EmpDisciplineTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpTranferDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetEmpTranferDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidentList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetIncidentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidentDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetIncidentDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JobApplicationTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/JobApplicationTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MemoPrepareTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/MemoPrepareTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDisciplinList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetDisciplinList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpContExtList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetEmpContExtList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpContExtDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetEmpContExtDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpContPreDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetEmpContPreDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDisciplinDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetDisciplinDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplicationTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/ApplicationTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobApplList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetJobApplList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractorInfo">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetContractorInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemoPrepDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetMemoPrepDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemoPrepList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetMemoPrepList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocumDoctoTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/LocumDoctoTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobApplDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetJobApplDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrainingDetTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/TrainingDetTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDrRoastList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetOPDrRoastList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDrRoastDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetOPDrRoastDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrangDetList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetTrangDetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetTrainingDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveEntry">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetLeaveEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLeaveEntryData">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/SaveLeaveEntryData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SectionTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/SectionTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveShiftEntry">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/SaveShiftEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeaveApplicatTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/LeaveApplicatTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeInfoTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/EmployeeInfoTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSectionLst">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetSectionLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeekOff">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetWeekOff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherApplications">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetOtherApplications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherEmployeLvAppl">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetOtherEmployeLvAppl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveApplList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetLeaveApplList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveApplDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetLeaveApplDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartDesigWiseStrength">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetDepartDesigWiseStrength" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDetails">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetEmployeeDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgeWiseEmpTotalSum">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetAgeWiseEmpTotalSum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgeWiseEmpList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetAgeWiseEmpList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRetiringEmpList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetRetiringEmpList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplListToCredit">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetApplListToCredit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DebitLeaveTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/DebitLeaveTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditLeaveTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/CreditLeaveTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQualExpDepeEmpList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetQualExpDepeEmpList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDebitCreditLvList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetDebitCreditLvList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDebitCreditLvDetail">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetDebitCreditLvDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveRegisterDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetLeaveRegisterDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveSumDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetLeaveSumDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResignEmpList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetResignEmpList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppraisalTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/AppraisalTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApraisalList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetApraisalList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApraisalDet">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetApraisalDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRoster">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetEmployeeRoster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployeeRoster">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/SaveEmployeeRoster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrngFeedbkQuestList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetTrngFeedbkQuestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FeedbkQuestTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/FeedbkQuestTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraingFeedbkTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/TraingFeedbkTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HODAllocation">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/HODAllocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpLeaveValidate">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/EmpLeaveValidate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveAndCO">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetLeaveAndCO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalTraing">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetPortalTraing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpPortalDetails">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetEmpPortalDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetDepartmentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeptMstTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/DeptMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveApprQMaster">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/SaveApprQMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApprQMaster">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetApprQMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpAppraisalReport">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetEmpAppraisalReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpAppr">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetEmpAppr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpAppraisalWeightageReport">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetEmpAppraisalWeightageReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpApprFinalRate">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetEmpApprFinalRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbscondTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/AbscondTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAbscondList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetAbscondList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLeaveBalance">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetLeaveBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HodLstTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/HodLstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHodList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetHodList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployeeRosternEW">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/SaveEmployeeRosternEW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRosterVRY">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetEmployeeRosterVRY" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetnwHodList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetnwHodList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLeaveAlert">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/getLeaveAlert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Isadmin">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/Isadmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotifiList">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetNotifiList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveoncallTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/saveoncallTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetoncallTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetoncallTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="savecoAPPROVAL">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/savecoAPPROVAL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetcoAPPROVAL">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetcoAPPROVAL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveSNAPPROVAL">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/saveSNAPPROVAL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSNAPPROVAL">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetSNAPPROVAL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveLATEAPPROVAL">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/saveLATEAPPROVAL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLATEAPPROVAL">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetLATEAPPROVAL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCicularLst">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetCicularLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CircularTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/CircularTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLeavsToPost">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/GetLeavsToPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeavePostTran">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/LeavePostTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangeRoster">
+      <soap:operation soapAction="http://tempuri.org/IPersonal/SaveChangeRoster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Personal">
+    <wsdl:port name="BasicHttpBinding_IPersonal" binding="tns:BasicHttpBinding_IPersonal">
+      <soap:address location="http://192.168.1.3/WebHRMSServiceNUnit/Personal.svc/Personal.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

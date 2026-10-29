@@ -1,0 +1,726 @@
+﻿/**
+    * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+    * http://www.cssportal.com
+    */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #333;
+}
+
+p {
+    padding: 10px;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 1024px;
+}
+
+#headerwrap {
+    width: 1024px;
+    float: left;
+    margin: 0 auto;
+}
+
+#header {
+        background-image: linear-gradient(to bottom, #0077eb, #005db8);
+    background-repeat: repeat-x;
+    z-index: 1;
+    height: 46px;
+    /*background: #0077eb;*/
+    /*border-radius: 10px;*/
+    border: 1px solid #0063d7;
+    margin: 1px;
+}
+
+#contentwrap {
+    width: 774px;
+    float: left;
+    margin: 0 auto;
+}
+
+#content {
+    background: #FFFFFF;
+    /*border-radius: 10px;*/
+    border: 1px solid #ebebeb;
+    margin: 1px;
+}
+
+#leftcolumnwrap {
+    /*width: 240px;*/
+    float: left;
+    margin: 0 auto;
+}
+
+#leftcolumn {
+    background: #eeeeee;
+    /*border-radius: 10px;*/
+    border: 1px solid #dadada;
+    margin-top: 2px;
+}
+
+
+
+#CompanyLogo {
+    /*background: url('../Images/CompanyLogo.jpg') no-repeat;
+    width: 200px;
+    height: 49px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;*/
+        background: url('../Images/CompanyLogo.jpg') no-repeat;
+    width: 155px;
+    height: 48px;
+    padding: 0 0 0 0;
+    margin: -1px 0 0 0;
+}
+
+#CompanyName {
+    width: 300px;
+    height: 49px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 14.7px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    letter-spacing: 2px;
+    top: 13px;
+    left: 675px;
+    z-index: 999;
+}
+
+#leftTopcolumnwrap {
+    width: 225px;
+    float: left;
+    margin: 0 auto;
+}
+
+#topcontentwrap {
+    width: 799px;
+    float: left;
+    margin: 0 auto;
+}
+
+#topcontent {
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    margin: 5px;
+}
+
+#topleftcolumn {
+    background: #eeeeee;
+    border-radius: 10px;
+    border: 1px solid #dadada;
+}
+
+#button {
+    width: 155px;
+    /*border-right: 1px solid #000;*/
+    padding: 0 0 1em 0;
+    margin-bottom: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #333;
+}
+
+    #button ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+    #button li {
+        border-bottom: 1px solid #90bade;
+        margin: 0;
+        list-style: none;
+        list-style-image: none;
+    }
+
+        #button li a {
+            display: block;
+            /*padding: 5px 5px 5px 0.5em;*/
+            padding: 8px 17px 17px 0.5em;
+            /*border-left: 10px solid #1958b7;
+            border-right: 10px solid #508fc4;*/
+            border-right: 10px solid linear-gradient(to bottom, #eeeeee, #908585);
+            border-left: 10px solid linear-gradient(to bottom, #eeeeee, #908585);
+            background-image: linear-gradient(to bottom, #eeeeee, #908585);
+            color: black;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        html > body #button li a {
+            width: auto;
+        }
+
+            #button li a:hover {
+                border-left: 10px solid linear-gradient(to bottom, #0077eb, #005db8);
+                border-right: 10px solid linear-gradient(to bottom, #0077eb, #005db8);
+                background-image:linear-gradient(to bottom, #0077eb, #005db8);
+                /*background-color: #2586d7;*/
+                color: #fff;
+            }
+
+
+/*CSS for Views - 10/07/2014 */
+label {
+    font-family: Arial;
+    font-size: 13.5px;
+    padding-left: 2px;
+}
+
+.SrchBtnFormat {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    width: 27px;
+    Height: 19px;
+    background: url('../../Images/btn_search1.png');
+    border: 1px groove #73cfdd;
+    color: white;
+    font-weight: bold;
+    font-family: callibri,arial;
+}
+
+fieldset {
+    padding: 0px 0px 1px 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-color: #428bca;
+    border-width: 1px;
+}
+
+legend {
+    color: #3366CC;
+    font-size: 13.5px;
+    font-weight: bold;
+    font-family: Calibri,Arial;
+    margin-left: 8px; /*i have added the Margin-Left For LeftSide Border*/
+}
+
+.TextBxFormat {
+    font-family: Calibri,Arial;
+    font-size: 13.5px;
+    height: 15px;
+    border-bottom-color: #075366;
+    border-right-color: #075366;
+    border-width: 1px;
+    background: white;
+    color: #0687a8;
+    background: white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.panel-heading {
+    padding-left: 3px;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 13.5px;
+    background-color: #35a0c4;
+    color: #fff;
+    height: 16px;
+    font-family: Calibri;
+    font-weight: bold;
+}
+
+.ComboFormat, select {
+    font-family: Calibri,Arial;
+    font-size: 13.5px;
+    height: 19px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-color: Black;
+    border-right-color: black;
+    border-width: 1px;
+}
+
+/*.Nbutton
+{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    width:auto;
+    font-size:13px;
+    Height:21px;background: radial-gradient(#072d33, #09d5f4);border:1px groove #73cfdd;color:white;font-weight:bold;font-family:callibri,arial;
+}*/
+.Nbutton {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 75px;
+    Height: 21px;
+    background: radial-gradient(#99CC00, #4C6600);
+    border: 1px groove #73cfdd;
+    color: white;
+    font-weight: bold;
+    /*font-family:callibri,arial;
+    font-size:13px;*/
+}
+
+    .Nbutton:hover {
+        cursor: pointer;
+        background-color: grey;
+        background: radial-gradient(#A2A3A3, #171819);
+    }
+
+.SrchDiv {
+    Height: 24px;
+    width: 1;
+    border: 1px groove lightblue;
+    padding: 0.3px 0.1px 0.1px 0.1px;
+    background: #2d1a07;
+    text-align: justify;
+    background: radial-gradient(#f47b02, #ff7b00);
+}
+
+.HeadDiv {
+    padding: 2px 1px 1px 1px;
+    font-family: Calibri,Arial;
+    border-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    font-weight: bold;
+    color: White;
+    height: 23px;
+    background: #343538;
+    background: #343538;
+    margin-bottom: 0px;
+}
+
+.divBg {
+    background: #343538;
+    background: radial-gradient(#64676e, #171819);
+}
+
+.panel-heading {
+    padding-left: 3px;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 13.5px;
+    background-color: #2D94D0;
+    color: #fff;
+    height: 16px;
+    font-family: Calibri;
+    font-weight: bold;
+    background: radial-gradient(#CCEBFF, #007ACC);
+    .panel-heading;
+
+{
+    padding-left: 3px;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 13.5px;
+    background-color: #2D94D0;
+    color: #fff;
+    height: 16px;
+    font-family: Calibri;
+    font-weight: bold;
+    background: radial-gradient(#CCEBFF, #007ACC);
+}
+
+line-height: 1; font-family: callibri, sans-serif; font-size: 14px; position: relative;
+}
+
+#cssmenu a {
+    line-height: 1.3;
+    padding: 6px 15px;
+}
+
+#cssmenu {
+    width: 148px;
+}
+
+    #cssmenu > ul > li {
+        cursor: pointer;
+        background: #000;
+        border-bottom: 1px solid #4c4e53;
+    }
+
+        #cssmenu > ul > li:last-child {
+            border-bottom: 1px solid #3e3d3c;
+        }
+
+        #cssmenu > ul > li > a {
+            font-size: 13px;
+            display: block;
+            color: #ffffff;
+            text-shadow: 0 1px 1px #000;
+            background: #343538;
+            background: radial-gradient(#64676e, #171819);
+            top: 0px;
+            left: 0px;
+        }
+
+            #cssmenu > ul > li > a:hover {
+                text-decoration: none;
+            }
+
+        #cssmenu > ul > li.active {
+            border-bottom: none;
+        }
+
+            #cssmenu > ul > li.active > a {
+                background: #97c700;
+                background: -moz-linear-gradient(#A8DE00 0%, #709400 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #A8DE00), color-stop(100%, #709400));
+                background: -webkit-linear-gradient(#A8DE00 0%, #709400 100%);
+                background: linear-gradient(#A8DE00 0%, #709400 100%);
+                color: #FFFFFF;
+                text-shadow: 0 1px 1px #709400;
+                background-color: #000080;
+            }
+
+        #cssmenu > ul > li.has-sub > a:after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: 5px solid transparent;
+            border-left: 5px solid #ffffff;
+        }
+
+        #cssmenu > ul > li.has-sub.active > a:after {
+            right: 14px;
+            top: 12px;
+            border: 5px solid transparent;
+            border-top: 5px solid #4e5800;
+        }
+    /* Sub menu */
+    #cssmenu ul ul {
+        padding: 0;
+        display: none;
+    }
+
+        #cssmenu ul ul a {
+            background: #efefef;
+            display: block;
+            color: #797979;
+            font-size: 13px;
+        }
+
+        #cssmenu ul ul li {
+            border-bottom: 1px solid #c9c9c9;
+        }
+
+            #cssmenu ul ul li.odd a {
+                background: #e5e5e5;
+            }
+
+            #cssmenu ul ul li:last-child {
+                border: none;
+            }
+
+.ErrorCssClass {
+    margin-top: 10px;
+    font-family: Arial;
+    font-size: 12px;
+    /* margin-left:15px;*/
+}
+/*Below Code Written By Suresh*/
+.CustomalertCss {
+    height: auto;
+    /*margin-left:15px;
+        margin-top:10px;*/
+}
+
+.GetTansList {
+    cursor: pointer;
+    background-image: url('../../Images/secondarytile.png');
+    width: 16px;
+    height: 16px;
+    position: relative;
+    float: right;
+    margin-right: 3px;
+    margin-left: 0px;
+}
+
+.GetTansInfo {
+    cursor: pointer;
+    position: relative;
+    float: right;
+    zoom: 1.2;
+    margin-right: 3px;
+    margin-top: -2px;
+}
+
+.tooltipClass {
+    /* background: #eee;*/
+    border: 1px solid #ccc;
+    border-color: white;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: 200px;
+}
+
+.btnSearch {
+    cursor: pointer;
+    background-image: url('../../Images/btn_search1.png');
+    /*background:url('../../Images/btn_search.png');*/
+    height: 21px;
+    width: 22px;
+    position: relative;
+    float: right;
+}
+
+.btnNew {
+    cursor: pointer;
+    background-image: url('../../Images/New1.png');
+    height: 18px;
+    width: 18px;
+    position: relative;
+    float: right;
+}
+
+.btnPrint {
+    cursor: pointer;
+    background-image: url('../../Images/Print1.png');
+    height: 21px;
+    width: 22px;
+    position: relative;
+    float: right;
+}
+
+.btnExcel {
+    cursor: pointer;
+    background-image: url('../../Images/Print1.png');
+    height: 21px;
+    width: 22px;
+    position: relative;
+    float: right;
+}
+
+.btnClear {
+    cursor: pointer;
+    background-image: url('../../Images/Reset.png');
+    height: 19px;
+    width: 22px;
+    position: relative;
+    float: right;
+}
+
+.NoteLabel {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 11px;
+    color: red;
+    font-weight: bold;
+    float: right;
+    margin-top: 5px;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+}
+
+.SeprateClass {
+    position: relative;
+    margin-right: 5px;
+    float: right;
+    height: 19px;
+}
+
+.seprateDiv {
+    position: relative;
+    float: right;
+    height: 19px;
+    width: 15px;
+}
+/*the cancelclass is used for grid cancel records*/
+.CancelClass td {
+    font-weight: bold !important;
+    /*background-color: OrangeRed !important;*/
+    /*background-color:whitesmoke !important;*/
+    color: white !important; /*#363636  !important;*/
+}
+
+.VerifyClass td {
+    font-weight: bold !important;
+    /*background-color: OrangeRed !important;*/
+    /*background-color:whitesmoke !important;*/
+    color: green !important; /*#363636  !important;*/
+}
+/*.AddFooterClass tr {
+font-weight: bolder !important;
+color: White;
+font-size: 13PX;
+/*background-color:radial-gradient(#A2A3A3, #171819);*/
+/*background :linear-gradient(#A8DE00 0%, #709400 100%);/* radial-gradient(#f47b02, #ff7b00);
+}*/
+
+.AddFooterClass td {
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: bold !important;
+    color: floralwhite;
+    font-size: 12px;
+    background-color: #00293D;
+    background: linear-gradient(#B2D1E0 0%, #001F2E 100%);
+}
+/*whenever the Cursor display pointer to Hand*/
+.ui-jqgrid .ui-jqgrid-btable {
+    cursor: pointer;
+}
+
+.Confirmcss {
+    content: url("../../Images/question-icon.png");
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+} 
+
+.login-help{
+  font-size: 12px;
+}
+

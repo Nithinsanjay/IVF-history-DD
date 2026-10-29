@@ -1,0 +1,263 @@
+=>12-12-2023 11:38:24 | ::1 |  |  |  An Error occured :  Message : There was no endpoint listening at http://medihealapp.uksouth.cloudapp.azure.com:82/WebHMISService/ICU.svc/ICU.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>22-12-2023 16:17:35 | ::1 |  |  |  An Error occured :  Message : The request channel timed out while waiting for a reply after 00:29:59.9980048. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+-----------------------------------------------------------------------------------------------
+=>10-01-2024 11:19:58 | ::1 |  |  |  An Error occured :  Message : A potentially dangerous Request.Form value was detected from the client (strExam="
+<b>DISTANCE VISION <...").
+-----------------------------------------------------------------------------------------------
+=>10-01-2024 11:20:10 | ::1 |  |  |  An Error occured :  Message : A potentially dangerous Request.Form value was detected from the client (strExam="
+<b>DISTANCE VISION <...").
+-----------------------------------------------------------------------------------------------
+=>10-01-2024 11:20:43 | ::1 |  |  |  An Error occured :  Message : A potentially dangerous Request.Form value was detected from the client (strExam="
+<b>DISTANCE VISION <...").
+-----------------------------------------------------------------------------------------------
+=>10-01-2024 11:21:16 | ::1 |  |  |  An Error occured :  Message : A potentially dangerous Request.Form value was detected from the client (strExam="
+<b>DISTANCE VISION <...").
+-----------------------------------------------------------------------------------------------
+=>10-01-2024 11:21:25 | ::1 |  |  |  An Error occured :  Message : A potentially dangerous Request.Form value was detected from the client (strExam="
+<b>DISTANCE VISION <...").
+-----------------------------------------------------------------------------------------------
+=>23-01-2024 11:54:50 | ::1 |  |  |  An Error occured :  Message : The controller for path '/OPTransaction/GetSignatory' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>23-01-2024 11:55:17 | ::1 |  |  |  An Error occured :  Message : The controller for path '/OPTransaction/GetSignatory' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>23-01-2024 11:56:07 | ::1 |  |  |  An Error occured :  Message : The controller for path '/OPTransaction/GetSignatory' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>23-01-2024 11:56:08 | ::1 |  |  |  An Error occured :  Message : The controller for path '/OPTransaction/PrintPrescription' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>23-01-2024 11:56:43 | ::1 |  |  |  An Error occured :  Message : The controller for path '/OPTransaction/GetSignatory' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>23-01-2024 11:56:43 | ::1 |  |  |  An Error occured :  Message : The controller for path '/OPTransaction/PrintPrescription' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>23-01-2024 11:57:02 | ::1 |  |  |  An Error occured :  Message : The controller for path '/OncologyEMR/GetSignatory' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>23-01-2024 11:57:02 | ::1 |  |  |  An Error occured :  Message : The controller for path '/OPTransaction/PrintPrescription' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>23-01-2024 11:57:21 | ::1 |  |  |  An Error occured :  Message : The controller for path '/OncologyEMR/GetSignatory' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>23-01-2024 11:57:21 | ::1 |  |  |  An Error occured :  Message : The controller for path '/OPTransaction/PrintPrescription' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>23-01-2024 11:58:18 | ::1 |  |  |  An Error occured :  Message : The controller for path '/OPTransaction/PrintPrescription' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>23-01-2024 11:58:48 | ::1 |  |  |  An Error occured :  Message : The controller for path '/OPTransaction/PrintPrescription' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>23-01-2024 12:00:02 | ::1 |  |  |  An Error occured :  Message : The controller for path '/OPTransaction/PrintPrescription' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>16-02-2024 10:30:22 | ::1 |  |  |  An Error occured :  Message : A potentially dangerous Request.Form value was detected from the client (OtherHistory="<b> Menstrual Histor...").
+-----------------------------------------------------------------------------------------------
+=>26-04-2024 20:56:30 | ::1 |  |  |  An Error occured :  Message : Column 'EMPID' does not belong to table PATDETAILS.
+-----------------------------------------------------------------------------------------------
+=>07-05-2024 12:11:56 | ::1 |  |  |  An Error occured :  Message : Cannot find table 0.
+-----------------------------------------------------------------------------------------------
+=>09-05-2024 15:52:00 | ::1 |  |  |  An Error occured :  Message : Index was outside the bounds of the array.
+-----------------------------------------------------------------------------------------------
+=>23-05-2024 18:23:49 | ::1 |  |  |  An Error occured :  Message : Cannot find table 0.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 09:46:07 | ::1 |  |  |  An Error occured :  Message : Column 'COPAYAMT' does not belong to table Table1.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 09:46:12 | ::1 |  |  |  An Error occured :  Message : Invalid column name 'REFZIP'.
+Invalid column name 'REFREGICODE'.
+Invalid column name 'REFCITYCODE'.
+Invalid column name 'REFAREACODE'.
+Invalid column name 'REFADDRESS'.
+Invalid column name 'TOKENNOCD'.
+Invalid column name 'PATCASETYPENM'.
+Invalid column name 'REFHOSPNM'.
+Invalid column name 'PATSOURCENM'.
+Invalid column name 'COPAYAMT'.
+Invalid column name 'TOKENNO'.
+Invalid column name 'SMRNO'.
+Invalid column name 'IVREGNO'.
+Invalid column name 'SCHEMENM'.
+Invalid column name 'SCHEMENM'.
+Invalid column name 'CAPITZNYN'.
+Invalid column name 'SCHEMECD'.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 10:07:50 | ::1 |  |  |  An Error occured :  Message : Invalid column name 'REFZIP'.
+Invalid column name 'REFREGICODE'.
+Invalid column name 'REFCITYCODE'.
+Invalid column name 'REFAREACODE'.
+Invalid column name 'REFADDRESS'.
+Invalid column name 'TOKENNOCD'.
+Invalid column name 'PATCASETYPENM'.
+Invalid column name 'REFHOSPNM'.
+Invalid column name 'PATSOURCENM'.
+Invalid column name 'COPAYAMT'.
+Invalid column name 'TOKENNO'.
+Invalid column name 'SMRNO'.
+Invalid column name 'IVREGNO'.
+Invalid column name 'SCHEMENM'.
+Invalid column name 'SCHEMENM'.
+Invalid column name 'CAPITZNYN'.
+Invalid column name 'SCHEMECD'.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 10:07:50 | ::1 |  |  |  An Error occured :  Message : Invalid column name 'REFZIP'.
+Invalid column name 'REFREGICODE'.
+Invalid column name 'REFCITYCODE'.
+Invalid column name 'REFAREACODE'.
+Invalid column name 'REFADDRESS'.
+Invalid column name 'TOKENNOCD'.
+Invalid column name 'PATCASETYPENM'.
+Invalid column name 'REFHOSPNM'.
+Invalid column name 'PATSOURCENM'.
+Invalid column name 'COPAYAMT'.
+Invalid column name 'TOKENNO'.
+Invalid column name 'SMRNO'.
+Invalid column name 'IVREGNO'.
+Invalid column name 'SCHEMENM'.
+Invalid column name 'SCHEMENM'.
+Invalid column name 'CAPITZNYN'.
+Invalid column name 'SCHEMECD'.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 10:36:46 | ::1 |  |  |  An Error occured :  Message : Invalid column name 'REFZIP'.
+Invalid column name 'REFREGICODE'.
+Invalid column name 'REFCITYCODE'.
+Invalid column name 'REFAREACODE'.
+Invalid column name 'REFADDRESS'.
+Invalid column name 'TOKENNOCD'.
+Invalid column name 'PATCASETYPENM'.
+Invalid column name 'REFHOSPNM'.
+Invalid column name 'PATSOURCENM'.
+Invalid column name 'COPAYAMT'.
+Invalid column name 'TOKENNO'.
+Invalid column name 'SMRNO'.
+Invalid column name 'IVREGNO'.
+Invalid column name 'SCHEMENM'.
+Invalid column name 'SCHEMENM'.
+Invalid column name 'CAPITZNYN'.
+Invalid column name 'SCHEMECD'.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 10:41:51 | ::1 |  |  |  An Error occured :  Message : Invalid column name 'SEQNO'.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 10:41:54 | ::1 |  |  |  An Error occured :  Message : Column 'PASTHIST' does not belong to table EXAMS.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 10:43:49 | ::1 |  |  |  An Error occured :  Message : Column 'PASTHIST' does not belong to table EXAMS.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 15:01:01 | ::1 |  |  |  An Error occured :  Message : Column 'PULSECOND' does not belong to table VITALS.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 15:01:10 | ::1 |  |  |  An Error occured :  Message : Column 'ADMNADVYN' does not belong to table FOLLOWUP.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 15:01:21 | ::1 |  |  |  An Error occured :  Message : Column 'PULSECOND' does not belong to table VITALS.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 15:19:03 | ::1 |  |  |  An Error occured :  Message : Column 'PULSECOND' does not belong to table VITALS.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 15:19:10 | ::1 |  |  |  An Error occured :  Message : Column 'PASTHIST' does not belong to table EXAMS.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 15:20:59 | ::1 |  |  |  An Error occured :  Message : Column 'PASTHIST' does not belong to table EXAMS.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 15:33:43 | ::1 |  |  |  An Error occured :  Message : [DBNETLIB][ConnectionOpen (Connect()).]SQL Server does not exist or access denied.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 15:33:43 | ::1 |  |  |  An Error occured :  Message : [DBNETLIB][ConnectionOpen (Connect()).]SQL Server does not exist or access denied.
+-----------------------------------------------------------------------------------------------
+=>07-06-2024 15:36:49 | ::1 |  |  |  An Error occured :  Message : [DBNETLIB][ConnectionOpen (Connect()).]SQL Server does not exist or access denied.
+-----------------------------------------------------------------------------------------------
+=>28-09-2024 18:43:48 | ::1 |  |  |  An Error occured :  Message : Access to the path 'C:\inetpub\ErrorLogs\ServiceErrorLog.txt' is denied.
+-----------------------------------------------------------------------------------------------
+=>08-10-2024 18:00:56 | ::1 |  |  |  An Error occured :  Message : Access to the path 'C:\inetpub\ErrorLogs\ServiceErrorLog.txt' is denied.
+-----------------------------------------------------------------------------------------------
+=>08-10-2024 18:00:59 | ::1 |  |  |  An Error occured :  Message : Access to the path 'C:\inetpub\ErrorLogs\ServiceErrorLog.txt' is denied.
+-----------------------------------------------------------------------------------------------
+=>08-10-2024 18:01:04 | ::1 |  |  |  An Error occured :  Message : Access to the path 'C:\inetpub\ErrorLogs\ServiceErrorLog.txt' is denied.
+-----------------------------------------------------------------------------------------------
+=>08-10-2024 19:03:02 | ::1 |  |  |  An Error occured :  Message : The controller for path '/WebOncology/Account/OncologyHome' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>08-10-2024 20:05:25 | ::1 |  |  |  An Error occured :  Message : Incorrect syntax near the keyword 'DEFAULT'.
+-----------------------------------------------------------------------------------------------
+=>08-10-2024 20:07:44 | ::1 |  |  |  An Error occured :  Message : Incorrect syntax near the keyword 'DEFAULT'.
+-----------------------------------------------------------------------------------------------
+=>08-10-2024 20:55:11 | ::1 |  |  |  An Error occured :  Message : Could not find file 'C:\DSDocument\306_DS-2020-0000324'.
+-----------------------------------------------------------------------------------------------
+=>19-11-2024 15:42:44 | ::1 |  |  |  An Error occured :  Message : Column 'TBDREFYN' does not belong to table FOLLOWUP.
+-----------------------------------------------------------------------------------------------
+=>19-11-2024 15:47:59 | ::1 |  |  |  An Error occured :  Message : Column 'TBDREFYN' does not belong to table FOLLOWUP.
+-----------------------------------------------------------------------------------------------
+=>19-11-2024 15:49:16 | ::1 |  |  |  An Error occured :  Message : Column 'TBDREFYN' does not belong to table FOLLOWUP.
+-----------------------------------------------------------------------------------------------
+=>28-01-2025 15:39:24 | ::1 |  |  |  An Error occured :  Message : Column 'COMPLETEDYN' does not belong to underlying table 'Table'.
+-----------------------------------------------------------------------------------------------
+=>28-01-2025 16:17:13 | ::1 |  |  |  An Error occured :  Message : An error occurred while receiving the HTTP response to http://localhost:56000/OncologyEMR.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+-----------------------------------------------------------------------------------------------
+=>28-01-2025 16:17:13 | ::1 |  |  |  An Error occured :  Message : An error occurred while receiving the HTTP response to http://localhost:56000/OncologyEMR.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+-----------------------------------------------------------------------------------------------
+=>21-02-2025 18:48:13 | ::1 |  |  |  An Error occured :  Message : A public action method 'GetHistory' was not found on controller 'OncologyEMR.Controllers.AccountController'.
+-----------------------------------------------------------------------------------------------
+=>21-02-2025 18:48:57 | ::1 |  |  |  An Error occured :  Message : A public action method 'GetHistory' was not found on controller 'OncologyEMR.Controllers.AccountController'.
+-----------------------------------------------------------------------------------------------
+=>21-02-2025 18:49:33 | ::1 |  |  |  An Error occured :  Message : A public action method 'GetHistory' was not found on controller 'OncologyEMR.Controllers.AccountController'.
+-----------------------------------------------------------------------------------------------
+=>21-02-2025 18:49:58 | ::1 |  |  |  An Error occured :  Message : A public action method 'GetHistory' was not found on controller 'OncologyEMR.Controllers.AccountController'.
+-----------------------------------------------------------------------------------------------
+=>21-02-2025 18:50:04 | ::1 |  |  |  An Error occured :  Message : A public action method 'GetHistory' was not found on controller 'OncologyEMR.Controllers.AccountController'.
+-----------------------------------------------------------------------------------------------
+=>21-02-2025 18:50:30 | ::1 |  |  |  An Error occured :  Message : A public action method 'GetHistory' was not found on controller 'OncologyEMR.Controllers.AccountController'.
+-----------------------------------------------------------------------------------------------
+=>21-02-2025 18:51:54 | ::1 |  |  |  An Error occured :  Message : A public action method 'GetHistory' was not found on controller 'OncologyEMR.Controllers.AccountController'.
+-----------------------------------------------------------------------------------------------
+=>21-02-2025 18:52:10 | ::1 |  |  |  An Error occured :  Message : A public action method 'GetHistory' was not found on controller 'OncologyEMR.Controllers.AccountController'.
+-----------------------------------------------------------------------------------------------
+=>25-03-2026 13:50:00 | ::1 |  |  |  An Error occured :  Message : Object reference not set to an instance of an object.
+-----------------------------------------------------------------------------------------------
+=>25-03-2026 13:50:36 | ::1 |  |  |  An Error occured :  Message : Object reference not set to an instance of an object.
+-----------------------------------------------------------------------------------------------
+=>25-03-2026 16:04:13 | ::1 |  |  |  An Error occured :  Message : Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper'.
+-----------------------------------------------------------------------------------------------
+=>25-03-2026 16:11:31 | ::1 |  |  |  An Error occured :  Message : The controller for path '/ACOOUNT/LOGIN' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>31-03-2026 20:50:42 | ::1 |  |  |  An Error occured :  Message : Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper'.
+-----------------------------------------------------------------------------------------------
+=>04-04-2026 19:41:17 | ::1 |  |  |  An Error occured :  Message : The controller for path '/WebEHR/ExternalCall/GetPACReportPrint' was not found or does not implement IController.
+-----------------------------------------------------------------------------------------------
+=>05-04-2026 14:32:01 | ::1 |  |  |  An Error occured :  Message : Object reference not set to an instance of an object.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 18:10:22 | ::1 |  |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>15-04-2026 07:48:16 | ::1 |  |  |  An Error occured :  Message : Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper'.
+-----------------------------------------------------------------------------------------------
+=>15-04-2026 07:48:19 | ::1 |  |  |  An Error occured :  Message : Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper'.
+-----------------------------------------------------------------------------------------------
+=>19-04-2026 19:52:57 | ::1 |  |  |  An Error occured :  Message : An error occurred while receiving the HTTP response to http://uat.himstccf.org:82/WebDDservice/OncologyEMR.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+-----------------------------------------------------------------------------------------------
+=>19-04-2026 19:53:45 | ::1 |  |  |  An Error occured :  Message : Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper'.
+-----------------------------------------------------------------------------------------------
+=>19-04-2026 19:53:47 | ::1 |  |  |  An Error occured :  Message : Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper'.
+-----------------------------------------------------------------------------------------------
+=>07-05-2026 11:37:18 | ::1 |  |  |  An Error occured :  Message : An error occurred while receiving the HTTP response to http://192.168.1.3/WebLisInterFace/LisInterface.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+-----------------------------------------------------------------------------------------------
+=>06-07-2026 07:58:18 | ::1 |  |  |  An Error occured :  Message : Object reference not set to an instance of an object.
+-----------------------------------------------------------------------------------------------
+=>06-07-2026 07:58:31 | ::1 |  |  |  An Error occured :  Message : Object reference not set to an instance of an object.
+-----------------------------------------------------------------------------------------------
+=>02-08-2026 12:18:48 | ::1 |  |  |  An Error occured :  Message : Could not find default endpoint element that references contract 'CommonSerRef.ICommonService' in the ServiceModel client configuration section. This might be because no configuration file was found for your application, or because no endpoint element matching this contract could be found in the client element.
+-----------------------------------------------------------------------------------------------
+=>02-08-2026 12:47:18 | ::1 |  |  |  An Error occured :  Message : Buffer cannot be null.
+Parameter name: buffer
+-----------------------------------------------------------------------------------------------
+=>02-08-2026 15:10:24 | ::1 |  |  |  An Error occured :  Message : Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper'.
+-----------------------------------------------------------------------------------------------
+=>06-08-2026 22:46:21 | ::1 |  |  |  An Error occured :  Message : Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper'.
+-----------------------------------------------------------------------------------------------
+=>06-08-2026 23:04:05 | ::1 |  |  |  An Error occured :  Message : Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper'.
+-----------------------------------------------------------------------------------------------
+=>08-08-2026 20:50:40 | ::1 |  |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>08-08-2026 20:50:41 | ::1 |  |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>08-08-2026 20:50:41 | ::1 |  |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>08-08-2026 20:50:42 | ::1 |  |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>08-08-2026 20:50:42 | ::1 |  |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>17-08-2026 13:59:55 |  |  |  |  An Error occured :  Message : Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper'.
+-----------------------------------------------------------------------------------------------
+=>20-08-2026 13:54:43 | ::1 |  |  |  An Error occured :  Message : Buffer cannot be null.
+Parameter name: buffer
+-----------------------------------------------------------------------------------------------
+=>27-08-2026 13:37:01 | ::1 |  |  |  An Error occured :  Message : Buffer cannot be null.
+Parameter name: buffer
+-----------------------------------------------------------------------------------------------
+=>27-08-2026 15:42:35 | ::1 |  |  |  An Error occured :  Message : Buffer cannot be null.
+Parameter name: buffer
+-----------------------------------------------------------------------------------------------
+=>27-08-2026 15:47:22 | ::1 |  |  |  An Error occured :  Message : Object reference not set to an instance of an object.
+-----------------------------------------------------------------------------------------------

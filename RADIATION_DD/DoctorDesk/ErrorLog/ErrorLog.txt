@@ -1,0 +1,1990 @@
+Time: 01-11-2022 04:44:16 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTariffID, String strTranYear) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1889
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTariffID, String strTranYear) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 818
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 01-11-2022 04:45:34 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTariffID, String strTranYear) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1889
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTariffID, String strTranYear) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 818
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 01-11-2022 04:46:10 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTariffID, String strTranYear) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1889
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTariffID, String strTranYear) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 818
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 01-11-2022 04:46:36 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTariffID, String strTranYear) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1889
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTariffID, String strTranYear) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 818
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 02-11-2022 12:13:13 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Models.OncologyModel.RetriveTestList(String TestName, String strTranNo)
+   at OncologyEMR.Controllers.DoctorDeskController.GetTestList(String testname)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 02-11-2022 12:13:37 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Models.OncologyModel.RetriveTestList(String TestName, String strTranNo)
+   at OncologyEMR.Controllers.DoctorDeskController.GetTestList(String testname)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-11-2022 11:12:41 AM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1895
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 818
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 04-11-2022 11:12:52 AM
+-----------------------------------------------------------
+Message: Cannot find table 0.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetMatchedTest(String strTestName, String strSrvType, String strTranno) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5511
+   at OncologyEMR.Models.OncologyModel.RetriveTestList(String TestName, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1972
+   at OncologyEMR.Controllers.DoctorDeskController.GetTestList(String testname, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 837
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-11-2022 11:15:47 AM
+-----------------------------------------------------------
+Message: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetMatchedTest(String strTestName, String strSrvType, String strTranno) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5511
+   at OncologyEMR.Models.OncologyModel.RetriveTestList(String TestName, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1972
+   at OncologyEMR.Controllers.DoctorDeskController.GetTestList(String testname, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 837
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-11-2022 11:16:42 AM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1895
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 818
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 04-11-2022 11:17:10 AM
+-----------------------------------------------------------
+Message: Cannot find table 0.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetMatchedTest(String strTestName, String strSrvType, String strTranno) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5511
+   at OncologyEMR.Models.OncologyModel.RetriveTestList(String TestName, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1972
+   at OncologyEMR.Controllers.DoctorDeskController.GetTestList(String testname, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 837
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-11-2022 11:17:20 AM
+-----------------------------------------------------------
+Message: Cannot find table 0.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetMatchedTest(String strTestName, String strSrvType, String strTranno) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5511
+   at OncologyEMR.Models.OncologyModel.RetriveTestList(String TestName, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1972
+   at OncologyEMR.Controllers.DoctorDeskController.GetTestList(String testname, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 837
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-11-2022 11:17:29 AM
+-----------------------------------------------------------
+Message: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetMatchedTest(String strTestName, String strSrvType, String strTranno) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5511
+   at OncologyEMR.Models.OncologyModel.RetriveTestList(String TestName, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1972
+   at OncologyEMR.Controllers.DoctorDeskController.GetTestList(String testname, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 837
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-11-2022 11:22:58 AM
+-----------------------------------------------------------
+Message: An error occurred while receiving the HTTP response to http://localhost:57000/OncologyEMR.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetMatchedTest(String strTestName, String strSrvType, String strTranno) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5511
+   at OncologyEMR.Models.OncologyModel.RetriveTestList(String TestName, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1972
+   at OncologyEMR.Controllers.DoctorDeskController.GetTestList(String testname, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 837
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-11-2022 02:37:25 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1895
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 818
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 04-11-2022 02:37:40 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1895
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 818
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 04-11-2022 03:51:26 PM
+-----------------------------------------------------------
+Message: The request channel timed out while waiting for a reply after 00:29:59.9986390. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetFreqTest(String strDoctCode, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetFreqTest(String strDoctCode, String strTranno) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5279
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1895
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 816
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-11-2022 04:53:04 PM
+-----------------------------------------------------------
+Message: An error occurred while receiving the HTTP response to http://localhost:57000/OncologyEMR.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetFreqTest(String strDoctCode, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetFreqTest(String strDoctCode, String strTranno) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5279
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1895
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 816
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-11-2022 04:58:30 PM
+-----------------------------------------------------------
+Message: An error occurred while receiving the HTTP response to http://localhost:57000/OncologyEMR.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetFreqTest(String strDoctCode, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetFreqTest(String strDoctCode, String strTranno) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5279
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1895
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 816
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-11-2022 04:59:33 PM
+-----------------------------------------------------------
+Message: Column 'SERVCOST' does not belong to table Table.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetInvestigationList>b__6c(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1903
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1902
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 816
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 04-11-2022 05:01:19 PM
+-----------------------------------------------------------
+Message: Column 'CNT' does not belong to table Table.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetInvestigationList>b__6c(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1903
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1902
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 816
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 09-11-2022 01:13:47 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 816
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 09-11-2022 01:14:08 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 816
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 09-11-2022 01:14:47 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 816
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 18-11-2022 04:56:02 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 18-11-2022 04:56:48 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 18-11-2022 04:57:52 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 18-11-2022 05:39:48 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 18-11-2022 05:39:58 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 18-11-2022 05:40:12 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 18-11-2022 05:44:51 PM
+-----------------------------------------------------------
+Message: An error occurred while receiving the HTTP response to http://localhost:57000/OncologyEMR.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetFreqTest(String strDoctCode, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetFreqTest(String strDoctCode, String strTranno) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5279
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-11-2022 12:39:46 PM
+-----------------------------------------------------------
+Message: An error occurred while receiving the HTTP response to http://localhost:57000/OncologyEMR.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetDiagnosisList()
+   at OncologyEMR.Oncology.OncologyEMRClient.GetDiagnosisList() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5351
+   at OncologyEMR.Models.OncologyModel.GetDiagnosisListdt(String strClinincode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1607
+   at OncologyEMR.Controllers.DoctorDeskController.GetMainDiagnoList(String ClinicCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 619
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 09-12-2022 11:14:27 AM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 10-01-2023 10:25:23 AM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 10-01-2023 11:27:36 AM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 10-01-2023 06:41:28 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 10-01-2023 06:43:47 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 10-01-2023 06:44:14 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 10-01-2023 06:56:34 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 11-01-2023 11:36:02 AM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 11-01-2023 03:45:25 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://localhost:65100/CommonService.svc/CommonService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request)
+   at OncologyEMR.CommonSerRef.CommonServiceClient.OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32644
+   at OncologyEMR.CommonSerRef.CommonServiceClient.GetServerDate() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32649
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5384
+   at OncologyEMR.Controllers.ClinicalnotesController.GetPatientList(String strdoctCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\ClinicalnotesController.cs:line 50
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 11-01-2023 06:00:31 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 11-01-2023 06:04:51 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetInvestigationList(String strDoctorCd, String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1899
+   at OncologyEMR.Controllers.DoctorDeskController.GetInvestigationList(String strTranNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 813
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 14-01-2023 01:21:56 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://localhost:65100/CommonService.svc/CommonService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request)
+   at OncologyEMR.CommonSerRef.CommonServiceClient.OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32644
+   at OncologyEMR.CommonSerRef.CommonServiceClient.GetServerDate() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32649
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5384
+   at OncologyEMR.Controllers.ClinicalnotesController.GetPatientList(String strdoctCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\ClinicalnotesController.cs:line 50
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 14-01-2023 01:22:12 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://localhost:65100/CommonService.svc/CommonService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request)
+   at OncologyEMR.CommonSerRef.CommonServiceClient.OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32644
+   at OncologyEMR.CommonSerRef.CommonServiceClient.GetServerDate() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32649
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5384
+   at OncologyEMR.Controllers.ClinicalnotesController.GetPatientList(String strdoctCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\ClinicalnotesController.cs:line 50
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 14-01-2023 01:22:17 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://localhost:65100/CommonService.svc/CommonService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request)
+   at OncologyEMR.CommonSerRef.CommonServiceClient.OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32644
+   at OncologyEMR.CommonSerRef.CommonServiceClient.GetServerDate() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32649
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5384
+   at OncologyEMR.Controllers.ClinicalnotesController.GetPatientList(String strdoctCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\ClinicalnotesController.cs:line 50
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 14-01-2023 01:22:21 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://localhost:65100/CommonService.svc/CommonService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request)
+   at OncologyEMR.CommonSerRef.CommonServiceClient.OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32644
+   at OncologyEMR.CommonSerRef.CommonServiceClient.GetServerDate() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32649
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5384
+   at OncologyEMR.Controllers.ClinicalnotesController.GetPatientList(String strdoctCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\ClinicalnotesController.cs:line 50
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 14-01-2023 01:22:25 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://localhost:65100/CommonService.svc/CommonService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request)
+   at OncologyEMR.CommonSerRef.CommonServiceClient.OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32644
+   at OncologyEMR.CommonSerRef.CommonServiceClient.GetServerDate() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32649
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5384
+   at OncologyEMR.Controllers.ClinicalnotesController.GetPatientList(String strdoctCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\ClinicalnotesController.cs:line 50
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 14-01-2023 01:22:30 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://localhost:65100/CommonService.svc/CommonService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request)
+   at OncologyEMR.CommonSerRef.CommonServiceClient.OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32644
+   at OncologyEMR.CommonSerRef.CommonServiceClient.GetServerDate() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32649
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5384
+   at OncologyEMR.Controllers.ClinicalnotesController.GetPatientList(String strdoctCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\ClinicalnotesController.cs:line 50
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 14-01-2023 01:22:35 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://localhost:65100/CommonService.svc/CommonService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request)
+   at OncologyEMR.CommonSerRef.CommonServiceClient.OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32644
+   at OncologyEMR.CommonSerRef.CommonServiceClient.GetServerDate() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32649
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5384
+   at OncologyEMR.Controllers.ClinicalnotesController.GetPatientList(String strdoctCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\ClinicalnotesController.cs:line 50
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 14-01-2023 01:22:39 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://localhost:65100/CommonService.svc/CommonService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request)
+   at OncologyEMR.CommonSerRef.CommonServiceClient.OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32644
+   at OncologyEMR.CommonSerRef.CommonServiceClient.GetServerDate() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32649
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5384
+   at OncologyEMR.Controllers.ClinicalnotesController.GetPatientList(String strdoctCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\ClinicalnotesController.cs:line 50
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 14-01-2023 01:22:45 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://localhost:65100/CommonService.svc/CommonService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request)
+   at OncologyEMR.CommonSerRef.CommonServiceClient.OncologyEMR.CommonSerRef.ICommonService.GetServerDate(GetServerDateRequest request) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32644
+   at OncologyEMR.CommonSerRef.CommonServiceClient.GetServerDate() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\CommonSerRef\Reference.cs:line 32649
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5384
+   at OncologyEMR.Controllers.ClinicalnotesController.GetPatientList(String strdoctCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\ClinicalnotesController.cs:line 50
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 02-05-2023 12:01:13 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at OncologyEMR.Models.Clinicalnotes.GetMainAllergyListdt() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Clinicalnotes.cs:line 1194
+   at OncologyEMR.Controllers.ClinicalnotesController.GetMainAllergyListdt() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\ClinicalnotesController.cs:line 422
+Source: OncologyEMR
+TargetSite: System.Object GetMainAllergyListdt()
+-----------------------------------------------------------
+
+Time: 02-05-2023 03:39:29 PM
+-----------------------------------------------------------
+Message: Invalid column name 'ONLPAYSTAT'.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetPatientDetails(String strMRNo, String strPatName, String strMobileNo, String strDoctorCd, String strFromDt, String strToDt, String strClinicCode)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetPatientDetails(String strMRNo, String strPatName, String strMobileNo, String strDoctorCd, String strFromDt, String strToDt, String strClinicCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5239
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5404
+   at OncologyEMR.Controllers.DoctorDeskController.GetPatientList(String strClinicCode, String strSrchByDoctYN, String DateType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 131
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 02-05-2023 03:39:37 PM
+-----------------------------------------------------------
+Message: Invalid column name 'ONLPAYSTAT'.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetPatientDetails(String strMRNo, String strPatName, String strMobileNo, String strDoctorCd, String strFromDt, String strToDt, String strClinicCode)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetPatientDetails(String strMRNo, String strPatName, String strMobileNo, String strDoctorCd, String strFromDt, String strToDt, String strClinicCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5239
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5404
+   at OncologyEMR.Controllers.DoctorDeskController.GetPatientList(String strClinicCode, String strSrchByDoctYN, String DateType) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 131
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 21-10-2023 09:09:47 PM
+-----------------------------------------------------------
+Message: An error occurred while receiving the HTTP response to http://localhost:57000/OncologyEMR.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetComplaintByName(String strComplaint, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetComplaintByName(String strComplaint, String strClinicCD) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5711
+   at OncologyEMR.Models.OncologyModel.RetriveDBComplainList(String complainName, String ClinicCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 902
+   at OncologyEMR.Controllers.DoctorDeskController.GetDBComplainList(String complainName, String ClinicCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 534
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 17-11-2023 06:51:42 PM
+-----------------------------------------------------------
+Message: Ambiguous column name 'STATUS'.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at OncologyEMR.Models.OncologyModel.RetriveMainCompListrevised(String ClinicCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1391
+   at OncologyEMR.Controllers.DoctorDeskController.GetMainCompList(String ClinicCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 433
+Source: OncologyEMR
+TargetSite: System.Object RetriveMainCompListrevised(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:28:49 PM
+-----------------------------------------------------------
+Message: Column 'ADDICTCD' does not belong to table Table6.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetHistory>b__80(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2280
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2279
+   at OncologyEMR.Controllers.DoctorDeskController.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 932
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:28:54 PM
+-----------------------------------------------------------
+Message: Column 'ADDICTCD' does not belong to table Table6.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetHistory>b__80(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2280
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2279
+   at OncologyEMR.Controllers.DoctorDeskController.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 932
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:28:59 PM
+-----------------------------------------------------------
+Message: Column 'ADDICTCD' does not belong to table Table6.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetHistory>b__80(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2280
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2279
+   at OncologyEMR.Controllers.DoctorDeskController.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 932
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:29:03 PM
+-----------------------------------------------------------
+Message: Column 'ADDICTCD' does not belong to table Table6.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetHistory>b__80(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2280
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2279
+   at OncologyEMR.Controllers.DoctorDeskController.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 932
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:29:09 PM
+-----------------------------------------------------------
+Message: Column 'ADDICTCD' does not belong to table Table6.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetHistory>b__80(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2280
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2279
+   at OncologyEMR.Controllers.DoctorDeskController.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 932
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:30:17 PM
+-----------------------------------------------------------
+Message: Column 'ADDICTCD' does not belong to table Table6.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetHistory>b__80(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2280
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2279
+   at OncologyEMR.Controllers.DoctorDeskController.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 932
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:30:19 PM
+-----------------------------------------------------------
+Message: Column 'ADDICTCD' does not belong to table Table6.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetHistory>b__80(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2280
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2279
+   at OncologyEMR.Controllers.DoctorDeskController.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 932
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:31:40 PM
+-----------------------------------------------------------
+Message: Column 'ADDICTCD' does not belong to table Table6.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetHistory>b__80(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2280
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2279
+   at OncologyEMR.Controllers.DoctorDeskController.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 932
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:32:57 PM
+-----------------------------------------------------------
+Message: Column 'ADDICTCD' does not belong to table Table6.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetHistory>b__80(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2280
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2279
+   at OncologyEMR.Controllers.DoctorDeskController.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 932
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:33:25 PM
+-----------------------------------------------------------
+Message: Column 'ADDICTCD' does not belong to table Table6.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetHistory>b__80(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2280
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2279
+   at OncologyEMR.Controllers.DoctorDeskController.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 932
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:33:30 PM
+-----------------------------------------------------------
+Message: Column 'ADDICTCD' does not belong to table Table6.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetHistory>b__80(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2280
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2279
+   at OncologyEMR.Controllers.DoctorDeskController.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 932
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:33:41 PM
+-----------------------------------------------------------
+Message: Column 'ADDICTCD' does not belong to table Table6.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetHistory>b__80(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2280
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2279
+   at OncologyEMR.Controllers.DoctorDeskController.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 932
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:40:41 PM
+-----------------------------------------------------------
+Message: Column 'ADDICTCD' does not belong to table Table6.
+StackTrace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OncologyEMR.Models.OncologyModel.<GetHistory>b__80(DataRow row) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2280
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at OncologyEMR.Models.OncologyModel.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 2279
+   at OncologyEMR.Controllers.DoctorDeskController.GetHistory(String strMrNo) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 932
+Source: System.Data
+TargetSite: System.Data.DataColumn GetDataColumn(System.String)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:49:44 PM
+-----------------------------------------------------------
+Message: Incorrect syntax near '='.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetDiagnosisList()
+   at OncologyEMR.Oncology.OncologyEMRClient.GetDiagnosisList() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5351
+   at OncologyEMR.Models.OncologyModel.GetDiagnosisListdt(String strClinincode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1604
+   at OncologyEMR.Controllers.DoctorDeskController.GetMainDiagnoList(String ClinicCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 618
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 18-11-2023 06:50:22 PM
+-----------------------------------------------------------
+Message: Incorrect syntax near '='.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetDiagnosisList()
+   at OncologyEMR.Oncology.OncologyEMRClient.GetDiagnosisList() in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Service References\Oncology\Reference.cs:line 5351
+   at OncologyEMR.Models.OncologyModel.GetDiagnosisListdt(String strClinincode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1604
+   at OncologyEMR.Controllers.DoctorDeskController.GetMainDiagnoList(String ClinicCode) in c:\Adhvit Innovations Azure\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 618
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 15-01-2025 12:19:23 PM
+-----------------------------------------------------------
+Message: String was not recognized as a valid DateTime.
+StackTrace:    at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType, Int32 CustomeDate) in d:\Meenakshi Team Project\Sources\Workspaces\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5651
+   at OncologyEMR.Controllers.DoctorDeskController.GetPatientList(String strClinicCode, String strSrchByDoctYN, String DateType, Int32 CustomeDate) in d:\Meenakshi Team Project\Sources\Workspaces\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 131
+Source: mscorlib
+TargetSite: System.DateTime ParseExact(System.String, System.String, System.Globalization.DateTimeFormatInfo, System.Globalization.DateTimeStyles)
+-----------------------------------------------------------
+
+Time: 15-01-2025 12:19:24 PM
+-----------------------------------------------------------
+Message: String was not recognized as a valid DateTime.
+StackTrace:    at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType, Int32 CustomeDate) in d:\Meenakshi Team Project\Sources\Workspaces\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 5651
+   at OncologyEMR.Controllers.DoctorDeskController.GetPatientList(String strClinicCode, String strSrchByDoctYN, String DateType, Int32 CustomeDate) in d:\Meenakshi Team Project\Sources\Workspaces\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 131
+Source: mscorlib
+TargetSite: System.DateTime ParseExact(System.String, System.String, System.Globalization.DateTimeFormatInfo, System.Globalization.DateTimeStyles)
+-----------------------------------------------------------
+
+Time: 15-01-2025 01:19:46 PM
+-----------------------------------------------------------
+Message: Cannot find table 0.
+StackTrace:    at System.Data.DataTableCollection.get_Item(Int32 index)
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType, Int32 CustomeDate)
+   at OncologyEMR.Controllers.DoctorDeskController.GetPatientList(String strClinicCode, String strSrchByDoctYN, String DateType, Int32 CustomeDate)
+Source: System.Data
+TargetSite: System.Data.DataTable get_Item(Int32)
+-----------------------------------------------------------
+
+Time: 28-01-2025 08:38:18 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetICDDiagnosisListdt(String clncCode) in d:\Meenakshi Team Project\Sources\Workspaces\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1704
+   at OncologyEMR.Controllers.DoctorDeskController.GetICDDiagnoList() in d:\Meenakshi Team Project\Sources\Workspaces\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 655
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 28-01-2025 08:38:35 PM
+-----------------------------------------------------------
+Message: Data at the root level is invalid. Line 1, position 1.
+StackTrace:    at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at System.Data.DataSet.ReadXml(XmlReader reader, Boolean denyResolving)
+   at System.Data.DataSet.ReadXml(XmlReader reader)
+   at OncologyEMR.Models.OncologyModel.GetICDDiagnosisListdt(String clncCode) in d:\Meenakshi Team Project\Sources\Workspaces\HMIS Project 2\EHR\DoctorDesk\Models\Oncology.cs:line 1704
+   at OncologyEMR.Controllers.DoctorDeskController.GetICDDiagnoList() in d:\Meenakshi Team Project\Sources\Workspaces\HMIS Project 2\EHR\DoctorDesk\Controllers\OncologyController.cs:line 655
+Source: System.Xml
+TargetSite: Void Throw(System.Exception)
+-----------------------------------------------------------
+
+Time: 12-06-2026 07:06:02 AM
+-----------------------------------------------------------
+Message: An error occurred while receiving the HTTP response to http://uat.himstccf.org:83/WebDDservice/OncologyEMR.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetPatientDetails(String strMRNo, String strPatName, String strMobileNo, String strDoctorCd, String strFromDt, String strToDt, String strClinicCode)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetPatientDetails(String strMRNo, String strPatName, String strMobileNo, String strDoctorCd, String strFromDt, String strToDt, String strClinicCode) in D:\TCCFUAT\DoctorDesk\Service References\Oncology\Reference.cs:line 9682
+   at OncologyEMR.Models.PatientSearch.GetPatientList(String strClinicCode, String strDoctorCd, String dayType, Int32 CustomeDate, String Type) in D:\TCCFUAT\DoctorDesk\Models\Oncology.cs:line 8177
+   at OncologyEMR.Controllers.DoctorDeskController.GetPatientList(String strClinicCode, String strSrchByDoctYN, String DateType, Int32 CustomeDate, String Type) in D:\TCCFUAT\DoctorDesk\Controllers\OncologyController.cs:line 131
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:53:41 PM
+-----------------------------------------------------------
+Message: The request channel timed out while waiting for a reply after 00:29:59.6259026. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetPatAdviceList(String strDoctCd, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetPatAdviceList(String strDoctCd, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.GetPatAdvList(String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetPatAdvList(String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:53:44 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetPatAdviceList(String strDoctCd, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetPatAdviceList(String strDoctCd, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.GetPatAdvList(String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetPatAdvList(String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:53:46 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetPatAdviceList(String strDoctCd, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetPatAdviceList(String strDoctCd, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.GetPatAdvList(String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetPatAdvList(String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:53:48 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.RetriveDBPatAdvice(String PatAdvice, String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetDBPatientAdvice(String PatAdvice, String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:53:51 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.RetriveDBPatAdvice(String PatAdvice, String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetDBPatientAdvice(String PatAdvice, String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:53:53 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.RetriveDBPatAdvice(String PatAdvice, String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetDBPatientAdvice(String PatAdvice, String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:53:56 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.RetriveDBPatAdvice(String PatAdvice, String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetDBPatientAdvice(String PatAdvice, String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:53:58 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.RetriveDBPatAdvice(String PatAdvice, String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetDBPatientAdvice(String PatAdvice, String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:54:00 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.RetriveDBPatAdvice(String PatAdvice, String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetDBPatientAdvice(String PatAdvice, String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:54:03 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetPatAdviceList(String strDoctCd, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetPatAdviceList(String strDoctCd, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.GetPatAdvList(String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetPatAdvList(String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:54:05 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetPatAdviceList(String strDoctCd, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetPatAdviceList(String strDoctCd, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.GetPatAdvList(String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetPatAdvList(String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:54:08 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.RetriveDBPatAdvice(String PatAdvice, String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetDBPatientAdvice(String PatAdvice, String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:54:10 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.RetriveDBPatAdvice(String PatAdvice, String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetDBPatientAdvice(String PatAdvice, String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:54:13 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.RetriveDBPatAdvice(String PatAdvice, String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetDBPatientAdvice(String PatAdvice, String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 26-06-2026 02:54:15 PM
+-----------------------------------------------------------
+Message: There was no endpoint listening at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetAdviceByName(String strAdvice, String strClinicCD)
+   at OncologyEMR.Models.OncologyModel.RetriveDBPatAdvice(String PatAdvice, String ClinicCode)
+   at OncologyEMR.Controllers.DoctorDeskController.GetDBPatientAdvice(String PatAdvice, String ClinicCode)
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-07-2026 05:38:00 PM
+-----------------------------------------------------------
+Message: Incorrect syntax near the keyword 'AND'.
+Incorrect syntax near '04'.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetMatchedTest(String strTestName, String strSrvType, String strTranno) in D:\TCCFUAT\DoctorDesk\Service References\Oncology\Reference.cs:line 9968
+   at OncologyEMR.Models.OncologyModel.RetriveTestList(String TestName, String strTranNo) in D:\TCCFUAT\DoctorDesk\Models\Oncology.cs:line 3280
+   at OncologyEMR.Controllers.DoctorDeskController.GetTestList(String testname, String strTranNo) in D:\TCCFUAT\DoctorDesk\Controllers\OncologyController.cs:line 1018
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-07-2026 05:38:01 PM
+-----------------------------------------------------------
+Message: Incorrect syntax near the keyword 'AND'.
+Incorrect syntax near '04'.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetMatchedTest(String strTestName, String strSrvType, String strTranno) in D:\TCCFUAT\DoctorDesk\Service References\Oncology\Reference.cs:line 9968
+   at OncologyEMR.Models.OncologyModel.RetriveTestList(String TestName, String strTranNo) in D:\TCCFUAT\DoctorDesk\Models\Oncology.cs:line 3280
+   at OncologyEMR.Controllers.DoctorDeskController.GetTestList(String testname, String strTranNo) in D:\TCCFUAT\DoctorDesk\Controllers\OncologyController.cs:line 1018
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-07-2026 05:38:03 PM
+-----------------------------------------------------------
+Message: Incorrect syntax near the keyword 'AND'.
+Incorrect syntax near '04'.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetMatchedTest(String strTestName, String strSrvType, String strTranno) in D:\TCCFUAT\DoctorDesk\Service References\Oncology\Reference.cs:line 9968
+   at OncologyEMR.Models.OncologyModel.RetriveTestList(String TestName, String strTranNo) in D:\TCCFUAT\DoctorDesk\Models\Oncology.cs:line 3280
+   at OncologyEMR.Controllers.DoctorDeskController.GetTestList(String testname, String strTranNo) in D:\TCCFUAT\DoctorDesk\Controllers\OncologyController.cs:line 1018
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 04-07-2026 05:38:03 PM
+-----------------------------------------------------------
+Message: Incorrect syntax near the keyword 'AND'.
+Incorrect syntax near '04'.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetMatchedTest(String strTestName, String strSrvType, String strTranno) in D:\TCCFUAT\DoctorDesk\Service References\Oncology\Reference.cs:line 9968
+   at OncologyEMR.Models.OncologyModel.RetriveTestList(String TestName, String strTranNo) in D:\TCCFUAT\DoctorDesk\Models\Oncology.cs:line 3280
+   at OncologyEMR.Controllers.DoctorDeskController.GetTestList(String testname, String strTranNo) in D:\TCCFUAT\DoctorDesk\Controllers\OncologyController.cs:line 1018
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+
+Time: 29-08-2026 11:46:52 AM
+-----------------------------------------------------------
+Message: Unclosed quotation mark after the character string ''.
+Incorrect syntax near 'Y'.
+StackTrace: 
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OncologyEMR.Oncology.IOncologyEMR.GetMatchedTest(String strTestName, String strSrvType, String strTranno)
+   at OncologyEMR.Oncology.OncologyEMRClient.GetMatchedTest(String strTestName, String strSrvType, String strTranno) in C:\Users\AIPL\Desktop\LASTEST SOURCE\DoctorDesk\Service References\Oncology\Reference.cs:line 10014
+   at OncologyEMR.Models.OncologyModel.RetriveTestList(String TestName, String strTranNo) in C:\Users\AIPL\Desktop\LASTEST SOURCE\DoctorDesk\Models\Oncology.cs:line 3380
+   at OncologyEMR.Controllers.DoctorDeskController.GetTestList(String testname, String strTranNo) in C:\Users\AIPL\Desktop\LASTEST SOURCE\DoctorDesk\Controllers\OncologyController.cs:line 1019
+Source: mscorlib
+TargetSite: Void HandleReturnMessage(System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMessage)
+-----------------------------------------------------------
+

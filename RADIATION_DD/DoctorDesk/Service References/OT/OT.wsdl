@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="OT" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IOT_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.OT" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BL_Logic" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Laboratory" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOT_OTBookingTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:OTBookingTran" />
+  </wsdl:message>
+  <wsdl:message name="IOT_OTBookingTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OTBookingTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTBookingDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTBookingDet" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTBookingDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTBookingDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTBookingList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTBookingList" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTBookingList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTBookingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_OTNotesTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:OTNotesTran" />
+  </wsdl:message>
+  <wsdl:message name="IOT_OTNotesTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OTNotesTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTNotesDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTNotesDet" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTNotesDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTNotesDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTNotesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTNotesList" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTNotesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTNotesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_SaveSurgeryMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSurgeryMaster" />
+  </wsdl:message>
+  <wsdl:message name="IOT_SaveSurgeryMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSurgeryMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetSurgMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgMstList" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetSurgMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetNotifOfSameSurgBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotifOfSameSurgBook" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetNotifOfSameSurgBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotifOfSameSurgBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_OTScheduleTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:OTScheduleTran" />
+  </wsdl:message>
+  <wsdl:message name="IOT_OTScheduleTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OTScheduleTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTSchedData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTSchedData" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTSchedData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTSchedDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetCathTempMstRec_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCathTempMstRec" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetCathTempMstRec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCathTempMstRecResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_CathTempTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CathTempTran" />
+  </wsdl:message>
+  <wsdl:message name="IOT_CathTempTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CathTempTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetCathTempList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCathTempList" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetCathTempList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCathTempListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetMedicineList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicineList" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetMedicineList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicineListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_CathTempRptTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CathTempRptTran" />
+  </wsdl:message>
+  <wsdl:message name="IOT_CathTempRptTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CathTempRptTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetCathTempRptLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCathTempRptLst" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetCathTempRptLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCathTempRptLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetCathTempRptData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCathTempRptData" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetCathTempRptData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCathTempRptDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_SurgMtrlServLnkTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SurgMtrlServLnkTran" />
+  </wsdl:message>
+  <wsdl:message name="IOT_SurgMtrlServLnkTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SurgMtrlServLnkTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetSurgMtrServlLnk_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgMtrServlLnk" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetSurgMtrServlLnk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgMtrServlLnkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetSpecReqMstLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecReqMstLst" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetSpecReqMstLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecReqMstLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_SpecReqMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpecReqMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IOT_SpecReqMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpecReqMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTNotesPatientList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTNotesPatientList" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTNotesPatientList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTNotesPatientListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTNotesDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTNotesDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTNotesDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTNotesDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_OTNotesNSTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:OTNotesNSTran" />
+  </wsdl:message>
+  <wsdl:message name="IOT_OTNotesNSTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OTNotesNSTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetBookedOTSpecialReqNurseList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookedOTSpecialReqNurseList" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetBookedOTSpecialReqNurseList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookedOTSpecialReqNurseListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTSurgeryLogBookReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTSurgeryLogBookReport" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTSurgeryLogBookReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTSurgeryLogBookReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetSurgeryForPlanning_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgeryForPlanning" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetSurgeryForPlanning_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgeryForPlanningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_BookingPlanConfirmation_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookingPlanConfirmation" />
+  </wsdl:message>
+  <wsdl:message name="IOT_BookingPlanConfirmation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookingPlanConfirmationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetSurgLinkTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgLinkTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetSurgLinkTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgLinkTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetTemplateLinkSurgery_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateLinkSurgery" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetTemplateLinkSurgery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateLinkSurgeryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_OTNotesTranWithAneasNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:OTNotesTranWithAneasNotes" />
+  </wsdl:message>
+  <wsdl:message name="IOT_OTNotesTranWithAneasNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OTNotesTranWithAneasNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTSurgeryWorklist_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTSurgeryWorklist" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTSurgeryWorklist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTSurgeryWorklistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_OTSaveAldreteScore_InputMessage">
+    <wsdl:part name="parameters" element="tns:OTSaveAldreteScore" />
+  </wsdl:message>
+  <wsdl:message name="IOT_OTSaveAldreteScore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OTSaveAldreteScoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTAldreteScoreList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTAldreteScoreList" />
+  </wsdl:message>
+  <wsdl:message name="IOT_GetOTAldreteScoreList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTAldreteScoreListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOT">
+    <wsdl:operation name="OTBookingTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/OTBookingTran" message="tns:IOT_OTBookingTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/OTBookingTranResponse" message="tns:IOT_OTBookingTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOTBookingDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetOTBookingDet" message="tns:IOT_GetOTBookingDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetOTBookingDetResponse" message="tns:IOT_GetOTBookingDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOTBookingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetOTBookingList" message="tns:IOT_GetOTBookingList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetOTBookingListResponse" message="tns:IOT_GetOTBookingList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OTNotesTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/OTNotesTran" message="tns:IOT_OTNotesTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/OTNotesTranResponse" message="tns:IOT_OTNotesTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOTNotesDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetOTNotesDet" message="tns:IOT_GetOTNotesDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetOTNotesDetResponse" message="tns:IOT_GetOTNotesDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOTNotesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetOTNotesList" message="tns:IOT_GetOTNotesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetOTNotesListResponse" message="tns:IOT_GetOTNotesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSurgeryMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/SaveSurgeryMaster" message="tns:IOT_SaveSurgeryMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/SaveSurgeryMasterResponse" message="tns:IOT_SaveSurgeryMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetSurgMstList" message="tns:IOT_GetSurgMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetSurgMstListResponse" message="tns:IOT_GetSurgMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotifOfSameSurgBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetNotifOfSameSurgBook" message="tns:IOT_GetNotifOfSameSurgBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetNotifOfSameSurgBookResponse" message="tns:IOT_GetNotifOfSameSurgBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OTScheduleTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/OTScheduleTran" message="tns:IOT_OTScheduleTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/OTScheduleTranResponse" message="tns:IOT_OTScheduleTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOTSchedData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetOTSchedData" message="tns:IOT_GetOTSchedData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetOTSchedDataResponse" message="tns:IOT_GetOTSchedData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCathTempMstRec">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetCathTempMstRec" message="tns:IOT_GetCathTempMstRec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetCathTempMstRecResponse" message="tns:IOT_GetCathTempMstRec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CathTempTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/CathTempTran" message="tns:IOT_CathTempTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/CathTempTranResponse" message="tns:IOT_CathTempTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCathTempList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetCathTempList" message="tns:IOT_GetCathTempList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetCathTempListResponse" message="tns:IOT_GetCathTempList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicineList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetMedicineList" message="tns:IOT_GetMedicineList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetMedicineListResponse" message="tns:IOT_GetMedicineList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOTTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetOTTemplate" message="tns:IOT_GetOTTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetOTTemplateResponse" message="tns:IOT_GetOTTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CathTempRptTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/CathTempRptTran" message="tns:IOT_CathTempRptTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/CathTempRptTranResponse" message="tns:IOT_CathTempRptTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCathTempRptLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetCathTempRptLst" message="tns:IOT_GetCathTempRptLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetCathTempRptLstResponse" message="tns:IOT_GetCathTempRptLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCathTempRptData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetCathTempRptData" message="tns:IOT_GetCathTempRptData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetCathTempRptDataResponse" message="tns:IOT_GetCathTempRptData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SurgMtrlServLnkTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/SurgMtrlServLnkTran" message="tns:IOT_SurgMtrlServLnkTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/SurgMtrlServLnkTranResponse" message="tns:IOT_SurgMtrlServLnkTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgMtrServlLnk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetSurgMtrServlLnk" message="tns:IOT_GetSurgMtrServlLnk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetSurgMtrServlLnkResponse" message="tns:IOT_GetSurgMtrServlLnk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecReqMstLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetSpecReqMstLst" message="tns:IOT_GetSpecReqMstLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetSpecReqMstLstResponse" message="tns:IOT_GetSpecReqMstLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpecReqMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/SpecReqMstTran" message="tns:IOT_SpecReqMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/SpecReqMstTranResponse" message="tns:IOT_SpecReqMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOTNotesPatientList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetOTNotesPatientList" message="tns:IOT_GetOTNotesPatientList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetOTNotesPatientListResponse" message="tns:IOT_GetOTNotesPatientList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOTNotesDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetOTNotesDetails" message="tns:IOT_GetOTNotesDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetOTNotesDetailsResponse" message="tns:IOT_GetOTNotesDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OTNotesNSTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/OTNotesNSTran" message="tns:IOT_OTNotesNSTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/OTNotesNSTranResponse" message="tns:IOT_OTNotesNSTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookedOTSpecialReqNurseList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetBookedOTSpecialReqNurseList" message="tns:IOT_GetBookedOTSpecialReqNurseList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetBookedOTSpecialReqNurseListResponse" message="tns:IOT_GetBookedOTSpecialReqNurseList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOTSurgeryLogBookReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetOTSurgeryLogBookReport" message="tns:IOT_GetOTSurgeryLogBookReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetOTSurgeryLogBookReportResponse" message="tns:IOT_GetOTSurgeryLogBookReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgeryForPlanning">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetSurgeryForPlanning" message="tns:IOT_GetSurgeryForPlanning_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetSurgeryForPlanningResponse" message="tns:IOT_GetSurgeryForPlanning_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookingPlanConfirmation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/BookingPlanConfirmation" message="tns:IOT_BookingPlanConfirmation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/BookingPlanConfirmationResponse" message="tns:IOT_BookingPlanConfirmation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgLinkTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetSurgLinkTemplate" message="tns:IOT_GetSurgLinkTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetSurgLinkTemplateResponse" message="tns:IOT_GetSurgLinkTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateLinkSurgery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetTemplateLinkSurgery" message="tns:IOT_GetTemplateLinkSurgery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetTemplateLinkSurgeryResponse" message="tns:IOT_GetTemplateLinkSurgery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OTNotesTranWithAneasNotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/OTNotesTranWithAneasNotes" message="tns:IOT_OTNotesTranWithAneasNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/OTNotesTranWithAneasNotesResponse" message="tns:IOT_OTNotesTranWithAneasNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOTSurgeryWorklist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetOTSurgeryWorklist" message="tns:IOT_GetOTSurgeryWorklist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetOTSurgeryWorklistResponse" message="tns:IOT_GetOTSurgeryWorklist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSaveAldreteScore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/OTSaveAldreteScore" message="tns:IOT_OTSaveAldreteScore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/OTSaveAldreteScoreResponse" message="tns:IOT_OTSaveAldreteScore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOTAldreteScoreList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOT/GetOTAldreteScoreList" message="tns:IOT_GetOTAldreteScoreList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOT/GetOTAldreteScoreListResponse" message="tns:IOT_GetOTAldreteScoreList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOT" type="tns:IOT">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IOT_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="OTBookingTran">
+      <soap:operation soapAction="http://tempuri.org/IOT/OTBookingTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOTBookingDet">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetOTBookingDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOTBookingList">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetOTBookingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTNotesTran">
+      <soap:operation soapAction="http://tempuri.org/IOT/OTNotesTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOTNotesDet">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetOTNotesDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOTNotesList">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetOTNotesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSurgeryMaster">
+      <soap:operation soapAction="http://tempuri.org/IOT/SaveSurgeryMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgMstList">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetSurgMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotifOfSameSurgBook">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetNotifOfSameSurgBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTScheduleTran">
+      <soap:operation soapAction="http://tempuri.org/IOT/OTScheduleTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOTSchedData">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetOTSchedData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCathTempMstRec">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetCathTempMstRec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CathTempTran">
+      <soap:operation soapAction="http://tempuri.org/IOT/CathTempTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCathTempList">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetCathTempList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicineList">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetMedicineList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOTTemplate">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetOTTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CathTempRptTran">
+      <soap:operation soapAction="http://tempuri.org/IOT/CathTempRptTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCathTempRptLst">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetCathTempRptLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCathTempRptData">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetCathTempRptData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SurgMtrlServLnkTran">
+      <soap:operation soapAction="http://tempuri.org/IOT/SurgMtrlServLnkTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgMtrServlLnk">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetSurgMtrServlLnk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecReqMstLst">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetSpecReqMstLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpecReqMstTran">
+      <soap:operation soapAction="http://tempuri.org/IOT/SpecReqMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOTNotesPatientList">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetOTNotesPatientList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOTNotesDetails">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetOTNotesDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTNotesNSTran">
+      <soap:operation soapAction="http://tempuri.org/IOT/OTNotesNSTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookedOTSpecialReqNurseList">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetBookedOTSpecialReqNurseList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOTSurgeryLogBookReport">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetOTSurgeryLogBookReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgeryForPlanning">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetSurgeryForPlanning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookingPlanConfirmation">
+      <soap:operation soapAction="http://tempuri.org/IOT/BookingPlanConfirmation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgLinkTemplate">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetSurgLinkTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateLinkSurgery">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetTemplateLinkSurgery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTNotesTranWithAneasNotes">
+      <soap:operation soapAction="http://tempuri.org/IOT/OTNotesTranWithAneasNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOTSurgeryWorklist">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetOTSurgeryWorklist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSaveAldreteScore">
+      <soap:operation soapAction="http://tempuri.org/IOT/OTSaveAldreteScore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOTAldreteScoreList">
+      <soap:operation soapAction="http://tempuri.org/IOT/GetOTAldreteScoreList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OT">
+    <wsdl:port name="BasicHttpBinding_IOT" binding="tns:BasicHttpBinding_IOT">
+      <soap:address location="http://uat.himstccf.org:82/WebHMISService/OT.svc/OT.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

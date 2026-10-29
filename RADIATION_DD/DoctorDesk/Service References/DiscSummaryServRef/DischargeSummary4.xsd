@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.DischargeSummary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.DischargeSummary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/DischargeSummary.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" />
+  <xs:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/DischargeSummary.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+  <xs:complexType name="BL_PatientIndexEntry">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" base="q1:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdmitDoctor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BedCatgcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BedNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsDoctor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TariffId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WardNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_PatientIndexEntry" nillable="true" type="tns:BL_PatientIndexEntry" />
+  <xs:complexType name="BL_MRDFileTransfer">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" base="q2:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BedNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BlBedCatg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileInMrd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FromDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FromDrCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FromEmpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FromTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MRDFileTransferDTxml" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NextNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NursStn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RACKNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RACKNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RCVDBY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TariffID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToDrCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToEmpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WardNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_MRDFileTransfer" nillable="true" type="tns:BL_MRDFileTransfer" />
+  <xs:complexType name="BL_CPCheckList">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" base="q3:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DischargeDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PreparedBy" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_CPCheckList" nillable="true" type="tns:BL_CPCheckList" />
+  <xs:complexType name="BL_DiscSummary">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" base="q4:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdmnReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ambulatory" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeathDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeathTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Diagnosis" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Diet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DisSumFor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrugAdvice" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DsXml" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmergContact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FIRNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FamilyHistory" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinalDiagnosis" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Findings" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FollowUp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FollowupDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FollowupDoct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FollowupTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HemodynamicCondition" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospCourse" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PastHist" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatCondAtDisch" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhysicalActivity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RMO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelInvstgn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurgNotes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TumorBoardDecision" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_DiscSummary" nillable="true" type="tns:BL_DiscSummary" />
+  <xs:complexType name="BL_DSTemplate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q5:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Complaint" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DSXml" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DrugAdvice" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinalDiagnosis" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospCource" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_DSTemplate" nillable="true" type="tns:BL_DSTemplate" />
+  <xs:complexType name="BL_EmergGuidelines">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q6:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Language1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Language2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Language3" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_EmergGuidelines" nillable="true" type="tns:BL_EmergGuidelines" />
+  <xs:complexType name="BL_PreventGuidelines">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q7:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CatgCd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Language1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Language2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Language3" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_PreventGuidelines" nillable="true" type="tns:BL_PreventGuidelines" />
+  <xs:complexType name="BL_MedicineNotes">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q8:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Language1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Language2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Language3" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_MedicineNotes" nillable="true" type="tns:BL_MedicineNotes" />
+</xs:schema>

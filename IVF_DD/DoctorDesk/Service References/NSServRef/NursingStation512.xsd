@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="BL_DischargeNotification">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Bedno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Diagnosis" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Disdest" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Disdoct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Disstatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Hospunit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Wardno" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_DischargeNotification" nillable="true" type="tns:BL_DischargeNotification" />
+  <xs:complexType name="BL_NSCommonProp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EditYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExcelYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FundSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrintYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rights" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShowYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranPrintYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tranmode" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cancelYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="verifyYn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_NSCommonProp" nillable="true" type="tns:BL_NSCommonProp" />
+  <xs:complexType name="BL_BedTransferNotification">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FromBLBedCatgCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Frombedno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fromnurscode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fromroomno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reqtype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Shiftdt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Shifttm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToBLBedCatgCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tobedno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tonurscode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Toroomno" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_BedTransferNotification" nillable="true" type="tns:BL_BedTransferNotification" />
+  <xs:complexType name="BL_PatBedVaccancy">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Bedno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Wardno" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_PatBedVaccancy" nillable="true" type="tns:BL_PatBedVaccancy" />
+  <xs:complexType name="BL_DischargeChkList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Admndoccd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NURSTCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Preparedby" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_DischargeChkList" nillable="true" type="tns:BL_DischargeChkList" />
+  <xs:complexType name="BL_EmergencyChkList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Admndoccd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NurstCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Preparedby" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_EmergencyChkList" nillable="true" type="tns:BL_EmergencyChkList" />
+  <xs:complexType name="BL_OrderBooking">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Bedcatgcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Bednumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CancelRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Compcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Inscompcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Labtype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Labtypecd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nurstcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTSurvYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Orderedby" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ordertype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patphone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reportto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tariffid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Trnyrfrcost" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Wardno" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OrderBooking" nillable="true" type="tns:BL_OrderBooking" />
+  <xs:complexType name="BL_ServiceBooking">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Bedno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Blbedcatg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CntrCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Hospunit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MultiDrTrnNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MultiDrYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patcatgcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Roomno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServiceTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Servicedt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tariffid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cancelRemark" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_ServiceBooking" nillable="true" type="tns:BL_ServiceBooking" />
+  <xs:complexType name="BL_DoctorVisit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_ServiceBooking">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChrgbleAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="Dicount" type="xs:double" />
+          <xs:element minOccurs="0" name="DoctShr" type="xs:double" />
+          <xs:element minOccurs="0" name="Doctcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospShr" type="xs:double" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="ServDept" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServGrpCd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServSubGrpCd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Vsttime" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_DoctorVisit" nillable="true" type="tns:BL_DoctorVisit" />
+  <xs:complexType name="BL_PreOperativeChkLst">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Allergy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BloodPres" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Diagnosis" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HasPatAgreed" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HeartRate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NurstCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTBookingNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OxygenSaturation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Preparedby" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceivedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReceivedDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Receivedtm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RespiratoryRate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Temperature" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VitalDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VitalTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_PreOperativeChkLst" nillable="true" type="tns:BL_PreOperativeChkLst" />
+  <xs:complexType name="Bl_InpatientIndent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DoctorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndentNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MtrlLst" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nurstcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Storecode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tranmode" type="xs:int" />
+      <xs:element minOccurs="0" name="Tranyear" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bl_InpatientIndent" nillable="true" type="tns:Bl_InpatientIndent" />
+  <xs:complexType name="BL_Diet">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dietDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="dietXml" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Diet" nillable="true" type="tns:BL_Diet" />
+  <xs:complexType name="BL_DietCatgChngReq">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="curDietCatCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="doctCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="reqDietCatg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="startFrmDT" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_DietCatgChngReq" nillable="true" type="tns:BL_DietCatgChngReq" />
+  <xs:complexType name="BL_DietFoodItemOrder">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BedNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FoodItems" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NurstCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RejectRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_DietFoodItemOrder" nillable="true" type="tns:BL_DietFoodItemOrder" />
+  <xs:complexType name="BL_DischargeProcessing">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DONEAT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DONEBY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DONEON" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DischrgType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlanDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlanTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QUESTCODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XMLList" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_DischargeProcessing" nillable="true" type="tns:BL_DischargeProcessing" />
+  <xs:complexType name="BL_PendingPatientReport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ByMailYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ColReportYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NSCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhoneNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ZIPCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlList" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_PendingPatientReport" nillable="true" type="tns:BL_PendingPatientReport" />
+  <xs:complexType name="BL_OTBookingRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BedNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CasualtyNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Diagnosis" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NursCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTCathType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SchemeCodes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Side" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurgeryDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurgeryTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WardNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XMLSurgList" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OTBookingRequest" nillable="true" type="tns:BL_OTBookingRequest" />
+  <xs:complexType name="Bl_PatBedAccept">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ATDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ATTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ATType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Bedno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Hospunit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NURSCODE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Bl_PatBedAccept" nillable="true" type="tns:Bl_PatBedAccept" />
+  <xs:complexType name="BL_BedAllocation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BedAllocationXml" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NURSID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NurseStation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="STAFFID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Shift" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShiftDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_BedAllocation" nillable="true" type="tns:BL_BedAllocation" />
+  <xs:complexType name="BL_VirtualPatientTransfer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BedNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NSCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTBookingNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QLevel" type="xs:int" />
+          <xs:element minOccurs="0" name="TransferStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransferTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VirtualTranId" type="xs:int" />
+          <xs:element minOccurs="0" name="WardCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_VirtualPatientTransfer" nillable="true" type="tns:BL_VirtualPatientTransfer" />
+  <xs:complexType name="BL_FoodComplaint">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BedNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CloseRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ComplaintData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NurstCD" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_FoodComplaint" nillable="true" type="tns:BL_FoodComplaint" />
+  <xs:complexType name="BL_DietOrderSheet">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_NSCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DietTimeCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NurstCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientLstXML" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_DietOrderSheet" nillable="true" type="tns:BL_DietOrderSheet" />
+  <xs:complexType name="BL_BedTransfer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bedcatgcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FrmBLBedCatgCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Frombedno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fromnurscode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fromroomno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipaddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moduleid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notifino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shiftdate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shiftno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shifttime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shifttype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tobedno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tonurscode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Toroomno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tranno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_BedTransfer" nillable="true" type="tns:BL_BedTransfer" />
+</xs:schema>

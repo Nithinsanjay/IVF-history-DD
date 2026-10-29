@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="5b171212-c8d5-4098-801b-703498ef64c5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://uat.himstccf.org:82/WEBHMISSERVICE/Outpatient.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Outpatient6.xsd" MetadataType="Schema" ID="7c1916fc-c91a-4cb4-8480-e25b56de8a45" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?xsd=xsd4" />
+    <MetadataFile FileName="Outpatient61.xsd" MetadataType="Schema" ID="09f686b2-b697-4bb7-9125-a93be1e00c3b" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?xsd=xsd5" />
+    <MetadataFile FileName="Outpatient1.wsdl" MetadataType="Wsdl" ID="921dc48a-a90d-4742-b9bc-7874293f1959" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?wsdl" />
+    <MetadataFile FileName="Outpatient62.xsd" MetadataType="Schema" ID="ff0c5de1-15b1-4a97-b693-e8e839a3dce4" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?xsd=xsd1" />
+    <MetadataFile FileName="Outpatient63.xsd" MetadataType="Schema" ID="09c7e86a-df1f-4e76-8c90-c8a899f037fe" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?xsd=xsd2" />
+    <MetadataFile FileName="Outpatient64.xsd" MetadataType="Schema" ID="04c9f5cb-0904-4d73-993f-66b6e891ea9f" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?xsd=xsd3" />
+    <MetadataFile FileName="Outpatient65.xsd" MetadataType="Schema" ID="bfb373e3-abc1-4919-b28c-1b283bc5be44" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?xsd=xsd0" />
+    <MetadataFile FileName="Outpatient1.disco" MetadataType="Disco" ID="e719667d-cbdf-46e1-ac0b-bec159d486dd" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

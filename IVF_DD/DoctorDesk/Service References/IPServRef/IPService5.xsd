@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="BL_BedTransfer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bedcatgcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FrmBLBedCatgCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Frombedno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fromnurscode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fromroomno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipaddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moduleid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notifino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shiftdate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shiftno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shifttime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Shifttype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tobedno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tonurscode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Toroomno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tranno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_BedTransfer" nillable="true" type="tns:BL_BedTransfer" />
+</xs:schema>

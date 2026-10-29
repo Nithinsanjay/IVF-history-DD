@@ -1,0 +1,2196 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="<%=ResolveUrl("/Images/favicon.ico")%>">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Doctor Desk</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+      <link rel="shortcut icon" type="image/png" href="<%=ResolveUrl("/Images/favicon.ico")%>">
+      <%-- Loader --%>
+  <script src="<%=ResolveUrl("~/css/Loader/Loader.js")%>"></script>
+  <link href="../css/Loader/Loader.css" rel="stylesheet" />
+  
+       <script src="<%=ResolveUrl("~/css/Bootstrap-5.3.8/dist/js/bootstrap.bundle.js")%>"></script>
+   <%-- Toaster --%>
+   <script src="<%=ResolveUrl("~/css/Toaster/dist/main.js")%>"></script>
+   <script src="<%=ResolveUrl("~/css/Toaster/src/Toast.js")%>"></script>
+   <link href="../css/Toaster/src/toasts.css" rel="stylesheet" />
+
+
+     <%-- Tabulator --%>
+ <link href="../css/TabulatorGrid/dist/css/tabulator.css" rel="stylesheet" />
+ <link href="../css/TabulatorGrid/dist/css/CustomTabulator.css" rel="stylesheet" />
+ <link href="../css/TabulatorGrid/dist/css/CustomTabulator.css" rel="stylesheet" />
+ <script src="<%=ResolveUrl("~/css/TabulatorGrid/dist/js/tabulator.js")%>"></script>
+ <script src="<%=ResolveUrl("~/css/TabulatorGrid/dist/js/Custom.js")%>"></script>
+ <script src="../css/TabulatorGrid/dist/js/tabulator.js"></script>
+  
+ <%-- Session --%>
+    <script type="text/javascript"
+        src="<%= Url.Content("~/Scripts/SinglePage/SessionMaintain.js") %>?v=<%= System.IO.File.GetLastWriteTime(Server.MapPath("~/Scripts/SinglePage/SessionMaintain.js")).Ticks %>">
+    </script>
+    <!-- Bootstrap 3.3.6 -->
+    <link href="<%=ResolveUrl("~/JQueryUi/jquery.ui.theme.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/JQueryUi/jquery.ui.css")%>" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="<%=ResolveUrl("~/font-awesome/css/font-awesome.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/font-awesome/css/font-awesome.min.css")%>" rel="stylesheet" />
+    <!-- Ionicons -->
+    <link href="<%=ResolveUrl("~/bootstrap/Icon.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/LoadingCursor/css/style.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/multi-select.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/plugins/select2Doctorlist.js/select2.css")%>" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="<%=ResolveUrl("~/dist/css/AdminLTE.css")%>" rel="stylesheet" />
+   <%-- <link href="<%=ResolveUrl("~/dist/css/skins/skin-blue.min.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/dist/css/skins/skin-yellow.min.css")%>" rel="stylesheet" />--%>
+    <link href="<%=ResolveUrl("~/jqGrid/css/ui.jqgrid.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/jqGrid.bootstrap.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/bootstrap.css")%>" rel="stylesheet" />
+    <link href="../plugins/alert/jquery-confirm.css" rel="stylesheet" />
+    <link href="../Scripts/HoldOn.min.css" rel="stylesheet" /> <%----%>
+    <script src="<%=ResolveUrl("~/Scripts/jquery-1-10-2.js")%>"></script>
+    <script src="<%=ResolveUrl("~/dist/js/app.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/bootstrap/js/bootstrap.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/bootstrap/js/jquery.messager.js")%>"></script>
+    <script src="<%=ResolveUrl("~/bootstrap/js/dropdown.js")%>"></script>
+    <script src="<%=ResolveUrl("~/Scripts/jquery-1-11-1-ui.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/slimScroll/jquery.slimscroll.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.date.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.regex.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/LoadingCursor/jquery-loader.js")%>"></script>
+    <script src="<%=ResolveUrl("~/Scripts/multi-select.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/select2/select2.full.min.js")%>"></script>
+    <script src="../Scripts/Doctorlist.js"></script>
+    <script src="../plugins/alert/jquery-confirm.js"></script>
+    <script src="../Scripts/jquerysession.js"></script>
+    <!-- 18/12/2019  16:29-->
+        <script src="../Scripts/Sortable-master/Sortable.js"></script>
+        <script src="../Scripts/Sortable-master/Sortable.min.js"></script>
+    <!--pradnya-->
+    <script src="../Scripts/HoldOn.min.js"></script><%-- --%>
+      <%-- Right Menu Slide --%>
+  <script src="<%=ResolveUrl("~/Scripts/SinglePage/RightMenuSlide.js")%>"></script>
+    <link href="../css/SPStyle.css" rel="stylesheet" />
+    <script type="text/javascript"
+        src="<%= Url.Content("~/Scripts/SinglePage/PrescriptionPrint.js") %>?v=<%= System.IO.File.GetLastWriteTime(Server.MapPath("~/Scripts/SinglePage/PrescriptionPrint.js")).Ticks %>">
+    </script>
+    <link href="../js/fancybox/jquery.fancybox2.0.5.css" rel="stylesheet" type="text/css" />
+    <script src="<%=ResolveUrl("~/js/fancybox/jquery.fancybox.pack2-0-5.js")%>"></script>
+
+      <link href="<%=ResolveUrl("~/css/Alert/Alert.css")%>" rel="stylesheet" />
+
+    <script src="<%=ResolveUrl("~/css/Alert/Alert.js")%>"></script>
+  <style type="text/css">
+
+
+      #PatientClinicalPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1040;
+    overflow: auto;
+}
+
+      #PatientClinicalOverlay{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.45);
+    z-index:99998;
+}
+
+#PatientClinicalContainer{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100vw;
+    height:100vh;
+    background:#fff;
+    z-index:99999;
+    display:flex;
+    flex-direction:column;
+}
+
+#PatientClinicalHeader{
+    height:50px;
+    background:#2d6ca2;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 15px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+#btnCloseClinicalPopup{
+    border:none;
+    background:transparent;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+
+#PatientClinicalBody{
+    flex:1;
+    overflow:auto;
+    background:white;
+}
+    
+#PatientClinicalPopup .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+      /*------------start-----added in all masters------ Meenakshi to apply a slim scroll ---------*/
+        ::-webkit-scrollbar {
+    width: 6px;
+      height:6px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background: rgba(255,0,0,0.8);
+}
+
+ /*------------end----------- Meenakshi to apply a slim scroll ---------*/
+
+        .navbar-nav > .user-menu > .dropdown-menu {
+            /*width: 450px;*/
+        }
+
+        #lnkNewNotes:hover, #lnkAddComp:hover {
+            cursor: pointer !important;
+        }
+
+        .dropbtn {
+            background-color: transparent;
+            color: black;
+            padding: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            outline: 0;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 3px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            height: 35px;
+        }
+
+        .dropdown:hover .dropbtn {
+        }
+
+        .sdList {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            right: 0;
+            top: 0;
+            width: 35%; /* Full width */
+            height: 20%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            -webkit-animation-name: fadeIn; /* Fade in the background */
+            -webkit-animation-duration: 0.4s;
+            animation-name: fadeIn;
+            animation-duration: 0.4s;
+            margin-top: 35px;
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 85%; /* Full width */
+            /*height: 100%;*/ /* Full height */
+            height:auto;
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            -webkit-animation-name: fadeIn; /* Fade in the background */
+            -webkit-animation-duration: 0.4s;
+            animation-name: fadeIn;
+            animation-duration: 0.4s;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: fixed;
+            bottom: 0;
+            background-color: #fefefe;
+            width: 230px;
+            -webkit-animation-name: slideIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name: slideIn;
+            animation-duration: 0.4s;
+        }
+
+        .menuButton {
+             background-color: #42525b;
+    color: white;
+    /* padding: 4px; */
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 1px 1px #223;
+    height: 26px;
+    width: 26px;
+        margin-top: 8px !important;    margin-left: 5px;     margin-bottom: 8px;
+        }
+         .RightMenuSelectedOption {
+            background-color: #fce8e6;
+            border-radius: 11px 11px 11px 11px;
+            color: #d93025;
+        }
+        .w3-circle {
+            border-radius: 99em;
+            margin-left: 5px;
+        }
+        
+        /*kavita 29-8-18*/
+         #menuDots{
+               display:none;
+           }
+
+      @media only screen and (min-width : 360px) {
+          /*kavita 29-8-18*/
+            #menuDots{
+               display:block;
+              }
+            /*suchita*/
+              .altText {
+                    display: none;
+                }
+      }
+      @media only screen and (min-width : 768px) {
+          /* tablet*/
+           #menuDots{
+               display:block;
+              }
+           /*suchita*/
+            .altText{
+                display:none;
+             }
+      }
+      @media screen and (min-width: 480px) and (max-width: 767px) {
+          /*mobile landscape*/
+           /*kavita 29-8-18*/
+            #menuDots{
+               display:block;
+              }
+            /*suchita*/
+              .altText {
+                    display: none;
+                }
+      }
+
+        @media only screen and (min-width : 992px) {
+
+            .content-wrapper {
+                width: 85%;
+            }
+
+            .modal {
+                width: 20%;
+                margin-top: 45px;
+            }
+
+            .content {
+                width: 53%;
+            }
+
+            .row {
+                margin-right: -190px;
+                margin-left: 130px;
+            }
+
+          
+            .panel-primary {
+                /*width: 6vw;
+                height: 5vw;*/
+                  width: 6vw;
+                height: 6vw;
+            }
+
+            .panel-body{
+
+                 width: 6vw;
+                height: 6vw;
+            }
+
+            .sdList {
+                width: 15%;
+                height: 100%;
+                margin-top: 45px;
+            }
+
+
+
+            .close {
+                display: none;
+            }
+
+            .pevPrescrp {
+                margin-left: 255px;
+            }
+
+           .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td
+           {
+               line-height:1.2;
+
+           }
+
+           .contentHoldClass{
+               width: 845px;
+           }
+
+           .clickRw{
+               font-size:13px;
+           }
+
+	  /* kavita 22-8-18*/
+           #menuDots{
+               display:none;
+           }
+           /*suchita*/
+             .altText{
+                display:block;
+             }
+        }
+
+        /*@media screen and (max-width: 600px) {
+            .close {
+                float: right;
+                margin-left:100px;
+            }
+        }*/
+
+        .content {
+    width: 53%;
+            }
+        
+         @media only screen and (min-width: 1024px) {
+            .content-wrapper {
+                width: 64.6%;
+                margin-left: 205px;
+            }
+              .modal {
+                width: 20.333%;
+                margin-top: 46px;
+            }
+
+              .row {
+                margin-left: 50px;
+            }
+	 /* kavita 22-8-18*/
+           #menuDots{
+               display:none;
+           }
+           /*suchita*/
+             .altText{
+                display:block;
+             }
+        }
+
+        @media only screen and (min-width: 1366px) {
+            .content-wrapper {
+                width: 64.5%;
+                margin-left: 278px;
+            }
+
+             .row {
+                margin-left: 120px;
+            }
+	 /* kavita 22-8-18*/
+           #menuDots{
+               display:none;
+           }
+           /*suchita*/
+             .altText{
+                display:block;
+             }
+        }
+
+        @media only screen and (min-width:1400px) {
+           .content-wrapper {
+                width: 64.6%;
+                margin-left: 292px;
+            }
+         
+            .row {
+                margin-left: 150px;
+            }
+	/* kavita 22-8-18*/
+           #menuDots{
+               display:none;
+           }
+           /*suchita*/
+             .altText{
+                display:block;
+             }
+        }
+        /*suchita*/
+        
+      @media screen and (min-width: 1280px) and (max-width: 1360px) {
+           .content-wrapper {
+                width: 62%;
+                margin-left: 292px;
+            }
+      } /*4/24/19*/
+      .rightPanelul {
+          line-height: 20px;
+          font-weight: bold;
+          color: #595454;
+          text-shadow: 0.4px 0px 0.4px #537c94;
+          font-size: 12px;
+          letter-spacing: 0.6px;
+          cursor: pointer;
+          margin-left: -20px;
+      }
+              .rightPanelul .list:hover {
+                  background: #7575722e;
+                  border-radius: 11px 11px 11px 11px; /*30 oct 2018*/
+              }
+      .liSeparator {
+          color: dimgray;
+          margin-left: -30px;
+          margin-top: 3px;
+          margin-bottom: 0px;
+          border-top: 2px solid #d6d2d2;
+      }
+      .lblRightMenu {
+          letter-spacing: 1px;
+          cursor: pointer;
+      }
+       .liIconSpan
+        {
+            padding-right:10px;
+             padding-left:17px;
+        }
+         .altText{ 
+		        /*display:none;*/
+                 color:gray;
+                 /*margin-left:100px;*/
+                 margin-top:2px;
+                 float:right;
+                 padding-right:6px;   
+                 font-size:11px;
+                 font-weight:100;
+             }
+
+
+          /*/*4/11/19*/    
+   .table > tbody > tr.active > td:not(.MaterialName):not(.tdRemark){   
+     border-left:1px solid #bbbbbb;
+    
+     padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 3px;
+    padding-bottom: 0px;
+     text-align: center;
+    vertical-align: middle;
+ }*/ 
+        .table > tbody > tr.active > td > a {
+            width: 100%;
+            display: table;
+        }
+        
+                  /*4/11/19*/    
+.HeadPatTab { min-width: 100%; }
+
+.HeadPatTab > thead,
+.HeadPatTab > tbody >tr{
+/*thead, tbody tr {*/
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.HeadPatTab > tbody{
+    display: block;
+    max-height: 500px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.HeadPatTab > tbody > tr > td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.HeadPatTab > thead > tr > th{
+    text-align:center;
+    border: 1px solid #ede4e4;
+      height: 22px;
+      font-size:12px;
+}
+
+/*thead th {
+    height: 22px;
+    text-align: left;
+}*/
+.HeadPatTab > thead > tr,
+.HeadPatTab > tbody > tr
+{
+    width:100%;
+}
+        @media (min-width: 1400px) {
+            .HeadPatTab  { min-width: 600px; }
+            .HeadPatTab > tbody {
+    display: block;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+        }
+         /**/ 
+                  /*/................. 10-12-19 for Back Button.....................*/
+
+strong {
+	 font-weight: bold;
+}
+ .button1 {
+    background-color: rgba(242, 242, 242, 1);
+    background-image: linear-gradient(to bottom, rgba(242, 242, 242, 1), rgba(242, 242, 242, 1));
+    border: 1px solid rgba(191, 191, 191, 1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), inset 0 -1px 0 rgba(217, 217, 217, 1), inset 0 0 0 1px rgba(242, 242, 242, 1), 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: rgba(140, 140, 140, 1);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    border-radius: 11px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+   padding:3px 15px 2px 15px;
+    /*margin: 16px 0 0 16px;*/
+    transition: all 20ms ease-out;
+    vertical-align: top;
+}
+ .button1:hover, .button1:focus {
+	 background: rgba(242, 242, 242, 1);
+	 border-color: rgba(140, 140, 140, 1);
+	 box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), inset 0 -1px 0 rgba(217, 217, 217, 1), inset 0 0 0 1px rgba(242, 242, 242, 1);
+}
+ .button1:active {
+	 background: rgba(242, 242, 242, 1);
+	 box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+ .button1 .fa {
+	 color: rgba(191, 191, 191, 1);
+	 text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+ 
+.button1-green {
+    background-color: rgb(57, 142, 190);
+   background-image: linear-gradient(to bottom, rgb(86, 135, 162), rgb(118, 185, 222));
+    border: 1px solid rgb(57, 142, 190);
+    box-shadow: inset 0 1px 0 rgb(52, 123, 165), inset 0 -1px 0 rgb(51, 127, 171), inset 0 0 0 1px rgb(48, 124, 167), 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fdf9f9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+ .button1-green:hover, .button1-green:focus {
+	 background: rgb(57, 142, 190);
+	 border-color: rgba(50, 102, 18, 1);
+	 box-shadow: inset 0 1px 0 rgba(198, 230, 179, 1), inset 0 -1px 0 rgba(121, 179, 86, 1), inset 0 0 0 1px rgba(0, 0, 0, 1);
+}
+
+
+     
+ .button1-green:active {
+	 background: rgb(57, 142, 190);
+	 box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+ .button1-green .fa {
+     color: rgb(78, 78, 78);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+
+ /*//...........................*/
+ .button1-Addnew {
+   background-color: rgb(244, 133, 23);
+    background-image: linear-gradient(to bottom, rgb(244, 123, 2), rgb(251, 204, 158));
+    border: 1px solid rgb(245, 141, 37);
+    box-shadow: inset 0 1px 0 rgb(245, 134, 23), inset 0 -1px 0 rgb(245, 141, 37), inset 0 0 0 1px rgb(244, 128, 11), 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fdf9f9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+ .button1-Addnew:hover, .button1-green:focus {
+	 background:  rgb(244, 133, 23);
+	 border-color: rgb(245, 141, 37);
+	 box-shadow: inset 0 1px 0 rgba(198, 230, 179, 1), inset 0 -1px 0 rgba(121, 179, 86, 1), inset 0 0 0 1px rgba(0, 0, 0, 1);
+}
+
+
+     
+ .button1-Addnew:active {
+	 background:  rgb(244, 133, 23);
+	 box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+ .button1-Addnew .fa {
+     color: rgb(78, 78, 78);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+ /*//........................*/
+ 
+ .button1 .fa {
+	 float: left;
+	 font-size: 14px;
+	 line-height: 20px;
+	 margin: -1px 8px 0 -4px;
+	 vertical-align: top;
+}
+/*/................end......................*/
+@media only screen and (max-width : 992px) {
+    #patList{
+            margin-top: 25px;
+    }
+    .form-control-feedback{
+        margin-top: 0px !important;
+    }
+}
+
+
+      /*priyanka 28/02/2026*/
+
+      .square {
+          width: 15px;
+          height: 15px;
+          background-color:#f4e1ef;
+          display: inline-block;
+      }
+      .spanSearchPatCls {
+          pointer-events: auto !important;
+          cursor: pointer;
+      }
+    </style>
+    <script type="text/javascript">
+        var UnitCd = '<%: Session["UNITCODE"] ?? "" %>';
+        var gDoctId = '<%: Session["gOncoUserId"] ?? "" %>';
+        var gDoctName = '<%: Session["gDoctName"] ?? "" %>';
+        var gClinicCode = '<%: Session["CLINICCODE"] ?? "" %>';
+        var gDoctCode = '<%: Session["gDoctCode"] ?? ""%>';
+        var gCIMSYN = '<%: Session["CIMYN"] ?? ""%>';
+        var timoutWarning = 1500000// 840000; // Display warning in 14 Mins.
+        var timoutNow = 1800000 // Timeout in 30 mins.
+        var logoutUrl = '../Account/Login'; // URL to logout page.
+        var warningTimer;
+        var timeoutTimer;
+        var NotificURl = '';
+        var Vaccineflag = 0;
+        var userid = '<%:Session["gOncoUserId"].ToString() %>';//Somnath
+        var DMSURL = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("LOCALDMSURL")%>'; //meenakshi 
+        var NoteTranMode = "1";
+        var QMSCall = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("QMSENABLE")%>'; //Added By RAJAN
+        var DispDurCritFrPatSrchYN = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("DispDurCritFrPatSrchYN")%>'; // Added by Dhananjay 20240813
+        var HideCheckPatInfoIcon = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("DispShowAllPatIcon")%>';  // Added by Dhananjay 20240828 Re
+        var UNITCODE = '<%: Session["UNITCODE"] ?? "" %>';
+        var adminConsoleYN = '<%: ("" + Session["CONSOLEAPPYN"]).ToString().Trim()%>';
+        var FormName = "";
+        var UnitSel = "";
+        var isCheckingUnit = false;
+        var SkipUnitSession = false;
+        var ErrorType = "";
+        var ShowVitalsInPrescPrintYN = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("ShowVitalsExtraFieldsinPrescPrint")%>';//Priyanka 26/12/2025
+        var GeneralWiseYN = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("GENERICWISEDATAYN")%>';
+        var isVitalsCompleted = "N";   // Abhishesh || 20260311 
+        var showVitalsAlert = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("ShowVitalsAlert")%>';
+        var RedirectToHMIS = 'N';
+        var RedirectToDD = '<%: Session["RedirectToDD"] ?? "" %>';
+        var IsClinicNotesFreeTxtVisible = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("ShowClinicalNotesFreeText")%>';//priyanka 10/04/2026
+        var PrecriptionPrintTemp = '<%:OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("PrecriptionPrintTemp")%>';
+        var FollowUpPrintText = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("FollowUpPrintText")%>';
+         BottomLine1 = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("PrescBottomLine1")%>';
+         BottomLine2 = '<%:@OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("PrescBottomLine2")%>';
+      
+       $(document).ajaxError(function (e, jqxhr, settings, exception) {
+            e.stopPropagation();
+            //if (jqxhr.status == 401)
+            //    window.location.href = "../Error/unauthorized";
+            //else if (jqxhr.status.toString().startsWith("4") || jqxhr.status.toString().startsWith("5")) {
+            //    window.location.href = "../Error/index?statuscode=" + jqxhr.status;
+            //}
+        });
+        // Start timers.
+        function StartTimers() {
+            warningTimer = setTimeout("IdleWarning()", timoutWarning);
+            timeoutTimer = setTimeout("IdleTimeout()", timoutNow);
+        }
+        // Reset timers.
+        function ResetTimers() {
+
+            if (window.localStorage.getItem("logged_in") == 'false') {
+                window.location.href = "about:blank";
+            }
+
+            clearTimeout(warningTimer);
+            clearTimeout(timeoutTimer);
+            StartTimers();
+
+        }
+
+        //window.addEventListener("load", function () {                //for  removing address bar in mobile
+        //    setTimeout(function () {
+        //        // This hides the address bar:
+        //        window.scrollTo(0, 1);
+        //    }, 0);
+        //});
+        // Show idle timeout warning dialog.
+        function IdleWarning() {
+            MsgDia("Session About To Timeout, You will be logged out in 5 min.To remain logged in move your mouse over this window. ", "Warning");
+        }
+
+        function IdleTimeout() {
+            window.location = logoutUrl;
+        }
+
+        $(document).ready(function (e) {
+            setModuleSession(true, "OPD");
+            if ('<%=(string)ViewBag.IsVitalsCompleted%>' === "Y") { //priyanka 12/03/2026
+                isVitalsCompleted = '<%=(string)ViewBag.IsVitalsCompleted%>'
+            }
+
+            // Added by Dhananjay 20250928
+            var sessionPatStatus = sessionStorage.getItem('PatCompleted');
+            if (sessionPatStatus && sessionPatStatus == 'Y') {
+                hideButtonsOnPages(['PersonalHist', 'MedicalHist', 'FamilyHist', 'AllergyHist', 'Vaccination', 'Vitals']);
+            }
+
+            var doctCode = sessionStorage.getItem('DoctCode');
+            var doctName = sessionStorage.getItem('DoctName');
+
+            if (DMSURL == "")
+                $("#lisDocuments").hide();
+
+            //vijeta 15th may 2019
+            $('#DivPatGrid').on('hidden.bs.collapse', toggleIconsofDivTab);
+            $('#DivPatGrid').on('shown.bs.collapse', toggleIconsofDivTab);
+            //vijeta 
+
+            //$.session.get('DoctName');
+
+            if (window.location.pathname == "/Account/MenuList" ||
+               window.location.pathname == "/DoctorDesk/PatientEntry") {
+                $('#lishome').css('display', 'none');
+            } else {
+                $('#lishome').css('display', 'block');
+            }
+
+            $('#lishome').click(function () {
+                window.location.href = '../ClinicalNotes/ClinicEntry';
+            });
+                
+          //  $("#DoctorInput").val($.session.get('DoctName'));
+            $('.dropdown-toggle').dropdown();
+            if (doctCode != undefined || doctName != undefined) {
+                SearchFunction(doctCode);
+            }
+            //Done By Somnath
+            /* kavita 29-8-18*/
+            if ($(window).width() < 996)//added by kavita 
+            {
+                $("#menuDots").show();//added by kavita 
+                //$("#P_Name").css('width', '145px');//comment by kavita
+            }
+
+            SetRightMenuOptionFocus();
+            $('#txtUid').val(userid);
+            $("#txtUid").attr("disabled", true);
+            BtnTxtHideDisb();
+
+
+            //btn click()
+            $('#btnPass').click(function (e) {
+                SaveAction();
+            })
+
+
+            var menuL = document.getElementById('menuList');
+            $('#menuBar').click(function (e) {
+                menuL.style.display = "block";
+
+
+            });
+
+            var lst = document.getElementById('sideList');
+            /*kavita 29-8-18*/
+            $('#menuDots').click(function (e) {
+                $("#sideList").toggle();//kavita
+
+            });
+
+
+            //commented by vijeta on  7th april 2018
+            //window.onclick = function (event) {
+            //    if (event.target == menuL) {
+            //        document.getElementById('menuList').style.display = "none";
+            //    }
+            //}
+
+            //commented by vijeta on  7th april 2018
+            //window.onclick = function (event) {
+            //    if (event.target == lst) {
+            //        lst.style.display = "none";
+            //    }
+            //}
+
+            //document.getElementById('secCont').onclick = function () {                           // commented for not closing panel when clicked outside
+            //    document.getElementById('sideList').style.display = 'none';
+            //}
+
+            // var closePanel = document.getElementsByClassName("close")[0];
+            panelClose.onclick = function () {
+                menuL.style.display = "none";
+            }
+
+            $('#btnClose').click(function (e) {
+                Makenormal();
+                RemoveBorder();
+            });
+            $("body").disableSelection();
+            $("body").keydown(function (e) {
+                if (e.keyCode == 8) {
+                    var element = e.target.nodeName.toLowerCase();
+                    if (element != 'input' && element != 'textarea') {
+                        return false;
+                    }
+                }
+            });
+
+            if (("" + '<%: Session["gDoctName"]%>') == "") {
+                alert("Session expired. Please login again.");
+                window.location.href = "../Account/Login";
+            }
+
+            //
+            $('#lishistory').click(function (e) {
+                if (CheckPatSessionNotEmpty()) {
+                    window.location.href = '../DoctorDesk/History';
+                }
+                else {
+                    $.messager.alert("Information", "Please Select Patient");
+                }
+            })
+            //end
+
+            //added on 31st march 2018
+            $('#lisattach').click(function (e) {
+                Vaccineflag = 1;
+                if (CheckPatSessionNotEmpty()) {
+                    var MRNO = sessionStorage.getItem('PatMRNO');
+                    window.location.href = '../DoctorDesk/Attachments?MRNO=' + MRNO;
+                }
+                else {
+                    $.messager.alert("Information", "Please Select Patient");
+                }
+            });
+
+            // added by vijeta on 3rd april 2018
+            $('#lisVitalHistory').click(function (e) {
+                Vaccineflag = 1;
+                if (CheckPatSessionNotEmpty())
+                    window.location.href = '../DoctorDesk/VitalHistory';
+                else
+                    $.messager.alert("Information", "Please Select Patient");
+            });
+            $('#lisClinicalHistory').click(function (e) {
+                Vaccineflag = 1;
+                if (CheckPatSessionNotEmpty())
+                    window.location.href = '../DoctorDesk/MedicationHistory';
+                else
+                    $.messager.alert("Information", "Please Select Patient");
+            });
+            
+
+            $('#lisVaccination').click(function (e) {
+                Vaccineflag = 1;
+                if (CheckPatSessionNotEmpty()) {
+                    Vaccineflag = 0;
+                    window.location.href = '../Clinicalnotes/Vaccination';
+                }
+                else
+                    $.messager.alert("Information", "Please Select Patient");
+            });
+            GetDoctors();
+
+            $('.content-wrapper').css('margin-left', function () {
+                if ($(window).width() > 1400)
+                    return $("#menuList").width() + 1;
+            });
+
+            $("#anchrSignOut").click(function () {
+                //debugger;
+                sessionStorage.setItem('PatTRANNO', "");
+                sessionStorage.setItem('PatMRNO', "");
+                sessionStorage.setItem('PatName', "");
+                sessionStorage.setItem('PatAge', "");
+                sessionStorage.setItem('PatGender', "");
+                sessionStorage.setItem('PatCompleted', "");
+                sessionStorage.setItem('Pagefrom', "");
+                sessionStorage.setItem('gDoctCode', "");
+                sessionStorage.setItem('DoctCode', "");
+                sessionStorage.setItem('DoctName', "");
+                sessionStorage.setItem('ClinicCode', "");
+
+                sessionStorage.setItem('ICUPatName', '');
+                sessionStorage.setItem('ICUPatGender', '');
+                sessionStorage.setItem('ICUPatIPNO', '');
+                sessionStorage.setItem('ICUPatMRNO', '');
+                sessionStorage.setItem('ICUPatBedNo', '');
+                sessionStorage.setItem('ICUPatAdmnDate', '');
+                /// Meenakshi
+                sessionStorage.setItem('PatSelected', '');
+                sessionStorage.setItem('ClinicName', '');
+                sessionStorage.setItem('PatMobile', '');
+                sessionStorage.setItem('PatDOB', '');
+                //// meenaskhi
+                //   sessionStorage.clear();//
+                //Meenakshi
+                //for (key in sessionStorage) {
+                //    delete sessionStorage[key];
+                //}
+                //for (key in localStorage) {
+                //    delete localStorage[key];
+                //}
+                //meenakshi
+                document.cookie.split(";").forEach(function (cookie) {
+                    const eqPos = cookie.indexOf("=");
+                    const name = eqPos > -1 ? cookie.substr(0, eqPos).trim() : cookie.trim();
+                    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
+                });
+                SignoutConfirm();
+            });
+
+            // register the handler 
+            document.addEventListener('keyup', doc_keyUpForRightLst, false);//added on 7th april 2018
+
+            SearchFunction('');
+             
+            $("#btnSearchPatient").click(function () {
+
+                if (!$("#searchPatDialog").dialog("isOpen")) {
+                    $("#searchPatDialog").dialog("open");
+                } else {
+                    $("#searchPatDialog").dialog("close");
+                }
+            });
+
+
+            //Meenakshi added notes option
+            //by vij on 29th nov 2018
+            $("#btnClearNotes").click(function () {
+                NoteTranMode = 1;
+                $("#txtNotes").val("");//by vij on 29th nov 2018
+                $("#btnSaveNotes").text("Save");//by vij on 29th nov 2018
+                $("#rbtnPrivate").prop("checked", "checked");//by vij on 29th nov 2018
+            });
+
+            $('#dialog').dialog({
+                autoOpen: false,
+                position: { my: 'right', at: 'left-10', of: '#NewNotesDiv', },
+                width: 330,
+                height: 'auto',
+                draggable: true,
+                //show: { effect: "blind", duration: 500 },
+                show: { effect: "fade", duration: 600 },
+                close: function () {
+
+                },
+                open: function () {
+                    // do something on load
+                    // $(event.target).parent().css('position', 'fixed');
+                    //$(event.target).parent().css('top', $("#btnAddNotes").position().top);
+                    $("#txtNotes").val("");//by vij on 29th nov 2018
+                    $("#btnSaveNotes").text("Save");//by vij on 29th nov 2018
+                    $("#rbtnPrivate").prop("checked", "checked");//by vij on 29th nov 2018
+                    var tranno = "";  //Meenakshi
+                    if (sessionStorage.getItem('PatTRANNO') == undefined) { tranno = ""; }
+                    $(".ui-dialog-content:not(#dialog)").dialog("close");
+                    // $("#showNotesDiv").height($("#dialog").height() - 100);//13th nov
+                    GetPatNotes(sessionStorage.getItem('PatTRANNO'), sessionStorage.getItem('PatMRNO'));
+
+                },
+                //resizable:false,
+            });
+
+            //for mobile phones and tablets
+            if ($(window).width() <= 768) {
+                $("#dialog").dialog("option", "height", $(window).height() - 60);
+                $("#dialog").dialog("option", "width", $(window).width() - 60);
+                $("#dialog").dialog("option", "position", { my: "center", at: "center center+20", of: window });
+                $("#divNotification").css("left", '18%'); $("#divNotification").css("top", '2.7%');
+                $("#anchrSignOut").hide();
+            }
+
+
+            $("#btnAddNotes").click(function () {
+                var patCompletedYN = sessionStorage.getItem('PatCompleted');
+                if (typeof patCompletedYN === "undefined" || patCompletedYN === null) {
+                    $(".ui-dialog-content").dialog("close");
+                    $.messager.alert("Alert", "Please Select Patient");
+                }
+                else {
+                    //if (CheckPatSessionNotEmpty()) {
+                    var mrNo = sessionStorage.getItem('PatMRNO');
+                    if (mrNo != "") {
+                        if (!$("#dialog").dialog("isOpen")) {
+                            $("#dialog").dialog("open");
+                        } else {
+                            $("#dialog").dialog("close");
+                        }
+                    }
+                    else {
+                        $(".ui-dialog-content").dialog("close");
+                        $.messager.alert("Alert", "Please Select Patient");
+                    }
+                    //window.location.href = '../DoctorDesk/Complaints';
+                }
+
+                GetPatNotes(sessionStorage.getItem("PatTRANNO"), sessionStorage.getItem("PatMRNO"));
+
+            });
+
+            $(document).on('click', '#tblNotesList tr', function (e) {
+                $("#txtNotes").val($(this).text());
+                $("#btnSaveNotes").text("Update");
+                $("#tblNotesList td").removeClass("NoteTrActive");
+                $(this).children('td').addClass("NoteTrActive");
+
+                //var color = $(this).css("background-color");
+                //if (color == "rgba(0, 0, 0, 0)")
+                //    $("#rbtnPublic").prop('checked', 'checked');
+                //else
+                //    $("#rbtnPrivate").prop('checked', 'checked');
+                var str = $(this).children('td')[0].id;
+                var noteType = str.substring(str.indexOf("_") + 1);
+                if (noteType == "R")
+                    $("#rbtnPrivate").prop('checked', 'checked');
+                else
+                    $("#rbtnPublic").prop('checked', 'checked');
+            });
+
+            $("#btnSaveNotes").click(function () {
+                var strTranno = sessionStorage.getItem('PatTRANNO');
+                // Meenakshi 
+                if (strTranno == undefined) { strTranno = ""; }
+                var strMrNo = sessionStorage.getItem('PatMRNO');
+                var strNotes = $("#txtNotes").val();
+                var strNoteType = $("input[name='NoteType']:checked")[0].value;//vijeta on 27th oct 2018
+                var strNoteCode = "";
+
+                if ($("#showNotesDiv tr td.NoteTrActive").length > 0) {
+                    strNoteCode = $("#showNotesDiv tr td.NoteTrActive").closest("tr")[0].id;
+                    NoteTranMode = "2";//for edit vijeta 18/4/19
+                }
+                 if (strNotes == "") {
+                    $.messager.alert("Information", "Please Enter Notes");
+                }
+                else {
+                    if (strMrNo != "" && strMrNo != undefined && strMrNo != null) {
+                        $.ajax({
+                            url: '../DoctorDesk/SaveNotes',
+                            data: { strNotes: strNotes, strTranNo: strTranno, strMrNo: strMrNo, strNoteType: strNoteType, strNoteCode: strNoteCode, tranMode: NoteTranMode },// tranModevijeta 18/4/19
+                            datatype: 'json',
+                            type: 'post',
+                            success: function (result) {
+                                //added on 12th may 2018
+                                if ($("#btnSaveNotes").text().indexOf("Update") != -1) {
+                                    $.messager.alert("Information", "Notes updated successfully");
+                                    $("#btnSaveNotes").text("Save");
+                                    $("#rbtnPrivate").prop("checked", "checked");//by vijeta 18/4/19
+                                }
+                                else if ($("#btnSaveNotes").text().indexOf("Save") != -1) {
+                                    $.messager.alert("Information", "Notes saved successfully");
+                                    //$("#btnSaveNotes").text("Update Notes");
+                                }
+                                else
+                                    $.messager.alert("Information", result);
+
+                                // $.messager.alert("Information", result);
+
+                                if (("" + result).toUpperCase().indexOf("SUCCESSFUL") != -1) {
+                                    $("#txtNotes").val('');
+                                    GetPatNotes(strTranno, strMrNo);
+                                }
+
+                            },
+                            error: function () {
+
+                            }
+                        });
+
+                    }
+                }
+            });
+
+
+            // Notes code close
+             
+            $('#searchPatDialog').dialog({
+                autoOpen: false,
+                position: { my: 'right', at: 'left-10 center+150', of: '#SearchPatients', },
+                //width: 500,
+                 draggable: true,
+                close: function () {
+                },
+                open: function (event, ui) {
+                    $(".ui-dialog-content:not(#searchPatDialog)").dialog("close");
+                   // $(event.target).parent().css('position', 'fixed');//
+                    //$("#showSearchedList").height($("#searchPatDialog").height() - 100);//13th nov 
+                },
+            });
+            //for mobile phones and tablets
+            if ($(window).width() <= 768) {
+                $("#searchPatDialog").dialog("option", "height", $(window).height() - 100);
+                $("#searchPatDialog").dialog("option", "width", $(window).width() - 60);
+                $("#searchPatDialog").dialog("option", "position", { my: "center", at: "center center+20", of: window });
+            }
+            else {
+                $("#searchPatDialog").dialog("option", "height", 320);
+                $("#searchPatDialog").dialog("option", "width", 350);  // meenakshi
+                $("#searchPatDialog").dialog("option", "position", { my: 'right', at: 'left-10', of: "#SearchPatients" });
+            }
+
+            $("#spanSearchPat").click(function (e) {
+                PatientSearchNotAppointed();
+            });
+
+            $('#txtPatSearchNotAppntd').on("keypress", function (e) {
+                if (e.keyCode == 13) {
+                    PatientSearchNotAppointed();
+                }
+            });
+
+            $('#txtPatSearchNotAppntd').on("keyup", function (e) {
+                if ($('#txtPatSearchNotAppntd').val() == "") {
+                    $("#tblPatList").empty();
+                }
+            });
+
+            $(window).resize(function () {
+                $('.content-wrapper').css('margin-left', function () {
+                    if ($(window).width() >= 996)
+                        return $("#menuList").width() + 1;
+                });
+            });
+            var curFormURL = ("" + '<%= Request.Url.AbsolutePath %>').toString().toUpperCase().trim();
+            var loadedFormName = curFormURL.substr(curFormURL.lastIndexOf("/") + 1);
+            document.getElementById("UnitIcon").style.display = "none";
+            if (loadedFormName.toUpperCase() == "CLINICENTRY" && '<%:Session["SINGLEUNITYN"]%>' == "N") {
+                document.getElementById("UnitIcon").style.display = "inline-block";
+            }
+            var headerHeight = document.querySelector('.main-header').offsetHeight;
+            document.querySelector('.content-wrapper').style.paddingTop = (headerHeight + 15) + "px";
+            document.querySelector('.sdList').style.marginTop = (headerHeight + 5) + "px";
+
+            $(document).on('click', '.patNameCls', function () {
+                var group = $(this).attr('data-group');
+                var btn = $(".btn-save-patstatus");
+
+                // Reset state
+                $("#MainDiv").hide();
+                btn.parent().hide(); // Hide button container by default
+
+                //GetAllCounts();//priyanka 12/03/2026
+
+                if (group === "NotArrived") {
+                    // 1. Not Arrived: Hide MainDiv, Show "Mark as Arrive", set type "A"
+                    $("#MainDiv").hide();
+                    btn.text("Mark as arrived");
+                    btn.attr("onclick", "SavePatientArrival('A')");
+                    btn.parent().show();
+                }
+                else if (group === "Arrived") {
+                    // 2. Arrived: Show MainDiv, Show "Post to Consultant", set type "P"
+                    $("#MainDiv").show();
+                    btn.text("Post to Consultant");
+                    if (isVitalsCompleted.trim() === "Y") {
+                        btn.attr("onclick", "SavePatientArrival('P')");
+                    }
+                    else {
+                        //btn.attr("onclick", /*"SavePatientArrival('P')"*/);  // SavePatientArrival Comment By Abhishesh
+                        btn.removeAttr("onclick");
+                        if (showVitalsAlert == "Y") {
+                            btn.attr("onclick", "ValidationForPostConslt()");
+                        }
+                        else {
+                            btn.attr("onclick", "SavePatientArrival('P')");
+                        }
+                    }
+                    /*btn.attr("onclick", *//*"SavePatientArrival('P')"*//*);  // SavePatientArrival Comment By Abhishesh*/
+                   
+                    btn.parent().show();
+                }
+                else {
+                    // 3. Waiting or Completed: Hide button, Show MainDiv
+                    $("#MainDiv").show();
+                    btn.parent().hide();
+                }
+            });
+
+        });
+        $(window).on('load', function () {
+            var headerHeight = document.querySelector('.main-header').offsetHeight;
+            document.querySelector('.content-wrapper').style.paddingTop = (headerHeight + 15) + "px";
+            document.querySelector('.sdList').style.marginTop = (headerHeight + 5) + "px";
+        });
+
+        // Added by Dhananjay 20250928
+        function hideButtonsOnPages(pageKeywords, elementSelectors) {
+            if (!elementSelectors) {
+                elementSelectors = ['#btnSave'];
+            }
+            var currentUrl = window.location.pathname.toLowerCase();
+            var matchedKeyword = null;
+            for (var i = 0; i < pageKeywords.length; i++) {
+                var keyword = pageKeywords[i].toLowerCase();
+                if (currentUrl.indexOf(keyword) !== -1) {
+                    matchedKeyword = keyword;
+                    break;
+                }
+            }
+            if (matchedKeyword) {
+                var $mainDiv = $('#ContentHolderDiv');
+                $mainDiv.find('input, button, select, textarea, fieldset').prop('disabled', true);
+                $mainDiv.css('pointer-events', 'none');
+                for (var j = 0; j < elementSelectors.length; j++) {
+                    var el = document.querySelector(elementSelectors[j]);
+                    if (el) {
+                        el.style.display = 'none';
+                    }
+                }
+            }
+        }
+        var AdminLTEOptions = {
+            enableBSToppltip: false
+        };
+        function ClosePatientClinicalPopup() {
+
+            $("#PatientClinicalPopup").hide();
+
+            $("#pATIENTcLINICALDETAILSBody").empty();
+
+            $("#bs5css").remove();
+            $("#rightMenuCss").remove();
+            $("#bs5js").remove();
+            $("#rightMenuJs").remove();
+        }
+
+     
+        function openChemoPlanning() {
+
+            if (CheckPatSessionNotEmpty()) {
+            LoadPatientClinicalResources();
+            $("#PatientClinicalPopup").show();
+
+            $("#pATIENTcLINICALDETAILSBody").load("../SinglePage/PatientClinicalHistory", function () {
+
+                        $("#PatientClinicalPopup .RightMenuBackIcon")
+                            .removeClass("fa-chevron-right")
+                            .addClass("fa-arrow-right")
+                            .attr("title", "Back")
+                            .off("click")
+                            .on("click", function () {
+                                ClosePatientClinicalPopup();
+                            });
+
+                });
+            } else
+                $.messager.alert("Information", "Please Select Patient");
+
+        } 
+        function toggleIconsofDivTab(e) {
+            $(e.target)
+                .prev('.btn-group-justified')
+                .find(".moreless")
+                .toggleClass('fa-plus fa-minus');
+            $(document).find("[href='#" + $(e.target).attr('id') + "']")
+        }
+
+
+        function BtnTxtHideDisb() {
+            $('#txtNPwd').attr("disabled", true);
+            $('#txtConfirmPwd').attr("disabled", true);
+            // $('#btnPass').hide();
+        }
+
+        function LoadPatientClinicalResources() {
+
+            if ($("#bs5css").length == 0) {
+                $("head").append(
+                    '<link id="bs5css" rel="stylesheet" href="../css/Bootstrap-5.3.8/dist/css/bootstrap.css">'
+                );
+            }
+
+            if ($("#rightMenuCss").length == 0) {
+                $("head").append(
+                    '<link id="rightMenuCss" rel="stylesheet" href="../css/RightMenu.css">'
+                );
+            }
+
+            if ($("#bs5js").length == 0) {
+                $("body").append(
+                    '<script id="bs5js" src="../css/Bootstrap-5.3.8/dist/js/bootstrap.bundle.js"><\/script>'
+                );
+            }
+
+            if ($("#rightMenuJs").length == 0) {
+                $("body").append(
+                    '<script id="rightMenuJs" src="../Scripts/SinglePage/RightMenuSlide.js"><\/script>'
+                );
+            }
+        }
+        function SaveAction() {
+            if (Validation() == false || ConfirmPassWord() == false) {
+                return false;
+            }
+            else {
+                uid = $('#txtUid').val();
+                Npwd = $('#txtNPwd').val();
+                Cpwd = $('#txtConfirmPwd').val();
+                var datatosend = { uid: uid, Npwd: Npwd, Cpwd: Cpwd }
+                // ajaxindicatorstart('Saving data.. please wait..');
+
+                $.ajax({
+                    type: "POST",
+                    url: '../DoctorDesk/ChangePWD',
+                    data: datatosend,
+                    dataType: "json",
+                    cache: false,
+                    success: function (response) {
+                        $("#btnClosePass").click();
+                        $.messager.alert("Information", response);
+                        //ajaxindicatorstop();
+                        ClearTxtbx();
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        // ajaxindicatorstop();
+                        $.messager.alert(textStatus, "Error Information");
+                    }
+                })
+            }
+        }
+
+        function ClearTxtbx() {
+            $('#txtOPwd').val("");
+            $('#txtNPwd').val("");
+            $('#txtConfirmPwd').val("");
+        }
+
+        function GetPatNotes(strTranNo, strMrNo) {
+            $.ajax({
+                url: '../DoctorDesk/GetPatNotes',
+                data: { strTranNo: strTranNo, strMrNo: strMrNo },
+                datatype: 'json',
+                type: 'post',
+                success: function (response) {
+
+                    $(document).ready(function () {
+
+                        if (response === "") {
+                            $("#tblNotesList").empty();
+                        }
+                        else if (response != "") {
+                            $("#tblNotesList").empty();
+                            $.each(response, function (i, val) {
+                                var type = (response[i].NOTETYPE) == "R" ? "Private" : "Share";
+                                var color = (response[i].NOTETYPE) == "P" ? "#f4e1ef" : "";//13th nov 
+                                var id = (response[i].CODE);//13th nov
+                                var tr = "<tr id='" + id + "' style='background-color:" + color + "' ><td id='" + id + "_" + (response[i].NOTETYPE) + "'>" + response[i].NOTE + "</td></tr>";//13th nov
+                                $("#tblNotesList").append(tr);
+                            });
+                        }
+                    });
+
+                    filterRowsByNoteType();//priyanka 28/02/2026
+                },
+                error: function () {
+                    
+                }
+            });
+        }
+
+        function ConfirmPassWord() {
+            var a = $("#txtNPwd").val();
+            var b = $("#txtConfirmPwd").val();
+            if (a === b) {
+                return true;
+            }
+            else {
+                $("#btnClosePass").click();
+                $.messager.alert("Information", "Password does not match!");
+                $('#txtConfirmPwd').val("");
+                return false;
+            }
+        }
+
+        function Makenormal() {
+            if (("" + $("#txtUid").val()).trim().length != 0) {
+                $("#txtUid").css({ 'border-color': '' });
+            }
+            if (("" + $("#txtOPwd").val()).trim().length != 0) {
+                $("#txtOPwd").css({ 'border-color': '' });
+            }
+            if (("" + $("#txtNPwd").val()).trim().length != 0) {
+                $("#txtNPwd").css({ 'border-color': '' });
+            }
+            if (("" + $("#txtConfirmPwd").val()).trim().length != 0) {
+                $("#txtConfirmPwd").css({ 'border-color': '' });
+            }
+        }
+
+        function RemoveBorder() {
+            if ($("#txtUid").val() == "") {
+                $("#txtUid").css({ 'border-color': '' });
+            }
+            if ($("#txtOPwd").val() == "") {
+                $("#txtOPwd").css({ 'border-color': '' });
+            }
+            if ($("#txtNPwd").val() == "") {
+                $("#txtNPwd").css({ 'border-color': '' });
+            }
+            if ($("#txtConfirmPwd").val() == "") {
+                $("#txtConfirmPwd").css({ 'border-color': '' });
+            }
+        }
+
+        function Validation() {
+            var i = 0;
+            if (("" + $("#txtUid").val()).trim().length == 0) {
+                $("#txtUid").focus();
+                $("#txtUid").css({ 'border-color': 'red' });
+                i = 1;
+            }
+            else {
+                $("#txtUid").css({ 'border-color': '' });
+
+            }
+            if (("" + $("#txtOPwd").val()).trim().length == 0) {
+                //$("#txtOPwd").focus();
+                $("#txtOPwd").css({ 'border-color': 'red' });
+                i = 1;
+            }
+            else {
+                $("#txtOPwd").css({ 'border-color': '' });
+
+
+                if (("" + $("#txtNPwd").val()).trim().length == 0) {
+                    $("#txtNPwd").focus();
+                    $("#txtNPwd").css({ 'border-color': 'red' });
+                    i = 1;
+                }
+                else {
+                    $("#txtNPwd").css({ 'border-color': '' });
+
+                }
+                if (("" + $("#txtConfirmPwd").val()).trim().length == 0) {
+                    $("#txtConfirmPwd").focus();
+                    $("#txtConfirmPwd").css({ 'border-color': 'red' });
+                    i = 1;
+                }
+                else {
+                    $("#txtConfirmPwd").css({ 'border-color': '' });
+
+                }
+            }
+
+            if (i == 1) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+
+        // define a handler added by vijeta on 7th april 2018
+        function doc_keyUpForRightLst(e) {
+
+            if (e.altKey && e.keyCode == 72) { //H
+                $('#lishistory').trigger("click");// History from right side list
+            }
+            else if (e.altKey && e.keyCode == 84) { //T
+                $("#lisVitalHistory").trigger("click");//Vital History from right side list
+            }
+            else if (e.altKey && e.keyCode == 78) { //N
+                $("#lisattach").trigger("click");// History from right side list
+            }
+            else if (e.altKey && e.keyCode == 90) {
+                $("#lisDocuments").trigger("click");
+            }
+        }
+
+        //end
+        function SetRightMenuOptionFocus() {
+            var page = window.location.href;
+            if (page.indexOf("Vaccination") != -1) {
+               $("li#lisVaccination").addClass("RightMenuSelectedOption");
+               $("li#lisVaccination img").attr("src", "../Images/vaccineNewBlue.png");
+            }
+        }
+
+
+
+        // Display Count - Added by Dhananjay - 20240703  
+        function SetCountsForHistory(strMrNo) {
+            if (strMrNo != undefined) { 
+                $.get("../DoctorDesk/GetAllHistoryCounts", { strMrNo: strMrNo }, function (data) {
+
+                    // Vital History
+                    if (data.vitalHistoryCount != "0")
+                        $("#lblVitalHisCnt").text(data.vitalHistoryCount);
+                        $("#lblVitalHisCnt").css({
+                          'float': 'right',
+                          'margin-right': '10px',
+                          'color': 'brown'
+                        });
+
+                    // History
+                    if (data.HistoryCnt != "0") {
+                        $("#lblHistoryCnt").text(data.HistoryCnt);
+                        $("#lblHistoryCnt").css({
+                            'float': 'right',
+                            'margin-right': '10px', 
+                            'color': 'brown'
+                        });
+                    } else {
+                        $("#historyPanel").css('display', 'none');
+                    }
+
+                    // Clical History
+                    if (data.medicationHisCount != "0") {
+                        $("#lblClinicalHisCnt").text(data.medicationHisCount);
+                        $("#lblClinicalHisCnt").css({
+                            'float': 'right',
+                            'margin-right': '10px',
+                            'color': 'brown'
+                        });
+                    } else {
+                        $("#historyPanel").css('display', 'none');
+                    }
+
+                    // vaccination
+                    if (data.VaccineCount != "0")
+                        $("#lblVaccinationCnt").text(data.VaccineCount);
+                        $("#lblVaccinationCnt").css({
+                          'float': 'right',
+                          'margin-right': '10px',
+                          'color': 'brown'
+                       });
+
+                });
+            }
+        }
+
+        function OpenUnitSel() {
+            var curFormURL = ("" + '<%= Request.Url.AbsolutePath %>').toString().toUpperCase().trim();
+            var loadedFormName = curFormURL.substr(curFormURL.lastIndexOf("/") + 1);
+            if (loadedFormName.toUpperCase() == "CLINICENTRY" && '<%:Session["SINGLEUNITYN"]%>' == "N") {
+                $("a#btnHospUnitDiv").click();
+            }
+        }
+
+        function Signout() {
+            sessionStorage.clear();
+            if (RedirectToHMIS === "Y") {
+                GoToHome("Login");
+            }
+            else {
+                window.location.href = "../Account/Login";
+            }
+        }
+
+        function SignoutConfirm() {
+            sessionStorage.clear();
+            if (RedirectToDD === "Y") {
+                window.location.href = "../Account/Login";
+            }
+            else {
+                GoToHome("Login");
+            }
+            //openPopupDynamic("Signout", "Do You Want to Signout ?", [
+            //    { text: "Logout", class: "btn btn-yes", action: "Signout()" },
+            //    { text: "Cancel", class: "btn btn-no", action: "closePopup()" }
+
+            //]);
+        }
+
+        function GoToHome(FormName) {
+            var curURL = ("" + '<%= Request.UrlReferrer %>').toString().toUpperCase().trim();
+            var splitURL = curURL.split('/');
+            var HTTPorHTTPS = curURL.toUpperCase().includes("HTTPS") ? "https" : "http";
+            if (curURL.indexOf("TESTWEBHMIS") != -1) {
+                window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/TestWebHmis/Account/" + FormName;
+            }
+            else if (curURL.indexOf("WEBHMIS") != -1) {
+                window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/WebHmis/Account/" + FormName;
+            }
+            else if (curURL.indexOf("TESTOTCATH") != -1) {
+                window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/TestWebHmis/Account/" + FormName;
+            }
+            else if (curURL.indexOf("WEBOTCATH") != -1) {
+                window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/WebHmis/Account/" + FormName;
+            }
+            else if (curURL.indexOf("HMIS") != -1) {
+                window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/HMIS/Account/" + FormName;
+            }
+            else if (curURL.indexOf("WEBEHR") != -1) {
+                window.location.href = HTTPorHTTPS + "://" + splitURL[2] + "/WebHmis/Account/" + FormName;
+            }
+        }
+    </script>
+
+    <%--Priyanka 28/02/2026--%>
+    <script>
+        $(document).ready(function () {
+            debugger;
+            /*GetPatNotes(sessionStorage.getItem("PatTRANNO"), sessionStorage.getItem('PatMRNO'));*/
+
+            $("input[name='NoteType']").on('change', function () {
+                filterRowsByNoteType();
+            });
+        });
+
+        function filterRowsByNoteType() {
+            var selectedVal = $("input[name='NoteType']:checked").val();
+
+            $("#tblNotesList tr").each(function () {
+                var bgColor = $(this).css("background-color");
+
+                function rgbToHex(rgb) {
+                    var result = /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/.exec(rgb);
+                    return result ? "#" +
+                        ("0" + parseInt(result[1], 10).toString(16)).slice(-2) +
+                        ("0" + parseInt(result[2], 10).toString(16)).slice(-2) +
+                        ("0" + parseInt(result[3], 10).toString(16)).slice(-2) : rgb;
+                }
+
+                var hexColor = rgbToHex(bgColor).toLowerCase();
+
+                if (selectedVal === "P") {
+                    // Show only rows with background color #f4e1ef
+                    if (hexColor === "#f4e1ef") {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                } else if (selectedVal === "R") {
+                    // Show only rows without background color (i.e., empty string or transparent)
+                    if (hexColor === "#f4e1ef" || hexColor === "transparent") {
+                        if (hexColor === "#f4e1ef") {
+                            $(this).hide();
+                        } else {
+                            $(this).show();
+                        }
+                    } else {
+                        $(this).show();
+                    }
+                } else {
+                    // If other, show all rows (optional)
+                    $(this).show();
+                }
+            });
+        }
+        filterRowsByNoteType();
+    </script>
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition skin-blue sidebar-mini fixed">
+
+    <div class="wrapper" style="background-color: #ecf0f5;">
+
+        <!-- Main Header -->
+        <header class="main-header">
+
+	 <% if (("" + Session["REDIRECTHMIS"]).ToString().Trim() == "Y")
+      { %>
+
+  <div id="QuickredirectPatList"
+      style="float: left; margin-top: 8px; margin-left: 5px; cursor: pointer;"
+      onclick="GoToHome('ModuleList')">
+
+      <img src="../Images/Singlepage/HmisRedirectionNurse.png"
+          style="height: 26px; width: 26px;" />
+
+  </div>
+
+  <% } %>
+             <img id="menuDots" style="float: right; margin-top: 15px; margin-right: 5px;cursor:pointer" src="<%=ResolveUrl("~/Images/menuDots.png")%>" title="Go To History">
+          
+            <div id="sideList" class="sdList" style="background-color: #f8f9fb;">
+                 
+                 <%-- <ul>
+                    <li id="lishistory" style="margin-left: -15px; margin-top: 5px;background-color:#fae3f0;" title="Alt+H">
+                        <label style="cursor:pointer;"><u>H</u>istory</label></li>
+                     <li id="lisattach" style="margin-left: -15px; margin-top: 5px;background-color: #ddf8dd;cursor:pointer;" title="Alt+N">
+                       <label style="cursor:pointer;">Attachme<u>n</u>t</label></li>
+                        <li id="lisVitalHistory" class="list" style="margin-left: -15px; margin-top: 5px;background-color: #fae3f0;;cursor:pointer;"  title="Alt+T">
+                          <label style="cursor:pointer;">Vi<u>t</u>al History</label></li>
+                </ul>--%>
+
+              
+
+                <ul class="rightPanelul" style="list-style-type: none">
+                    <%--id defined by --%>
+                        <!--kavita 18-01-19-->
+                     <li id="lishome" class="list" style="margin-left: -15px; margin-top: 5px;display:none;">
+                      <span class="liIconSpan"><img src="../Images/house.png" /></span> <label class="lblRightMenu">Home</label></li>
+                    <!--kavita 18-01-19-->
+                    <li id="lishistory" class="list" style="margin-left: -15px; margin-top: 5px;" title="Alt+H">
+                      <span class="liIconSpan"><img src="../Images/history.png"/></span> <label class="lblRightMenu"><u>H</u>istory</label>&nbsp;<label id="lblHistoryCnt" class="lblCnt"></label></li>
+           
+                        <li id="lisVitalHistory" class="list" style="margin-left: -15px; margin-top: 5px;cursor:pointer;" title="Alt+T">
+                          <span class="liIconSpan"><img src="../Images/bp.png"/></span><label   class="lblRightMenu">Vi<u>t</u>al History</label>&nbsp;<label id="lblVitalHisCnt"   class="lblCnt"></label></li>
+                   
+                     <% if (("" + Session["SHOWPRESYN"].ToString().Trim()) == "Y")
+              {%> 
+                     <li id="lisClinicalHistory" class="list" style="margin-left: -15px; margin-top: 5px;cursor:pointer;" title="Alt+C">
+                          <span class="liIconSpan"><img src="../Images/bp.png"/></span><label   class="lblRightMenu">Clinical History</label>&nbsp;<label id="lblClinicalHisCnt" class="lblCnt"></label></li>
+                    <%} %>
+
+
+                     <li id="lisVaccination" class="list" style="margin-left: -15px; margin-top: 5px;cursor:pointer;">
+                          <span class="liIconSpan"><img src="../Images/vaccineNew.png"/></span><label   class="lblRightMenu">Vaccination</label>&nbsp;<label id="lblVaccinationCnt" class="lblCnt"></label></li><%----%>
+
+                     <hr class='liSeparator'/>
+                    <li id="lisattach" class="list" style="margin-left: -15px; margin-top: 5px;cursor:pointer;"  title="Alt+N" >
+                         <span class="liIconSpan"><img src="../Images/attach-icon.png"/></span><label  class="lblRightMenu">Attachment</label><label class="altText">Alt+N</label></li>
+
+                        <%-- added by --%>
+                    <li id="lisDocuments" class="list" style="margin-left: -15px; margin-top: 5px;cursor:pointer;" title="Alt+Z">
+                          <span class="liIconSpan"><img src="../Images/documents-symbol.png"/></span><label  class="lblRightMenu">Documents</label><label class="altText">Alt+Z </label></li><!--title kavita-->
+                    <li id="lisPatientClinicalHistory" class="list" style="margin-left: -15px; margin-top: 5px; cursor: pointer;"onclick="openChemoPlanning()">
+                        <span class="liIconSpan">
+                            <img src="../Images/documents-symbol.png" /></span><label class="lblRightMenu">Patient Clinical Details</label>
+                    </li>
+                </ul>
+
+                      <div id="NewAddNotes" style="margin-top: 12%;">  
+                    <div style="border-top: 1px solid #d6d2d2; border-bottom: 1px solid #d6d2d2; padding: 10px 10px 10px 10px;" id="NewNotesDiv">
+                        <div style="float: left; width: 40%;"  class="divButtonPlus">
+                            <div><i class="fa fa-plus fa-2x divPlusNote" title="add notes" id="btnAddNotes"></i></div>
+                        </div>
+                        <div style="font-size: 14px">
+                            <label>Add Notes</label></div>
+                    </div>
+                    <div id="dialog" title="Add Notes" style="display:none">
+                       <div>
+                           <div><textarea  cols="34" rows="3" placeholder="Enter Notes" maxlength="1000" id="txtNotes"> </textarea></div>     
+                           <div>
+                               <table>
+                                   <tr>
+                                       <td> <label><input type="radio" name="NoteType" id='rbtnPrivate' value='R' checked />Private</label>
+                                            <label style="width: 100px;"><input type="radio" name="NoteType" id='rbtnPublic' value="P" />Public</label> 
+
+                                       </td>
+                                        <td>
+                                            <button type="button" id="btnSaveNotes" style="background-color: rgb(57, 142, 189); height: 27px; width: 60px; border-radius: 10px 10px 10px 10px; font-weight: bold; font-size: 12px; color: white">Save</button>
+                                            <button type="button" id="btnClearNotes" style="background-color: rgb(57, 142, 189); height: 27px; width: 60px; border-radius: 10px 10px 10px 10px; font-weight: bold; font-size: 12px; color: white">Clear</button>
+                                        </td>
+                                   </tr>
+                               </table>
+                             
+
+                           </div> 
+                                              
+                       </div>
+                        <hr />
+                        <div id="showNotesDiv" style="overflow-x:hidden;height:211px;" >
+                            <table id="tblNotesList" style="width:100%;border-collapse:collapse;">
+
+                            </table>
+                        </div>
+                        <%--<div> 
+                            <div class="col-md-2" style='float: left;font-size:12px'>Note-</div><div class='square'></div>
+                            &nbsp;&nbsp;<span style="font-size:12px;margin-left:-11px;" class="col-md-3">Public Note</span>
+                            <div class="col-md-7" style="text-align:center;background-color:aliceblue;margin-top:-2px" id="ViewAllNotesDiv">
+                        </div>
+                        </div>--%>
+                        <div class="align-items-center" style="font-size: 12px;">
+                            <div class="col-md-2" style="display:none;">
+                                Note-
+                            </div>
+                            <div class="col-md-1" style="margin-right: 10px;">
+                                <div class="square"></div>
+                            </div>
+                            <div style="width:50%;">
+                                Public Note
+                            </div>
+                            <div class="col-md-6 text-center" style="background-color: aliceblue; margin-top: -2px;" id="ViewAllNotesDiv">
+                                <%-- <label>View All Notes</label>--%>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+ 
+          <% if (("" + Session["SHOWPRESYN"].ToString().Trim()) == "Y")
+              {%> 
+                   
+                 <div id="SearchPatients" style="margin-top:200px;">
+                     <div style="border-top: 1px solid #d6d2d2; border-bottom: 1px solid #d6d2d2; padding: 10px 10px 10px 10px;" id="SearchPatDiv">
+                        <div style="float: left; width: 35%;"  class="divButtonPlus"> 
+                            <div><i class="fa fa-search fa-2x" title="Search patient" id="btnSearchPatient"></i></div>
+                        </div>
+                        <div style="font-size: 14px">
+                            <label>Search patient</label></div>
+                    </div>
+                    <div id="searchPatDialog" style="display:none;bottom:0px;">
+                       <div style="border-bottom: 1px solid rgba(0,0,0,.1);border: 1px solid transparent">
+                          <%-- <div class='form-group has-feedback'><input type='text' style='height:40px;width:100%;text-indent: 10px' class='form-control' id='txtPatSearchNotAppntd'  placeholder='MRNo,Name,Empcode,Dependent No'/><span class='fa fa-search form-control-feedback spanSearchPatCls'  id="spanSearchPat" title="search patient" ></span></div>--%>
+
+                           <div class='form-group has-feedback'>
+                               <input type='text'
+                                   style='height: 40px; width: 100%; text-indent: 10px'
+                                   class='form-control'
+                                   id='txtPatSearchNotAppntd'
+                                   placeholder='MRNo,Name,Empcode,Dependent No' />
+
+                               <span class='fa fa-search form-control-feedback spanSearchPatCls'
+                                   id="spanSearchPat"
+                                   title="search patient"
+                                   style="cursor: pointer;"></span>
+                           </div>
+
+
+                           <%--<div><input  type="text" placeholder="Enter mr no or name" aria-label="Enter mr no or name" maxlength="500" id="txtSearchPat" /></div>                                      --%>
+                       </div>
+                        <hr />
+                        <div id="showSearchedList" style="overflow-x:hidden;" >
+                            <table id="tblPatList" style="width:100%;border-collapse:collapse;">
+                                     
+                            </table>
+                        </div>                        
+                    </div>
+                </div>
+                <%} %>
+
+            </div>
+         
+            <!-- Logo -->
+
+
+            <!-- Header Navbar -->
+
+            <%--  <a href="#" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini">
+                    <img src="<%=ResolveUrl("~/Images/jupiterLogo.png")%>" /></span>
+                <!-- logo for regular state and mobile devices -->
+
+                <span class="logo-lg">
+                    <img src="<%=ResolveUrl("~/Images/jupiterLogo.png")%>" />Hospital Name</span>
+            </a>--%>
+
+            <!-- Sidebar toggle button-->
+
+            <!-- Navbar Right Menu -->
+            <%--  <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+
+                    <!-- User Account: style can be found in dropdown.less  Session("PortalEmpName")-->
+                    <li>
+                        <span>Dr. <%:Session["gDoctName"]%></span>
+                    </li>
+                    <!-- Control Sidebar Toggle Button -->
+                    <li title="Home">
+
+                        <a href="<%=ResolveUrl("~/DoctorDesk/PatientEntry")%>" id="lnkSearch"><i class="fa fa-home fa-lg" title="Home"></i></a>
+                    </li>
+                      <li title="Change Password">
+                            <a id="lnkAddComp" class="pull-right" data-toggle="modal" data-target="#mdAddChangePassword">
+                                                                <i class="fa fa-cogs fa-lg" title="Change Password"></i></a>
+                    </li>
+                    <li title="Sign Out">
+                        <a href="<%=ResolveUrl("~/Account/Login")%>"><i class="fa fa-sign-out fa-lg" title="Sign Out"></i></a>
+                    </li>
+                </ul>
+            </div>--%>
+
+
+            <%--    <div class="dropdown" style="float:left;">
+                      <button class="dropbtn"> <i class="fa fa-bars" style="color: white;"></i> </button>
+                      <div class="dropdown-content">
+                    
+                        <a href="<%=ResolveUrl("~/DoctorDesk/PatientEntry")%>" id="lnkSearch"><i class="fa fa-home fa-lg" title="Home"></i></a>
+                    
+                          </div>
+                 </div>--%>
+            <div id="DivpatDtls" style="float: right; color: white;">
+                <div style="float: left; margin-right: 10px;">
+                    <i title="add notes" style="font-size: 34px; color: #74f165;" id="btnwhtsup"></i>
+                </div>
+                <div style="float: right;margin-right:10px">
+                    <h5 style="font-weight: 600; font-size: 13px; line-height: 0.5; padding-right: 2px;"></h5>
+                    <h6 style="line-height: 0.3;">
+                        <i class="fa fa-circle" style="color: lightgray; font-size: 0.6em; vertical-align: middle; margin-right: 5px; display: none"></i>
+                        <label id="lblGender" style="line-height: 0.3; font-size: 12px;"></label>
+                        <label id="lblAge" style="line-height: 0.3; font-size: 12px;"></label>
+                        <label id="CompanyNM" style="line-height: 0.3;font-size: 12px;color: orange;font-weight: 900;"></label>
+                    </h6>
+                </div>
+            </div>
+            <button id="menuBar" class="menuButton"><i class="fa fa-bars" style="color: white;"></i></button>
+            <!--Add by Karthick 20191128 -->
+             <% if (("" + Session["MOBACCESS"]).ToString() == "False" )
+                {%> 
+            <a style="color:white;font-weight:bold;margin-left: 6px;" class="" id="anchrSignOut"> 
+                              Sign Out</a>
+             <% } %>
+            <%--   <div id="sideBarMenu">--%>
+            <%--   </div>--%>
+            <div style="display:inline-block; margin-top: 10px; margin-left: 10px;">
+                <i class="fa fa-map-marker" aria-hidden="true" style="font-size: 20px; color: #ff8100; margin-right: 5px;"></i>
+                <% string SetHospitalName = OncologyEMR.DataClass.GeneralFunction.GetAppsettingUnitWiseValue("SetHospitalNm"); %> 
+                <label style="font-size: 13px; color: white; font-weight: bold; margin: 0px;" id="HospUnitLbl"> <%: !string.IsNullOrWhiteSpace(SetHospitalName) ? SetHospitalName : Convert.ToString(Session["HOSPITALNAME"]).Trim() %></label>
+                <i class="fa fa-chevron-down" aria-hidden="true" style="font-size: 13px;color:white;display:none" title="Change Unit" id="UnitIcon" onclick="OpenUnitSel()"></i>
+            </div>
+            <div id="menuList" class="modal" style="background-color: #f8f9fb;box-shadow: rgb(227 225 225) 1px -1px 2px 1px;">
+                <span id="panelClose" class="close" style="font-size: 18px; opacity: 0.5; margin-right: 5px;">
+
+                    <i class="fa fa-times fa-lg" style="width: 131%;"></i>
+
+                </span>
+                  <div id="loggedInfo">
+                    <%
+                    string logoimgurl = OncologyEMR.DataClass.GeneralFunction.GetImageUnitWise("logo.jpg");
+                    string appPath = Server.MapPath("~/");  
+                    string relativeimgPath = logoimgurl.Replace(appPath, "~/").Replace("\\", "/");
+                    %>
+                    <%--<img src="<%=ResolveUrl("~/Images/Logo.png")%>" alt="Norway" style="margin-left:5px;width: 20%">--%>
+                    <img src="<%=ResolveUrl(relativeimgPath)%>" alt="Norway" style="margin-left:5px;width: 20%">
+                    <label style="color: #eb5a04;margin-left: 30px;margin-top:14px;font-size:14px"><%:Session["staffUserName"]%></label>
+              </div>
+                <div id="doctPanel">
+                    <hr style="margin-bottom: 10px; margin-top: 0px" />
+
+                    <div class="dropdown" style="width: 100%;">
+                        <table style="width: 100%;" >
+                            <tr id="SubDoctPanel">
+                                <td style="width: 80%;">
+                                 <form autocomplete="off"> <%--  16/12/19  --%>                                 
+                                   <input type="text" id="DoctorInput" onkeyup="SearchDoctors()" placeholder="&#xF002; Search Doctor " style="height:31px;margin-left: 2%;width: 98%;border-radius: 5px; border-color: rgba(51, 122, 183, 0.55); -webkit-box-shadow: 0 8px 6px -6px black; -moz-box-shadow: 0 8px 6px -6px black; box-shadow: 0 7px 4px -6px rgb(181, 181, 181); margin-top: 2px;font-family:Arial, FontAwesome" class=" empty">
+                                </form>
+                              </td>
+                            </tr>  
+                      
+                        </table>
+                    </div>
+
+
+                    <div class="btn-group btn-toggle1" id="divTodayYest" data-toggle="buttons" style="width: 99%; height: 26px; margin-left: 2px;position: relative;z-index: 10;"><%--priyanka 01/03/2026--%>
+                        <label class="btn btn-default borderC active" style="width: 25%; font-size: 12px !important;">
+                            <input type="radio" name="dateType" id="rbtnToday" value="T" autocomplete="off" checked>
+                            Today
+                        </label>
+                        <label class="btn btn-default borderC" style="width: 30%; font-size: 12px !important;">
+                            <input type="radio" name="dateType" id="rbtnYesterday" value="Y" autocomplete="off">
+                            Yesterday
+                        </label>
+                        <label class="btn btn-default borderC" style="width: 45%; font-size: 12px !important;">
+                            <input type="radio" name="dateType" id="rbtnDayBefYest" value="B" autocomplete="off">
+                            Day Before
+                        </label>
+                    </div>
+
+              <div class="col-md-12" style="text-align: center;">
+                  <div>
+                      <table id="tblDoctors" class="table" style="width: 150%; background-color: white;">
+                      </table>
+                  </div>
+                  <input id="hdnDoctCode" type="hidden" />
+              </div>
+                    <div id="btnsDiv" class="btn-group btn-group-justified" style="margin-top: -15px;"></div>
+
+                </div>
+                <div id="patList">
+                    <div id="DivPatGrid">
+                    </div>
+                   <%-- <div style="margin-top: 30px; padding: 10px; border: 1px solid #337ab7; background-color: #f9f9f9; font-family: Arial, sans-serif; font-size: 12px;">
+                        <strong style="font-weight: 800; margin-right: 10px;">Note:</strong>
+
+                        <span style="color: green; font-weight: bold; margin-right: 10px;">NW</span> - New,
+                        <span style="color: green; font-weight: bold; margin-left: 10px; margin-right: 10px;">FU</span> - Follow Up,
+    
+                         <br>
+
+                        <span style="color: green; font-weight: bold; margin-left: 49px;">RR</span> - Review with Report
+                    </div>--%>
+
+                </div>
+
+                <div style="clear:both;"></div>
+                <div style="margin-bottom: 10px; padding: 10px; border: 1px solid #337ab7; background-color: #f9f9f9; font-family: Arial, sans-serif; font-size: 12px;">
+                    <strong style="font-weight: 800; margin-right: 10px;">Note:</strong>
+                    <span style="color: green; font-weight: bold; margin-right: 10px;">NW</span> - New,
+                    <span style="color: green; font-weight: bold; margin-left: 10px; margin-right: 10px;">FU</span> - Follow Up,
+                    <br>
+                    <span style="color: green; font-weight: bold; margin-left: 49px;">RR</span> - Review with Report
+                </div>
+
+                 <div style="display:none" id="labelForInactive"> 
+                     <div class="tsStatus" style="background-color: #fd4d00 !important;"></div>
+                     <label class="LBLFormat" style="margin-left:5%">Inactive Records</label>
+                 </div>
+
+<table id="tblMasterSetUplist" style="display:none;">
+                     <thead><tr style="border: 1px solid black;background-color: #fafdc2;"><th style="border-right: 1px solid black;">Name</th><th>Gender</th><th style="border-left: 1px solid black;">Age</th></tr></thead>
+                          <caption style="text-align:center;font-size:16px;font-weight:bold;color:black">Set up List</caption>
+                            <tbody>
+                             
+                            </tbody>
+                  </table>
+            </div>
+        </header>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div id="secCont" class="content-wrapper">
+            <div class="row">
+                <div class="modal fade" id="mdAddChangePassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document" style="width: 30%">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myCompModalLabel">Change Password</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="list-group">
+                                    <div class="list-group-item">
+                                        <input type="text" id="txtUid" class="form-control input-sm" placeholder="User ID" />
+                                    </div>
+                                    <div class="list-group-item">
+                                        <input type="password" id="txtOPwd" class="form-control input-sm" placeholder="Current Password" />
+                                    </div>
+                                    <div class="list-group-item">
+                                        <input type="password" id="txtNPwd" class="form-control input-sm" placeholder="New Password" />
+                                    </div>
+                                    <div class="list-group-item">
+                                        <input type="password" id="txtConfirmPwd" class="form-control input-sm" placeholder="Confirm Password" />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="btnClosePass" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                                <button type="button" id="btnPass" class="btn btn-primary btn-sm">Save </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Header (Page header) -->
+            <asp:ContentPlaceHolder runat="server" ID="Head">
+            </asp:ContentPlaceHolder>
+
+
+            <!-- Main content -->
+            <section class="content" style="padding-bottom: 1px;width:100%"> <%--4/24/19--%>
+
+                <asp:ContentPlaceHolder runat="server" ID="MainContent">
+                </asp:ContentPlaceHolder>
+
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Main Footer -->
+        <%--  <div id="footerFlow" style="    position: fixed;    bottom: 0px;    left: 0;   right: 0;">
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="pull-right hidden-xs">
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2017 <a href="#">Company name</a>.</strong> All rights reserved.
+ 
+        </footer>
+            </div>--%>
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+        </aside>
+        <div id="iframe" style="display: none; width: 100%; height: 100%;"></div>
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <div id="popupAlertOverlay" class="popup-overlay" style="display: none"></div>
+
+    <div id="popupOverlay" class="popup-overlay" style="display: none;"></div>
+
+    <div id="RightMenuFormSlidePopup" class="DivRightMenuFormSlidePopup"></div>
+
+
+
+     <%-- Toaster Container --%>
+ <div id="ToasterContainer" class="DivToasterContainer" style="display: none"></div>
+    
+    <div id="PatientClinicalPopup" style="display: none;">
+        <div id="pATIENTcLINICALDETAILSBody"></div>
+    </div>
+</body>
+</html>

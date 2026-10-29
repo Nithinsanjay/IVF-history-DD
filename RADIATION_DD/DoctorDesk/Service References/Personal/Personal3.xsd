@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.Personal" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.Personal" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.3/WebHRMSServiceNUnit/Personal.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic" />
+  <xs:complexType name="BL_Shift">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/BL_Logic" base="q1:BL_MastersCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Desc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OutTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShiftHrs" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Shift" nillable="true" type="tns:BL_Shift" />
+  <xs:complexType name="BL_OnCallDoctor">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CallDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CallDoct1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CallDoct2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClinicCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OnCallDoctor" nillable="true" type="tns:BL_OnCallDoctor" />
+  <xs:complexType name="BL_PersonnelComProp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EditYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExcelYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAdress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrintYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rights" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShowYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranPrintYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tranmode" type="xs:int" />
+      <xs:element minOccurs="0" name="cancelYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="verifyYn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_PersonnelComProp" nillable="true" type="tns:BL_PersonnelComProp" />
+  <xs:complexType name="BL_Holiday">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/BL_Logic" base="q2:BL_MastersCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HldayDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HldayRes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HldayType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OptnHlday" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Holiday" nillable="true" type="tns:BL_Holiday" />
+  <xs:complexType name="BL_PayScale">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/BL_Logic" base="q3:BL_MastersCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Basic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PPPayFixed" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_PayScale" nillable="true" type="tns:BL_PayScale" />
+  <xs:complexType name="BL_Training">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MandtrYn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaidYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrainingCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrainingNm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranMode" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_Training" nillable="true" type="tns:BL_Training" />
+  <xs:complexType name="BL_Memo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/BL_Logic" base="q4:BL_MastersCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MemoType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StdText" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Memo" nillable="true" type="tns:BL_Memo" />
+  <xs:complexType name="BL_EmpType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/BL_Logic" base="q5:BL_MastersCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EndOfServType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoticePeriod" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoticeType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoticeYorN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayPeriod" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayPeriodType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServPeriod" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_EmpType" nillable="true" type="tns:BL_EmpType" />
+  <xs:complexType name="BL_LeaveType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/BL_Logic" base="q6:BL_MastersCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllowInNoticeYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AnnualDays" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Applicable" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CarryDays" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CarryFrwd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckBal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Debit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Deductal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Encash" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EncashDays" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GapPrd" type="xs:decimal" />
+          <xs:element minOccurs="0" name="GapUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HalfDay" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LeaveType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Luggallwn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaxLeave" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaxTimes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MinLeave" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoticePrd" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NoticeUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayPeriod" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PaybleYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reimburse" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidityDays" type="xs:decimal" />
+          <xs:element minOccurs="0" name="test" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_LeaveType" nillable="true" type="tns:BL_LeaveType" />
+  <xs:complexType name="BL_Resignation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MonthDays" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoticeDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoticePriod" type="xs:int" />
+          <xs:element minOccurs="0" name="NoticeYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResigDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResigType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Resignation" nillable="true" type="tns:BL_Resignation" />
+  <xs:complexType name="BL_ContractorsMst">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContPer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContPin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContTel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Contadd1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Contadd2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Contadd3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Conttype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KEMInchrg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_ContractorsMst" nillable="true" type="tns:BL_ContractorsMst" />
+  <xs:complexType name="BL_Contracts">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="ContCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContEndDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContStartDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Contracts" nillable="true" type="tns:BL_Contracts" />
+  <xs:complexType name="BL_EmpTransfer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NewDeptCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewDesigCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewDiviCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewRoastAreaCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewSecCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldDeptCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldDesigCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldDiviCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldRoastAreaCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldSecCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransferDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_EmpTransfer" nillable="true" type="tns:BL_EmpTransfer" />
+  <xs:complexType name="BL_EmpIncident">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaimDet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InceidentCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LostDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LostTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReportedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReturnDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Witness" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_EmpIncident" nillable="true" type="tns:BL_EmpIncident" />
+  <xs:complexType name="BL_EmpContractReview">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApprovedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewContEndDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewContRevDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewEmpType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldContEndDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldContRevDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldEmpType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecommentBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_EmpContractReview" nillable="true" type="tns:BL_EmpContractReview" />
+  <xs:complexType name="BL_EmpDiscipline">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DiscipTypeCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IssueDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IssueTm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IssuedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefLetterNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarnindStageCD" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_EmpDiscipline" nillable="true" type="tns:BL_EmpDiscipline" />
+  <xs:complexType name="BL_JobApplication">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AppDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AppTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApplicantName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COORemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrentSal" type="xs:double" />
+          <xs:element minOccurs="0" name="DeptCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmpQualifiCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpectedSal" type="xs:double" />
+          <xs:element minOccurs="0" name="FresherOrExp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HODRemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HRPersonCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HRRemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InterSelStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InterviewDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InterviewTM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InterviewerCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JoiningTmRequired" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NegotiableYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OfferedDesig" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OfferedSal" type="xs:double" />
+          <xs:element minOccurs="0" name="PostCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PresentCompNm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PresntDesigCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuestListXML" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalExp" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_JobApplication" nillable="true" type="tns:BL_JobApplication" />
+  <xs:complexType name="BL_MemoPreparation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApprovedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MemoDescript" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MemoTypeCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_MemoPreparation" nillable="true" type="tns:BL_MemoPreparation" />
+  <xs:complexType name="BL_OPDrRoster">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DoctCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DoctName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FrmDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Locum1DoctCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Locum1FrmDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Locum1ToDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Locum2DoctCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Locum2FrmDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Locum2ToDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToDt" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OPDrRoster" nillable="true" type="tns:BL_OPDrRoster" />
+  <xs:complexType name="BL_TrainingDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApprovedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CourseDet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeptCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FrmDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FrmTM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InstituteCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MandatoryYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SponserCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToTM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TrainGivenBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TrainingCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlEmpList" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_TrainingDetail" nillable="true" type="tns:BL_TrainingDetail" />
+  <xs:complexType name="BL_LeaveEntry">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="xmlLeaveList" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_LeaveEntry" nillable="true" type="tns:BL_LeaveEntry" />
+  <xs:complexType name="BL_Section">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/BL_Logic" base="q7:BL_MastersCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DeptCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiviCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HOD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoasteringArea" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Section" nillable="true" type="tns:BL_Section" />
+  <xs:complexType name="BL_ShiftEntry">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EmpListXml" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostingArea" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StandarShifr" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_ShiftEntry" nillable="true" type="tns:BL_ShiftEntry" />
+  <xs:complexType name="BL_LeaveApplication">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="COYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FrmLvDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HalfDayTm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HalfDayYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LeaveType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MobileNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoOfLeaveDays" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhoneNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecommendBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RejectRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SanctionBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToLvDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XmlCOLeave" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_LeaveApplication" nillable="true" type="tns:BL_LeaveApplication" />
+  <xs:complexType name="BL_EmployeeDetails">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AdharNM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AdharNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AdminYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BasicAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="BldGrpCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClassifCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConfirmDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContEndDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DOB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DOJ" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeptCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesigCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiviCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ESINo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmpTypCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FatherOrSposeNM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HOD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HandicapYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HealthInsure" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HealthInsureNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImageData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="IssueDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IssuePlace" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JDDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KinAddress1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KinAddress2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KinAddress3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KinEmailID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KinFullNM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KinPhoneNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KinPinCd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LIN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaritalStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MarriageDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MedCheckCatg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MedicalRecord" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MedicalYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MedicheckYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MobileNo1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MobileNo2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MothTongueCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NHIFNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NHIFNoYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NSSFNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NSSFNoYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NSSNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NationalityCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NurseYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PANName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PFNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PanNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PassExpiryDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PassportNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayScaleCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayScaleTypeCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayeeYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PensionContNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PensionDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PinCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PromotionDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropConfirmDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RejoinYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReligCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RetiringAge" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RetiringDt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReviewDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoasteringCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SaluCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SectionCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpeedDial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpouseName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TelNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TraineeDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UAN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WPExpDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkPermitYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="perAddress1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="perAddress2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="perAddress3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="perEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="perMobileNo1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="perMobileNo2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="perPinCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="perTelNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_EmployeeDetails" nillable="true" type="tns:BL_EmployeeDetails" />
+  <xs:complexType name="BL_DebitCreditLeaves">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LeaveTypeCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoOfDays" type="xs:double" />
+          <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XmlCreditApplList" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_DebitCreditLeaves" nillable="true" type="tns:BL_DebitCreditLeaves" />
+  <xs:complexType name="BL_EmpAppraisal">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AREASFRDEVELPMNT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COMMENTS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EMPCOMMENTS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EVALUATORBY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EVALUATORDESIGCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherDev" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Perform" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="STRENTHS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TOTALRATING" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlQuestList" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_EmpAppraisal" nillable="true" type="tns:BL_EmpAppraisal" />
+  <xs:complexType name="BL_EmployeeRoster">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AreaCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XmlList" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_EmployeeRoster" nillable="true" type="tns:BL_EmployeeRoster" />
+  <xs:complexType name="BL_TrngFeedQuestionMst">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/BL_Logic" base="q8:BL_MastersCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="QuestListxml" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_TrngFeedQuestionMst" nillable="true" type="tns:BL_TrngFeedQuestionMst" />
+  <xs:complexType name="BL_TrainingFeedback">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GradeXML" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TrainingTransNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_TrainingFeedback" nillable="true" type="tns:BL_TrainingFeedback" />
+  <xs:complexType name="BL_DepartmentMaster">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/BL_Logic" base="q9:BL_MastersCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FloorCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HRYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_DepartmentMaster" nillable="true" type="tns:BL_DepartmentMaster" />
+  <xs:complexType name="BL_Absconding">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AbsconDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Absconding" nillable="true" type="tns:BL_Absconding" />
+  <xs:complexType name="BL_HodList">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/BL_Logic" base="q10:BL_MastersCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CONFIRMNOTIF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EARLYNOTIF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EMPCODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LATENOTIF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LEAVENOTIF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MAILID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ROASTERMANAGER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ROASTERNOTIF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SNNOTIF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_HodList" nillable="true" type="tns:BL_HodList" />
+  <xs:complexType name="BL_Oncall">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EMPCODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FROMDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HODREMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HRREMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MRNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NOOFDAYS" type="xs:int" />
+          <xs:element minOccurs="0" name="PROCENM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TODATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TRANTYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TYPE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Oncall" nillable="true" type="tns:BL_Oncall" />
+  <xs:complexType name="BL_COAPPROVAL">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EMPCODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EMPREASON" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FROMDT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HODREMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HRREMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NOOFDAYS" type="xs:int" />
+          <xs:element minOccurs="0" name="TODATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TYPE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_COAPPROVAL" nillable="true" type="tns:BL_COAPPROVAL" />
+  <xs:complexType name="BL_SNAPPROVAL">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EMPCODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HODREMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HRREMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REASON" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SNEMPXML" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TRANDATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TRANTIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TYPE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_SNAPPROVAL" nillable="true" type="tns:BL_SNAPPROVAL" />
+  <xs:complexType name="BL_LATEAPPROVAL">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EMPCODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HODREMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HRREMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LATEEMPXML" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REASON" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TRANDATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TRANTIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TYPE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_LATEAPPROVAL" nillable="true" type="tns:BL_LATEAPPROVAL" />
+  <xs:complexType name="BL_Circular">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CircularType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="year" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Circular" nillable="true" type="tns:BL_Circular" />
+  <xs:complexType name="BL_LeavePost">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_PersonnelComProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PostData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranYear" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_LeavePost" nillable="true" type="tns:BL_LeavePost" />
+</xs:schema>

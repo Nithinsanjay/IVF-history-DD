@@ -1,0 +1,1550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="NursingStation" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_INursingStation_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/NursingStation.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/NursingStation.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/NursingStation.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/NursingStation.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/NursingStation.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INursingStation_DischargeNotifTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DischargeNotifTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_DischargeNotifTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DischargeNotifTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetLabTestLsttWithTAT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabTestLsttWithTAT" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetLabTestLsttWithTAT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabTestLsttWithTATResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_BedTransferNotifTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:BedTransferNotifTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_BedTransferNotifTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BedTransferNotifTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDischargeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDischargeList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDischargeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDischargeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_BedVaccancyTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:BedVaccancyTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_BedVaccancyTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BedVaccancyTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_DischrgChkLstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DischrgChkLstTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_DischrgChkLstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DischrgChkLstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_EmergencyChkLstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmergencyChkLstTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_EmergencyChkLstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmergencyChkLstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetEmergChkLstDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmergChkLstDt" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetEmergChkLstDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmergChkLstDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetEmergencyChkList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmergencyChkList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetEmergencyChkList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmergencyChkListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDischrgChkDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDischrgChkDt" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDischrgChkDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDischrgChkDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDischrgChkList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDischrgChkList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDischrgChkList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDischrgChkListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetNsBordList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNsBordList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetNsBordList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNsBordListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetIPServiceLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPServiceLst" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetIPServiceLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPServiceLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetCasIPServiceLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasIPServiceLst" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetCasIPServiceLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasIPServiceLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_OrderBookingTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrderBookingTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_OrderBookingTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrderBookingTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_CasualOrderBookTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CasualOrderBookTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_CasualOrderBookTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CasualOrderBookTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetOrderBookList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderBookList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetOrderBookList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderBookListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetOrderBookTestDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderBookTestDt" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetOrderBookTestDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderBookTestDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_IPServBookTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:IPServBookTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_IPServBookTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IPServBookTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_CasIPServBookTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CasIPServBookTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_CasIPServBookTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CasIPServBookTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetIPMulDrShrDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPMulDrShrDt" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetIPMulDrShrDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPMulDrShrDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetCasMulDrShrDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasMulDrShrDt" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetCasMulDrShrDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasMulDrShrDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_CancelServBooking_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelServBooking" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_CancelServBooking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelServBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_CasCancelServBooking_InputMessage">
+    <wsdl:part name="parameters" element="tns:CasCancelServBooking" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_CasCancelServBooking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CasCancelServBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_CancelOrderTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelOrderTest" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_CancelOrderTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelOrderTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_SaveDoctVisit_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDoctVisit" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_SaveDoctVisit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDoctVisitResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDoctVisit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctVisit" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDoctVisit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctVisitResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetWardCensusDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWardCensusDet" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetWardCensusDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWardCensusDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_PreOperChkLstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PreOperChkLstTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_PreOperChkLstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PreOperChkLstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPreOperChkList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreOperChkList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPreOperChkList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreOperChkListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPreOperChkLstDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreOperChkLstDt" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPreOperChkLstDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreOperChkLstDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPendngOrderAndTests_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendngOrderAndTests" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPendngOrderAndTests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendngOrderAndTestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_IPIndentSaveUpCnVfyClo_InputMessage">
+    <wsdl:part name="parameters" element="tns:IPIndentSaveUpCnVfyClo" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_IPIndentSaveUpCnVfyClo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IPIndentSaveUpCnVfyCloResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetIPIndentDetailsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPIndentDetailsList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetIPIndentDetailsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPIndentDetailsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetIPIndentLstToIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPIndentLstToIssue" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetIPIndentLstToIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPIndentLstToIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetMtrlHlpUsrCntrlData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMtrlHlpUsrCntrlData" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetMtrlHlpUsrCntrlData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMtrlHlpUsrCntrlDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetIpMtrlHlpUsrCntrlData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIpMtrlHlpUsrCntrlData" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetIpMtrlHlpUsrCntrlData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIpMtrlHlpUsrCntrlDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetMtrlInfoStoTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMtrlInfoStoTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetMtrlInfoStoTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMtrlInfoStoTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetMaterialsToIndent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialsToIndent" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetMaterialsToIndent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialsToIndentResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_PatientDietTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PatientDietTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_PatientDietTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PatientDietTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDietDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDietDetails" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDietDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDietDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_DietChngReqTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DietChngReqTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_DietChngReqTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DietChngReqTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_FoodItemOrderTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:FoodItemOrderTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_FoodItemOrderTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FoodItemOrderTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDietFoodItemOrderList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDietFoodItemOrderList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDietFoodItemOrderList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDietFoodItemOrderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPendingOrderCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingOrderCount" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPendingOrderCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingOrderCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_CheckPHIPDUE_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPHIPDUE" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_CheckPHIPDUE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPHIPDUEResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetOrderTestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderTestList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetOrderTestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderTestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDiscProDoctList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiscProDoctList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDiscProDoctList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiscProDoctListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_SaveDischageProcessing_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDischageProcessing" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_SaveDischageProcessing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDischageProcessingResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDisProcessNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisProcessNotification" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDisProcessNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisProcessNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPatientPendingReports_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientPendingReports" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPatientPendingReports_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientPendingReportsResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_SavePendingReportTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePendingReportTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_SavePendingReportTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePendingReportTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetNSPendingPatRptList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNSPendingPatRptList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetNSPendingPatRptList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNSPendingPatRptListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetNSPendingPatRptDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNSPendingPatRptDetails" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetNSPendingPatRptDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNSPendingPatRptDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_UPDATE_DischageProcessing_InputMessage">
+    <wsdl:part name="parameters" element="tns:UPDATE_DischageProcessing" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_UPDATE_DischageProcessing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UPDATE_DischageProcessingResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_OTBookingRequestTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:OTBookingRequestTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_OTBookingRequestTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OTBookingRequestTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetOTBookRequestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTBookRequestList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetOTBookRequestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTBookRequestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetSurgMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgMstList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetSurgMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPatListToAccept_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatListToAccept" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPatListToAccept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatListToAcceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_AcceptPatAtWard_InputMessage">
+    <wsdl:part name="parameters" element="tns:AcceptPatAtWard" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_AcceptPatAtWard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AcceptPatAtWardResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_SaveBedAllocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBedAllocation" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_SaveBedAllocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBedAllocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetBedAllocateData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedAllocateData" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetBedAllocateData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedAllocateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_VirtualBedTransferTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:VirtualBedTransferTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_VirtualBedTransferTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VirtualBedTransferTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_VirtualBedTransferInDepartTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:VirtualBedTransferInDepartTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_VirtualBedTransferInDepartTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VirtualBedTransferInDepartTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetVirtualBedTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVirtualBedTransfer" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetVirtualBedTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVirtualBedTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetVirtualPatListToAccept_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVirtualPatListToAccept" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetVirtualPatListToAccept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVirtualPatListToAcceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPreOPPatientOnloadDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreOPPatientOnloadDetails" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetPreOPPatientOnloadDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreOPPatientOnloadDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetAcuityScore_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcuityScore" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetAcuityScore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcuityScoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetTSPrescribeTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTSPrescribeTest" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetTSPrescribeTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTSPrescribeTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetAllocInveList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllocInveList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetAllocInveList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllocInveListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_FoodIComplaintTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:FoodIComplaintTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_FoodIComplaintTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FoodIComplaintTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetFoodComplList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodComplList" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetFoodComplList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodComplListResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetScheduleInvestFrNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleInvestFrNotification" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetScheduleInvestFrNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleInvestFrNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_DietOrderSheetTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DietOrderSheetTran" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_DietOrderSheetTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DietOrderSheetTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDietOrderSheet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDietOrderSheet" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetDietOrderSheet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDietOrderSheetResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetCaseDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseDetails" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetCaseDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetNSRejRemakAlert_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNSRejRemakAlert" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetNSRejRemakAlert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNSRejRemakAlertResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetProgresNoteAlert_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgresNoteAlert" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetProgresNoteAlert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgresNoteAlertResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetChkLast24HourOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChkLast24HourOrder" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_GetChkLast24HourOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChkLast24HourOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_SaveTransferBed_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTransferBed" />
+  </wsdl:message>
+  <wsdl:message name="INursingStation_SaveTransferBed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTransferBedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="INursingStation">
+    <wsdl:operation name="DischargeNotifTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/DischargeNotifTran" message="tns:INursingStation_DischargeNotifTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/DischargeNotifTranResponse" message="tns:INursingStation_DischargeNotifTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabTestLsttWithTAT">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetLabTestLsttWithTAT" message="tns:INursingStation_GetLabTestLsttWithTAT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetLabTestLsttWithTATResponse" message="tns:INursingStation_GetLabTestLsttWithTAT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BedTransferNotifTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/BedTransferNotifTran" message="tns:INursingStation_BedTransferNotifTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/BedTransferNotifTranResponse" message="tns:INursingStation_BedTransferNotifTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDischargeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetDischargeList" message="tns:INursingStation_GetDischargeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetDischargeListResponse" message="tns:INursingStation_GetDischargeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BedVaccancyTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/BedVaccancyTran" message="tns:INursingStation_BedVaccancyTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/BedVaccancyTranResponse" message="tns:INursingStation_BedVaccancyTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DischrgChkLstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/DischrgChkLstTran" message="tns:INursingStation_DischrgChkLstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/DischrgChkLstTranResponse" message="tns:INursingStation_DischrgChkLstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmergencyChkLstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/EmergencyChkLstTran" message="tns:INursingStation_EmergencyChkLstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/EmergencyChkLstTranResponse" message="tns:INursingStation_EmergencyChkLstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmergChkLstDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetEmergChkLstDt" message="tns:INursingStation_GetEmergChkLstDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetEmergChkLstDtResponse" message="tns:INursingStation_GetEmergChkLstDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmergencyChkList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetEmergencyChkList" message="tns:INursingStation_GetEmergencyChkList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetEmergencyChkListResponse" message="tns:INursingStation_GetEmergencyChkList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDischrgChkDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetDischrgChkDt" message="tns:INursingStation_GetDischrgChkDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetDischrgChkDtResponse" message="tns:INursingStation_GetDischrgChkDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDischrgChkList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetDischrgChkList" message="tns:INursingStation_GetDischrgChkList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetDischrgChkListResponse" message="tns:INursingStation_GetDischrgChkList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNsBordList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetNsBordList" message="tns:INursingStation_GetNsBordList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetNsBordListResponse" message="tns:INursingStation_GetNsBordList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIPServiceLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetIPServiceLst" message="tns:INursingStation_GetIPServiceLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetIPServiceLstResponse" message="tns:INursingStation_GetIPServiceLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCasIPServiceLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetCasIPServiceLst" message="tns:INursingStation_GetCasIPServiceLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetCasIPServiceLstResponse" message="tns:INursingStation_GetCasIPServiceLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderBookingTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/OrderBookingTran" message="tns:INursingStation_OrderBookingTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/OrderBookingTranResponse" message="tns:INursingStation_OrderBookingTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CasualOrderBookTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/CasualOrderBookTran" message="tns:INursingStation_CasualOrderBookTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/CasualOrderBookTranResponse" message="tns:INursingStation_CasualOrderBookTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderBookList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetOrderBookList" message="tns:INursingStation_GetOrderBookList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetOrderBookListResponse" message="tns:INursingStation_GetOrderBookList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderBookTestDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetOrderBookTestDt" message="tns:INursingStation_GetOrderBookTestDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetOrderBookTestDtResponse" message="tns:INursingStation_GetOrderBookTestDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IPServBookTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/IPServBookTran" message="tns:INursingStation_IPServBookTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/IPServBookTranResponse" message="tns:INursingStation_IPServBookTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CasIPServBookTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/CasIPServBookTran" message="tns:INursingStation_CasIPServBookTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/CasIPServBookTranResponse" message="tns:INursingStation_CasIPServBookTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIPMulDrShrDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetIPMulDrShrDt" message="tns:INursingStation_GetIPMulDrShrDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetIPMulDrShrDtResponse" message="tns:INursingStation_GetIPMulDrShrDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCasMulDrShrDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetCasMulDrShrDt" message="tns:INursingStation_GetCasMulDrShrDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetCasMulDrShrDtResponse" message="tns:INursingStation_GetCasMulDrShrDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelServBooking">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/CancelServBooking" message="tns:INursingStation_CancelServBooking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/CancelServBookingResponse" message="tns:INursingStation_CancelServBooking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CasCancelServBooking">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/CasCancelServBooking" message="tns:INursingStation_CasCancelServBooking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/CasCancelServBookingResponse" message="tns:INursingStation_CasCancelServBooking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/CancelOrderTest" message="tns:INursingStation_CancelOrderTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/CancelOrderTestResponse" message="tns:INursingStation_CancelOrderTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDoctVisit">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/SaveDoctVisit" message="tns:INursingStation_SaveDoctVisit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/SaveDoctVisitResponse" message="tns:INursingStation_SaveDoctVisit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctVisit">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetDoctVisit" message="tns:INursingStation_GetDoctVisit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetDoctVisitResponse" message="tns:INursingStation_GetDoctVisit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWardCensusDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetWardCensusDet" message="tns:INursingStation_GetWardCensusDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetWardCensusDetResponse" message="tns:INursingStation_GetWardCensusDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PreOperChkLstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/PreOperChkLstTran" message="tns:INursingStation_PreOperChkLstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/PreOperChkLstTranResponse" message="tns:INursingStation_PreOperChkLstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreOperChkList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetPreOperChkList" message="tns:INursingStation_GetPreOperChkList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetPreOperChkListResponse" message="tns:INursingStation_GetPreOperChkList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreOperChkLstDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetPreOperChkLstDt" message="tns:INursingStation_GetPreOperChkLstDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetPreOperChkLstDtResponse" message="tns:INursingStation_GetPreOperChkLstDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendngOrderAndTests">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetPendngOrderAndTests" message="tns:INursingStation_GetPendngOrderAndTests_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetPendngOrderAndTestsResponse" message="tns:INursingStation_GetPendngOrderAndTests_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IPIndentSaveUpCnVfyClo">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/IPIndentSaveUpCnVfyClo" message="tns:INursingStation_IPIndentSaveUpCnVfyClo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/IPIndentSaveUpCnVfyCloResponse" message="tns:INursingStation_IPIndentSaveUpCnVfyClo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIPIndentDetailsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetIPIndentDetailsList" message="tns:INursingStation_GetIPIndentDetailsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetIPIndentDetailsListResponse" message="tns:INursingStation_GetIPIndentDetailsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIPIndentLstToIssue">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetIPIndentLstToIssue" message="tns:INursingStation_GetIPIndentLstToIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetIPIndentLstToIssueResponse" message="tns:INursingStation_GetIPIndentLstToIssue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMtrlHlpUsrCntrlData">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetMtrlHlpUsrCntrlData" message="tns:INursingStation_GetMtrlHlpUsrCntrlData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetMtrlHlpUsrCntrlDataResponse" message="tns:INursingStation_GetMtrlHlpUsrCntrlData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIpMtrlHlpUsrCntrlData">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetIpMtrlHlpUsrCntrlData" message="tns:INursingStation_GetIpMtrlHlpUsrCntrlData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetIpMtrlHlpUsrCntrlDataResponse" message="tns:INursingStation_GetIpMtrlHlpUsrCntrlData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMtrlInfoStoTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetMtrlInfoStoTran" message="tns:INursingStation_GetMtrlInfoStoTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetMtrlInfoStoTranResponse" message="tns:INursingStation_GetMtrlInfoStoTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialsToIndent">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetMaterialsToIndent" message="tns:INursingStation_GetMaterialsToIndent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetMaterialsToIndentResponse" message="tns:INursingStation_GetMaterialsToIndent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PatientDietTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/PatientDietTran" message="tns:INursingStation_PatientDietTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/PatientDietTranResponse" message="tns:INursingStation_PatientDietTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDietDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetDietDetails" message="tns:INursingStation_GetDietDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetDietDetailsResponse" message="tns:INursingStation_GetDietDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DietChngReqTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/DietChngReqTran" message="tns:INursingStation_DietChngReqTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/DietChngReqTranResponse" message="tns:INursingStation_DietChngReqTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FoodItemOrderTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/FoodItemOrderTran" message="tns:INursingStation_FoodItemOrderTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/FoodItemOrderTranResponse" message="tns:INursingStation_FoodItemOrderTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDietFoodItemOrderList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetDietFoodItemOrderList" message="tns:INursingStation_GetDietFoodItemOrderList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetDietFoodItemOrderListResponse" message="tns:INursingStation_GetDietFoodItemOrderList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingOrderCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetPendingOrderCount" message="tns:INursingStation_GetPendingOrderCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetPendingOrderCountResponse" message="tns:INursingStation_GetPendingOrderCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPHIPDUE">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/CheckPHIPDUE" message="tns:INursingStation_CheckPHIPDUE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/CheckPHIPDUEResponse" message="tns:INursingStation_CheckPHIPDUE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderTestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetOrderTestList" message="tns:INursingStation_GetOrderTestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetOrderTestListResponse" message="tns:INursingStation_GetOrderTestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscProDoctList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetDiscProDoctList" message="tns:INursingStation_GetDiscProDoctList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetDiscProDoctListResponse" message="tns:INursingStation_GetDiscProDoctList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDischageProcessing">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/SaveDischageProcessing" message="tns:INursingStation_SaveDischageProcessing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/SaveDischageProcessingResponse" message="tns:INursingStation_SaveDischageProcessing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDisProcessNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetDisProcessNotification" message="tns:INursingStation_GetDisProcessNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetDisProcessNotificationResponse" message="tns:INursingStation_GetDisProcessNotification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientPendingReports">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetPatientPendingReports" message="tns:INursingStation_GetPatientPendingReports_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetPatientPendingReportsResponse" message="tns:INursingStation_GetPatientPendingReports_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePendingReportTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/SavePendingReportTran" message="tns:INursingStation_SavePendingReportTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/SavePendingReportTranResponse" message="tns:INursingStation_SavePendingReportTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNSPendingPatRptList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetNSPendingPatRptList" message="tns:INursingStation_GetNSPendingPatRptList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetNSPendingPatRptListResponse" message="tns:INursingStation_GetNSPendingPatRptList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNSPendingPatRptDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetNSPendingPatRptDetails" message="tns:INursingStation_GetNSPendingPatRptDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetNSPendingPatRptDetailsResponse" message="tns:INursingStation_GetNSPendingPatRptDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_DischageProcessing">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/UPDATE_DischageProcessing" message="tns:INursingStation_UPDATE_DischageProcessing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/UPDATE_DischageProcessingResponse" message="tns:INursingStation_UPDATE_DischageProcessing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OTBookingRequestTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/OTBookingRequestTran" message="tns:INursingStation_OTBookingRequestTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/OTBookingRequestTranResponse" message="tns:INursingStation_OTBookingRequestTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOTBookRequestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetOTBookRequestList" message="tns:INursingStation_GetOTBookRequestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetOTBookRequestListResponse" message="tns:INursingStation_GetOTBookRequestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetSurgMstList" message="tns:INursingStation_GetSurgMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetSurgMstListResponse" message="tns:INursingStation_GetSurgMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatListToAccept">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetPatListToAccept" message="tns:INursingStation_GetPatListToAccept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetPatListToAcceptResponse" message="tns:INursingStation_GetPatListToAccept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AcceptPatAtWard">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/AcceptPatAtWard" message="tns:INursingStation_AcceptPatAtWard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/AcceptPatAtWardResponse" message="tns:INursingStation_AcceptPatAtWard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveBedAllocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/SaveBedAllocation" message="tns:INursingStation_SaveBedAllocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/SaveBedAllocationResponse" message="tns:INursingStation_SaveBedAllocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBedAllocateData">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetBedAllocateData" message="tns:INursingStation_GetBedAllocateData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetBedAllocateDataResponse" message="tns:INursingStation_GetBedAllocateData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VirtualBedTransferTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/VirtualBedTransferTran" message="tns:INursingStation_VirtualBedTransferTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/VirtualBedTransferTranResponse" message="tns:INursingStation_VirtualBedTransferTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VirtualBedTransferInDepartTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/VirtualBedTransferInDepartTran" message="tns:INursingStation_VirtualBedTransferInDepartTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/VirtualBedTransferInDepartTranResponse" message="tns:INursingStation_VirtualBedTransferInDepartTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVirtualBedTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetVirtualBedTransfer" message="tns:INursingStation_GetVirtualBedTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetVirtualBedTransferResponse" message="tns:INursingStation_GetVirtualBedTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVirtualPatListToAccept">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetVirtualPatListToAccept" message="tns:INursingStation_GetVirtualPatListToAccept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetVirtualPatListToAcceptResponse" message="tns:INursingStation_GetVirtualPatListToAccept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreOPPatientOnloadDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetPreOPPatientOnloadDetails" message="tns:INursingStation_GetPreOPPatientOnloadDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetPreOPPatientOnloadDetailsResponse" message="tns:INursingStation_GetPreOPPatientOnloadDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAcuityScore">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetAcuityScore" message="tns:INursingStation_GetAcuityScore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetAcuityScoreResponse" message="tns:INursingStation_GetAcuityScore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTSPrescribeTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetTSPrescribeTest" message="tns:INursingStation_GetTSPrescribeTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetTSPrescribeTestResponse" message="tns:INursingStation_GetTSPrescribeTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllocInveList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetAllocInveList" message="tns:INursingStation_GetAllocInveList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetAllocInveListResponse" message="tns:INursingStation_GetAllocInveList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FoodIComplaintTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/FoodIComplaintTran" message="tns:INursingStation_FoodIComplaintTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/FoodIComplaintTranResponse" message="tns:INursingStation_FoodIComplaintTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodComplList">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetFoodComplList" message="tns:INursingStation_GetFoodComplList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetFoodComplListResponse" message="tns:INursingStation_GetFoodComplList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleInvestFrNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetScheduleInvestFrNotification" message="tns:INursingStation_GetScheduleInvestFrNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetScheduleInvestFrNotificationResponse" message="tns:INursingStation_GetScheduleInvestFrNotification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DietOrderSheetTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/DietOrderSheetTran" message="tns:INursingStation_DietOrderSheetTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/DietOrderSheetTranResponse" message="tns:INursingStation_DietOrderSheetTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDietOrderSheet">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetDietOrderSheet" message="tns:INursingStation_GetDietOrderSheet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetDietOrderSheetResponse" message="tns:INursingStation_GetDietOrderSheet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetCaseDetails" message="tns:INursingStation_GetCaseDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetCaseDetailsResponse" message="tns:INursingStation_GetCaseDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNSRejRemakAlert">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetNSRejRemakAlert" message="tns:INursingStation_GetNSRejRemakAlert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetNSRejRemakAlertResponse" message="tns:INursingStation_GetNSRejRemakAlert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProgresNoteAlert">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetProgresNoteAlert" message="tns:INursingStation_GetProgresNoteAlert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetProgresNoteAlertResponse" message="tns:INursingStation_GetProgresNoteAlert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChkLast24HourOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/GetChkLast24HourOrder" message="tns:INursingStation_GetChkLast24HourOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/GetChkLast24HourOrderResponse" message="tns:INursingStation_GetChkLast24HourOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTransferBed">
+      <wsdl:input wsaw:Action="http://tempuri.org/INursingStation/SaveTransferBed" message="tns:INursingStation_SaveTransferBed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INursingStation/SaveTransferBedResponse" message="tns:INursingStation_SaveTransferBed_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INursingStation" type="tns:INursingStation">
+    <wsp:PolicyReference URI="#BasicHttpBinding_INursingStation_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DischargeNotifTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/DischargeNotifTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabTestLsttWithTAT">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetLabTestLsttWithTAT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BedTransferNotifTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/BedTransferNotifTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDischargeList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetDischargeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BedVaccancyTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/BedVaccancyTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DischrgChkLstTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/DischrgChkLstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmergencyChkLstTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/EmergencyChkLstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmergChkLstDt">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetEmergChkLstDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmergencyChkList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetEmergencyChkList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDischrgChkDt">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetDischrgChkDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDischrgChkList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetDischrgChkList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNsBordList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetNsBordList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIPServiceLst">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetIPServiceLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCasIPServiceLst">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetCasIPServiceLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderBookingTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/OrderBookingTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CasualOrderBookTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/CasualOrderBookTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderBookList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetOrderBookList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderBookTestDt">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetOrderBookTestDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IPServBookTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/IPServBookTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CasIPServBookTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/CasIPServBookTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIPMulDrShrDt">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetIPMulDrShrDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCasMulDrShrDt">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetCasMulDrShrDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelServBooking">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/CancelServBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CasCancelServBooking">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/CasCancelServBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderTest">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/CancelOrderTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDoctVisit">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/SaveDoctVisit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctVisit">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetDoctVisit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWardCensusDet">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetWardCensusDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreOperChkLstTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/PreOperChkLstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreOperChkList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetPreOperChkList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreOperChkLstDt">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetPreOperChkLstDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendngOrderAndTests">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetPendngOrderAndTests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IPIndentSaveUpCnVfyClo">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/IPIndentSaveUpCnVfyClo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIPIndentDetailsList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetIPIndentDetailsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIPIndentLstToIssue">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetIPIndentLstToIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMtrlHlpUsrCntrlData">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetMtrlHlpUsrCntrlData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIpMtrlHlpUsrCntrlData">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetIpMtrlHlpUsrCntrlData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMtrlInfoStoTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetMtrlInfoStoTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialsToIndent">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetMaterialsToIndent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatientDietTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/PatientDietTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDietDetails">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetDietDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DietChngReqTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/DietChngReqTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FoodItemOrderTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/FoodItemOrderTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDietFoodItemOrderList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetDietFoodItemOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingOrderCount">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetPendingOrderCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPHIPDUE">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/CheckPHIPDUE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderTestList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetOrderTestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscProDoctList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetDiscProDoctList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDischageProcessing">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/SaveDischageProcessing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDisProcessNotification">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetDisProcessNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientPendingReports">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetPatientPendingReports" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePendingReportTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/SavePendingReportTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNSPendingPatRptList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetNSPendingPatRptList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNSPendingPatRptDetails">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetNSPendingPatRptDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_DischageProcessing">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/UPDATE_DischageProcessing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTBookingRequestTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/OTBookingRequestTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOTBookRequestList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetOTBookRequestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgMstList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetSurgMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatListToAccept">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetPatListToAccept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcceptPatAtWard">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/AcceptPatAtWard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBedAllocation">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/SaveBedAllocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBedAllocateData">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetBedAllocateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VirtualBedTransferTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/VirtualBedTransferTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VirtualBedTransferInDepartTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/VirtualBedTransferInDepartTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVirtualBedTransfer">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetVirtualBedTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVirtualPatListToAccept">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetVirtualPatListToAccept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreOPPatientOnloadDetails">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetPreOPPatientOnloadDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcuityScore">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetAcuityScore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTSPrescribeTest">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetTSPrescribeTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllocInveList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetAllocInveList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FoodIComplaintTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/FoodIComplaintTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodComplList">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetFoodComplList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleInvestFrNotification">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetScheduleInvestFrNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DietOrderSheetTran">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/DietOrderSheetTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDietOrderSheet">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetDietOrderSheet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseDetails">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetCaseDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNSRejRemakAlert">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetNSRejRemakAlert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgresNoteAlert">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetProgresNoteAlert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChkLast24HourOrder">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/GetChkLast24HourOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTransferBed">
+      <soap:operation soapAction="http://tempuri.org/INursingStation/SaveTransferBed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NursingStation">
+    <wsdl:port name="BasicHttpBinding_INursingStation" binding="tns:BasicHttpBinding_INursingStation">
+      <soap:address location="http://uat.himstccf.org:82/WebHMISService/NursingStation.svc/NursingStation.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

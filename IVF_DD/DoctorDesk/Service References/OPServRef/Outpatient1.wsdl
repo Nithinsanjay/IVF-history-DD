@@ -1,0 +1,3394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Outpatient" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IOutpatient_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Outpatient" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?xsd=xsd4" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOutpatient_GetHCExaminationDetailsReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCExaminationDetailsReport" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCExaminationDetailsReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCExaminationDetailsReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_PushClinicalDataFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:PushClinicalDataFile" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_PushClinicalDataFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PushClinicalDataFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetSlotExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSlotExists" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetSlotExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSlotExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDoctorListForPassedDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorListForPassedDate" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDoctorListForPassedDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorListForPassedDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveQMSTokenTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveQMSTokenTran" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveQMSTokenTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveQMSTokenTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetQMSMaxTokenNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQMSMaxTokenNo" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetQMSMaxTokenNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQMSMaxTokenNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDoctorsToDisplay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorsToDisplay" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDoctorsToDisplay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorsToDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDoctorWaitlistForPasswedDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorWaitlistForPasswedDate" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDoctorWaitlistForPasswedDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorWaitlistForPasswedDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCalledQMSTokenToDisplay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCalledQMSTokenToDisplay" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCalledQMSTokenToDisplay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCalledQMSTokenToDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_QMSTokenStatusUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:QMSTokenStatusUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_QMSTokenStatusUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QMSTokenStatusUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCExamAnalysisReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCExamAnalysisReport" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCExamAnalysisReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCExamAnalysisReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveRefClaimTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRefClaimTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveRefClaimTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRefClaimTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetReferralClaimList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReferralClaimList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetReferralClaimList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReferralClaimListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefDetailsForYARAClaimHIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefDetailsForYARAClaimHIS" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefDetailsForYARAClaimHIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefDetailsForYARAClaimHISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefDetailsForYARAClaimPP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefDetailsForYARAClaimPP" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefDetailsForYARAClaimPP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefDetailsForYARAClaimPPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetLocalPurchaseReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalPurchaseReport" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetLocalPurchaseReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalPurchaseReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetReferralClaimDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReferralClaimDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetReferralClaimDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReferralClaimDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetClaimAuthorizationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClaimAuthorizationList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetClaimAuthorizationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClaimAuthorizationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveRefClaimAuthTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRefClaimAuthTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveRefClaimAuthTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRefClaimAuthTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveSelfRegistrationPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSelfRegistrationPatient" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveSelfRegistrationPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSelfRegistrationPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRegistrationEditHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistrationEditHistory" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRegistrationEditHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistrationEditHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetSelfRegistrationPatientList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelfRegistrationPatientList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetSelfRegistrationPatientList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelfRegistrationPatientListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetAppointmentOverview_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointmentOverview" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetAppointmentOverview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointmentOverviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveAppointmentDelayIntimation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAppointmentDelayIntimation" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveAppointmentDelayIntimation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAppointmentDelayIntimationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyOutstandingAmountAndLimit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyOutstandingAmountAndLimit" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyOutstandingAmountAndLimit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyOutstandingAmountAndLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_CompanyServiceRequestTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyServiceRequestTran" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_CompanyServiceRequestTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyServiceRequestTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyServiceRequestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyServiceRequestList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyServiceRequestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyServiceRequestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyServiceRequestDisplay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyServiceRequestDisplay" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyServiceRequestDisplay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyServiceRequestDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyPortalSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyPortalSummary" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyPortalSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyPortalSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyServiceReqesutDetailsForProvBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyServiceReqesutDetailsForProvBill" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyServiceReqesutDetailsForProvBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyServiceReqesutDetailsForProvBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyServiceList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyServiceList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyServiceList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyServiceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyPatientList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyPatientList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyPatientList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyPatientListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyServiceRequestReportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyServiceRequestReportData" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanyServiceRequestReportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyServiceRequestReportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientServiceRequestPatientData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientServiceRequestPatientData" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientServiceRequestPatientData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientServiceRequestPatientDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientServiceRequestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientServiceRequestList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientServiceRequestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientServiceRequestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_UploadRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadRegistration" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_UploadRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetTestEstimateDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestEstimateDate" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetTestEstimateDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestEstimateDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientNavigatorList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientNavigatorList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientNavigatorList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientNavigatorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientFollowUpsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientFollowUpsList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientFollowUpsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientFollowUpsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientDiagnosisHist_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientDiagnosisHist" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientDiagnosisHist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientDiagnosisHistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientNaviPatientStatusHist_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientNaviPatientStatusHist" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientNaviPatientStatusHist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientNaviPatientStatusHistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_PatientNavigatorTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PatientNavigatorTran" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_PatientNavigatorTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PatientNavigatorTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_PatientNavigatorTreatmentStatusTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PatientNavigatorTreatmentStatusTran" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_PatientNavigatorTreatmentStatusTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PatientNavigatorTreatmentStatusTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientNavigatorReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientNavigatorReport" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientNavigatorReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientNavigatorReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientNavigatorConversionReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientNavigatorConversionReport" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientNavigatorConversionReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientNavigatorConversionReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPCNServiceListAgainstBillNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPCNServiceListAgainstBillNo" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPCNServiceListAgainstBillNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPCNServiceListAgainstBillNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_OPPatCatgTransferTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:OPPatCatgTransferTran" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_OPPatCatgTransferTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OPPatCatgTransferTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatCatgTransferList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatCatgTransferList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatCatgTransferList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatCatgTransferListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_UploadRegistrationVerifiedContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadRegistrationVerifiedContact" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_UploadRegistrationVerifiedContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadRegistrationVerifiedContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveUpdateRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateRegistration" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveUpdateRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SetPatCompLimit_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPatCompLimit" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SetPatCompLimit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPatCompLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRegistrationDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistrationDet" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRegistrationDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistrationDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveUpdateAppointment_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateAppointment" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveUpdateAppointment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateAppointmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_CancelOPApt_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelOPApt" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_CancelOPApt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelOPAptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDoctLeaveStat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctLeaveStat" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDoctLeaveStat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctLeaveStatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPAptList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPAptList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPAptList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPAptListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDoctAvail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctAvail" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDoctAvail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctAvailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPAPTSearchLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPAPTSearchLst" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPAPTSearchLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPAPTSearchLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCAptList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCAptList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCAptList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCAptListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDepositList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDepositList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDepositList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDepositListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPRcptLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPRcptLst" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPRcptLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPRcptLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetBillInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillInfo" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetBillInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetBillData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillData" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetBillData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetBilldtInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBilldtInfo" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetBilldtInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBilldtInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetBillDtFrCrdNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillDtFrCrdNote" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetBillDtFrCrdNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillDtFrCrdNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetBillPayModeDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillPayModeDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetBillPayModeDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillPayModeDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefRquestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefRquestList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefRquestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefRquestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveOPRefund_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOPRefund" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveOPRefund_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOPRefundResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCrdNtHDList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrdNtHDList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCrdNtHDList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrdNtHDListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_UpdateOpBillInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOpBillInfo" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_UpdateOpBillInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOpBillInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetBillAdjmntDtls_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillAdjmntDtls" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetBillAdjmntDtls_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillAdjmntDtlsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDpstPayModeDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDpstPayModeDt" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDpstPayModeDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDpstPayModeDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPReceiptDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPReceiptDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPReceiptDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPReceiptDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveUpdateRefRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateRefRequest" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveUpdateRefRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateRefRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveOPDeposit_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOPDeposit" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveOPDeposit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOPDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveUpdateCancelDueCol_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateCancelDueCol" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveUpdateCancelDueCol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateCancelDueColResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDpstRefundList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDpstRefundList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDpstRefundList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDpstRefundListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDpstTransferList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDpstTransferList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDpstTransferList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDpstTransferListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCAPTSearchLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCAPTSearchLst" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCAPTSearchLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCAPTSearchLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveUpdateHCApt_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateHCApt" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveUpdateHCApt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateHCAptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_CancelHCApt_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelHCApt" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_CancelHCApt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelHCAptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveOPBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOPBill" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveOPBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOPBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDollerRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDollerRate" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDollerRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDollerRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_CancelRefRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelRefRequest" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_CancelRefRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelRefRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefRquestDTLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefRquestDTLst" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefRquestDTLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefRquestDTLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveCancelOPCN_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCancelOPCN" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveCancelOPCN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCancelOPCNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveCancelBillRefund_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCancelBillRefund" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveCancelBillRefund_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCancelBillRefundResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_UpdateBillDiscount_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBillDiscount" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_UpdateBillDiscount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBillDiscountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDpstInfoFrTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDpstInfoFrTransfer" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDpstInfoFrTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDpstInfoFrTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveDpstTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDpstTransfer" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveDpstTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDpstTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDocConsFee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDocConsFee" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDocConsFee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDocConsFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDpstTransfDT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDpstTransfDT" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDpstTransfDT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDpstTransfDTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCrdNoteList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrdNoteList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCrdNoteList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrdNoteListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPCNDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPCNDt" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPCNDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPCNDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPColletSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPColletSummary" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPColletSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPColletSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SubmitToCashier_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitToCashier" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SubmitToCashier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitToCashierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveOrCancelOPConsltn_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrCancelOPConsltn" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveOrCancelOPConsltn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrCancelOPConsltnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPServWiseDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPServWiseDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPServWiseDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPServWiseDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPPatLedgerData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPPatLedgerData" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPPatLedgerData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPPatLedgerDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPConsulDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPConsulDet" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPConsulDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPConsulDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPTestDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPTestDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPTestDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPTestDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPBlWiseTestStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPBlWiseTestStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPBlWiseTestStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPBlWiseTestStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetServWiseOPPatList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServWiseOPPatList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetServWiseOPPatList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServWiseOPPatListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPCollectionDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPCollectionDet" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPCollectionDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPCollectionDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetConsltnListFrRpt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsltnListFrRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetConsltnListFrRpt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsltnListFrRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetConsltnDetListFrRpt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsltnDetListFrRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetConsltnDetListFrRpt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsltnDetListFrRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPRefundDTOrUserWise_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPRefundDTOrUserWise" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPRefundDTOrUserWise_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPRefundDTOrUserWiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCBillDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCBillDet" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCBillDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCBillDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCPkgBillDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCPkgBillDet" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCPkgBillDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCPkgBillDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOtherTestDoneByHCPat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherTestDoneByHCPat" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOtherTestDoneByHCPat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherTestDoneByHCPatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_HCPositveRepotTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:HCPositveRepotTran" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_HCPositveRepotTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HCPositveRepotTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCPosRpt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCPosRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCPosRpt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCPosRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_HCBillChkListTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:HCBillChkListTran" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_HCBillChkListTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HCBillChkListTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCBillChkList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCBillChkList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCBillChkList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCBillChkListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCBillChkLstDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCBillChkLstDet" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCBillChkLstDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCBillChkLstDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_UpdateHCDrShare_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHCDrShare" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_UpdateHCDrShare_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHCDrShareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDoctorSlots_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorSlots" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDoctorSlots_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorSlotsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPTallyReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPTallyReport" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPTallyReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPTallyReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCurBedOccupancy_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurBedOccupancy" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCurBedOccupancy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurBedOccupancyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPServiceWiseIncome_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPServiceWiseIncome" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPServiceWiseIncome_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPServiceWiseIncomeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_OPDepositAdjTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:OPDepositAdjTran" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_OPDepositAdjTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OPDepositAdjTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDepositAdjList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDepositAdjList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDepositAdjList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDepositAdjListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPkgWiseInvstRsltList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPkgWiseInvstRsltList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPkgWiseInvstRsltList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPkgWiseInvstRsltListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPBillNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPBillNotification" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPBillNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPBillNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_PatientTracking_Save_InputMessage">
+    <wsdl:part name="parameters" element="tns:PatientTracking_Save" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_PatientTracking_Save_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PatientTracking_SaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientTracking_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientTracking" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientTracking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientTrackingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPPackageReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPPackageReport" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPPackageReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPPackageReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPConsultVisitType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPConsultVisitType" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPConsultVisitType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPConsultVisitTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_getddrefApprovallst_InputMessage">
+    <wsdl:part name="parameters" element="tns:getddrefApprovallst" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_getddrefApprovallst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getddrefApprovallstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDDRefApprovalDisplay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDRefApprovalDisplay" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetDDRefApprovalDisplay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDRefApprovalDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveddrefApproval_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveddrefApproval" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveddrefApproval_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveddrefApprovalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPConsultPrescriptionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPConsultPrescriptionList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPConsultPrescriptionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPConsultPrescriptionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveUpdateCancelCompSettle_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateCancelCompSettle" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveUpdateCancelCompSettle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateCancelCompSettleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanySettleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanySettleList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCompanySettleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanySettleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_RemoveServYN_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveServYN" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_RemoveServYN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveServYNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveQMSToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveQMSToken" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveQMSToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveQMSTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetQMSMaxToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQMSMaxToken" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetQMSMaxToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQMSMaxTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCounterWiseTokenCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCounterWiseTokenCount" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCounterWiseTokenCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCounterWiseTokenCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCountersToDisplay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountersToDisplay" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCountersToDisplay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountersToDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientTokenList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientTokenList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatientTokenList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientTokenListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_TransferToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransferToken" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_TransferToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransferTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveTokenCounterForCalling_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTokenCounterForCalling" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveTokenCounterForCalling_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTokenCounterForCallingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCalledTokenToDisplay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCalledTokenToDisplay" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCalledTokenToDisplay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCalledTokenToDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_TokenStatusUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:TokenStatusUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_TokenStatusUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TokenStatusUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_IsNonCapService_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsNonCapService" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_IsNonCapService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsNonCapServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_OpenOPBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:OpenOPBill" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_OpenOPBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OpenOPBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_PatServiceCostTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PatServiceCostTran" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_PatServiceCostTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PatServiceCostTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatServiceDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatServiceDet" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetPatServiceDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatServiceDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetServices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServices" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetServices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDBillInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDBillInfo" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDBillInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDBillInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveCancelCasBillRefund_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCancelCasBillRefund" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveCancelCasBillRefund_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCancelCasBillRefundResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCasRefundDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasRefundDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetCasRefundDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasRefundDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPPrescriptnDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPPrescriptnDet" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPPrescriptnDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPPrescriptnDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_DepositReqTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositReqTran" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_DepositReqTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositReqTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDepositReqLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDepositReqLst" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPDepositReqLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDepositReqLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_OBRegistTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:OBRegistTran" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_OBRegistTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OBRegistTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOBPatRegistrationDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOBPatRegistrationDet" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOBPatRegistrationDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOBPatRegistrationDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOBPatRegExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOBPatRegExist" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOBPatRegExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOBPatRegExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveRefBillReimbursement_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRefBillReimbursement" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveRefBillReimbursement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRefBillReimbursementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_getRefReimburselst_InputMessage">
+    <wsdl:part name="parameters" element="tns:getRefReimburselst" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_getRefReimburselst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getRefReimburselstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetEmpDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetEmpDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_getRefReimburseDtls_InputMessage">
+    <wsdl:part name="parameters" element="tns:getRefReimburseDtls" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_getRefReimburseDtls_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getRefReimburseDtlsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_getReferralReportlst_InputMessage">
+    <wsdl:part name="parameters" element="tns:getReferralReportlst" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_getReferralReportlst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getReferralReportlstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetAppoinmentReq_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppoinmentReq" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetAppoinmentReq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppoinmentReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPConsultVisit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPConsultVisit" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetOPConsultVisit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPConsultVisitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetReferralApprovalsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReferralApprovalsList" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetReferralApprovalsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReferralApprovalsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefApprovalDisplay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefApprovalDisplay" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefApprovalDisplay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefApprovalDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveRefAuthorization_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRefAuthorization" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveRefAuthorization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRefAuthorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveRefSettlementTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRefSettlementTran" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_SaveRefSettlementTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRefSettlementTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefSettlementData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefSettlementData" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefSettlementData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefSettlementDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetEmployeeTreatmentHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeTreatmentHistory" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetEmployeeTreatmentHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeTreatmentHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetReferralLogHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReferralLogHistory" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetReferralLogHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReferralLogHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefSAPPostData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefSAPPostData" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetRefSAPPostData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefSAPPostDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_HCExaminationSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:HCExaminationSave" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_HCExaminationSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HCExaminationSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCExaminationDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCExaminationDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCExaminationDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCExaminationDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCExaminationListReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCExaminationListReport" />
+  </wsdl:message>
+  <wsdl:message name="IOutpatient_GetHCExaminationListReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHCExaminationListReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOutpatient">
+    <wsdl:operation name="GetHCExaminationDetailsReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetHCExaminationDetailsReport" message="tns:IOutpatient_GetHCExaminationDetailsReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetHCExaminationDetailsReportResponse" message="tns:IOutpatient_GetHCExaminationDetailsReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PushClinicalDataFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/PushClinicalDataFile" message="tns:IOutpatient_PushClinicalDataFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/PushClinicalDataFileResponse" message="tns:IOutpatient_PushClinicalDataFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSlotExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetSlotExists" message="tns:IOutpatient_GetSlotExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetSlotExistsResponse" message="tns:IOutpatient_GetSlotExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorListForPassedDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetDoctorListForPassedDate" message="tns:IOutpatient_GetDoctorListForPassedDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetDoctorListForPassedDateResponse" message="tns:IOutpatient_GetDoctorListForPassedDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveQMSTokenTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveQMSTokenTran" message="tns:IOutpatient_SaveQMSTokenTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveQMSTokenTranResponse" message="tns:IOutpatient_SaveQMSTokenTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQMSMaxTokenNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetQMSMaxTokenNo" message="tns:IOutpatient_GetQMSMaxTokenNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetQMSMaxTokenNoResponse" message="tns:IOutpatient_GetQMSMaxTokenNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorsToDisplay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetDoctorsToDisplay" message="tns:IOutpatient_GetDoctorsToDisplay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetDoctorsToDisplayResponse" message="tns:IOutpatient_GetDoctorsToDisplay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorWaitlistForPasswedDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetDoctorWaitlistForPasswedDate" message="tns:IOutpatient_GetDoctorWaitlistForPasswedDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetDoctorWaitlistForPasswedDateResponse" message="tns:IOutpatient_GetDoctorWaitlistForPasswedDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalledQMSTokenToDisplay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCalledQMSTokenToDisplay" message="tns:IOutpatient_GetCalledQMSTokenToDisplay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCalledQMSTokenToDisplayResponse" message="tns:IOutpatient_GetCalledQMSTokenToDisplay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QMSTokenStatusUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/QMSTokenStatusUpdate" message="tns:IOutpatient_QMSTokenStatusUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/QMSTokenStatusUpdateResponse" message="tns:IOutpatient_QMSTokenStatusUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHCExamAnalysisReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetHCExamAnalysisReport" message="tns:IOutpatient_GetHCExamAnalysisReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetHCExamAnalysisReportResponse" message="tns:IOutpatient_GetHCExamAnalysisReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRefClaimTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveRefClaimTransaction" message="tns:IOutpatient_SaveRefClaimTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveRefClaimTransactionResponse" message="tns:IOutpatient_SaveRefClaimTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferralClaimList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetReferralClaimList" message="tns:IOutpatient_GetReferralClaimList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetReferralClaimListResponse" message="tns:IOutpatient_GetReferralClaimList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefDetailsForYARAClaimHIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetRefDetailsForYARAClaimHIS" message="tns:IOutpatient_GetRefDetailsForYARAClaimHIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetRefDetailsForYARAClaimHISResponse" message="tns:IOutpatient_GetRefDetailsForYARAClaimHIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefDetailsForYARAClaimPP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetRefDetailsForYARAClaimPP" message="tns:IOutpatient_GetRefDetailsForYARAClaimPP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetRefDetailsForYARAClaimPPResponse" message="tns:IOutpatient_GetRefDetailsForYARAClaimPP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalPurchaseReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetLocalPurchaseReport" message="tns:IOutpatient_GetLocalPurchaseReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetLocalPurchaseReportResponse" message="tns:IOutpatient_GetLocalPurchaseReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferralClaimDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetReferralClaimDetails" message="tns:IOutpatient_GetReferralClaimDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetReferralClaimDetailsResponse" message="tns:IOutpatient_GetReferralClaimDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClaimAuthorizationList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetClaimAuthorizationList" message="tns:IOutpatient_GetClaimAuthorizationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetClaimAuthorizationListResponse" message="tns:IOutpatient_GetClaimAuthorizationList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRefClaimAuthTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveRefClaimAuthTransaction" message="tns:IOutpatient_SaveRefClaimAuthTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveRefClaimAuthTransactionResponse" message="tns:IOutpatient_SaveRefClaimAuthTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSelfRegistrationPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveSelfRegistrationPatient" message="tns:IOutpatient_SaveSelfRegistrationPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveSelfRegistrationPatientResponse" message="tns:IOutpatient_SaveSelfRegistrationPatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationEditHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetRegistrationEditHistory" message="tns:IOutpatient_GetRegistrationEditHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetRegistrationEditHistoryResponse" message="tns:IOutpatient_GetRegistrationEditHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSelfRegistrationPatientList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetSelfRegistrationPatientList" message="tns:IOutpatient_GetSelfRegistrationPatientList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetSelfRegistrationPatientListResponse" message="tns:IOutpatient_GetSelfRegistrationPatientList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppointmentOverview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetAppointmentOverview" message="tns:IOutpatient_GetAppointmentOverview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetAppointmentOverviewResponse" message="tns:IOutpatient_GetAppointmentOverview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAppointmentDelayIntimation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveAppointmentDelayIntimation" message="tns:IOutpatient_SaveAppointmentDelayIntimation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveAppointmentDelayIntimationResponse" message="tns:IOutpatient_SaveAppointmentDelayIntimation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyOutstandingAmountAndLimit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyOutstandingAmountAndLimit" message="tns:IOutpatient_GetCompanyOutstandingAmountAndLimit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyOutstandingAmountAndLimitResponse" message="tns:IOutpatient_GetCompanyOutstandingAmountAndLimit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyServiceRequestTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/CompanyServiceRequestTran" message="tns:IOutpatient_CompanyServiceRequestTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/CompanyServiceRequestTranResponse" message="tns:IOutpatient_CompanyServiceRequestTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyServiceRequestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyServiceRequestList" message="tns:IOutpatient_GetCompanyServiceRequestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyServiceRequestListResponse" message="tns:IOutpatient_GetCompanyServiceRequestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyServiceRequestDisplay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyServiceRequestDisplay" message="tns:IOutpatient_GetCompanyServiceRequestDisplay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyServiceRequestDisplayResponse" message="tns:IOutpatient_GetCompanyServiceRequestDisplay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyPortalSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyPortalSummary" message="tns:IOutpatient_GetCompanyPortalSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyPortalSummaryResponse" message="tns:IOutpatient_GetCompanyPortalSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyServiceReqesutDetailsForProvBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyServiceReqesutDetailsForProvBill" message="tns:IOutpatient_GetCompanyServiceReqesutDetailsForProvBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyServiceReqesutDetailsForProvBillResponse" message="tns:IOutpatient_GetCompanyServiceReqesutDetailsForProvBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyServiceList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyServiceList" message="tns:IOutpatient_GetCompanyServiceList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyServiceListResponse" message="tns:IOutpatient_GetCompanyServiceList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyPatientList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyPatientList" message="tns:IOutpatient_GetCompanyPatientList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyPatientListResponse" message="tns:IOutpatient_GetCompanyPatientList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyServiceRequestReportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyServiceRequestReportData" message="tns:IOutpatient_GetCompanyServiceRequestReportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCompanyServiceRequestReportDataResponse" message="tns:IOutpatient_GetCompanyServiceRequestReportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientServiceRequestPatientData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetPatientServiceRequestPatientData" message="tns:IOutpatient_GetPatientServiceRequestPatientData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetPatientServiceRequestPatientDataResponse" message="tns:IOutpatient_GetPatientServiceRequestPatientData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientServiceRequestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetPatientServiceRequestList" message="tns:IOutpatient_GetPatientServiceRequestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetPatientServiceRequestListResponse" message="tns:IOutpatient_GetPatientServiceRequestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/UploadRegistration" message="tns:IOutpatient_UploadRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/UploadRegistrationResponse" message="tns:IOutpatient_UploadRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestEstimateDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetTestEstimateDate" message="tns:IOutpatient_GetTestEstimateDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetTestEstimateDateResponse" message="tns:IOutpatient_GetTestEstimateDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientNavigatorList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetPatientNavigatorList" message="tns:IOutpatient_GetPatientNavigatorList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetPatientNavigatorListResponse" message="tns:IOutpatient_GetPatientNavigatorList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientFollowUpsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetPatientFollowUpsList" message="tns:IOutpatient_GetPatientFollowUpsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetPatientFollowUpsListResponse" message="tns:IOutpatient_GetPatientFollowUpsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientDiagnosisHist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetPatientDiagnosisHist" message="tns:IOutpatient_GetPatientDiagnosisHist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetPatientDiagnosisHistResponse" message="tns:IOutpatient_GetPatientDiagnosisHist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientNaviPatientStatusHist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetPatientNaviPatientStatusHist" message="tns:IOutpatient_GetPatientNaviPatientStatusHist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetPatientNaviPatientStatusHistResponse" message="tns:IOutpatient_GetPatientNaviPatientStatusHist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PatientNavigatorTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/PatientNavigatorTran" message="tns:IOutpatient_PatientNavigatorTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/PatientNavigatorTranResponse" message="tns:IOutpatient_PatientNavigatorTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PatientNavigatorTreatmentStatusTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/PatientNavigatorTreatmentStatusTran" message="tns:IOutpatient_PatientNavigatorTreatmentStatusTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/PatientNavigatorTreatmentStatusTranResponse" message="tns:IOutpatient_PatientNavigatorTreatmentStatusTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientNavigatorReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetPatientNavigatorReport" message="tns:IOutpatient_GetPatientNavigatorReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetPatientNavigatorReportResponse" message="tns:IOutpatient_GetPatientNavigatorReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientNavigatorConversionReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetPatientNavigatorConversionReport" message="tns:IOutpatient_GetPatientNavigatorConversionReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetPatientNavigatorConversionReportResponse" message="tns:IOutpatient_GetPatientNavigatorConversionReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPCNServiceListAgainstBillNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPCNServiceListAgainstBillNo" message="tns:IOutpatient_GetOPCNServiceListAgainstBillNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPCNServiceListAgainstBillNoResponse" message="tns:IOutpatient_GetOPCNServiceListAgainstBillNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OPPatCatgTransferTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/OPPatCatgTransferTran" message="tns:IOutpatient_OPPatCatgTransferTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/OPPatCatgTransferTranResponse" message="tns:IOutpatient_OPPatCatgTransferTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatCatgTransferList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetPatCatgTransferList" message="tns:IOutpatient_GetPatCatgTransferList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetPatCatgTransferListResponse" message="tns:IOutpatient_GetPatCatgTransferList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadRegistrationVerifiedContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/UploadRegistrationVerifiedContact" message="tns:IOutpatient_UploadRegistrationVerifiedContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/UploadRegistrationVerifiedContactResponse" message="tns:IOutpatient_UploadRegistrationVerifiedContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveUpdateRegistration" message="tns:IOutpatient_SaveUpdateRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveUpdateRegistrationResponse" message="tns:IOutpatient_SaveUpdateRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPatCompLimit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SetPatCompLimit" message="tns:IOutpatient_SetPatCompLimit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SetPatCompLimitResponse" message="tns:IOutpatient_SetPatCompLimit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetRegistrationDet" message="tns:IOutpatient_GetRegistrationDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetRegistrationDetResponse" message="tns:IOutpatient_GetRegistrationDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateAppointment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveUpdateAppointment" message="tns:IOutpatient_SaveUpdateAppointment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveUpdateAppointmentResponse" message="tns:IOutpatient_SaveUpdateAppointment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOPApt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/CancelOPApt" message="tns:IOutpatient_CancelOPApt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/CancelOPAptResponse" message="tns:IOutpatient_CancelOPApt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctLeaveStat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetDoctLeaveStat" message="tns:IOutpatient_GetDoctLeaveStat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetDoctLeaveStatResponse" message="tns:IOutpatient_GetDoctLeaveStat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPAptList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPAptList" message="tns:IOutpatient_GetOPAptList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPAptListResponse" message="tns:IOutpatient_GetOPAptList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctAvail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetDoctAvail" message="tns:IOutpatient_GetDoctAvail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetDoctAvailResponse" message="tns:IOutpatient_GetDoctAvail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPAPTSearchLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPAPTSearchLst" message="tns:IOutpatient_GetOPAPTSearchLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPAPTSearchLstResponse" message="tns:IOutpatient_GetOPAPTSearchLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHCAptList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetHCAptList" message="tns:IOutpatient_GetHCAptList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetHCAptListResponse" message="tns:IOutpatient_GetHCAptList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDepositList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPDepositList" message="tns:IOutpatient_GetOPDepositList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPDepositListResponse" message="tns:IOutpatient_GetOPDepositList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPRcptLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPRcptLst" message="tns:IOutpatient_GetOPRcptLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPRcptLstResponse" message="tns:IOutpatient_GetOPRcptLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetBillInfo" message="tns:IOutpatient_GetBillInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetBillInfoResponse" message="tns:IOutpatient_GetBillInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetBillData" message="tns:IOutpatient_GetBillData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetBillDataResponse" message="tns:IOutpatient_GetBillData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBilldtInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetBilldtInfo" message="tns:IOutpatient_GetBilldtInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetBilldtInfoResponse" message="tns:IOutpatient_GetBilldtInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillDtFrCrdNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetBillDtFrCrdNote" message="tns:IOutpatient_GetBillDtFrCrdNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetBillDtFrCrdNoteResponse" message="tns:IOutpatient_GetBillDtFrCrdNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillPayModeDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetBillPayModeDetails" message="tns:IOutpatient_GetBillPayModeDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetBillPayModeDetailsResponse" message="tns:IOutpatient_GetBillPayModeDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefRquestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetRefRquestList" message="tns:IOutpatient_GetRefRquestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetRefRquestListResponse" message="tns:IOutpatient_GetRefRquestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOPRefund">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveOPRefund" message="tns:IOutpatient_SaveOPRefund_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveOPRefundResponse" message="tns:IOutpatient_SaveOPRefund_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCrdNtHDList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCrdNtHDList" message="tns:IOutpatient_GetCrdNtHDList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCrdNtHDListResponse" message="tns:IOutpatient_GetCrdNtHDList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOpBillInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/UpdateOpBillInfo" message="tns:IOutpatient_UpdateOpBillInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/UpdateOpBillInfoResponse" message="tns:IOutpatient_UpdateOpBillInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillAdjmntDtls">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetBillAdjmntDtls" message="tns:IOutpatient_GetBillAdjmntDtls_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetBillAdjmntDtlsResponse" message="tns:IOutpatient_GetBillAdjmntDtls_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDpstPayModeDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPDpstPayModeDt" message="tns:IOutpatient_GetOPDpstPayModeDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPDpstPayModeDtResponse" message="tns:IOutpatient_GetOPDpstPayModeDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPReceiptDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPReceiptDetails" message="tns:IOutpatient_GetOPReceiptDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPReceiptDetailsResponse" message="tns:IOutpatient_GetOPReceiptDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateRefRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveUpdateRefRequest" message="tns:IOutpatient_SaveUpdateRefRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveUpdateRefRequestResponse" message="tns:IOutpatient_SaveUpdateRefRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOPDeposit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveOPDeposit" message="tns:IOutpatient_SaveOPDeposit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveOPDepositResponse" message="tns:IOutpatient_SaveOPDeposit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateCancelDueCol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveUpdateCancelDueCol" message="tns:IOutpatient_SaveUpdateCancelDueCol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveUpdateCancelDueColResponse" message="tns:IOutpatient_SaveUpdateCancelDueCol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDpstRefundList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPDpstRefundList" message="tns:IOutpatient_GetOPDpstRefundList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPDpstRefundListResponse" message="tns:IOutpatient_GetOPDpstRefundList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDpstTransferList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPDpstTransferList" message="tns:IOutpatient_GetOPDpstTransferList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPDpstTransferListResponse" message="tns:IOutpatient_GetOPDpstTransferList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHCAPTSearchLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetHCAPTSearchLst" message="tns:IOutpatient_GetHCAPTSearchLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetHCAPTSearchLstResponse" message="tns:IOutpatient_GetHCAPTSearchLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateHCApt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveUpdateHCApt" message="tns:IOutpatient_SaveUpdateHCApt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveUpdateHCAptResponse" message="tns:IOutpatient_SaveUpdateHCApt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelHCApt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/CancelHCApt" message="tns:IOutpatient_CancelHCApt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/CancelHCAptResponse" message="tns:IOutpatient_CancelHCApt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOPBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveOPBill" message="tns:IOutpatient_SaveOPBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveOPBillResponse" message="tns:IOutpatient_SaveOPBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDollerRate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetDollerRate" message="tns:IOutpatient_GetDollerRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetDollerRateResponse" message="tns:IOutpatient_GetDollerRate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelRefRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/CancelRefRequest" message="tns:IOutpatient_CancelRefRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/CancelRefRequestResponse" message="tns:IOutpatient_CancelRefRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefRquestDTLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetRefRquestDTLst" message="tns:IOutpatient_GetRefRquestDTLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetRefRquestDTLstResponse" message="tns:IOutpatient_GetRefRquestDTLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCancelOPCN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveCancelOPCN" message="tns:IOutpatient_SaveCancelOPCN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveCancelOPCNResponse" message="tns:IOutpatient_SaveCancelOPCN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCancelBillRefund">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveCancelBillRefund" message="tns:IOutpatient_SaveCancelBillRefund_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveCancelBillRefundResponse" message="tns:IOutpatient_SaveCancelBillRefund_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBillDiscount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/UpdateBillDiscount" message="tns:IOutpatient_UpdateBillDiscount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/UpdateBillDiscountResponse" message="tns:IOutpatient_UpdateBillDiscount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDpstInfoFrTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetDpstInfoFrTransfer" message="tns:IOutpatient_GetDpstInfoFrTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetDpstInfoFrTransferResponse" message="tns:IOutpatient_GetDpstInfoFrTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDpstTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveDpstTransfer" message="tns:IOutpatient_SaveDpstTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveDpstTransferResponse" message="tns:IOutpatient_SaveDpstTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDocConsFee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPDocConsFee" message="tns:IOutpatient_GetOPDocConsFee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPDocConsFeeResponse" message="tns:IOutpatient_GetOPDocConsFee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDpstTransfDT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPDpstTransfDT" message="tns:IOutpatient_GetOPDpstTransfDT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPDpstTransfDTResponse" message="tns:IOutpatient_GetOPDpstTransfDT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCrdNoteList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCrdNoteList" message="tns:IOutpatient_GetCrdNoteList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCrdNoteListResponse" message="tns:IOutpatient_GetCrdNoteList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPCNDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPCNDt" message="tns:IOutpatient_GetOPCNDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPCNDtResponse" message="tns:IOutpatient_GetOPCNDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPColletSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPColletSummary" message="tns:IOutpatient_GetOPColletSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPColletSummaryResponse" message="tns:IOutpatient_GetOPColletSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitToCashier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SubmitToCashier" message="tns:IOutpatient_SubmitToCashier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SubmitToCashierResponse" message="tns:IOutpatient_SubmitToCashier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrCancelOPConsltn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveOrCancelOPConsltn" message="tns:IOutpatient_SaveOrCancelOPConsltn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveOrCancelOPConsltnResponse" message="tns:IOutpatient_SaveOrCancelOPConsltn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPServWiseDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPServWiseDetails" message="tns:IOutpatient_GetOPServWiseDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPServWiseDetailsResponse" message="tns:IOutpatient_GetOPServWiseDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPPatLedgerData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPPatLedgerData" message="tns:IOutpatient_GetOPPatLedgerData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPPatLedgerDataResponse" message="tns:IOutpatient_GetOPPatLedgerData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPConsulDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPConsulDet" message="tns:IOutpatient_GetOPConsulDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPConsulDetResponse" message="tns:IOutpatient_GetOPConsulDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPTestDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPTestDetails" message="tns:IOutpatient_GetOPTestDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPTestDetailsResponse" message="tns:IOutpatient_GetOPTestDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPBlWiseTestStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPBlWiseTestStatus" message="tns:IOutpatient_GetOPBlWiseTestStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPBlWiseTestStatusResponse" message="tns:IOutpatient_GetOPBlWiseTestStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServWiseOPPatList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetServWiseOPPatList" message="tns:IOutpatient_GetServWiseOPPatList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetServWiseOPPatListResponse" message="tns:IOutpatient_GetServWiseOPPatList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPCollectionDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPCollectionDet" message="tns:IOutpatient_GetOPCollectionDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPCollectionDetResponse" message="tns:IOutpatient_GetOPCollectionDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsltnListFrRpt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetConsltnListFrRpt" message="tns:IOutpatient_GetConsltnListFrRpt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetConsltnListFrRptResponse" message="tns:IOutpatient_GetConsltnListFrRpt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsltnDetListFrRpt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetConsltnDetListFrRpt" message="tns:IOutpatient_GetConsltnDetListFrRpt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetConsltnDetListFrRptResponse" message="tns:IOutpatient_GetConsltnDetListFrRpt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPRefundDTOrUserWise">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPRefundDTOrUserWise" message="tns:IOutpatient_GetOPRefundDTOrUserWise_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPRefundDTOrUserWiseResponse" message="tns:IOutpatient_GetOPRefundDTOrUserWise_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHCBillDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetHCBillDet" message="tns:IOutpatient_GetHCBillDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetHCBillDetResponse" message="tns:IOutpatient_GetHCBillDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHCPkgBillDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetHCPkgBillDet" message="tns:IOutpatient_GetHCPkgBillDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetHCPkgBillDetResponse" message="tns:IOutpatient_GetHCPkgBillDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherTestDoneByHCPat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOtherTestDoneByHCPat" message="tns:IOutpatient_GetOtherTestDoneByHCPat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOtherTestDoneByHCPatResponse" message="tns:IOutpatient_GetOtherTestDoneByHCPat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HCPositveRepotTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/HCPositveRepotTran" message="tns:IOutpatient_HCPositveRepotTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/HCPositveRepotTranResponse" message="tns:IOutpatient_HCPositveRepotTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHCPosRpt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetHCPosRpt" message="tns:IOutpatient_GetHCPosRpt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetHCPosRptResponse" message="tns:IOutpatient_GetHCPosRpt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HCBillChkListTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/HCBillChkListTran" message="tns:IOutpatient_HCBillChkListTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/HCBillChkListTranResponse" message="tns:IOutpatient_HCBillChkListTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHCBillChkList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetHCBillChkList" message="tns:IOutpatient_GetHCBillChkList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetHCBillChkListResponse" message="tns:IOutpatient_GetHCBillChkList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHCBillChkLstDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetHCBillChkLstDet" message="tns:IOutpatient_GetHCBillChkLstDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetHCBillChkLstDetResponse" message="tns:IOutpatient_GetHCBillChkLstDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHCDrShare">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/UpdateHCDrShare" message="tns:IOutpatient_UpdateHCDrShare_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/UpdateHCDrShareResponse" message="tns:IOutpatient_UpdateHCDrShare_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorSlots">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetDoctorSlots" message="tns:IOutpatient_GetDoctorSlots_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetDoctorSlotsResponse" message="tns:IOutpatient_GetDoctorSlots_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPTallyReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPTallyReport" message="tns:IOutpatient_GetOPTallyReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPTallyReportResponse" message="tns:IOutpatient_GetOPTallyReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurBedOccupancy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCurBedOccupancy" message="tns:IOutpatient_GetCurBedOccupancy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCurBedOccupancyResponse" message="tns:IOutpatient_GetCurBedOccupancy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPServiceWiseIncome">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPServiceWiseIncome" message="tns:IOutpatient_GetOPServiceWiseIncome_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPServiceWiseIncomeResponse" message="tns:IOutpatient_GetOPServiceWiseIncome_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OPDepositAdjTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/OPDepositAdjTran" message="tns:IOutpatient_OPDepositAdjTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/OPDepositAdjTranResponse" message="tns:IOutpatient_OPDepositAdjTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDepositAdjList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPDepositAdjList" message="tns:IOutpatient_GetOPDepositAdjList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPDepositAdjListResponse" message="tns:IOutpatient_GetOPDepositAdjList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPkgWiseInvstRsltList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetPkgWiseInvstRsltList" message="tns:IOutpatient_GetPkgWiseInvstRsltList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetPkgWiseInvstRsltListResponse" message="tns:IOutpatient_GetPkgWiseInvstRsltList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPBillNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPBillNotification" message="tns:IOutpatient_GetOPBillNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPBillNotificationResponse" message="tns:IOutpatient_GetOPBillNotification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PatientTracking_Save">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/PatientTracking_Save" message="tns:IOutpatient_PatientTracking_Save_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/PatientTracking_SaveResponse" message="tns:IOutpatient_PatientTracking_Save_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientTracking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetPatientTracking" message="tns:IOutpatient_GetPatientTracking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetPatientTrackingResponse" message="tns:IOutpatient_GetPatientTracking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPPackageReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPPackageReport" message="tns:IOutpatient_GetOPPackageReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPPackageReportResponse" message="tns:IOutpatient_GetOPPackageReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPConsultVisitType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPConsultVisitType" message="tns:IOutpatient_GetOPConsultVisitType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPConsultVisitTypeResponse" message="tns:IOutpatient_GetOPConsultVisitType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getddrefApprovallst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/getddrefApprovallst" message="tns:IOutpatient_getddrefApprovallst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/getddrefApprovallstResponse" message="tns:IOutpatient_getddrefApprovallst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDRefApprovalDisplay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetDDRefApprovalDisplay" message="tns:IOutpatient_GetDDRefApprovalDisplay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetDDRefApprovalDisplayResponse" message="tns:IOutpatient_GetDDRefApprovalDisplay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveddrefApproval">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveddrefApproval" message="tns:IOutpatient_SaveddrefApproval_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveddrefApprovalResponse" message="tns:IOutpatient_SaveddrefApproval_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPConsultPrescriptionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPConsultPrescriptionList" message="tns:IOutpatient_GetOPConsultPrescriptionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPConsultPrescriptionListResponse" message="tns:IOutpatient_GetOPConsultPrescriptionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateCancelCompSettle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveUpdateCancelCompSettle" message="tns:IOutpatient_SaveUpdateCancelCompSettle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveUpdateCancelCompSettleResponse" message="tns:IOutpatient_SaveUpdateCancelCompSettle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanySettleList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCompanySettleList" message="tns:IOutpatient_GetCompanySettleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCompanySettleListResponse" message="tns:IOutpatient_GetCompanySettleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveServYN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/RemoveServYN" message="tns:IOutpatient_RemoveServYN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/RemoveServYNResponse" message="tns:IOutpatient_RemoveServYN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveQMSToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveQMSToken" message="tns:IOutpatient_SaveQMSToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveQMSTokenResponse" message="tns:IOutpatient_SaveQMSToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQMSMaxToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetQMSMaxToken" message="tns:IOutpatient_GetQMSMaxToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetQMSMaxTokenResponse" message="tns:IOutpatient_GetQMSMaxToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCounterWiseTokenCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCounterWiseTokenCount" message="tns:IOutpatient_GetCounterWiseTokenCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCounterWiseTokenCountResponse" message="tns:IOutpatient_GetCounterWiseTokenCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountersToDisplay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCountersToDisplay" message="tns:IOutpatient_GetCountersToDisplay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCountersToDisplayResponse" message="tns:IOutpatient_GetCountersToDisplay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientTokenList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetPatientTokenList" message="tns:IOutpatient_GetPatientTokenList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetPatientTokenListResponse" message="tns:IOutpatient_GetPatientTokenList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/TransferToken" message="tns:IOutpatient_TransferToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/TransferTokenResponse" message="tns:IOutpatient_TransferToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTokenCounterForCalling">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveTokenCounterForCalling" message="tns:IOutpatient_SaveTokenCounterForCalling_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveTokenCounterForCallingResponse" message="tns:IOutpatient_SaveTokenCounterForCalling_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalledTokenToDisplay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCalledTokenToDisplay" message="tns:IOutpatient_GetCalledTokenToDisplay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCalledTokenToDisplayResponse" message="tns:IOutpatient_GetCalledTokenToDisplay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TokenStatusUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/TokenStatusUpdate" message="tns:IOutpatient_TokenStatusUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/TokenStatusUpdateResponse" message="tns:IOutpatient_TokenStatusUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsNonCapService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/IsNonCapService" message="tns:IOutpatient_IsNonCapService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/IsNonCapServiceResponse" message="tns:IOutpatient_IsNonCapService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OpenOPBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/OpenOPBill" message="tns:IOutpatient_OpenOPBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/OpenOPBillResponse" message="tns:IOutpatient_OpenOPBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PatServiceCostTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/PatServiceCostTran" message="tns:IOutpatient_PatServiceCostTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/PatServiceCostTranResponse" message="tns:IOutpatient_PatServiceCostTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatServiceDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetPatServiceDet" message="tns:IOutpatient_GetPatServiceDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetPatServiceDetResponse" message="tns:IOutpatient_GetPatServiceDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServices">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetServices" message="tns:IOutpatient_GetServices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetServicesResponse" message="tns:IOutpatient_GetServices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDBillInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPDBillInfo" message="tns:IOutpatient_GetOPDBillInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPDBillInfoResponse" message="tns:IOutpatient_GetOPDBillInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCancelCasBillRefund">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveCancelCasBillRefund" message="tns:IOutpatient_SaveCancelCasBillRefund_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveCancelCasBillRefundResponse" message="tns:IOutpatient_SaveCancelCasBillRefund_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCasRefundDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetCasRefundDetails" message="tns:IOutpatient_GetCasRefundDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetCasRefundDetailsResponse" message="tns:IOutpatient_GetCasRefundDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPPrescriptnDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPPrescriptnDet" message="tns:IOutpatient_GetOPPrescriptnDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPPrescriptnDetResponse" message="tns:IOutpatient_GetOPPrescriptnDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositReqTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/DepositReqTran" message="tns:IOutpatient_DepositReqTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/DepositReqTranResponse" message="tns:IOutpatient_DepositReqTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDepositReqLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPDepositReqLst" message="tns:IOutpatient_GetOPDepositReqLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPDepositReqLstResponse" message="tns:IOutpatient_GetOPDepositReqLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OBRegistTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/OBRegistTran" message="tns:IOutpatient_OBRegistTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/OBRegistTranResponse" message="tns:IOutpatient_OBRegistTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOBPatRegistrationDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOBPatRegistrationDet" message="tns:IOutpatient_GetOBPatRegistrationDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOBPatRegistrationDetResponse" message="tns:IOutpatient_GetOBPatRegistrationDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOBPatRegExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOBPatRegExist" message="tns:IOutpatient_GetOBPatRegExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOBPatRegExistResponse" message="tns:IOutpatient_GetOBPatRegExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRefBillReimbursement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveRefBillReimbursement" message="tns:IOutpatient_SaveRefBillReimbursement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveRefBillReimbursementResponse" message="tns:IOutpatient_SaveRefBillReimbursement_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getRefReimburselst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/getRefReimburselst" message="tns:IOutpatient_getRefReimburselst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/getRefReimburselstResponse" message="tns:IOutpatient_getRefReimburselst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetEmpDetails" message="tns:IOutpatient_GetEmpDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetEmpDetailsResponse" message="tns:IOutpatient_GetEmpDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetRefDetails" message="tns:IOutpatient_GetRefDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetRefDetailsResponse" message="tns:IOutpatient_GetRefDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getRefReimburseDtls">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/getRefReimburseDtls" message="tns:IOutpatient_getRefReimburseDtls_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/getRefReimburseDtlsResponse" message="tns:IOutpatient_getRefReimburseDtls_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getReferralReportlst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/getReferralReportlst" message="tns:IOutpatient_getReferralReportlst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/getReferralReportlstResponse" message="tns:IOutpatient_getReferralReportlst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppoinmentReq">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetAppoinmentReq" message="tns:IOutpatient_GetAppoinmentReq_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetAppoinmentReqResponse" message="tns:IOutpatient_GetAppoinmentReq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPConsultVisit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetOPConsultVisit" message="tns:IOutpatient_GetOPConsultVisit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetOPConsultVisitResponse" message="tns:IOutpatient_GetOPConsultVisit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferralApprovalsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetReferralApprovalsList" message="tns:IOutpatient_GetReferralApprovalsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetReferralApprovalsListResponse" message="tns:IOutpatient_GetReferralApprovalsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefApprovalDisplay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetRefApprovalDisplay" message="tns:IOutpatient_GetRefApprovalDisplay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetRefApprovalDisplayResponse" message="tns:IOutpatient_GetRefApprovalDisplay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRefAuthorization">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveRefAuthorization" message="tns:IOutpatient_SaveRefAuthorization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveRefAuthorizationResponse" message="tns:IOutpatient_SaveRefAuthorization_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRefSettlementTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/SaveRefSettlementTran" message="tns:IOutpatient_SaveRefSettlementTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/SaveRefSettlementTranResponse" message="tns:IOutpatient_SaveRefSettlementTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefSettlementData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetRefSettlementData" message="tns:IOutpatient_GetRefSettlementData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetRefSettlementDataResponse" message="tns:IOutpatient_GetRefSettlementData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeTreatmentHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetEmployeeTreatmentHistory" message="tns:IOutpatient_GetEmployeeTreatmentHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetEmployeeTreatmentHistoryResponse" message="tns:IOutpatient_GetEmployeeTreatmentHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferralLogHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetReferralLogHistory" message="tns:IOutpatient_GetReferralLogHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetReferralLogHistoryResponse" message="tns:IOutpatient_GetReferralLogHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefSAPPostData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetRefSAPPostData" message="tns:IOutpatient_GetRefSAPPostData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetRefSAPPostDataResponse" message="tns:IOutpatient_GetRefSAPPostData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HCExaminationSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/HCExaminationSave" message="tns:IOutpatient_HCExaminationSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/HCExaminationSaveResponse" message="tns:IOutpatient_HCExaminationSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHCExaminationDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetHCExaminationDetails" message="tns:IOutpatient_GetHCExaminationDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetHCExaminationDetailsResponse" message="tns:IOutpatient_GetHCExaminationDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHCExaminationListReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutpatient/GetHCExaminationListReport" message="tns:IOutpatient_GetHCExaminationListReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutpatient/GetHCExaminationListReportResponse" message="tns:IOutpatient_GetHCExaminationListReport_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOutpatient" type="tns:IOutpatient">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IOutpatient_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHCExaminationDetailsReport">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetHCExaminationDetailsReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PushClinicalDataFile">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/PushClinicalDataFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSlotExists">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetSlotExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorListForPassedDate">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetDoctorListForPassedDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQMSTokenTran">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveQMSTokenTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQMSMaxTokenNo">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetQMSMaxTokenNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorsToDisplay">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetDoctorsToDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorWaitlistForPasswedDate">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetDoctorWaitlistForPasswedDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalledQMSTokenToDisplay">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCalledQMSTokenToDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QMSTokenStatusUpdate">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/QMSTokenStatusUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHCExamAnalysisReport">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetHCExamAnalysisReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRefClaimTransaction">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveRefClaimTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferralClaimList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetReferralClaimList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefDetailsForYARAClaimHIS">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetRefDetailsForYARAClaimHIS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefDetailsForYARAClaimPP">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetRefDetailsForYARAClaimPP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalPurchaseReport">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetLocalPurchaseReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferralClaimDetails">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetReferralClaimDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClaimAuthorizationList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetClaimAuthorizationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRefClaimAuthTransaction">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveRefClaimAuthTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSelfRegistrationPatient">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveSelfRegistrationPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationEditHistory">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetRegistrationEditHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelfRegistrationPatientList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetSelfRegistrationPatientList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppointmentOverview">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetAppointmentOverview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAppointmentDelayIntimation">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveAppointmentDelayIntimation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyOutstandingAmountAndLimit">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCompanyOutstandingAmountAndLimit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyServiceRequestTran">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/CompanyServiceRequestTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyServiceRequestList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCompanyServiceRequestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyServiceRequestDisplay">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCompanyServiceRequestDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyPortalSummary">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCompanyPortalSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyServiceReqesutDetailsForProvBill">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCompanyServiceReqesutDetailsForProvBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyServiceList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCompanyServiceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyPatientList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCompanyPatientList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyServiceRequestReportData">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCompanyServiceRequestReportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientServiceRequestPatientData">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetPatientServiceRequestPatientData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientServiceRequestList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetPatientServiceRequestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadRegistration">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/UploadRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestEstimateDate">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetTestEstimateDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientNavigatorList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetPatientNavigatorList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientFollowUpsList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetPatientFollowUpsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientDiagnosisHist">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetPatientDiagnosisHist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientNaviPatientStatusHist">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetPatientNaviPatientStatusHist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatientNavigatorTran">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/PatientNavigatorTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatientNavigatorTreatmentStatusTran">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/PatientNavigatorTreatmentStatusTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientNavigatorReport">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetPatientNavigatorReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientNavigatorConversionReport">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetPatientNavigatorConversionReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPCNServiceListAgainstBillNo">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPCNServiceListAgainstBillNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPPatCatgTransferTran">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/OPPatCatgTransferTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatCatgTransferList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetPatCatgTransferList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadRegistrationVerifiedContact">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/UploadRegistrationVerifiedContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateRegistration">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveUpdateRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPatCompLimit">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SetPatCompLimit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationDet">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetRegistrationDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateAppointment">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveUpdateAppointment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOPApt">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/CancelOPApt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctLeaveStat">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetDoctLeaveStat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPAptList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPAptList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctAvail">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetDoctAvail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPAPTSearchLst">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPAPTSearchLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHCAptList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetHCAptList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDepositList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPDepositList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPRcptLst">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPRcptLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillInfo">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetBillInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillData">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetBillData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBilldtInfo">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetBilldtInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillDtFrCrdNote">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetBillDtFrCrdNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillPayModeDetails">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetBillPayModeDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefRquestList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetRefRquestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOPRefund">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveOPRefund" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCrdNtHDList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCrdNtHDList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOpBillInfo">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/UpdateOpBillInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillAdjmntDtls">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetBillAdjmntDtls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDpstPayModeDt">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPDpstPayModeDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPReceiptDetails">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPReceiptDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateRefRequest">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveUpdateRefRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOPDeposit">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveOPDeposit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateCancelDueCol">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveUpdateCancelDueCol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDpstRefundList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPDpstRefundList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDpstTransferList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPDpstTransferList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHCAPTSearchLst">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetHCAPTSearchLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateHCApt">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveUpdateHCApt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelHCApt">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/CancelHCApt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOPBill">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveOPBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDollerRate">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetDollerRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelRefRequest">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/CancelRefRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefRquestDTLst">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetRefRquestDTLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCancelOPCN">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveCancelOPCN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCancelBillRefund">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveCancelBillRefund" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBillDiscount">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/UpdateBillDiscount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDpstInfoFrTransfer">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetDpstInfoFrTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDpstTransfer">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveDpstTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDocConsFee">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPDocConsFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDpstTransfDT">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPDpstTransfDT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCrdNoteList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCrdNoteList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPCNDt">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPCNDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPColletSummary">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPColletSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitToCashier">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SubmitToCashier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrCancelOPConsltn">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveOrCancelOPConsltn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPServWiseDetails">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPServWiseDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPPatLedgerData">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPPatLedgerData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPConsulDet">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPConsulDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPTestDetails">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPTestDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPBlWiseTestStatus">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPBlWiseTestStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServWiseOPPatList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetServWiseOPPatList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPCollectionDet">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPCollectionDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsltnListFrRpt">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetConsltnListFrRpt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsltnDetListFrRpt">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetConsltnDetListFrRpt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPRefundDTOrUserWise">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPRefundDTOrUserWise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHCBillDet">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetHCBillDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHCPkgBillDet">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetHCPkgBillDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherTestDoneByHCPat">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOtherTestDoneByHCPat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HCPositveRepotTran">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/HCPositveRepotTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHCPosRpt">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetHCPosRpt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HCBillChkListTran">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/HCBillChkListTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHCBillChkList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetHCBillChkList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHCBillChkLstDet">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetHCBillChkLstDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHCDrShare">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/UpdateHCDrShare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorSlots">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetDoctorSlots" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPTallyReport">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPTallyReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurBedOccupancy">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCurBedOccupancy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPServiceWiseIncome">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPServiceWiseIncome" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPDepositAdjTran">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/OPDepositAdjTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDepositAdjList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPDepositAdjList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPkgWiseInvstRsltList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetPkgWiseInvstRsltList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPBillNotification">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPBillNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatientTracking_Save">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/PatientTracking_Save" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientTracking">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetPatientTracking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPPackageReport">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPPackageReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPConsultVisitType">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPConsultVisitType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getddrefApprovallst">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/getddrefApprovallst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDRefApprovalDisplay">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetDDRefApprovalDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveddrefApproval">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveddrefApproval" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPConsultPrescriptionList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPConsultPrescriptionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateCancelCompSettle">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveUpdateCancelCompSettle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanySettleList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCompanySettleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveServYN">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/RemoveServYN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQMSToken">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveQMSToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQMSMaxToken">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetQMSMaxToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCounterWiseTokenCount">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCounterWiseTokenCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountersToDisplay">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCountersToDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientTokenList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetPatientTokenList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferToken">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/TransferToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTokenCounterForCalling">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveTokenCounterForCalling" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalledTokenToDisplay">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCalledTokenToDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TokenStatusUpdate">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/TokenStatusUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsNonCapService">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/IsNonCapService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpenOPBill">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/OpenOPBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatServiceCostTran">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/PatServiceCostTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatServiceDet">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetPatServiceDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServices">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDBillInfo">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPDBillInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCancelCasBillRefund">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveCancelCasBillRefund" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCasRefundDetails">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetCasRefundDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPPrescriptnDet">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPPrescriptnDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepositReqTran">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/DepositReqTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDepositReqLst">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPDepositReqLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OBRegistTran">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/OBRegistTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOBPatRegistrationDet">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOBPatRegistrationDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOBPatRegExist">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOBPatRegExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRefBillReimbursement">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveRefBillReimbursement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRefReimburselst">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/getRefReimburselst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpDetails">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetEmpDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefDetails">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetRefDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRefReimburseDtls">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/getRefReimburseDtls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReferralReportlst">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/getReferralReportlst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppoinmentReq">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetAppoinmentReq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPConsultVisit">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetOPConsultVisit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferralApprovalsList">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetReferralApprovalsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefApprovalDisplay">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetRefApprovalDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRefAuthorization">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveRefAuthorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRefSettlementTran">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/SaveRefSettlementTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefSettlementData">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetRefSettlementData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeTreatmentHistory">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetEmployeeTreatmentHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferralLogHistory">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetReferralLogHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefSAPPostData">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetRefSAPPostData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HCExaminationSave">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/HCExaminationSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHCExaminationDetails">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetHCExaminationDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHCExaminationListReport">
+      <soap:operation soapAction="http://tempuri.org/IOutpatient/GetHCExaminationListReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Outpatient">
+    <wsdl:port name="BasicHttpBinding_IOutpatient" binding="tns:BasicHttpBinding_IOutpatient">
+      <soap:address location="http://uat.himstccf.org:82/WebHMISService/Outpatient.svc/Outpatient.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

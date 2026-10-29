@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.Outpatient" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.Outpatient" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.3/WebHMISServiceN/Outpatient.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+  <xs:complexType name="BL_RefClaimYARA">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdvanceAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CityCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CityName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClaimNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClaimStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaimType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HISorPP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HoldYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospChargeAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="HospCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospFromDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospToDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LocalConvAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="MedExpAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NoOfEscort" type="xs:int" />
+          <xs:element minOccurs="0" name="OtherMedicalRefDoctor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REFNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SettleAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="StayInGuestHouseYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TravelAlwAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TravelExpAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TravelFromDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TravelToDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisitFromDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisitToDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XMLString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_RefClaimYARA" nillable="true" type="tns:BL_RefClaimYARA" />
+  <xs:complexType name="BL_CommonProp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CntrCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EditYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExcelYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FundSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrintYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rights" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShowYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranMode" type="xs:int" />
+      <xs:element minOccurs="0" name="TranNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranPrintYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cancelYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="verifyYn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_CommonProp" nillable="true" type="tns:BL_CommonProp" />
+  <xs:complexType name="BL_RefClaimYARAAuth">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClaimNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrentHoldStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrentStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="SettlementAmount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SettlementRefNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XMLDocString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_RefClaimYARAAuth" nillable="true" type="tns:BL_RefClaimYARAAuth" />
+  <xs:complexType name="BL_OPSelfRegistration">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdharHolder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AdharNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Areaid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cityid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Countryid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Districtid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImgData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Nationlity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Passportno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patblodgrp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patdob" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patemail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patfname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patincgrp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patlname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patmartsts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patmname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patmobile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patoccup" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patreligin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patsex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Regionid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Salutation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UnitCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OPSelfRegistration" nillable="true" type="tns:BL_OPSelfRegistration" />
+  <xs:complexType name="BL_CompanyServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BiopsySpecimen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CompanyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DOB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FreeTestEntry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferDoctor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SaluCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalAmount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XMLList" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_CompanyServiceRequest" nillable="true" type="tns:BL_CompanyServiceRequest" />
+  <xs:complexType name="BL_OPRegistration">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdharHolder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AdharNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Admnstatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Aplidamt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Areaid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Avllmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Cardlimit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Cardno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Casetypecd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cityid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cliniccd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Conscatg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Consdoct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Countryid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Crdcompcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Crdempid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Deliverydt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Depstamt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Deptcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Districtid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Empdepndcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Empid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Empname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExempProof" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gpincode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdentityCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdentityNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImgData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Iptransfr" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Lastadmndt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Lastipno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Letterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nationlity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Natlntycd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Oldmrno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Otaplidamt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Otdepstamt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Otrefndamt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PANCardHolder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PANNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Passportno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatGDistID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatPDistID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patblodgrp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patcatgcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patdob" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pateductn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patemail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patfname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatgAreacd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patgaddr1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patgaddr2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patgaddr3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patgcitycd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patgcntrcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patgmobl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patgname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patgphon1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patgphon2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patgregncd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patgreln" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientCaseType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patincgrp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patlname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patmartsts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patmname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patmobile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patoccup" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patophone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatpAreacd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patpaddr1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patpaddr2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patpaddr3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patpcitycd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patpcntrcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patpmobl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patpphon1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patpphon2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patpregncd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patpwd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patreligin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patrphone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patsex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patstatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pattribe" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pattypcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Paytype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ppincode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Prefdoct" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PriorityRemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Refdoctcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Referedby" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Refhosp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Refndamt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RegTranTimeTaken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Regdate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Regfeeyn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Regionid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Regno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Regstat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Regstatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Regtime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Relatnship" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Salutation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SchemeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SelfRegiRefNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Snctprfyn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SplEvent" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tariffid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TokenNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tpalmt" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Validupto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Vipyorn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OPRegistration" nillable="true" type="tns:BL_OPRegistration" />
+  <xs:complexType name="BL_OPAppointment">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApmntReqID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApmntTypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Clncode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Consdate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Constime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Districtid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Division" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Doctcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EnqTranNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patcatg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patfname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patlname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patmname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patremarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patsex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phoneno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SCHEDASPER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Salutation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Slotno" type="xs:int" />
+          <xs:element minOccurs="0" name="TeleConsultYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Visittype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Weekday" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OPAppointment" nillable="true" type="tns:BL_OPAppointment" />
+  <xs:complexType name="BL_OPRefund">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AMOUNT" type="xs:double" />
+          <xs:element minOccurs="0" name="BANKNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DOLLERRATE" type="xs:int" />
+          <xs:element minOccurs="0" name="PAIDTO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PAYMODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REFREQNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REMARKS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="chequedate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="chequeno" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OPRefund" nillable="true" type="tns:BL_OPRefund" />
+  <xs:complexType name="BL_OPBill">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Advadjamt" type="xs:double" />
+          <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Amountpaid" type="xs:double" />
+          <xs:element minOccurs="0" name="AuthCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Billamt" type="xs:double" />
+          <xs:element minOccurs="0" name="Billstat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Billtype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CancelRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CaptiznAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="CareType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comamtpaid" type="xs:double" />
+          <xs:element minOccurs="0" name="Combillamt" type="xs:double" />
+          <xs:element minOccurs="0" name="CompCNAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="CompDueAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="CompRefundedAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="Conscatg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CopayAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="Crdcompcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DOB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepstInfoYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Deptcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Discauthby" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Discount" type="xs:double" />
+          <xs:element minOccurs="0" name="DollerDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Dollerrate" type="xs:double" />
+          <xs:element minOccurs="0" name="EmergAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="EmergencyYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Empid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Inscompcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Letterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MemberID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MultiDrTrnNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Multipayyn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Netamount" type="xs:double" />
+          <xs:element minOccurs="0" name="PAYTYPECD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PRIORITY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatCNAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="PatDueAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="PatRefundedAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="Patamtpaid" type="xs:double" />
+          <xs:element minOccurs="0" name="Patbillamt" type="xs:double" />
+          <xs:element minOccurs="0" name="Patcatgcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patphone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProvBillNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProvFinalBill" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefCompCd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefFrmOut" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefdoctCDOut" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Refdoctcd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SALUCODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SchemeCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServTaxYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Servicetax" type="xs:double" />
+          <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurchargeYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurchrgAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="Tariffid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Totservamt" type="xs:double" />
+          <xs:element minOccurs="0" name="Tpalmt" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OPBill" nillable="true" type="tns:BL_OPBill" />
+  <xs:complexType name="BL_OpRefRequisition">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" type="xs:double" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OpRefRequisition" nillable="true" type="tns:BL_OpRefRequisition" />
+  <xs:complexType name="BL_OPDeposit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DepoType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepstAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="DepstRcpNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Deptype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DollerDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Dollerrate" type="xs:double" />
+          <xs:element minOccurs="0" name="DonorCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FixToCounterCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rcvdfrom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqestedAmt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fixToCntr" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OPDeposit" nillable="true" type="tns:BL_OPDeposit" />
+  <xs:complexType name="BL_DueCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheqDDNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheqDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayMode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SettlementType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_DueCollection" nillable="true" type="tns:BL_DueCollection" />
+  <xs:complexType name="BL_HCAppointment">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BookFor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConsTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Consdate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Districtid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Division" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pataddr3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patcatg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patfname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patlname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patmname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patremarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Patsex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phoneno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PkgCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Salutation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Slotno" type="xs:int" />
+          <xs:element minOccurs="0" name="Visittype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Weekday" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_HCAppointment" nillable="true" type="tns:BL_HCAppointment" />
+  <xs:complexType name="BL_CreditNote">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AUTHCODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COMCNAMT" type="xs:double" />
+          <xs:element minOccurs="0" name="OPBILLNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PATCNAMT" type="xs:double" />
+          <xs:element minOccurs="0" name="REMARKS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_CreditNote" nillable="true" type="tns:BL_CreditNote" />
+  <xs:complexType name="BL_OPBillRefund">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BANKNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BILLNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COMPREFAMT" type="xs:double" />
+          <xs:element minOccurs="0" name="DOLLERRATE" type="xs:double" />
+          <xs:element minOccurs="0" name="PAIDTO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PATREFAMT" type="xs:double" />
+          <xs:element minOccurs="0" name="PAYMODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REMARKS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="chequedate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="chequeno" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OPBillRefund" nillable="true" type="tns:BL_OPBillRefund" />
+  <xs:complexType name="BL_OPDpstTransfer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Rcvdfrom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TansferAmt" type="xs:double" />
+          <xs:element minOccurs="0" name="ToIPno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToMrno" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OPDpstTransfer" nillable="true" type="tns:BL_OPDpstTransfer" />
+  <xs:complexType name="BL_SubmitToCashier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Reqfrom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Requestno" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_SubmitToCashier" nillable="true" type="tns:BL_SubmitToCashier" />
+  <xs:complexType name="BL_Consultation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Advadjamt" type="xs:double" />
+      <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Amtpaid" type="xs:double" />
+      <xs:element minOccurs="0" name="Appmntno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CancelRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CapAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="CareType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Casetypecd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Compcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConsNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Conscatg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Counterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Createdby" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dob" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dollardt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dollerrate" type="xs:double" />
+      <xs:element minOccurs="0" name="Empid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Finyear" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fundsource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Inscompcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ipaddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Letterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MemberId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mrno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewFileCharge" type="xs:double" />
+      <xs:element minOccurs="0" name="OnlPayStat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patcatg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patphone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Paytype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RefCompCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegFee" type="xs:double" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Salucd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SchemeCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tariffid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tpalmt" type="xs:double" />
+      <xs:element minOccurs="0" name="TranMode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_Consultation" nillable="true" type="tns:BL_Consultation" />
+  <xs:complexType name="BL_HCPositiveReport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Billno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Doctcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefferedFr" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_HCPositiveReport" nillable="true" type="tns:BL_HCPositiveReport" />
+  <xs:complexType name="BL_HCBillChkList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Billno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XMLTestlist" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_HCBillChkList" nillable="true" type="tns:BL_HCBillChkList" />
+  <xs:complexType name="BL_HCDrShareChange">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Billno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlMultiDrList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlServList" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_HCDrShareChange" nillable="true" type="tns:BL_HCDrShareChange" />
+  <xs:complexType name="BL_OPDepositAdjust">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BillDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BillNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepAdjAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="DepAdjType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlList" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OPDepositAdjust" nillable="true" type="tns:BL_OPDepositAdjust" />
+  <xs:complexType name="BL_PatientTracking">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="COUNTER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOCTCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAdress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REMARK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_PatientTracking" nillable="true" type="tns:BL_PatientTracking" />
+  <xs:complexType name="BL_DDRefApproval">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="APPROVEDAT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="APPROVEDBY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="APPROVEDON" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DSXml" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ESCORT" type="xs:int" />
+          <xs:element minOccurs="0" name="ESCORT1" type="xs:int" />
+          <xs:element minOccurs="0" name="ESCORT2" type="xs:int" />
+          <xs:element minOccurs="0" name="LREMARKS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RCATEGORY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RCATEGORY1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RCATEGORY2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RCITY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RCITY1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RCITY2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REFNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REMARKS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RHOSPITAL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RHOSPITAL1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RHOSPITAL2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RVISITDATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SPECONV" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TRANNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VSTTYPE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_DDRefApproval" nillable="true" type="tns:BL_DDRefApproval" />
+  <xs:complexType name="BL_CompanySettlement">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheqDDNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheqDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CompanyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DepAdjRcptNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayMode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XmlDS" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_CompanySettlement" nillable="true" type="tns:BL_CompanySettlement" />
+  <xs:complexType name="BL_PatServiceCost">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q1:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BillNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmergYn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExempCatgCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ipaddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MrNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatAge" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatDob" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatGender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefDoctCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefFromOutYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranMode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlDsTstLnk" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_PatServiceCost" nillable="true" type="tns:BL_PatServiceCost" />
+  <xs:complexType name="BL_OPDepositReq">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DepoType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Deptype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DonorCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecivedFrm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReqAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="fixToCntr" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OPDepositReq" nillable="true" type="tns:BL_OPDepositReq" />
+  <xs:complexType name="BL_OBGynacRegistration">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abortion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BedCatgCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Breast" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Consultant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Edd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Grava" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LMP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MarriagePeriod" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MenstrualHistory" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NursStnCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldRegYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Para" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistWithin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestAmt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StayAdvReq" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tariff" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TranMode1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WardNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_OBGynacRegistration" nillable="true" type="tns:BL_OBGynacRegistration" />
+  <xs:complexType name="BL_RefBillReimbursement">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BILLCATG" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EMPCODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ESCORTS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EXMPPROOF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IPOPYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MCIAMOUNT" type="xs:double" />
+          <xs:element minOccurs="0" name="MRNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REFDATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REFDOCTOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REFHOSPITAL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REFNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REFPLACE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REMARKS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TAXABLE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TOTALAMOUNT" type="xs:double" />
+          <xs:element minOccurs="0" name="TRANNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TREXPAMOUNT" type="xs:double" />
+          <xs:element minOccurs="0" name="TREXPOTHAMT" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_RefBillReimbursement" nillable="true" type="tns:BL_RefBillReimbursement" />
+  <xs:complexType name="BL_ReferralAuthorization">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LoggedUserType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PayModeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdateStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XmlString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_ReferralAuthorization" nillable="true" type="tns:BL_ReferralAuthorization" />
+  <xs:complexType name="BL_ReferralSettlement">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdvanceRecAmt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BalanceAmount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DaysWithHalt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DaysWithoutHalt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FoodAllowanceAmt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FoodYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospFromDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospToDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospitalizationYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MedicalExpAmount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferralNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SettlementNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StayAllowanceAmt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalAllowanceAmt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalAmount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TravelAllowanceAmt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TravelExpAmount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TravelProofDocYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisitFromDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisitToDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_ReferralSettlement" nillable="true" type="tns:BL_ReferralSettlement" />
+  <xs:complexType name="BL_HCExamination">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_CommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PackageCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefBillno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XMLString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_HCExamination" nillable="true" type="tns:BL_HCExamination" />
+</xs:schema>

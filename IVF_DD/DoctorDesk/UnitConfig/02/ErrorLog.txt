@@ -1,0 +1,476 @@
+=>25-Aug-25 2:59:58 PM | ::1 | 32 |  |  An Error occured :  Message : A public action method 'IPMedication' was not found on controller 'OncologyEMR.Controllers.DoctorDeskController'.
+-----------------------------------------------------------------------------------------------
+=>25-Aug-25 3:10:40 PM | ::1 | 32 |  |  An Error occured :  Message : Retrieving the COM class factory for component with CLSID {B933B20D-20F7-4CBC-A31E-4A2C2F197BE1} failed due to the following error: 80040154 Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)).
+-----------------------------------------------------------------------------------------------
+=>25-Aug-25 3:48:35 PM | ::1 | 32 |  |  An Error occured :  Message : Invalid column name 'CLNCODE'.
+-----------------------------------------------------------------------------------------------
+=>25-Aug-25 3:48:47 PM | ::1 | 32 |  |  An Error occured :  Message : Invalid column name 'CLNCODE'.
+-----------------------------------------------------------------------------------------------
+=>25-Aug-25 3:49:44 PM | ::1 | 32 |  |  An Error occured :  Message : Invalid column name 'CLNCODE'.
+-----------------------------------------------------------------------------------------------
+=>25-Aug-25 3:50:16 PM | ::1 | 32 |  |  An Error occured :  Message : Incorrect syntax near the keyword 'AND'.
+-----------------------------------------------------------------------------------------------
+=>25-Aug-25 3:50:33 PM | ::1 | 32 |  |  An Error occured :  Message : Incorrect syntax near the keyword 'AND'.
+-----------------------------------------------------------------------------------------------
+=>11-Jan-26 10:09:32 AM | ::1 | 32 |  |  An Error occured :  Message : A public action method 'PrintTumorTransactionAction' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>28-02-2026 18:58:04 | ::1 | 32 |  |  An Error occured :  Message : The HTTP service located at http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 13:33:26 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 13:40:34 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 14:02:08 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:13:45 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:14:01 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:30:16 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:33:54 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:35:38 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:37:38 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:38:04 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:38:22 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:41:23 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:42:32 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:47:13 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:53:09 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:54:22 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 17:56:43 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 18:02:36 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 18:25:40 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 18:30:40 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 18:44:19 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 18:45:08 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 18:46:50 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 19:05:46 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 19:13:17 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 19:19:04 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 20:00:51 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 20:09:25 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 20:13:35 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 20:14:05 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 20:14:25 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 20:14:54 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 20:29:13 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 21:07:42 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 21:08:54 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 21:14:12 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 21:14:36 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 21:18:04 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 21:18:22 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 21:23:12 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>05-03-2026 21:35:52 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetSurgryList' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>07-03-2026 15:47:38 | ::1 | 32 |  |  An Error occured :  Message : <target>.AdminstrDuration and <source>.AdminstrDuration have conflicting properties: DataType property mismatch.
+-----------------------------------------------------------------------------------------------
+=>07-03-2026 17:42:26 | ::1 | 32 |  |  An Error occured :  Message : <target>.AdminstrDuration and <source>.AdminstrDuration have conflicting properties: DataType property mismatch.
+-----------------------------------------------------------------------------------------------
+=>08-03-2026 12:57:16 | ::1 | 32 |  |  An Error occured :  Message : Additional text found in JSON string after finishing deserializing object.
+-----------------------------------------------------------------------------------------------
+=>08-03-2026 12:57:19 | ::1 | 32 |  |  An Error occured :  Message : Additional text found in JSON string after finishing deserializing object.
+-----------------------------------------------------------------------------------------------
+=>08-03-2026 16:47:42 | ::1 | 32 |  |  An Error occured :  Message : A circular reference was detected while serializing an object of type 'System.Globalization.CultureInfo'.
+-----------------------------------------------------------------------------------------------
+=>08-03-2026 16:52:40 | ::1 | 32 |  |  An Error occured :  Message : A circular reference was detected while serializing an object of type 'System.Globalization.CultureInfo'.
+-----------------------------------------------------------------------------------------------
+=>08-03-2026 16:53:15 | ::1 | 32 |  |  An Error occured :  Message : A circular reference was detected while serializing an object of type 'System.Globalization.CultureInfo'.
+-----------------------------------------------------------------------------------------------
+=>09-03-2026 09:02:05 | ::1 | 32 |  |  An Error occured :  Message : Could not find file 'D:\TCCF\WorkSpace\HMIS Project 2\DoctorDesk\Images\logo.jpg'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 15:11:13 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 15:13:02 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 15:13:35 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 15:28:53 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 16:15:13 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 16:16:59 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 16:35:37 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 16:39:32 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 16:40:53 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 16:51:10 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:09:26 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:09:58 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:13:23 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:13:52 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:14:12 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:14:23 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:14:24 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:14:40 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:15:51 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:15:59 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:17:33 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:19:07 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:21:33 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:22:19 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:23:27 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:24:55 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 17:27:10 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 18:00:51 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 18:03:32 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 18:10:57 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 18:12:19 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 18:34:06 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 18:37:28 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 19:52:13 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 19:52:49 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 19:53:05 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 19:53:59 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 19:57:38 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 19:59:28 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 20:01:06 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>09-04-2026 20:03:09 | ::1 | 32 |  |  An Error occured :  Message : A public action method 'GetMedicineType' was not found on controller 'OncologyEMR.Controllers.SinglePageController'.
+-----------------------------------------------------------------------------------------------
+=>12-06-2026 07:06:29 | ::1 | 32 |  |  An Error occured :  Message : An error occurred while receiving the HTTP response to http://uat.himstccf.org:83/WEBHMISSERVICE/CommonService.svc/CommonService.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+-----------------------------------------------------------------------------------------------
+=>12-06-2026 07:07:10 | ::1 | 32 |  |  An Error occured :  Message : An error occurred while receiving the HTTP response to http://uat.himstccf.org:83/WEBHMISSERVICE/Security.svc/Security.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.
+-----------------------------------------------------------------------------------------------
+=>01-07-2026 11:07:10 | ::1 | 32 |  |  An Error occured :  Message : Access to the path 'D:\TCCFUAT\DoctorDesk\HumanBodyImg\000003' is denied.
+-----------------------------------------------------------------------------------------------
+=>30-07-2026 00:36:25 | ::1 | 32 |  |  An Error occured :  Message : Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper'.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:26 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:26 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:27 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:28 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:29 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:29 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:29 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:29 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:30 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:30 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:31 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:31 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:32 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:33 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 03:58:33 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 04:00:05 | ::1 | 32 |  |  An Error occured :  Message : Data at the root level is invalid. Line 1, position 1.
+-----------------------------------------------------------------------------------------------
+=>01-08-2026 04:03:17 | ::1 | 32 |  |  An Error occured :  Message : Data at the root level is invalid. Line 1, position 1.
+-----------------------------------------------------------------------------------------------
+=>09-08-2026 11:58:13 | ::1 | 32 |  |  An Error occured :  Message : Access to the path 'C:\Users\AIPL\Desktop\LASTEST SOURCE\DoctorDesk\HumanBodyImg\000003' is denied.
+-----------------------------------------------------------------------------------------------
+=>09-08-2026 16:47:49 | ::1 | 32 |  |  An Error occured :  Message : Object reference not set to an instance of an object.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:04:11 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:04:12 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:04:13 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:04:15 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:04:16 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:04:16 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:04:39 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:04:39 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:04:40 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:04:40 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:04:41 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:04:41 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:07:24 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:07:24 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:07:24 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:07:24 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:07:25 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:07:26 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:16:15 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:16:15 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:16:15 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:16:16 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:16:17 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:16:17 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:17:02 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:17:02 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:17:03 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:17:03 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:17:04 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:17:04 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:23:14 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:23:14 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:23:15 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:23:15 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:23:16 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:23:16 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:35:17 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:35:18 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:35:19 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:35:19 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:35:20 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:35:21 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:35:25 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:35:26 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:35:26 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:35:27 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:35:27 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:35:28 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:42:31 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:42:31 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:42:31 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:42:32 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:42:32 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>10-08-2026 11:42:33 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:20:16 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:20:16 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:20:17 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:20:19 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:20:21 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:20:22 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:22:14 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:22:15 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:22:17 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:22:34 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:22:35 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:22:35 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:22:36 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:22:36 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:22:37 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:22:48 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:22:48 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:22:49 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:24:00 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:24:00 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:24:01 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:24:01 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:24:01 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:24:02 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:24:05 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:24:05 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>13-08-2026 16:24:06 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:22:55 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:22:55 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:22:56 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:26:58 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:26:58 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:26:59 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:31:31 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:31:31 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:31:32 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:32:08 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:32:09 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:32:09 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:44:52 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:44:52 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:44:53 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:52:28 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:52:28 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:52:29 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:54:11 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:54:12 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:54:12 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:55:50 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:55:50 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:55:50 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:57:37 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:57:38 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 18:57:38 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 19:00:56 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 19:00:56 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 19:00:57 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 19:02:49 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 19:02:49 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>24-08-2026 19:02:50 | ::1 | 32 |  |  An Error occured :  Message : There was no endpoint listening at http://uat.himstccf.org:83/WebLisInterFace/LisInterface.svc/LisInterface.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+-----------------------------------------------------------------------------------------------
+=>27-08-2026 14:58:28 | ::1 | 32 |  |  An Error occured :  Message : Input string was not in a correct format.
+-----------------------------------------------------------------------------------------------
+=>19-09-2026 13:32:21 | ::1 | 32 |  |  An Error occured :  Message : The conversion of a varchar data type to a datetime data type resulted in an out-of-range value.
+-----------------------------------------------------------------------------------------------

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfBL_GeneralFunctions.SelectLstThreeItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BL_GeneralFunctions.SelectLstThreeItem" nillable="true" type="tns:BL_GeneralFunctions.SelectLstThreeItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBL_GeneralFunctions.SelectLstThreeItem" nillable="true" type="tns:ArrayOfBL_GeneralFunctions.SelectLstThreeItem" />
+  <xs:complexType name="BL_GeneralFunctions.SelectLstThreeItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ThirdCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_GeneralFunctions.SelectLstThreeItem" nillable="true" type="tns:BL_GeneralFunctions.SelectLstThreeItem" />
+  <xs:complexType name="ArrayOfFileAttachments">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileAttachments" nillable="true" type="tns:FileAttachments" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileAttachments" nillable="true" type="tns:ArrayOfFileAttachments" />
+  <xs:complexType name="FileAttachments">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileContentBase64" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileAttachments" nillable="true" type="tns:FileAttachments" />
+  <xs:complexType name="BL_TwoOrThreeFldMst">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentralMasterYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommonForAllUnitsYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FIELD3Val" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FIELDMasterType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TbleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranMode" type="xs:int" />
+      <xs:element minOccurs="0" name="UnitStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_TwoOrThreeFldMst" nillable="true" type="tns:BL_TwoOrThreeFldMst" />
+</xs:schema>

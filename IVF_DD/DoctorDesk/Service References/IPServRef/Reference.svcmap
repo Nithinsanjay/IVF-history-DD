@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="2ef70c9c-d263-48f6-b89d-cab7abf9de38" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://uat.himstccf.org:82/WEBHMISSERVICE/IPService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IPService.xsd" MetadataType="Schema" ID="1967f407-d221-4183-a44c-707e494d179b" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd4" />
+    <MetadataFile FileName="IPService.wsdl" MetadataType="Wsdl" ID="b1a173bd-34e7-4d9c-810b-ab5610c3e8c7" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/IPService.svc?wsdl" />
+    <MetadataFile FileName="IPService1.xsd" MetadataType="Schema" ID="54180aff-465f-4f08-988d-4570b2306f3d" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd5" />
+    <MetadataFile FileName="IPService2.xsd" MetadataType="Schema" ID="7395f591-e2a9-4ddc-867a-8aa6d5617a3c" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd2" />
+    <MetadataFile FileName="IPService3.xsd" MetadataType="Schema" ID="bb14b7d9-278c-40bb-8082-1d5641be4e57" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd1" />
+    <MetadataFile FileName="IPService4.xsd" MetadataType="Schema" ID="82e19bd9-341a-48b5-af6c-edb332ab1be4" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd0" />
+    <MetadataFile FileName="IPService1.wsdl" MetadataType="Wsdl" ID="403a10b7-fbd0-4b43-86f6-c44a7022b8d2" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/IPService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="IPService5.xsd" MetadataType="Schema" ID="d496f6dd-0e41-4ead-9ba4-ea91d8f7d90d" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd3" />
+    <MetadataFile FileName="IPService.disco" MetadataType="Disco" ID="a69154ac-3b39-4a9f-ab55-fe669f0e5d07" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/IPService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

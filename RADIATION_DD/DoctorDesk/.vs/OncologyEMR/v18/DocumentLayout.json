@@ -1,0 +1,362 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DoctorDesk\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\controllers\\oncologycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:controllers\\oncologycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\controllers\\clinicalnotescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:controllers\\clinicalnotescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\views\\singlepage\\diagnosis.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:views\\singlepage\\diagnosis.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\views\\singlepage\\personalhistory.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:views\\singlepage\\personalhistory.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\views\\singlepage\\familyhistory.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:views\\singlepage\\familyhistory.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\views\\singlepage\\historyexamipd.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:views\\singlepage\\historyexamipd.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\dataclass\\generalfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:dataclass\\generalfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|d:\\doctordesk\\views\\singlepage\\singlepageipd.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:views\\singlepage\\singlepageipd.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\models\\patientclinicalhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:models\\patientclinicalhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\models\\singlepagemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:models\\singlepagemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\controllers\\singlepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:controllers\\singlepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\css\\toaster\\src\\toast.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:css\\toaster\\src\\toast.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\views\\singlepage\\treatmentorder.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:views\\singlepage\\treatmentorder.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\models\\clinicalnotes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:models\\clinicalnotes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\views\\singlepage\\allergyhistory.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:views\\singlepage\\allergyhistory.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\views\\singlepage\\patientinfoipd.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:views\\singlepage\\patientinfoipd.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|D:\\DoctorDesk\\models\\oncology.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EA89ABB-D56D-472F-BF2F-CB12FE534515}|OncologyEMR.csproj|solutionrelative:models\\oncology.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 23,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\DoctorDesk\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "D:\\DoctorDesk\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T06:21:33.114Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GeneralFunction.cs",
+              "DocumentMoniker": "D:\\DoctorDesk\\DataClass\\GeneralFunction.cs",
+              "RelativeDocumentMoniker": "DataClass\\GeneralFunction.cs",
+              "ToolTip": "D:\\DoctorDesk\\DataClass\\GeneralFunction.cs",
+              "RelativeToolTip": "DataClass\\GeneralFunction.cs",
+              "ViewState": "AgIAAJoHAAAAAAAAAAAmwKkHAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T05:34:01.093Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SinglePageModels.cs",
+              "DocumentMoniker": "D:\\DoctorDesk\\Models\\SinglePageModels.cs",
+              "RelativeDocumentMoniker": "Models\\SinglePageModels.cs",
+              "ToolTip": "D:\\DoctorDesk\\Models\\SinglePageModels.cs",
+              "RelativeToolTip": "Models\\SinglePageModels.cs",
+              "ViewState": "AgIAAIY7AAAAAAAAAAAkwJ47AAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T04:49:00.634Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SinglePageController.cs",
+              "DocumentMoniker": "D:\\DoctorDesk\\Controllers\\SinglePageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SinglePageController.cs",
+              "ToolTip": "D:\\DoctorDesk\\Controllers\\SinglePageController.cs",
+              "RelativeToolTip": "Controllers\\SinglePageController.cs",
+              "ViewState": "AgIAAP0FAAAAAAAAAAAUwAkGAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T04:49:00.543Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Oncology.cs",
+              "DocumentMoniker": "D:\\DoctorDesk\\Models\\Oncology.cs",
+              "RelativeDocumentMoniker": "Models\\Oncology.cs",
+              "ToolTip": "D:\\DoctorDesk\\Models\\Oncology.cs",
+              "RelativeToolTip": "Models\\Oncology.cs",
+              "ViewState": "AgIAACsfAAAAAAAAAABRwC4fAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T05:07:34.528Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FamilyHistory.ascx",
+              "DocumentMoniker": "D:\\DoctorDesk\\Views\\SinglePage\\FamilyHistory.ascx",
+              "RelativeDocumentMoniker": "Views\\SinglePage\\FamilyHistory.ascx",
+              "ToolTip": "D:\\DoctorDesk\\Views\\SinglePage\\FamilyHistory.ascx",
+              "RelativeToolTip": "Views\\SinglePage\\FamilyHistory.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2026-10-26T06:13:42.482Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{65ddf8c3-8f89-4077-a6c6-dbb8853aab13}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1869956712:0:{81164725-9a96-4ece-a4cb-440d8fd285e5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e3fc08be-3924-11db-8af6-b622a1ef5492}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TreatmentOrder.ascx",
+              "DocumentMoniker": "D:\\DoctorDesk\\Views\\SinglePage\\TreatmentOrder.ascx",
+              "RelativeDocumentMoniker": "Views\\SinglePage\\TreatmentOrder.ascx",
+              "ToolTip": "D:\\DoctorDesk\\Views\\SinglePage\\TreatmentOrder.ascx",
+              "RelativeToolTip": "Views\\SinglePage\\TreatmentOrder.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2026-10-27T10:47:03.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Toast.js",
+              "DocumentMoniker": "D:\\DoctorDesk\\css\\Toaster\\src\\Toast.js",
+              "RelativeDocumentMoniker": "css\\Toaster\\src\\Toast.js",
+              "ToolTip": "D:\\DoctorDesk\\css\\Toaster\\src\\Toast.js",
+              "RelativeToolTip": "css\\Toaster\\src\\Toast.js",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-10-27T10:40:20.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Clinicalnotes.cs",
+              "DocumentMoniker": "D:\\DoctorDesk\\Models\\Clinicalnotes.cs",
+              "RelativeDocumentMoniker": "Models\\Clinicalnotes.cs",
+              "ToolTip": "D:\\DoctorDesk\\Models\\Clinicalnotes.cs",
+              "RelativeToolTip": "Models\\Clinicalnotes.cs",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAqwA8BAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T11:19:25.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClinicalnotesController.cs",
+              "DocumentMoniker": "D:\\DoctorDesk\\Controllers\\ClinicalnotesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClinicalnotesController.cs",
+              "ToolTip": "D:\\DoctorDesk\\Controllers\\ClinicalnotesController.cs",
+              "RelativeToolTip": "Controllers\\ClinicalnotesController.cs",
+              "ViewState": "AgIAAJYBAAAAAAAAAAAAAHcBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T11:18:36.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AllergyHistory.ascx",
+              "DocumentMoniker": "D:\\DoctorDesk\\Views\\SinglePage\\AllergyHistory.ascx",
+              "RelativeDocumentMoniker": "Views\\SinglePage\\AllergyHistory.ascx",
+              "ToolTip": "D:\\DoctorDesk\\Views\\SinglePage\\AllergyHistory.ascx",
+              "RelativeToolTip": "Views\\SinglePage\\AllergyHistory.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2026-10-26T11:05:45.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PersonalHistory.ascx",
+              "DocumentMoniker": "D:\\DoctorDesk\\Views\\SinglePage\\PersonalHistory.ascx",
+              "RelativeDocumentMoniker": "Views\\SinglePage\\PersonalHistory.ascx",
+              "ToolTip": "D:\\DoctorDesk\\Views\\SinglePage\\PersonalHistory.ascx",
+              "RelativeToolTip": "Views\\SinglePage\\PersonalHistory.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2026-10-26T04:38:30.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Diagnosis.ascx",
+              "DocumentMoniker": "D:\\DoctorDesk\\Views\\SinglePage\\Diagnosis.ascx",
+              "RelativeDocumentMoniker": "Views\\SinglePage\\Diagnosis.ascx",
+              "ToolTip": "D:\\DoctorDesk\\Views\\SinglePage\\Diagnosis.ascx",
+              "RelativeToolTip": "Views\\SinglePage\\Diagnosis.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2026-10-23T14:47:53.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PatientInfoIPD.ascx",
+              "DocumentMoniker": "D:\\DoctorDesk\\Views\\SinglePage\\PatientInfoIPD.ascx",
+              "RelativeDocumentMoniker": "Views\\SinglePage\\PatientInfoIPD.ascx",
+              "ToolTip": "D:\\DoctorDesk\\Views\\SinglePage\\PatientInfoIPD.ascx",
+              "RelativeToolTip": "Views\\SinglePage\\PatientInfoIPD.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2026-10-23T14:41:11.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HistoryExamIPD.ascx",
+              "DocumentMoniker": "D:\\DoctorDesk\\Views\\SinglePage\\HistoryExamIPD.ascx",
+              "RelativeDocumentMoniker": "Views\\SinglePage\\HistoryExamIPD.ascx",
+              "ToolTip": "D:\\DoctorDesk\\Views\\SinglePage\\HistoryExamIPD.ascx",
+              "RelativeToolTip": "Views\\SinglePage\\HistoryExamIPD.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2026-10-23T14:08:35.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PatientClinicalHistory.cs",
+              "DocumentMoniker": "D:\\DoctorDesk\\Models\\PatientClinicalHistory.cs",
+              "RelativeDocumentMoniker": "Models\\PatientClinicalHistory.cs",
+              "ToolTip": "D:\\DoctorDesk\\Models\\PatientClinicalHistory.cs",
+              "RelativeToolTip": "Models\\PatientClinicalHistory.cs",
+              "ViewState": "AgIAAPYAAAAAAAAAAAAowJcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T07:58:13.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SinglePageIPD.aspx",
+              "DocumentMoniker": "D:\\DoctorDesk\\Views\\SinglePage\\SinglePageIPD.aspx",
+              "RelativeDocumentMoniker": "Views\\SinglePage\\SinglePageIPD.aspx",
+              "ToolTip": "D:\\DoctorDesk\\Views\\SinglePage\\SinglePageIPD.aspx",
+              "RelativeToolTip": "Views\\SinglePage\\SinglePageIPD.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-23T05:55:05.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\DoctorDesk\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "D:\\DoctorDesk\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAAwKcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-23T05:38:16.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OncologyController.cs",
+              "DocumentMoniker": "D:\\DoctorDesk\\Controllers\\OncologyController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OncologyController.cs",
+              "ToolTip": "D:\\DoctorDesk\\Controllers\\OncologyController.cs",
+              "RelativeToolTip": "Controllers\\OncologyController.cs",
+              "ViewState": "AgIAAEsCAAAAAAAAAAAhwB4IAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T04:49:00.786Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

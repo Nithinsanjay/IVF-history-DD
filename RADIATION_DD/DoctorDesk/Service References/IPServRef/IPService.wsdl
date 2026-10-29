@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:i0="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="IPService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IIPService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" location="http://uat.himstccf.org:82/WebHMISService/IPService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_IIPService" type="i0:IIPService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IIPService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveUpdateAdmission">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveUpdateAdmission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateNBAdmn">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveUpdateNBAdmn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDoctorTransfer">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveDoctorTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrUpdateRoomReserv">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveOrUpdateRoomReserv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelRoomReserv">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/CancelRoomReserv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTransferBed">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveTransferBed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoomReservDet">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetRoomReservDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIPRegistDet">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPRegistDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewBornDet">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetNewBornDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTwinbabyName">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetTwinbabyName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BedMaintainTran">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/BedMaintainTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BedIsolationTran">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/BedIsolationTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCancelDischrg">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveCancelDischrg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BedHoldingTran">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/BedHoldingTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDischargeList">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetDischargeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateDpstReq">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveUpdateDpstReq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepstReqList">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetDepstReqList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IPAuthTran">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/IPAuthTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DonorRegisTran">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/DonorRegisTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIpMoveDetails">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIpMoveDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIPPatientVisitDet">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPPatientVisitDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDonorRegiList">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetDonorRegiList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIPOverDueAuthList">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPOverDueAuthList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWardWiseAdmnPerHr">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetWardWiseAdmnPerHr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdmnAndDiscEnqData">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetAdmnAndDiscEnqData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillAmtByIP">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetBillAmtByIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdmnAndDiscEnqSumData">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetAdmnAndDiscEnqSumData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IPRefundReqTran">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/IPRefundReqTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBedOccupDetail">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetBedOccupDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIPRefReqList">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPRefReqList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIPRefReqDt">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPRefReqDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIPDpstListToTransfer">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPDpstListToTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IPDpstTransfTran">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/IPDpstTransfTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIPDpstTransferList">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPDpstTransferList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIPDpstTransfDT">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPDpstTransfDT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotificationData">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetNotificationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReferralHospitalMstTran">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/ReferralHospitalMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastIPOPFeedByMRNo">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetLastIPOPFeedByMRNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBedChart">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetBedChart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDischargeTAT">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetDischargeTAT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CorrectAdmisisonDetails">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/CorrectAdmisisonDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateChemoSchedule">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveUpdateChemoSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNSAvailableBedSlots">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetNSAvailableBedSlots" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoPlan">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetChemoPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoScheduleList">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetChemoScheduleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAdmission_Draft">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveAdmission_Draft" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdmissionDraftList">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetAdmissionDraftList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdmissionSavedCheckList">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetAdmissionSavedCheckList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllocatSchemeToIPNo">
+      <soap:operation soapAction="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/AllocatSchemeToIPNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IPService">
+    <wsdl:port name="BasicHttpBinding_IIPService" binding="tns:BasicHttpBinding_IIPService">
+      <soap:address location="http://uat.himstccf.org:82/WebHMISService/IPService.svc/IPService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

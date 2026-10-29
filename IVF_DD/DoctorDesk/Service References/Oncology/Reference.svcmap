@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="46a52cb1-c180-4e25-ab34-6354632d0256" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="7dd0f7d4-03bc-4357-b5ce-b020ad98d9f5" SourceId="1" SourceUrl="http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="eebac58d-f246-4603-b531-f2fd3d34e549" SourceId="1" SourceUrl="http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="d42e77b5-2cec-46c3-98a5-d239d197c6e6" SourceId="1" SourceUrl="http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc/mex" />
+    <MetadataFile FileName="BL_Logic.OncologyEMR.xsd" MetadataType="Schema" ID="4796e4a4-dadd-4f84-a0ea-e67291999312" SourceId="1" SourceUrl="http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc/mex" />
+    <MetadataFile FileName="BL_Logic.xsd" MetadataType="Schema" ID="9b3363eb-5ff7-43e0-a6e3-5743616f00ad" SourceId="1" SourceUrl="http://desktop-rjsau4e/WebDDServiceN/OncologyEMR.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

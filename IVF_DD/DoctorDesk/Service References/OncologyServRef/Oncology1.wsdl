@@ -1,0 +1,2840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Oncology" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IOncology_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.1.3/WebHMISServiceNUnit/Oncology.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebHMISServiceNUnit/Oncology.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.1.3/WebHMISServiceNUnit/Oncology.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Oncology" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOncology_GetPrevProtocolList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrevProtocolList" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPrevProtocolList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrevProtocolListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveTumorBrdDiscTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTumorBrdDiscTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveTumorBrdDiscTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTumorBrdDiscTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetTumorBrdEntryDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetTumorBrdEntryDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetTumorBrdEntryDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetTumorBrdEntryDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetTumorBoardPatList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTumorBoardPatList" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetTumorBoardPatList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTumorBoardPatListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDoctorSpecList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorSpecList" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDoctorSpecList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorSpecListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDoctorsMeetingDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorsMeetingDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDoctorsMeetingDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorsMeetingDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadHistForTBD_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadHistForTBD" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadHistForTBD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadHistForTBDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetTBDTreatmentDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTBDTreatmentDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetTBDTreatmentDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTBDTreatmentDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatDiagVitalHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatDiagVitalHistory" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatDiagVitalHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatDiagVitalHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetTBDStatusReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTBDStatusReport" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetTBDStatusReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTBDStatusReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatientDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatientDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_UpdateExtDrRemarks_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExtDrRemarks" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_UpdateExtDrRemarks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExtDrRemarksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetTBDExtDoctorDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTBDExtDoctorDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetTBDExtDoctorDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTBDExtDoctorDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetBiopsyRptTBD_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBiopsyRptTBD" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetBiopsyRptTBD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBiopsyRptTBDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetICDFromDD_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetICDFromDD" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetICDFromDD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetICDFromDDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetTBDRefDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTBDRefDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetTBDRefDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTBDRefDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTDailyReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTDailyReport" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTDailyReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTDailyReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTOnCouch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTOnCouch" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTOnCouch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTOnCouchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_DataMigrationTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DataMigrationTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_DataMigrationTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DataMigrationTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDataMigrationLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataMigrationLst" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDataMigrationLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataMigrationLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_CRegistTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CRegistTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_CRegistTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CRegistTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetCRRegistDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCRRegistDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetCRRegistDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCRRegistDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatTracking_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatTracking" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatTracking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatTrackingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_AddRemark_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRemark" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_AddRemark_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRemarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SavePatientTracking_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientTracking" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SavePatientTracking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientTrackingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveRTTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRTTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveRTTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRTTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_RadTechTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:RadTechTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_RadTechTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RadTechTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadTechLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadTechLst" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadTechLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadTechLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadTechDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadTechDt" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadTechDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadTechDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_RadOncTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:RadOncTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_RadOncTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RadOncTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadOncDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadOncDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadOncDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadOncDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadOncDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadOncDt" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadOncDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadOncDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadOncoLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadOncoLst" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadOncoLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadOncoLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadOncoDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadOncoDt" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadOncoDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadOncoDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_MedPhyTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:MedPhyTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_MedPhyTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MedPhyTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetMedPhyDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedPhyDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetMedPhyDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedPhyDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetMedPhyPHDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedPhyPHDt" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetMedPhyPHDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedPhyPHDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRecordExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordExist" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRecordExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SRadTechTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SRadTechTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SRadTechTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SRadTechTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadTechLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadTechLst" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadTechLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadTechLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadTechVisitDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadTechVisitDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadTechVisitDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadTechVisitDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadTechSummaryDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadTechSummaryDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadTechSummaryDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadTechSummaryDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadTechDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadTechDt" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadTechDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadTechDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SRadOncTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SRadOncTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SRadOncTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SRadOncTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadOncDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadOncDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadOncDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadOncDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadOncDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadOncDt" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadOncDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadOncDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadOncoLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadOncoLst" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadOncoLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadOncoLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadOncoDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadOncoDt" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRadOncoDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRadOncoDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SMedPhyTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SMedPhyTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SMedPhyTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SMedPhyTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetMedPhyDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetMedPhyDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetMedPhyDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetMedPhyDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetMedPhyPHDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetMedPhyPHDt" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetMedPhyPHDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetMedPhyPHDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRTChartDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRTChartDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetRTChartDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetRTChartDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SMedOncoTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SMedOncoTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SMedOncoTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SMedOncoTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetMedOncoLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetMedOncoLst" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetMedOncoLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetMedOncoLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDiagnosis_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagnosis" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDiagnosis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagnosisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPlanCompletedDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanCompletedDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPlanCompletedDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanCompletedDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPlanAppointmentDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanAppointmentDate" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPlanAppointmentDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanAppointmentDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoProtocolByMRNO_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoProtocolByMRNO" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoProtocolByMRNO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoProtocolByMRNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatHPMedHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatHPMedHistory" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatHPMedHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatHPMedHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoSMedication_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoSMedication" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoSMedication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoSMedicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoSMedCycle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoSMedCycle" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoSMedCycle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoSMedCycleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SMedOncoEntryTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SMedOncoEntryTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SMedOncoEntryTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SMedOncoEntryTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetMedOncoEntryLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetMedOncoEntryLst" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetMedOncoEntryLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetMedOncoEntryLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetChemoPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetChemoPlan" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetChemoPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetChemoPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetChemoCycle_InputMessage">
+    <wsdl:part name="parameters" element="tns:SGetChemoCycle" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SGetChemoCycle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SGetChemoCycleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveChemoProtocol_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChemoProtocol" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveChemoProtocol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChemoProtocolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoProtocol_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoProtocol" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoProtocol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoProtocolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoAdmissionDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoAdmissionDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoAdmissionDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoAdmissionDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveSignatoryTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSignatoryTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveSignatoryTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSignatoryTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetSignatureDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSignatureDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetSignatureDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSignatureDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetNewlyStartedTrPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewlyStartedTrPatient" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetNewlyStartedTrPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewlyStartedTrPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatientDetbyAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientDetbyAddress" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatientDetbyAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientDetbyAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetOncologyBrachyReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOncologyBrachyReport" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetOncologyBrachyReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOncologyBrachyReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetMachineAvailableSlots_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMachineAvailableSlots" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetMachineAvailableSlots_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMachineAvailableSlotsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTMacineLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTMacineLst" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTMacineLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTMacineLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveUpdateRTSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateRTSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveUpdateRTSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateRTScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTPatientPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTPatientPlan" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTPatientPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTPatientPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTScheduleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTScheduleList" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTScheduleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTScheduleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveRadDosePrescAprovalTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRadDosePrescAprovalTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveRadDosePrescAprovalTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRadDosePrescAprovalTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadDosePrescAprovalDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadDosePrescAprovalDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadDosePrescAprovalDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadDosePrescAprovalDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPreAuthDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreAuthDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPreAuthDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreAuthDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetAvailablePreAuthListForMRNO_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailablePreAuthListForMRNO" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetAvailablePreAuthListForMRNO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailablePreAuthListForMRNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetAppliedSchemeForIPNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppliedSchemeForIPNo" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetAppliedSchemeForIPNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppliedSchemeForIPNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveMouldRoomReq_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMouldRoomReq" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveMouldRoomReq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMouldRoomReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetMouldRoomReq_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMouldRoomReq" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetMouldRoomReq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMouldRoomReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDiagStage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagStage" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDiagStage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagStageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetOncoWorkList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOncoWorkList" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetOncoWorkList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOncoWorkListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetMRRData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMRRData" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetMRRData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMRRDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetUpdateMRPrepareStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateMRPrepareStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetUpdateMRPrepareStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateMRPrepareStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDiagHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagHistory" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDiagHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveSimulationTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSimulationTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveSimulationTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSimulationTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetSimulationDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSimulationDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetSimulationDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSimulationDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetMRRDetRT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMRRDetRT" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetMRRDetRT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMRRDetRTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetSIMDiagICD_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSIMDiagICD" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetSIMDiagICD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSIMDiagICDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDiagnosisChangeHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagnosisChangeHistory" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDiagnosisChangeHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagnosisChangeHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetAlleryHist_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlleryHist" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetAlleryHist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlleryHistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveRadDosePrescTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRadDosePrescTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveRadDosePrescTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRadDosePrescTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadDosePrescDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadDosePrescDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRadDosePrescDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRadDosePrescDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDPDiagICD_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDPDiagICD" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDPDiagICD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDPDiagICDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveRadBrachyDisSumNoteTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRadBrachyDisSumNoteTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveRadBrachyDisSumNoteTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRadBrachyDisSumNoteTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDisSumNoteDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisSumNoteDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDisSumNoteDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisSumNoteDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveHDRBrachyTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHDRBrachyTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveHDRBrachyTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHDRBrachyTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetHDRBrachyDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHDRBrachyDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetHDRBrachyDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHDRBrachyDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetBrachyDetBT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrachyDetBT" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetBrachyDetBT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrachyDetBTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SavePlanCheckList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlanCheckList" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SavePlanCheckList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlanCheckListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPlanCheckList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanCheckList" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPlanCheckList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanCheckListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_ImageGuidedSetupTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImageGuidedSetupTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_ImageGuidedSetupTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImageGuidedSetupTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetImageGuidedSetupLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageGuidedSetupLst" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetImageGuidedSetupLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageGuidedSetupLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetImageGuidedVisitDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageGuidedVisitDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetImageGuidedVisitDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageGuidedVisitDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetImageGuidedSummaryDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageGuidedSummaryDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetImageGuidedSummaryDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageGuidedSummaryDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetImageGuidedDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageGuidedDt" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetImageGuidedDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageGuidedDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPhaseNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhaseNo" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPhaseNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhaseNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTSummary" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetRTSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRTSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetOARDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOARDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetOARDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOARDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_WeekNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WeekNo" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_WeekNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WeekNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetFractionsStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFractionsStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetFractionsStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFractionsStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetFractionsDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFractionsDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetFractionsDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFractionsDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetStartDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStartDate" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetStartDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStartDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoCourse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetStartDateVisit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStartDateVisit" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetStartDateVisit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStartDateVisitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveEBRTPlanSchdTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEBRTPlanSchdTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveEBRTPlanSchdTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEBRTPlanSchdTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetEBRTPlanSchedyleDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEBRTPlanSchedyleDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetEBRTPlanSchedyleDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEBRTPlanSchedyleDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveWeeklyReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveWeeklyReview" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveWeeklyReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveWeeklyReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetWeeklyReviewLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeeklyReviewLst" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetWeeklyReviewLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWeeklyReviewLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_TreatmentStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:TreatmentStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_TreatmentStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TreatmentStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_PalliativeRegistTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PalliativeRegistTran" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_PalliativeRegistTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PalliativeRegistTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCRegistDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCRegistDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCRegistDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCRegistDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SavePalliativeCareForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePalliativeCareForm" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SavePalliativeCareForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePalliativeCareFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCFormDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCFormDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCFormDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCFormDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCDiagStage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCDiagStage" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCDiagStage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCDiagStageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDiagStageHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagStageHistory" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDiagStageHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagStageHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCTextSurgList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCTextSurgList" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCTextSurgList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCTextSurgListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPreviousPainScore_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreviousPainScore" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPreviousPainScore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreviousPainScoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetNurseVerifiedList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNurseVerifiedList" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetNurseVerifiedList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNurseVerifiedListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatPreviousHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatPreviousHistory" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatPreviousHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatPreviousHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCTATDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCTATDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCTATDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCTATDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPreviousMedicineFreq_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreviousMedicineFreq" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPreviousMedicineFreq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreviousMedicineFreqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatDemographicalDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatDemographicalDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPatDemographicalDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatDemographicalDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDoctorDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetDoctorDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPreviousPCDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreviousPCDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPreviousPCDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreviousPCDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCDetRpt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCDetRpt" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetPCDetRpt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPCDetRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveOrganTissueGrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrganTissueGrade" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveOrganTissueGrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrganTissueGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetOrganTissueGrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganTissueGrade" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetOrganTissueGrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganTissueGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveChemoMedication_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChemoMedication" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_SaveChemoMedication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChemoMedicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoMedication_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoMedication" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoMedication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoMedicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoMedAdmnDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoMedAdmnDet" />
+  </wsdl:message>
+  <wsdl:message name="IOncology_GetChemoMedAdmnDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoMedAdmnDetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOncology">
+    <wsdl:operation name="GetPrevProtocolList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPrevProtocolList" message="tns:IOncology_GetPrevProtocolList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPrevProtocolListResponse" message="tns:IOncology_GetPrevProtocolList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTumorBrdDiscTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveTumorBrdDiscTran" message="tns:IOncology_SaveTumorBrdDiscTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveTumorBrdDiscTranResponse" message="tns:IOncology_SaveTumorBrdDiscTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetTumorBrdEntryDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetTumorBrdEntryDet" message="tns:IOncology_SGetTumorBrdEntryDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetTumorBrdEntryDetResponse" message="tns:IOncology_SGetTumorBrdEntryDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTumorBoardPatList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetTumorBoardPatList" message="tns:IOncology_GetTumorBoardPatList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetTumorBoardPatListResponse" message="tns:IOncology_GetTumorBoardPatList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorSpecList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetDoctorSpecList" message="tns:IOncology_GetDoctorSpecList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetDoctorSpecListResponse" message="tns:IOncology_GetDoctorSpecList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorsMeetingDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetDoctorsMeetingDet" message="tns:IOncology_GetDoctorsMeetingDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetDoctorsMeetingDetResponse" message="tns:IOncology_GetDoctorsMeetingDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRadHistForTBD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRadHistForTBD" message="tns:IOncology_GetRadHistForTBD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRadHistForTBDResponse" message="tns:IOncology_GetRadHistForTBD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTBDTreatmentDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetTBDTreatmentDet" message="tns:IOncology_GetTBDTreatmentDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetTBDTreatmentDetResponse" message="tns:IOncology_GetTBDTreatmentDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDiagVitalHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPatDiagVitalHistory" message="tns:IOncology_GetPatDiagVitalHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPatDiagVitalHistoryResponse" message="tns:IOncology_GetPatDiagVitalHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTBDStatusReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetTBDStatusReport" message="tns:IOncology_GetTBDStatusReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetTBDStatusReportResponse" message="tns:IOncology_GetTBDStatusReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPatientDet" message="tns:IOncology_GetPatientDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPatientDetResponse" message="tns:IOncology_GetPatientDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExtDrRemarks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/UpdateExtDrRemarks" message="tns:IOncology_UpdateExtDrRemarks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/UpdateExtDrRemarksResponse" message="tns:IOncology_UpdateExtDrRemarks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTBDExtDoctorDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetTBDExtDoctorDet" message="tns:IOncology_GetTBDExtDoctorDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetTBDExtDoctorDetResponse" message="tns:IOncology_GetTBDExtDoctorDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBiopsyRptTBD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetBiopsyRptTBD" message="tns:IOncology_GetBiopsyRptTBD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetBiopsyRptTBDResponse" message="tns:IOncology_GetBiopsyRptTBD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetICDFromDD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetICDFromDD" message="tns:IOncology_GetICDFromDD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetICDFromDDResponse" message="tns:IOncology_GetICDFromDD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTBDRefDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetTBDRefDet" message="tns:IOncology_GetTBDRefDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetTBDRefDetResponse" message="tns:IOncology_GetTBDRefDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRTDailyReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRTDailyReport" message="tns:IOncology_GetRTDailyReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRTDailyReportResponse" message="tns:IOncology_GetRTDailyReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRTOnCouch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRTOnCouch" message="tns:IOncology_GetRTOnCouch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRTOnCouchResponse" message="tns:IOncology_GetRTOnCouch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DataMigrationTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/DataMigrationTran" message="tns:IOncology_DataMigrationTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/DataMigrationTranResponse" message="tns:IOncology_DataMigrationTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataMigrationLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetDataMigrationLst" message="tns:IOncology_GetDataMigrationLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetDataMigrationLstResponse" message="tns:IOncology_GetDataMigrationLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CRegistTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/CRegistTran" message="tns:IOncology_CRegistTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/CRegistTranResponse" message="tns:IOncology_CRegistTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCRRegistDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetCRRegistDet" message="tns:IOncology_GetCRRegistDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetCRRegistDetResponse" message="tns:IOncology_GetCRRegistDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatTracking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPatTracking" message="tns:IOncology_GetPatTracking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPatTrackingResponse" message="tns:IOncology_GetPatTracking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRemark">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/AddRemark" message="tns:IOncology_AddRemark_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/AddRemarkResponse" message="tns:IOncology_AddRemark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientTracking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SavePatientTracking" message="tns:IOncology_SavePatientTracking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SavePatientTrackingResponse" message="tns:IOncology_SavePatientTracking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRTTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveRTTemplate" message="tns:IOncology_SaveRTTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveRTTemplateResponse" message="tns:IOncology_SaveRTTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRTTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRTTemplate" message="tns:IOncology_GetRTTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRTTemplateResponse" message="tns:IOncology_GetRTTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RadTechTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/RadTechTran" message="tns:IOncology_RadTechTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/RadTechTranResponse" message="tns:IOncology_RadTechTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRadTechLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRadTechLst" message="tns:IOncology_GetRadTechLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRadTechLstResponse" message="tns:IOncology_GetRadTechLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRadTechDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRadTechDt" message="tns:IOncology_GetRadTechDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRadTechDtResponse" message="tns:IOncology_GetRadTechDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RadOncTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/RadOncTran" message="tns:IOncology_RadOncTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/RadOncTranResponse" message="tns:IOncology_RadOncTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRadOncDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRadOncDet" message="tns:IOncology_GetRadOncDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRadOncDetResponse" message="tns:IOncology_GetRadOncDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRadOncDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRadOncDt" message="tns:IOncology_GetRadOncDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRadOncDtResponse" message="tns:IOncology_GetRadOncDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRadOncoLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRadOncoLst" message="tns:IOncology_GetRadOncoLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRadOncoLstResponse" message="tns:IOncology_GetRadOncoLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRadOncoDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRadOncoDt" message="tns:IOncology_GetRadOncoDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRadOncoDtResponse" message="tns:IOncology_GetRadOncoDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MedPhyTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/MedPhyTran" message="tns:IOncology_MedPhyTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/MedPhyTranResponse" message="tns:IOncology_MedPhyTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMedPhyDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetMedPhyDet" message="tns:IOncology_GetMedPhyDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetMedPhyDetResponse" message="tns:IOncology_GetMedPhyDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMedPhyPHDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetMedPhyPHDt" message="tns:IOncology_GetMedPhyPHDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetMedPhyPHDtResponse" message="tns:IOncology_GetMedPhyPHDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecordExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRecordExist" message="tns:IOncology_GetRecordExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRecordExistResponse" message="tns:IOncology_GetRecordExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SRadTechTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SRadTechTran" message="tns:IOncology_SRadTechTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SRadTechTranResponse" message="tns:IOncology_SRadTechTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadTechLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetRadTechLst" message="tns:IOncology_SGetRadTechLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetRadTechLstResponse" message="tns:IOncology_SGetRadTechLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadTechVisitDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetRadTechVisitDet" message="tns:IOncology_SGetRadTechVisitDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetRadTechVisitDetResponse" message="tns:IOncology_SGetRadTechVisitDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadTechSummaryDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetRadTechSummaryDet" message="tns:IOncology_SGetRadTechSummaryDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetRadTechSummaryDetResponse" message="tns:IOncology_SGetRadTechSummaryDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadTechDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetRadTechDt" message="tns:IOncology_SGetRadTechDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetRadTechDtResponse" message="tns:IOncology_SGetRadTechDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SRadOncTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SRadOncTran" message="tns:IOncology_SRadOncTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SRadOncTranResponse" message="tns:IOncology_SRadOncTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadOncDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetRadOncDet" message="tns:IOncology_SGetRadOncDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetRadOncDetResponse" message="tns:IOncology_SGetRadOncDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadOncDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetRadOncDt" message="tns:IOncology_SGetRadOncDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetRadOncDtResponse" message="tns:IOncology_SGetRadOncDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadOncoLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetRadOncoLst" message="tns:IOncology_SGetRadOncoLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetRadOncoLstResponse" message="tns:IOncology_SGetRadOncoLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadOncoDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetRadOncoDt" message="tns:IOncology_SGetRadOncoDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetRadOncoDtResponse" message="tns:IOncology_SGetRadOncoDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SMedPhyTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SMedPhyTran" message="tns:IOncology_SMedPhyTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SMedPhyTranResponse" message="tns:IOncology_SMedPhyTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetMedPhyDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetMedPhyDet" message="tns:IOncology_SGetMedPhyDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetMedPhyDetResponse" message="tns:IOncology_SGetMedPhyDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetMedPhyPHDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetMedPhyPHDt" message="tns:IOncology_SGetMedPhyPHDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetMedPhyPHDtResponse" message="tns:IOncology_SGetMedPhyPHDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetRTChartDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetRTChartDet" message="tns:IOncology_SGetRTChartDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetRTChartDetResponse" message="tns:IOncology_SGetRTChartDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SMedOncoTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SMedOncoTran" message="tns:IOncology_SMedOncoTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SMedOncoTranResponse" message="tns:IOncology_SMedOncoTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetMedOncoLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetMedOncoLst" message="tns:IOncology_SGetMedOncoLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetMedOncoLstResponse" message="tns:IOncology_SGetMedOncoLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagnosis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetDiagnosis" message="tns:IOncology_GetDiagnosis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetDiagnosisResponse" message="tns:IOncology_GetDiagnosis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanCompletedDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPlanCompletedDet" message="tns:IOncology_GetPlanCompletedDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPlanCompletedDetResponse" message="tns:IOncology_GetPlanCompletedDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanAppointmentDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPlanAppointmentDate" message="tns:IOncology_GetPlanAppointmentDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPlanAppointmentDateResponse" message="tns:IOncology_GetPlanAppointmentDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoProtocolByMRNO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetChemoProtocolByMRNO" message="tns:IOncology_GetChemoProtocolByMRNO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetChemoProtocolByMRNOResponse" message="tns:IOncology_GetChemoProtocolByMRNO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatHPMedHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPatHPMedHistory" message="tns:IOncology_GetPatHPMedHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPatHPMedHistoryResponse" message="tns:IOncology_GetPatHPMedHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoSMedication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetChemoSMedication" message="tns:IOncology_GetChemoSMedication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetChemoSMedicationResponse" message="tns:IOncology_GetChemoSMedication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoSMedCycle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetChemoSMedCycle" message="tns:IOncology_GetChemoSMedCycle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetChemoSMedCycleResponse" message="tns:IOncology_GetChemoSMedCycle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SMedOncoEntryTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SMedOncoEntryTran" message="tns:IOncology_SMedOncoEntryTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SMedOncoEntryTranResponse" message="tns:IOncology_SMedOncoEntryTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetMedOncoEntryLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetMedOncoEntryLst" message="tns:IOncology_SGetMedOncoEntryLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetMedOncoEntryLstResponse" message="tns:IOncology_SGetMedOncoEntryLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetChemoPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetChemoPlan" message="tns:IOncology_SGetChemoPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetChemoPlanResponse" message="tns:IOncology_SGetChemoPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SGetChemoCycle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SGetChemoCycle" message="tns:IOncology_SGetChemoCycle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SGetChemoCycleResponse" message="tns:IOncology_SGetChemoCycle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveChemoProtocol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveChemoProtocol" message="tns:IOncology_SaveChemoProtocol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveChemoProtocolResponse" message="tns:IOncology_SaveChemoProtocol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoProtocol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetChemoProtocol" message="tns:IOncology_GetChemoProtocol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetChemoProtocolResponse" message="tns:IOncology_GetChemoProtocol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoAdmissionDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetChemoAdmissionDet" message="tns:IOncology_GetChemoAdmissionDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetChemoAdmissionDetResponse" message="tns:IOncology_GetChemoAdmissionDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSignatoryTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveSignatoryTran" message="tns:IOncology_SaveSignatoryTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveSignatoryTranResponse" message="tns:IOncology_SaveSignatoryTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSignatureDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetSignatureDet" message="tns:IOncology_GetSignatureDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetSignatureDetResponse" message="tns:IOncology_GetSignatureDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewlyStartedTrPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetNewlyStartedTrPatient" message="tns:IOncology_GetNewlyStartedTrPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetNewlyStartedTrPatientResponse" message="tns:IOncology_GetNewlyStartedTrPatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientDetbyAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPatientDetbyAddress" message="tns:IOncology_GetPatientDetbyAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPatientDetbyAddressResponse" message="tns:IOncology_GetPatientDetbyAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOncologyBrachyReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetOncologyBrachyReport" message="tns:IOncology_GetOncologyBrachyReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetOncologyBrachyReportResponse" message="tns:IOncology_GetOncologyBrachyReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineAvailableSlots">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetMachineAvailableSlots" message="tns:IOncology_GetMachineAvailableSlots_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetMachineAvailableSlotsResponse" message="tns:IOncology_GetMachineAvailableSlots_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRTMacineLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRTMacineLst" message="tns:IOncology_GetRTMacineLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRTMacineLstResponse" message="tns:IOncology_GetRTMacineLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateRTSchedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveUpdateRTSchedule" message="tns:IOncology_SaveUpdateRTSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveUpdateRTScheduleResponse" message="tns:IOncology_SaveUpdateRTSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRTPatientPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRTPatientPlan" message="tns:IOncology_GetRTPatientPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRTPatientPlanResponse" message="tns:IOncology_GetRTPatientPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRTScheduleList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRTScheduleList" message="tns:IOncology_GetRTScheduleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRTScheduleListResponse" message="tns:IOncology_GetRTScheduleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRadDosePrescAprovalTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveRadDosePrescAprovalTran" message="tns:IOncology_SaveRadDosePrescAprovalTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveRadDosePrescAprovalTranResponse" message="tns:IOncology_SaveRadDosePrescAprovalTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRadDosePrescAprovalDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRadDosePrescAprovalDet" message="tns:IOncology_GetRadDosePrescAprovalDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRadDosePrescAprovalDetResponse" message="tns:IOncology_GetRadDosePrescAprovalDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreAuthDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPreAuthDetails" message="tns:IOncology_GetPreAuthDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPreAuthDetailsResponse" message="tns:IOncology_GetPreAuthDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailablePreAuthListForMRNO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetAvailablePreAuthListForMRNO" message="tns:IOncology_GetAvailablePreAuthListForMRNO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetAvailablePreAuthListForMRNOResponse" message="tns:IOncology_GetAvailablePreAuthListForMRNO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppliedSchemeForIPNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetAppliedSchemeForIPNo" message="tns:IOncology_GetAppliedSchemeForIPNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetAppliedSchemeForIPNoResponse" message="tns:IOncology_GetAppliedSchemeForIPNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMouldRoomReq">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveMouldRoomReq" message="tns:IOncology_SaveMouldRoomReq_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveMouldRoomReqResponse" message="tns:IOncology_SaveMouldRoomReq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMouldRoomReq">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetMouldRoomReq" message="tns:IOncology_GetMouldRoomReq_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetMouldRoomReqResponse" message="tns:IOncology_GetMouldRoomReq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagStage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetDiagStage" message="tns:IOncology_GetDiagStage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetDiagStageResponse" message="tns:IOncology_GetDiagStage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOncoWorkList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetOncoWorkList" message="tns:IOncology_GetOncoWorkList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetOncoWorkListResponse" message="tns:IOncology_GetOncoWorkList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMRRData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetMRRData" message="tns:IOncology_GetMRRData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetMRRDataResponse" message="tns:IOncology_GetMRRData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateMRPrepareStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetUpdateMRPrepareStatus" message="tns:IOncology_GetUpdateMRPrepareStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetUpdateMRPrepareStatusResponse" message="tns:IOncology_GetUpdateMRPrepareStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetDiagHistory" message="tns:IOncology_GetDiagHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetDiagHistoryResponse" message="tns:IOncology_GetDiagHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSimulationTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveSimulationTran" message="tns:IOncology_SaveSimulationTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveSimulationTranResponse" message="tns:IOncology_SaveSimulationTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSimulationDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetSimulationDet" message="tns:IOncology_GetSimulationDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetSimulationDetResponse" message="tns:IOncology_GetSimulationDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMRRDetRT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetMRRDetRT" message="tns:IOncology_GetMRRDetRT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetMRRDetRTResponse" message="tns:IOncology_GetMRRDetRT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSIMDiagICD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetSIMDiagICD" message="tns:IOncology_GetSIMDiagICD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetSIMDiagICDResponse" message="tns:IOncology_GetSIMDiagICD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagnosisChangeHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetDiagnosisChangeHistory" message="tns:IOncology_GetDiagnosisChangeHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetDiagnosisChangeHistoryResponse" message="tns:IOncology_GetDiagnosisChangeHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlleryHist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetAlleryHist" message="tns:IOncology_GetAlleryHist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetAlleryHistResponse" message="tns:IOncology_GetAlleryHist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRadDosePrescTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveRadDosePrescTran" message="tns:IOncology_SaveRadDosePrescTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveRadDosePrescTranResponse" message="tns:IOncology_SaveRadDosePrescTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRadDosePrescDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRadDosePrescDet" message="tns:IOncology_GetRadDosePrescDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRadDosePrescDetResponse" message="tns:IOncology_GetRadDosePrescDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDPDiagICD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetDPDiagICD" message="tns:IOncology_GetDPDiagICD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetDPDiagICDResponse" message="tns:IOncology_GetDPDiagICD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRadBrachyDisSumNoteTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveRadBrachyDisSumNoteTran" message="tns:IOncology_SaveRadBrachyDisSumNoteTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveRadBrachyDisSumNoteTranResponse" message="tns:IOncology_SaveRadBrachyDisSumNoteTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDisSumNoteDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetDisSumNoteDet" message="tns:IOncology_GetDisSumNoteDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetDisSumNoteDetResponse" message="tns:IOncology_GetDisSumNoteDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveHDRBrachyTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveHDRBrachyTran" message="tns:IOncology_SaveHDRBrachyTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveHDRBrachyTranResponse" message="tns:IOncology_SaveHDRBrachyTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHDRBrachyDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetHDRBrachyDet" message="tns:IOncology_GetHDRBrachyDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetHDRBrachyDetResponse" message="tns:IOncology_GetHDRBrachyDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrachyDetBT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetBrachyDetBT" message="tns:IOncology_GetBrachyDetBT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetBrachyDetBTResponse" message="tns:IOncology_GetBrachyDetBT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePlanCheckList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SavePlanCheckList" message="tns:IOncology_SavePlanCheckList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SavePlanCheckListResponse" message="tns:IOncology_SavePlanCheckList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanCheckList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPlanCheckList" message="tns:IOncology_GetPlanCheckList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPlanCheckListResponse" message="tns:IOncology_GetPlanCheckList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImageGuidedSetupTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/ImageGuidedSetupTran" message="tns:IOncology_ImageGuidedSetupTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/ImageGuidedSetupTranResponse" message="tns:IOncology_ImageGuidedSetupTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageGuidedSetupLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetImageGuidedSetupLst" message="tns:IOncology_GetImageGuidedSetupLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetImageGuidedSetupLstResponse" message="tns:IOncology_GetImageGuidedSetupLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageGuidedVisitDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetImageGuidedVisitDet" message="tns:IOncology_GetImageGuidedVisitDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetImageGuidedVisitDetResponse" message="tns:IOncology_GetImageGuidedVisitDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageGuidedSummaryDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetImageGuidedSummaryDet" message="tns:IOncology_GetImageGuidedSummaryDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetImageGuidedSummaryDetResponse" message="tns:IOncology_GetImageGuidedSummaryDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageGuidedDt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetImageGuidedDt" message="tns:IOncology_GetImageGuidedDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetImageGuidedDtResponse" message="tns:IOncology_GetImageGuidedDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhaseNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPhaseNo" message="tns:IOncology_GetPhaseNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPhaseNoResponse" message="tns:IOncology_GetPhaseNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRTSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetRTSummary" message="tns:IOncology_GetRTSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetRTSummaryResponse" message="tns:IOncology_GetRTSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOARDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetOARDet" message="tns:IOncology_GetOARDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetOARDetResponse" message="tns:IOncology_GetOARDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WeekNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/WeekNo" message="tns:IOncology_WeekNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/WeekNoResponse" message="tns:IOncology_WeekNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFractionsStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetFractionsStatus" message="tns:IOncology_GetFractionsStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetFractionsStatusResponse" message="tns:IOncology_GetFractionsStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFractionsDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetFractionsDetails" message="tns:IOncology_GetFractionsDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetFractionsDetailsResponse" message="tns:IOncology_GetFractionsDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStartDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetStartDate" message="tns:IOncology_GetStartDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetStartDateResponse" message="tns:IOncology_GetStartDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetChemoCourse" message="tns:IOncology_GetChemoCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetChemoCourseResponse" message="tns:IOncology_GetChemoCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStartDateVisit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetStartDateVisit" message="tns:IOncology_GetStartDateVisit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetStartDateVisitResponse" message="tns:IOncology_GetStartDateVisit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEBRTPlanSchdTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveEBRTPlanSchdTran" message="tns:IOncology_SaveEBRTPlanSchdTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveEBRTPlanSchdTranResponse" message="tns:IOncology_SaveEBRTPlanSchdTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEBRTPlanSchedyleDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetEBRTPlanSchedyleDet" message="tns:IOncology_GetEBRTPlanSchedyleDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetEBRTPlanSchedyleDetResponse" message="tns:IOncology_GetEBRTPlanSchedyleDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveWeeklyReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveWeeklyReview" message="tns:IOncology_SaveWeeklyReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveWeeklyReviewResponse" message="tns:IOncology_SaveWeeklyReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeeklyReviewLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetWeeklyReviewLst" message="tns:IOncology_GetWeeklyReviewLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetWeeklyReviewLstResponse" message="tns:IOncology_GetWeeklyReviewLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TreatmentStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/TreatmentStatus" message="tns:IOncology_TreatmentStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/TreatmentStatusResponse" message="tns:IOncology_TreatmentStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PalliativeRegistTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/PalliativeRegistTran" message="tns:IOncology_PalliativeRegistTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/PalliativeRegistTranResponse" message="tns:IOncology_PalliativeRegistTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPCRegistDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPCRegistDet" message="tns:IOncology_GetPCRegistDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPCRegistDetResponse" message="tns:IOncology_GetPCRegistDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePalliativeCareForm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SavePalliativeCareForm" message="tns:IOncology_SavePalliativeCareForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SavePalliativeCareFormResponse" message="tns:IOncology_SavePalliativeCareForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPCFormDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPCFormDet" message="tns:IOncology_GetPCFormDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPCFormDetResponse" message="tns:IOncology_GetPCFormDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPCDiagStage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPCDiagStage" message="tns:IOncology_GetPCDiagStage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPCDiagStageResponse" message="tns:IOncology_GetPCDiagStage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagStageHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetDiagStageHistory" message="tns:IOncology_GetDiagStageHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetDiagStageHistoryResponse" message="tns:IOncology_GetDiagStageHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPCDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPCDet" message="tns:IOncology_GetPCDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPCDetResponse" message="tns:IOncology_GetPCDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPCTextSurgList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPCTextSurgList" message="tns:IOncology_GetPCTextSurgList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPCTextSurgListResponse" message="tns:IOncology_GetPCTextSurgList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreviousPainScore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPreviousPainScore" message="tns:IOncology_GetPreviousPainScore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPreviousPainScoreResponse" message="tns:IOncology_GetPreviousPainScore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNurseVerifiedList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetNurseVerifiedList" message="tns:IOncology_GetNurseVerifiedList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetNurseVerifiedListResponse" message="tns:IOncology_GetNurseVerifiedList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatPreviousHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPatPreviousHistory" message="tns:IOncology_GetPatPreviousHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPatPreviousHistoryResponse" message="tns:IOncology_GetPatPreviousHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPCTATDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPCTATDet" message="tns:IOncology_GetPCTATDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPCTATDetResponse" message="tns:IOncology_GetPCTATDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreviousMedicineFreq">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPreviousMedicineFreq" message="tns:IOncology_GetPreviousMedicineFreq_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPreviousMedicineFreqResponse" message="tns:IOncology_GetPreviousMedicineFreq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDemographicalDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPatDemographicalDet" message="tns:IOncology_GetPatDemographicalDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPatDemographicalDetResponse" message="tns:IOncology_GetPatDemographicalDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetDoctorDet" message="tns:IOncology_GetDoctorDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetDoctorDetResponse" message="tns:IOncology_GetDoctorDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreviousPCDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPreviousPCDet" message="tns:IOncology_GetPreviousPCDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPreviousPCDetResponse" message="tns:IOncology_GetPreviousPCDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPCDetRpt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetPCDetRpt" message="tns:IOncology_GetPCDetRpt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetPCDetRptResponse" message="tns:IOncology_GetPCDetRpt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrganTissueGrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveOrganTissueGrade" message="tns:IOncology_SaveOrganTissueGrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveOrganTissueGradeResponse" message="tns:IOncology_SaveOrganTissueGrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganTissueGrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetOrganTissueGrade" message="tns:IOncology_GetOrganTissueGrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetOrganTissueGradeResponse" message="tns:IOncology_GetOrganTissueGrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveChemoMedication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/SaveChemoMedication" message="tns:IOncology_SaveChemoMedication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/SaveChemoMedicationResponse" message="tns:IOncology_SaveChemoMedication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoMedication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetChemoMedication" message="tns:IOncology_GetChemoMedication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetChemoMedicationResponse" message="tns:IOncology_GetChemoMedication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoMedAdmnDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOncology/GetChemoMedAdmnDet" message="tns:IOncology_GetChemoMedAdmnDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOncology/GetChemoMedAdmnDetResponse" message="tns:IOncology_GetChemoMedAdmnDet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOncology" type="tns:IOncology">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IOncology_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPrevProtocolList">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPrevProtocolList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTumorBrdDiscTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveTumorBrdDiscTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetTumorBrdEntryDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetTumorBrdEntryDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTumorBoardPatList">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetTumorBoardPatList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorSpecList">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetDoctorSpecList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorsMeetingDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetDoctorsMeetingDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRadHistForTBD">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRadHistForTBD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTBDTreatmentDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetTBDTreatmentDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDiagVitalHistory">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPatDiagVitalHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTBDStatusReport">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetTBDStatusReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPatientDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExtDrRemarks">
+      <soap:operation soapAction="http://tempuri.org/IOncology/UpdateExtDrRemarks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTBDExtDoctorDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetTBDExtDoctorDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBiopsyRptTBD">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetBiopsyRptTBD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetICDFromDD">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetICDFromDD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTBDRefDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetTBDRefDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRTDailyReport">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRTDailyReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRTOnCouch">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRTOnCouch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataMigrationTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/DataMigrationTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataMigrationLst">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetDataMigrationLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CRegistTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/CRegistTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCRRegistDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetCRRegistDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatTracking">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPatTracking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRemark">
+      <soap:operation soapAction="http://tempuri.org/IOncology/AddRemark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientTracking">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SavePatientTracking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRTTemplate">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveRTTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRTTemplate">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRTTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RadTechTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/RadTechTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRadTechLst">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRadTechLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRadTechDt">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRadTechDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RadOncTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/RadOncTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRadOncDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRadOncDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRadOncDt">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRadOncDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRadOncoLst">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRadOncoLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRadOncoDt">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRadOncoDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MedPhyTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/MedPhyTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMedPhyDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetMedPhyDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMedPhyPHDt">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetMedPhyPHDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecordExist">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRecordExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRadTechTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SRadTechTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadTechLst">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetRadTechLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadTechVisitDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetRadTechVisitDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadTechSummaryDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetRadTechSummaryDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadTechDt">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetRadTechDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRadOncTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SRadOncTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadOncDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetRadOncDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadOncDt">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetRadOncDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadOncoLst">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetRadOncoLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetRadOncoDt">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetRadOncoDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMedPhyTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SMedPhyTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetMedPhyDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetMedPhyDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetMedPhyPHDt">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetMedPhyPHDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetRTChartDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetRTChartDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMedOncoTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SMedOncoTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetMedOncoLst">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetMedOncoLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagnosis">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetDiagnosis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanCompletedDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPlanCompletedDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanAppointmentDate">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPlanAppointmentDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoProtocolByMRNO">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetChemoProtocolByMRNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatHPMedHistory">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPatHPMedHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoSMedication">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetChemoSMedication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoSMedCycle">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetChemoSMedCycle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMedOncoEntryTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SMedOncoEntryTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetMedOncoEntryLst">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetMedOncoEntryLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetChemoPlan">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetChemoPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SGetChemoCycle">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SGetChemoCycle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveChemoProtocol">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveChemoProtocol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoProtocol">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetChemoProtocol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoAdmissionDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetChemoAdmissionDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSignatoryTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveSignatoryTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignatureDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetSignatureDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewlyStartedTrPatient">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetNewlyStartedTrPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientDetbyAddress">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPatientDetbyAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOncologyBrachyReport">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetOncologyBrachyReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineAvailableSlots">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetMachineAvailableSlots" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRTMacineLst">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRTMacineLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateRTSchedule">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveUpdateRTSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRTPatientPlan">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRTPatientPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRTScheduleList">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRTScheduleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRadDosePrescAprovalTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveRadDosePrescAprovalTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRadDosePrescAprovalDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRadDosePrescAprovalDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreAuthDetails">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPreAuthDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailablePreAuthListForMRNO">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetAvailablePreAuthListForMRNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppliedSchemeForIPNo">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetAppliedSchemeForIPNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMouldRoomReq">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveMouldRoomReq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMouldRoomReq">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetMouldRoomReq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagStage">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetDiagStage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOncoWorkList">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetOncoWorkList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMRRData">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetMRRData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateMRPrepareStatus">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetUpdateMRPrepareStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagHistory">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetDiagHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSimulationTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveSimulationTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSimulationDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetSimulationDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMRRDetRT">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetMRRDetRT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSIMDiagICD">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetSIMDiagICD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagnosisChangeHistory">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetDiagnosisChangeHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlleryHist">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetAlleryHist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRadDosePrescTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveRadDosePrescTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRadDosePrescDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRadDosePrescDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDPDiagICD">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetDPDiagICD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRadBrachyDisSumNoteTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveRadBrachyDisSumNoteTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDisSumNoteDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetDisSumNoteDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveHDRBrachyTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveHDRBrachyTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHDRBrachyDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetHDRBrachyDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrachyDetBT">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetBrachyDetBT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePlanCheckList">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SavePlanCheckList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanCheckList">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPlanCheckList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImageGuidedSetupTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/ImageGuidedSetupTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageGuidedSetupLst">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetImageGuidedSetupLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageGuidedVisitDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetImageGuidedVisitDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageGuidedSummaryDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetImageGuidedSummaryDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageGuidedDt">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetImageGuidedDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhaseNo">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPhaseNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRTSummary">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetRTSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOARDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetOARDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WeekNo">
+      <soap:operation soapAction="http://tempuri.org/IOncology/WeekNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFractionsStatus">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetFractionsStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFractionsDetails">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetFractionsDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStartDate">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetStartDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoCourse">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetChemoCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStartDateVisit">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetStartDateVisit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEBRTPlanSchdTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveEBRTPlanSchdTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEBRTPlanSchedyleDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetEBRTPlanSchedyleDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveWeeklyReview">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveWeeklyReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeeklyReviewLst">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetWeeklyReviewLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreatmentStatus">
+      <soap:operation soapAction="http://tempuri.org/IOncology/TreatmentStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PalliativeRegistTran">
+      <soap:operation soapAction="http://tempuri.org/IOncology/PalliativeRegistTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPCRegistDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPCRegistDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePalliativeCareForm">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SavePalliativeCareForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPCFormDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPCFormDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPCDiagStage">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPCDiagStage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagStageHistory">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetDiagStageHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPCDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPCDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPCTextSurgList">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPCTextSurgList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreviousPainScore">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPreviousPainScore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNurseVerifiedList">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetNurseVerifiedList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatPreviousHistory">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPatPreviousHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPCTATDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPCTATDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreviousMedicineFreq">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPreviousMedicineFreq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDemographicalDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPatDemographicalDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetDoctorDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreviousPCDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPreviousPCDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPCDetRpt">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetPCDetRpt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrganTissueGrade">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveOrganTissueGrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganTissueGrade">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetOrganTissueGrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveChemoMedication">
+      <soap:operation soapAction="http://tempuri.org/IOncology/SaveChemoMedication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoMedication">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetChemoMedication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoMedAdmnDet">
+      <soap:operation soapAction="http://tempuri.org/IOncology/GetChemoMedAdmnDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Oncology">
+    <wsdl:port name="BasicHttpBinding_IOncology" binding="tns:BasicHttpBinding_IOncology">
+      <soap:address location="http://192.168.1.3/WebHMISServiceNUnit/Oncology.svc/Oncology.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

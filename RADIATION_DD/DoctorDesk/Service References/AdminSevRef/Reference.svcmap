@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="cf872110-2645-42c8-803c-739f8e5ec41a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://uat.himstccf.org:82/WEBHMISSERVICE/Administration.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Administration.xsd" MetadataType="Schema" ID="f85e20c8-b088-4b11-89d5-18ded608dda7" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Administration.svc?xsd=xsd1" />
+    <MetadataFile FileName="Administration1.xsd" MetadataType="Schema" ID="122e6844-abe7-4b64-813c-1a916c455808" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Administration.svc?xsd=xsd0" />
+    <MetadataFile FileName="Administration.disco" MetadataType="Disco" ID="17377d4b-4408-4182-9243-e1136dd9c5f0" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Administration.svc?disco" />
+    <MetadataFile FileName="Administration.wsdl" MetadataType="Wsdl" ID="3d86506c-9c71-4453-8619-0b714335efc6" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Administration.svc?wsdl" />
+    <MetadataFile FileName="Administration2.xsd" MetadataType="Schema" ID="c4127445-050d-4758-95ed-ced29ea92513" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Administration.svc?xsd=xsd4" />
+    <MetadataFile FileName="Administration3.xsd" MetadataType="Schema" ID="41b09abb-7628-4442-90ea-af57cd0d77ee" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Administration.svc?xsd=xsd3" />
+    <MetadataFile FileName="Administration4.xsd" MetadataType="Schema" ID="e60085ca-bed2-4bf2-b13d-2fc74c302711" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/Administration.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

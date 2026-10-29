@@ -1,0 +1,1402 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="<%=ResolveUrl("/Images/favicon.ico")%>">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Doctor Desk</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+
+
+    <link href="<%=ResolveUrl("~/JQueryUi/jquery.ui.theme.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/JQueryUi/jquery.ui.css")%>" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="<%=ResolveUrl("~/font-awesome/css/font-awesome.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/font-awesome/css/font-awesome.min.css")%>" rel="stylesheet" />
+    <%--<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">--%>
+
+    <!-- Ionicons -->
+    <link href="<%=ResolveUrl("~/bootstrap/Icon.css")%>" rel="stylesheet" />
+
+    <link href="<%=ResolveUrl("~/LoadingCursor/css/style.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/multi-select.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/plugins/select2/select2.css")%>" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="<%=ResolveUrl("~/dist/css/AdminLTE.css")%>" rel="stylesheet" />
+
+    <link href="<%=ResolveUrl("~/dist/css/skins/skin-blue.min.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/dist/css/skins/skin-yellow.min.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/jqGrid/css/ui.jqgrid.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/jqGrid.bootstrap.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/bootstrap.css")%>" rel="stylesheet" />
+    <link href="../plugins/alert/jquery-confirm.css" rel="stylesheet" />
+    <link href="../Scripts/HoldOn.min.css" rel="stylesheet" /> <%-- 26-11-19--%>
+    <%-- <link href="<%=ResolveUrl("~/Styles/MenuCSS/bootstrap.min.css")%>" rel="stylesheet" />
+     <link href="<%=ResolveUrl("~/Styles/MenuCSS/animate.min.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/Styles/MenuCSS/bootstrap-dropdownhover.min.css")%>" rel="stylesheet" />--%>
+
+    <script src="<%=ResolveUrl("~/Scripts/jquery-1-10-2.js")%>"></script>
+    <script src="<%=ResolveUrl("~/dist/js/app.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/bootstrap/js/bootstrap.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/bootstrap/js/jquery.messager.js")%>"></script>
+    <script src="<%=ResolveUrl("~/bootstrap/js/dropdown.js")%>"></script>
+    <script src="<%=ResolveUrl("~/Scripts/jquery-1-11-1-ui.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/slimScroll/jquery.slimscroll.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.date.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.regex.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/input-mask/jquery.inputmask.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/jqGrid/js/i18n/grid.locale-en.js")%>"></script>
+    <script src="<%=ResolveUrl("~/jqGrid/js/jquery.jqGrid.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/LoadingCursor/jquery-loader.js")%>"></script>
+    <script src="<%=ResolveUrl("~/Scripts/multi-select.js")%>"></script>
+    <script src="<%=ResolveUrl("~/plugins/select2/select2.full.min.js")%>"></script>
+     <script src="<%=ResolveUrl("~/Styles/MenuCSS/bootstrap-dropdownhover.min.js")%>"></script><%--//--%>
+    <script src="<%=ResolveUrl("~/js/ICU_Prescription.js")%>"></script> <%--//--%>
+      <%-- for cirical care graph--%>
+  
+     <link href="<%=ResolveUrl("~/Styles/MenuCSS/animate.min.css")%>" rel="stylesheet" /><%--//--%>
+    <link href="<%=ResolveUrl("~/Styles/MenuCSS/bootstrap-dropdownhover.min.css")%>" rel="stylesheet" /><%--//--%>
+
+    
+    <%--<link href="../Content/font-awesome.min.css" rel="stylesheet" />--%> 
+
+    <%--<script src="../js/jquery-1-10-2.js"></script>--%>
+    <%--<script src="../js/jquery-1-11-1-ui.js"></script>--%>
+    <%--<script src="../js/i18n/grid.locale-en.js"></script>--%>
+    <%--<script src="../js/jquery.jqGrid.js"></script>--%>
+    <script src="../js/canvasjs.min.js"></script>
+   <%-- <script src="<%=ResolveUrl("~/js/jquery-1-10-2.js")%>"></script>
+    <script src="<%=ResolveUrl("~/js/jquery-1-11-1-ui.js")%>"></script>
+    <script src="<%=ResolveUrl("~/js/i18n/grid.locale-en.js")%>"></script>
+    <script src="<%=ResolveUrl("~/js/jquery.jqGrid.js")%>"></script>
+    <script src="../js/canvasjs.min.js"></script>--%>
+    <%--end--%>
+    <script src="../plugins/alert/jquery-confirm.js"></script>
+    <%-- <script src="../Scripts/PatList.js"></script>--%>
+
+      <%-- 26-11-19--%>
+    <script src="../Scripts/jquerysession.js"></script>
+      <script src="../Scripts/HoldOn.min.js"></script> <%----%>
+
+   
+    <script src="../Scripts/Sortable-master/jquery.binding.js"></script>
+    <script src="../Scripts/Sortable-master/Sortable.js"></script>
+    <script src="../Scripts/Sortable-master/Sortable.min.js"></script>
+
+       <script src="<%=ResolveUrl("~/js/maskedinput.js")%>"></script>
+    <script src="<%=ResolveUrl("~/js/jquery.inputmask.js")%>"></script>
+    <script src="<%=ResolveUrl("~/js/jquery.inputmask.custom.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/js/jquery.inputmask.date.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/js/jquery.inputmask.extensions.js")%>"></script>
+    <script src="<%=ResolveUrl("~/js/jquery.inputmask.numeric.extensions.js")%>"></script>
+     <link href="../Content/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+
+   
+    <script src="../js/jquery-ui-timepicker-addon.js"></script>
+    <%--end--%><script src="../js/jquery-ui-timepicker-addon.js"></script>
+  <%--  <script src="../Scripts/ipInvstAndMed.js"></script>--%>
+
+   <%-- end--%>
+    <style type="text/css">
+        
+         /*------------start-----added in all masters------ Meenakshi to apply a slim scroll ---------*/
+        ::-webkit-scrollbar {
+     width: 6px;
+    height:6px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background: rgba(255,0,0,0.8);
+}
+
+ /*------------end----------- Meenakshi to apply a slim scroll ---------*/
+        
+        /*added by vijeta on 28th may 2018*/
+        .rightPanelul {
+            line-height: 24px;
+            font-weight: bold;
+            color: #595454;
+            text-shadow: 0.4px 0px 0.4px #537c94;
+            font-size: 12px;
+            letter-spacing: 0.6px;
+            cursor: pointer;
+        }
+        /*-----------------------*/
+
+      .divHeads {
+            color: #f4f4f4;
+            background-color: #3c8dbc;
+            border-color: #ddd;
+            box-shadow: none;
+            font-size: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .navbar-nav > .user-menu > .dropdown-menu {
+            /*width: 450px;*/
+        }
+
+        #lnkNewNotes:hover, #lnkAddComp:hover {
+            cursor: pointer !important;
+        }
+
+        .dropbtn {
+            background-color: transparent;
+            color: black;
+            padding: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            outline: 0;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 3px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            height: 35px;
+        }
+
+        .dropdown:hover .dropbtn {
+        }
+
+        .sdList {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            right: 0;
+            top: 0;
+            width: 40%; /* Full width */
+            height:auto; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            -webkit-animation-name: fadeIn; /* Fade in the background */
+            -webkit-animation-duration: 0.4s;
+            animation-name: fadeIn;
+            animation-duration: 0.4s;
+            margin-top: 47px;
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            -webkit-animation-name: fadeIn; /* Fade in the background */
+            -webkit-animation-duration: 0.4s;
+            animation-name: fadeIn;
+            animation-duration: 0.4s;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: fixed;
+            bottom: 0;
+            background-color: #fefefe;
+            width: 230px;
+            -webkit-animation-name: slideIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name: slideIn;
+            animation-duration: 0.4s;
+        }
+         .menuButton {
+    background-color: transparent;
+    color: white;
+    padding: 8px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+        .w3-circle {
+            border-radius: 99em;
+            margin-left: 5px;
+        }
+
+          .signOut {
+            width: 10%;
+        }
+        @media only screen and (min-width : 992px) {
+
+            .content-wrapper {
+                width: 100%;
+            }
+
+            .modal {
+                width: 20%;
+                margin-top: 45px;
+            }
+
+            /*Meenakshi*/
+           /*.content {
+
+                padding-left: 320px;
+
+            }*/
+
+            .row {
+                margin-right: -190px;
+                margin-left: 130px;
+            }
+            
+            .panel-primary {
+                /*width: 6vw;
+                height: 5vw;*/
+                  width: 6vw;
+                height: 6vw;
+            }
+
+            .panel-body{
+
+                 width: 6vw;
+                height: 6vw;
+            }
+
+            .sdList {
+                width: 15%;
+                height: auto;
+                margin-top: 45px;
+            }
+
+            .close {
+                display: none;
+            }
+
+               .signOut {
+                float: right;
+                margin-top: 10px;
+                width: 10%;
+            }
+            .pevPrescrp {
+                margin-left: 255px;
+            }
+
+           .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td
+           {
+               line-height:1.2;
+
+           }
+           .contentHoldClass{
+               width: 845px;
+           }
+
+           .clickRw{
+               font-size:13px;
+           }
+
+        }
+
+        
+      @media only screen and (min-width : 1024px) {
+          /*Meenakshi*/
+          /*.content {
+                  padding-left: 215px !important;
+          }*/
+      }
+
+
+      @media only screen and (min-width : 1366px) {
+          /*Meenakshi*/
+          /*.content {
+                  padding-left: 300px  !important;
+          }*/
+      }
+
+
+       /*added by vijeta on 13th Aug 2018*/
+           .divHeads a{
+            color: #f4f4f4;
+            text-decoration: none;
+            font-size: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+        /*@media screen and (max-width: 600px) {
+            .close {
+                float: right;
+                margin-left:100px;
+            }
+        }*/
+         @media only screen and (max-width : 640px) { 
+            .collapse {
+               display: block;
+
+                }
+            .main-header{
+                    height: 45px;
+            }
+            .navbar-nav .open .dropdown-menu {
+                    position: static;
+                    width: auto;
+                    border: 0;
+                    box-shadow: none;
+                    background-color: white;
+                    float: right;
+            }
+        }/* added for displaying menu list*/
+         
+           /*added by vijeta on 27th sep 2018*/
+          
+         
+/*//......................... 26-11-19.....................................*/
+   
+        
+       
+        
+      
+         
+         
+    
+        
+       
+           .tabcontainer a {
+                text-shadow: 1px 0px 1px;
+    letter-spacing: 1px;
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+           color:#f3bd69d4;
+
+
+           
+    display: block;
+    padding: 10px 10px !important;
+    color: rgb(255, 255, 255);
+    background-color: #61788d;
+            }
+           .tabcontainer{
+               margin-left:172px;
+                margin-top:6px;
+           }
+      
+	
+  
+     
+      
+       
+.tabcontainer  li {
+                 float: left;
+                 width:fit-content;            
+                 text-align: center;
+                 font-size: larger;          
+                }
+.HighAlertDrug {
+    color: #e02c0f !important;
+    font-weight: bold !important;
+}
+
+      .avoid-clicks {
+            pointer-events: none;
+        }  
+       .cancellation {
+            /*background-image: linear-gradient(to left, #cef9f4, #c7f8f3, #c0f7f1, #b9f5f0, #b1f4ef);*/
+            /*background-image: linear-gradient(to left top, #f9b596, #f9b292, #f9af8e, #f9ab8a, #f9a886);*/
+            background-color: #f9b596;
+             /*background : '#f9a886';*/
+        } 
+       
+        .Omited {
+            background-color: #c4faae !important;
+        }
+        .tsStatus {
+            width: 13px;
+            height: 13px;
+            float: left;
+            margin-top: 9px;
+            border: 1px solid #313131;
+            margin-left: 3px;
+            /*margin-top: -5px;*/
+            /*margin: 3px 3px 3px 5px;*/
+        }
+        .PlanedOmitt{
+            background-color:#FEE188;
+        } 
+        
+        
+         @media only screen and (max-width : 1280px) {
+              .tabcontainer {
+                  margin-left: 26px;
+    font-size: 10px;
+              }
+        }
+        @media only screen and (max-width : 1024px) {
+              /*.content-wrapper {
+                 margin-left: 0px !important;
+              }*/
+              .menuButton {
+  
+    padding: 10px !important;
+   
+}
+              #anchrSignOut{
+                  margin-left: 6px !important;
+              }
+             .tabcontainer a{	
+                  margin-right: 0px !important;	
+                  font-size: 10px !important;	
+              }
+              #ICU_Pat_Name{
+                  font-size: 10px !important;
+              }
+              .nav-tabs > li > a {
+ 
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+
+   
+}
+              /*#tRoutHead{
+               width: 9%;
+              }*/
+               #orderBy{
+width:6.5% !important;
+     }
+              .wrapperWidth{
+                  width:100% !important;
+              }
+              /*.StuckInput table{
+                  width:95% !important;
+              }*/
+              #infotab{
+                  width:100% !important;
+              }
+          }
+      /*//...................................end....................................*/
+    </style>
+    <script src="../Scripts/ICUPatList.js"></script>
+    <script type="text/javascript">
+        var timoutWarning = 1500000// 840000; // Display warning in 14 Mins.
+        var timoutNow = 1800000 // Timeout in 30 mins.
+        var logoutUrl = '../Account/Login'; // URL to logout page.
+        var warningTimer;
+        var timeoutTimer;
+        var NotificURl = '';
+        var formname = "";
+        var stopProp = true;
+        var userid = '<%:Session["gOncoUserId"].ToString() %>';//Somnath
+        $(document).ajaxError(function (e, jqxhr, settings, exception) {
+            e.stopPropagation();
+            if (jqxhr.status == 401)
+                window.location.href = "../Error/unauthorized";
+            else if (jqxhr.status.toString().startsWith("4") || jqxhr.status.toString().startsWith("5")) {
+               // window.location.href = "../Error/index?statuscode=" + jqxhr.status;
+            }
+        });
+
+       
+
+        // Start timers.
+        function StartTimers() {
+            warningTimer = setTimeout("IdleWarning()", timoutWarning);
+            timeoutTimer = setTimeout("IdleTimeout()", timoutNow);
+        }
+        // Reset timers.
+        function ResetTimers() {
+
+            if (window.localStorage.getItem("logged_in") == 'false') {
+                window.location.href = "about:blank";
+            }
+
+            clearTimeout(warningTimer);
+            clearTimeout(timeoutTimer);
+            StartTimers();
+
+        }
+
+        //window.addEventListener("load", function () {                //for  removing address bar in mobile
+        //    setTimeout(function () {
+        //        // This hides the address bar:
+        //        window.scrollTo(0, 1);
+        //    }, 0);
+        //});
+        // Show idle timeout warning dialog.
+        function IdleWarning() {
+            MsgDia("Session About To Timeout, You will be logged out in 5 min.To remain logged in move your mouse over this window. ", "Warning");
+        }
+
+        function IdleTimeout() {
+            window.location = logoutUrl;
+        }
+
+        $(document).ready(function (e) {
+            //$.session.set('IPStatOrdersflag', "");
+	 //kavita 23-8-18
+            if ($(window).width() < 996)//added by kavita 
+            {
+               //added by kavita 
+                $("#anchrSignOut").css('margin-left', '1px');//kavita
+            }
+            else {
+                $("#ICU_Pat_Name").css('width', 'auto');//kavita
+            }//kavita 23-8-18
+
+            $("#IPStatOrders").click(function () {// 26-11-19
+
+                $.session.set('IPStatOrdersflag', "Stat");
+            });
+            $("#IPMedication").click(function () {
+                $.session.set('IPStatOrdersflag', "");
+            });
+            $("#anchrSignOut").click(function () {
+                $.session.set('PatTRANNO', "");
+                $.session.set('PatMRNO', "");
+                $.session.set('PatName', "");
+                $.session.set('PatAge', "");
+                $.session.set('PatGender', "");
+                $.session.set('PatCompleted', "");
+
+
+                $.session.set('ICUPatName', '');
+                $.session.set('ICUPatGender', '');
+                $.session.set('ICUPatIPNO', '');
+                $.session.set('ICUPatMRNO', '');
+                $.session.set('ICUPatBedNo', '');
+                $.session.set('ICUPatAdmnDate', '');
+                $.session.set('ICUPatAge', '');
+            });
+
+            $('.dropdown-toggle').dropdown();
+
+            //Done By Somnath
+
+            $('#txtUid').val(userid);
+            $("#txtUid").attr("disabled", true);
+            BtnTxtHideDisb();
+
+           
+            //btn click()
+            $('#btnPass').click(function (e) {
+                SaveAction();
+            })
+
+            //old pwd chk exist
+            $('#txtOPwd').blur(function (e) {
+                if ($("#txtOPwd").val() != "") {
+                    Opwd = $('#txtOPwd').val();
+                    uid = $('#txtUid').val();
+                    var datatosend = { uid: uid, Opwd: Opwd }
+
+                    $.ajax({
+                        type: "POST",
+                        url: '../DoctorDesk/CheckUserExist',
+                        data: datatosend,
+                        async: false,
+                        success: function (response) {
+                            if (response == "True") {
+
+                                $('#txtNPwd').attr("disabled", false);
+                                $('#txtConfirmPwd').attr("disabled", false);
+                                //$("#btnClosePass").click();
+                                //$('#btnPass').show();
+                            }
+                            else {
+                                $("#btnClosePass").click();
+                                $.messager.alert("Information", "Incorrect Password !");
+                                //alert("Incorrect Password !");
+                                $('#txtOPwd').val(""); $("#txtOPwd").css({ 'border-color': 'red' });
+                            }
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            $.messager.alert(textStatus, "Error Information");
+                        }
+                    });
+                }
+            });
+            //end
+
+            //$(document).on("pageinit", "menuList", function () {
+            //    $(document).on("swipeleft swiperight", "menuList", function (e) {
+            //        // We check if there is no open panel on the page because otherwise
+            //        // a swipe to close the left panel would also open the right panel (and v.v.).
+            //        // We do this by checking the data that the framework stores on the page element (panel: open).
+            //        if ($.mobile.activePage.jqmData("panel") !== "open") {
+            //            if (e.type === "swipeleft") {
+
+            //               // $("#right-panel").panel("open");
+            //            }// else if (e.type === "swiperight") {
+            //            //    $("#left-panel").panel("open");
+            //            //}
+            //        }
+            //    });
+            //});
+
+            var menuL = document.getElementById('menuList');
+            $('#menuBar').click(function (e) {//26-11-19
+                //if (formname == "IPMedication") {
+
+                if (menuL.style.display == "block" && $(window).width() <= 1024) {
+                    menuL.style.display = "none";
+                }
+                else {
+                    menuL.style.display = "block";
+                }
+                // }
+
+                // else {
+                //  menuL.style.display = "block";
+                // }
+                GetNursStationsNPAtients("Y");
+                //alert("old");
+            });
+
+            $("#btnHome").click(function () {
+                $.session.set('ICUPatName', '');
+                $.session.set('ICUPatGender', '');
+                $.session.set('ICUPatIPNO', '');
+                $.session.set('ICUPatMRNO', '');
+                $.session.set('ICUPatBedNo', '');
+                $.session.set('ICUPatAdmnDate', '');
+                $.session.set('ICUPatAge', '');
+                window.location.href =  "../Account/MenuList";
+            });
+            //var lst = document.getElementById('sideList');
+            //$('#menuDots').click(function (e) {
+            //    lst.style.display = "block";
+
+            //});
+
+            window.onclick = function (event) {
+                if (event.target == menuL) {
+                    //document.getElementById('menuList').style.display = "none";
+                }
+            }
+
+            //window.onclick = function (event) {
+            //    if (event.target == lst) {
+            //        lst.style.display = "none";
+            //    }
+            //}
+
+            //document.getElementById('secCont').onclick = function () {                           // commented for not closing panel when clicked outside
+            //    document.getElementById('sideList').style.display = 'none';
+            //}
+
+            // var closePanel = document.getElementsByClassName("close")[0];
+            panelClose.onclick = function () {
+                menuL.style.display = "none";
+            }
+
+            $('#btnClose').click(function (e) {
+                Makenormal();
+                RemoveBorder();
+            });
+            $("body").disableSelection();
+            $("body").keydown(function (e) {
+                if (e.keyCode == 8) {
+                    var element = e.target.nodeName.toLowerCase();
+                    if (element != 'input' && element != 'textarea') {
+                        return false;
+                    }
+                }
+            });
+
+            if (("" + '<%: Session["gDoctName"].ToString().Trim()%>') == "") {
+                alert("Session expired. Please login again.");
+                window.location.href = "../Account/Login";
+            }
+
+            //
+            $('#lishistory').click(function (e) {
+                window.location.href = '../DoctorDesk/History';
+            })
+            //end
+
+            //added on 28th may 2018
+            SetDateTime1();
+            if (("" + '<%:TempData["PageID"]%>') == "ICUReport") {
+                //$("#menuDots").hide();
+            }
+            else {
+                $("#menuDots").show();
+            }
+
+            var lst = document.getElementById('sideList');
+            //$('#menuDots').click(function (e) {
+               
+            //    $("#sideList").fadeToggle(2000);//added on 1st june 2018
+            //});// commented
+
+            window.onclick = function (event) {
+                if (event.target == document.getElementById('menuDots')) {
+                    //lst.style.display = "block";
+                }
+                else {
+                    //lst.style.display = "none";//commented by vijeta on 1st june 2018
+                    //$("#sideList").fadeOut(2000); commented by kavita
+                }
+            }
+
+            $('#listCriticl').click(function (e) {
+                if (CheckPatSessionNotEmpty()) {
+                    var strDate = $("#Reportdate").val();
+                    var strIPNO = $.session.get('ICUPatIPNO');
+                    window.location.href = '../ICUMob/CriticalCareGraph1?strIPNO=' + strIPNO + '&&strDate=' + strDate;
+                }
+                else
+                    $.messager.alert("Information", "Please Select Patient");
+            });
+
+            $("#listRespiratory").click(function () {
+                if (CheckPatSessionNotEmpty()) {
+                    var strDate = $("#Reportdate").val();
+                    window.location.href = 'RespiratoryAssessment?strDate=' + strDate;
+                }
+                else
+                    $.messager.alert("Information", "Please Select Patient");
+            });
+            $("#listMaxTemp").click(function () {
+                if (CheckPatSessionNotEmpty()) {
+                    var strDate = $("#Reportdate").val();
+                    window.location.href = 'DateWiseMaxTempReport?strDate=' + strDate;
+                }
+                else
+                    $.messager.alert("Information", "Please Select Patient");
+            });
+            $("#listInvestChart").click(function () {
+                if (CheckPatSessionNotEmpty()) {
+                    var strDate = $("#Reportdate").val();
+                    window.location.href = 'InvestigationChart?strDate=' + strDate;
+                }
+                else
+                    $.messager.alert("Information", "Please Select Patient");
+            });
+            $("#listDiabeticChart").click(function () {
+                if (CheckPatSessionNotEmpty()) {
+                    var strDate = $("#Reportdate").val();
+                    window.location.href = 'DiabeticChart?strDate=' + strDate;
+                }
+                else
+                    $.messager.alert("Information", "Please Select Patient");
+            });
+            $("#listDiacom").click(function () {
+                $.loader.open();
+                if (CheckPatSessionNotEmpty()) {
+                    var Mrno = ($.session.get('ICUPatMRNO')).toString();
+                    if (Mrno != "") {
+                        //window.location.href = '../DoctorDesk/RedirectToDicom?mrNo=' + Mrno;// 'http://103.59.215.74:8081/SampleViewer/index?mrno=' + Mrno;
+                        $.ajax({
+                            type: 'POST',
+                            url: 'RedirectToDicom',
+                            data: { mrNo: Mrno },
+                            success: function (data) {
+                                $.loader.close();
+                                window.open(data, '_blank');
+                            },
+                            error: function () {
+                                $.loader.close();
+                            },
+                        });
+                    }
+                }
+                else
+                    $.messager.alert("Information", "Please Select Patient");
+
+                $.loader.close();
+
+            });
+            $("#listInvestReport").click(function () {
+                if (CheckPatSessionNotEmpty()) {
+                    var strDate = $("#Reportdate").val();
+                    window.location.href = '../ICUMob/InvestigationReport';
+                }
+                else
+                    $.messager.alert("Information", "Please Select Patient");
+            });
+            //-----------------------------------------------------------------------------
+            $("#listPrescription").click(function () {
+                if (CheckPatSessionNotEmpty()) {
+
+                    window.location.href = '../ICUMob/IPMedication';
+                }
+                else
+                    $.messager.alert("Information", "Please Select Patient");
+            });//26-11-19
+            // Meenakshi 28/07/2018
+            $('.content-wrapper').css('margin-left', function () {
+                if ($(window).width() >= 996)
+                    return $("#menuList").width() + 1;
+            });
+            GetDBMaxSEQNO();//
+
+
+            //$("#tabMenuUl1 li").click(function (e) {
+            //    SaveForAllShortCutMenus(e);
+            //});//
+
+
+            $(document.body).on('click', '.divHeads', function (e) {
+
+                stopProp = false;
+
+            });
+        });
+        //function SaveForAllShortCutMenus(e) {
+
+        //    var page = window.location.href;
+        //    if (page.indexOf("IVsuplement") != -1)
+        //        SaveIVsuplement("Y");
+        //    //else if (page.indexOf("Vitals") != -1) {
+        //    //    if (!SaveVitals("Y")) {
+        //    //        e.preventDefault();
+        //    //    }
+        //    //}
+        //    else if (page.indexOf("IPInfusion") != -1)
+        //        SaveAllIPInfusion("Y");
+        //    else if (page.indexOf("IPInvestigation") != -1)
+        //        SaveInvestigations("Y");
+        //    else if (page.indexOf("IPReferrals") != -1)
+        //        SaveIPReferrals("Y");
+        //        //else if (page.indexOf("Advice") != -1)//commented by vijeta on 19th oct 2018
+        //        //    SaveMedicineResequence("Y");
+        //    else if (page.indexOf("IPMedication") != -1)   //by vijeta on 12th march 19
+        //    {
+        //        if (! SaveAllMedicines("Y")) {
+        //            e.preventDefault();
+        //        }
+        //    }
+        //    //else if (page.indexOf("RxNewSearch") != -1) {
+        //    //    if (!SaveAllMedicines("Y")) {
+        //    //        e.preventDefault();
+        //    //    }
+        //    //}
+        //    else if (page.indexOf("NonDrugOrder") != -1)
+        //        SaveNonDrugOrder("Y");
+
+        //    else if (page.indexOf("BloodProduct") != -1)
+        //        SaveBloodProduct("Y");
+        //}
+        function SetDateTime1() {
+            var admissiondate = $.session.get('ICUPatAdmnDate');
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1;
+            var yyyy = today.getFullYear();
+            if (dd < 10) {
+                dd = '0' + dd
+            }
+            if (mm < 10) {
+                mm = '0' + mm
+            }
+            today = dd + '/' + mm + '/' + yyyy;
+            $("#Reportdate").val(today);
+
+            $("#Reportdate").datepicker(
+                        {
+                            showButtonPanel: true,
+                            changeMonth: true,
+                            yearRange: "c-150:c+99",
+                            changeYear: true,
+                            dateFormat: "dd/mm/yy",
+                            maxDate: new Date(),
+                            minDate: admissiondate
+                        });
+
+            //   MinDate();
+
+        }
+
+        var AdminLTEOptions = {
+            enableBSToppltip: false
+        };
+
+        // element.requestFullscreen();
+
+        //Done By sOMNATH
+        function BtnTxtHideDisb() {
+            $('#txtNPwd').attr("disabled", true);
+            $('#txtConfirmPwd').attr("disabled", true);
+            // $('#btnPass').hide();
+        }
+
+        function SaveAction() {
+            if (Validation() == false || ConfirmPassWord() == false) {
+                return false;
+            }
+            else {
+                uid = $('#txtUid').val();
+                Npwd = $('#txtNPwd').val();
+                Cpwd = $('#txtConfirmPwd').val();
+                var datatosend = { uid: uid, Npwd: Npwd, Cpwd: Cpwd }
+                // ajaxindicatorstart('Saving data.. please wait..');
+
+                $.ajax({
+                    type: "POST",
+                    url: '../DoctorDesk/ChangePWD',
+                    data: datatosend,
+                    dataType: "json",
+                    cache: false,
+                    success: function (response) {
+                        $("#btnClosePass").click();
+                        $.messager.alert("Information", response);
+                        //ajaxindicatorstop();
+                        ClearTxtbx();
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        // ajaxindicatorstop();
+                        $.messager.alert(textStatus, "Error Information");
+                    }
+                })
+            }
+        }
+
+        function ClearTxtbx() {
+            $('#txtOPwd').val("");
+            $('#txtNPwd').val("");
+            $('#txtConfirmPwd').val("");
+        }
+
+        function ConfirmPassWord() {
+            var a = $("#txtNPwd").val();
+            var b = $("#txtConfirmPwd").val();
+            if (a === b) {
+                return true;
+            }
+            else {
+                $("#btnClosePass").click();
+                $.messager.alert("Information", "Password does not match!");
+                $('#txtConfirmPwd').val("");
+                return false;
+            }
+        }
+
+        function Makenormal() {
+            if (("" + $("#txtUid").val()).trim().length != 0) {
+                $("#txtUid").css({ 'border-color': '' });
+            }
+            if (("" + $("#txtOPwd").val()).trim().length != 0) {
+                $("#txtOPwd").css({ 'border-color': '' });
+            }
+            if (("" + $("#txtNPwd").val()).trim().length != 0) {
+                $("#txtNPwd").css({ 'border-color': '' });
+            }
+            if (("" + $("#txtConfirmPwd").val()).trim().length != 0) {
+                $("#txtConfirmPwd").css({ 'border-color': '' });
+            }
+        }
+
+        function RemoveBorder() {
+            if ($("#txtUid").val() == "") {
+                $("#txtUid").css({ 'border-color': '' });
+            }
+            if ($("#txtOPwd").val() == "") {
+                $("#txtOPwd").css({ 'border-color': '' });
+            }
+            if ($("#txtNPwd").val() == "") {
+                $("#txtNPwd").css({ 'border-color': '' });
+            }
+            if ($("#txtConfirmPwd").val() == "") {
+                $("#txtConfirmPwd").css({ 'border-color': '' });
+            }
+        }
+
+        function Validation() {
+            var i = 0;
+            if (("" + $("#txtUid").val()).trim().length == 0) {
+                $("#txtUid").focus();
+                $("#txtUid").css({ 'border-color': 'red' });
+                i = 1;
+            }
+            else {
+                $("#txtUid").css({ 'border-color': '' });
+
+            }
+            if (("" + $("#txtOPwd").val()).trim().length == 0) {
+                //$("#txtOPwd").focus();
+                $("#txtOPwd").css({ 'border-color': 'red' });
+                i = 1;
+            }
+            else {
+                $("#txtOPwd").css({ 'border-color': '' });
+
+
+                if (("" + $("#txtNPwd").val()).trim().length == 0) {
+                    $("#txtNPwd").focus();
+                    $("#txtNPwd").css({ 'border-color': 'red' });
+                    i = 1;
+                }
+                else {
+                    $("#txtNPwd").css({ 'border-color': '' });
+
+                }
+                if (("" + $("#txtConfirmPwd").val()).trim().length == 0) {
+                    $("#txtConfirmPwd").focus();
+                    $("#txtConfirmPwd").css({ 'border-color': 'red' });
+                    i = 1;
+                }
+                else {
+                    $("#txtConfirmPwd").css({ 'border-color': '' });
+
+                }
+            }
+
+            if (i == 1) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function ActiveMenu(liObject) {
+            formname = liObject;
+            $('#tabMenuUl1').children().each(function () {
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                }
+            });
+            $("#tabMenuUl1 li#" + liObject + "").addClass("active");
+        }
+        function MsgDia(messages, titles, RedirectPath) {
+            if (titles == "Information") {
+                $("#MsgImgID").attr("src", "../Images/dialog-information.png");
+            }
+            else if (titles == "Validation") {
+                $("#MsgImgID").attr("src", "../Images/exclamation-Icon.png");
+            }
+            else if (titles == "Error Information") {
+                $("#MsgImgID").attr("src", "../Images/Error-icon.png");
+            }
+            else {
+                $("#MsgImgID").attr("src", "");
+            }
+            $("#ErrorLabel").text(messages);
+            $('#ptdialog').dialog({
+                autoOpen: true,
+                width: 280,
+                minHeight: 150,
+                maxHeight: 150,
+                resizable: false,
+                title: titles,
+                modal: true,
+                buttons: {
+                    "Ok": function () {
+                        if (RedirectPath == null || RedirectPath == "") {
+                            $(this).dialog("close");
+                        }
+                        else {
+                            ajaxindicatorstart('please wait..');
+                            window.location.replace(RedirectPath);
+                            $(this).dialog("close");
+                        }
+                    }
+                },
+                position: { my: "center", at: "center" }//,
+            });
+        }//
+        //end
+
+
+    </script>
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition skin-blue sidebar-mini fixed">
+
+    <div class="wrapper" style="background-color: #fff;">
+
+        <!-- Main Header -->
+         <header class="main-header">
+
+          <%--    Added Control by vijeta on 28th may 2018 --%>
+            <span id="DATE" style="display: none; line-height: 19px; margin-left: 12px;">Date :</span><input type="text" style="display: none;" id="Reportdate" />
+
+           <div class="collapse navbar-collapse" style="width: 10px;
+              float: right;" data-toggle="dropdown" id="sideList" data-hover="dropdown" data-animations="bounceIn fadeInLeft fadeInUp fadeInRight">
+              <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="background-color:transparent;">
+                            <img id="menuDots" style="float: right; margin-top: 3px; margin-right: 0px;" src="<%=ResolveUrl("~/Images/menuDots.png")%>">  </a>
+                        <ul class="dropdown-menu dropdownhover-top" role="menu" style="bottom: 100%; margin-top:12px; margin-right: 7px;">
+                           <li><a id="listCriticl">Critical Care Flow Sheet</a></li>
+                          <li><a id="listRespiratory">Respiratory Assessment</a></li>
+                          <li><a id="listMaxTemp">Max Temerature Report</a></li>
+                            <li><a id="listInvestChart">Investigation Chart</a></li>
+                             <li><a id="listDiabeticChart">Diabetic Chart</a></li>
+                            <li><a id="listInvestReport">Investigation Report</a></li><!--kavita 30-8-18 -->
+                           <%-- <li><a id="listPrescription">Prescriptions</a></li>--%>
+                             <li class="divider"></li>
+                             <li><a  id="listDiacom">Diacom Images</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+               </div>
+
+            <%-- Added Control by vijeta on 28th may 2018 --%>
+            <div id="DivpatDtls" style="float: right; color: white;margin-right: 15px;"> 
+                <h5 id="ICU_Pat_Name" style="font-weight: 600; font-size: 12px; line-height: 0.5;padding-right:2px;"></h5>
+                <h6 style="line-height: 0.3; font-size: 10px;">
+                    <!-- kavita 23-8-18-->
+                    <label id="lblBedNo" style="line-height: 0.3; font-size: 10px;"></label>
+                   <%-- <i class="fa fa-circle" style="color: lightgray; font-size: 0.6em; vertical-align: middle; margin-right: 5px; display: none"></i>--%>
+                    <label id="lblGender" style="line-height: 0.3; font-size: 10px;"></label>
+                    <label id="lblAge" style="line-height: 0.3; font-size: 10px;"></label>
+                    <!-- kavita 23-8-18-->
+                </h6>
+            </div>
+
+            <%--  26-11-19--%>
+             <div style="float:left"><button id="menuBar" class="menuButton"><i class="fa fa-bars" style="color: white;"></i></button></div>
+           <%-- <button id="menuBar" class="menuButton"><i class="fa fa-bars" style="color: white;"></i></button>--%>
+            <%--<button id="btnHome" class="menuButton"><i class="fa fa-home" style="color: white;"></i></button>
+             <a href="<%=ResolveUrl("~/Account/Login")%>" style="color:#fefefe; margin-left : 15px; font-size: 12px;" id="anchrSignOut"> Sign Out
+                       </a>--%>
+            
+
+            
+            <div style="float:left"><button id="btnHome" class="menuButton"  title="Go To Home"  style="margin-left: 15px;"><i class="fa fa-home" style="color: white;"></i></button></div>
+           
+
+             <div style="float:left;margin-top:10px;">
+                 <!--Add by Karthick 20191128  MOBACCESS for mob log function-->
+                  <% if (("" + Session["MOBACCESS"]).ToString() == "False" )
+                {%> 
+                 <a href="<%=ResolveUrl("~/Account/Login")%>" style="color:#fefefe; margin-left : 15px; font-size: 20px;" id="anchrSignOut">
+                      <i class="fa fa-sign-out" style="color: white;"></i></a>
+                 <%}%>
+             </div>
+
+            <%-- --%>
+             <div style="float:left">
+            <div class="tabcontainer" id="tabMenu" style="display:none;">
+ 
+             <ul class="nav nav-tabs" id="tabMenuUl1" style="border-bottom:none"> <%--Meenakshi added border bottom none--%>
+                    <li class="active" id="IPMedication"><a href="<%=ResolveUrl("~/ICUMob/IPMedication")%>"><u>M</u>edication</a></li>
+             <li  id="IPInfusion"><a href="<%=ResolveUrl("~/ICUMob/IPInfusion")%>" ><u>I</u>nfusion</a></li>
+             <li id="IPStatOrders"><a href="<%=ResolveUrl("~/ICUMob/IPMedication")%>"><u>S</u>TAT Orders</a></li>
+             <li id="IVsuplement"><a  href="<%=ResolveUrl("~/ICUMob/IVsuplement")%>">I<u>V</u>Suplement</a></li>
+             <li id="BloodProduct"><a href="<%=ResolveUrl("~/ICUMob/BloodProduct")%>"><u>B</u>lood Product</a></li>
+             <li id="NonDrugOrder"><a  href="<%=ResolveUrl("~/ICUMob/NonDrugOrder")%>"><u>N</u>on Drug Order</a></li>
+            <%--<% if ((""+Session["CIMYN"]) == "Y")
+                           { %>--%>
+                     
+                        <%--<%}
+                           else {%>
+
+                        <li id="RxDesktop"><a href="<%=ResolveUrl("~/DoctorDesk/RxDesktop")%>"><u>R</u>x</a></li>
+                        <%}%>--%>
+             <li id="IPInvestigation1"><a  href="<%=ResolveUrl("~/ICUMob/IPInvestigation")%>"><u>I</u>nvestigation</a></li>
+             <li id="Referrals"><a  href="<%=ResolveUrl("~/ICUMob/IPReferrals")%>"><u>R</u>eferrals</a></li>
+            </ul>
+
+            </div>
+            </div>
+
+
+            <%-- ......end............--%>
+            
+             <%--   <div id="sideBarMenu">--%>
+
+            <%--   </div>--%>
+            <div id="menuList" class="modal" style="background-color: #fff; box-shadow: rgb(146, 146, 146) 2px 1px 20px inset;">
+                <span id="panelClose" class="close" style="font-size: 18px; opacity: 0.5; margin-right: 5px;">
+
+                    <i class="fa fa-times fa-lg" style="width: 131%;"></i>
+
+                </span>
+              
+                  <div id="doctPanel">
+                    <hr style="margin-bottom: 3px; margin-top: 0px" />
+                    <img src="<%=ResolveUrl("~/Images/Logo.png")%>" alt="Norway" style="margin-left:5px;width: 20%">
+                    <div style ="float: right; width: 66%;margin-left:15px;"><label class="dropbtn" style="color: #eb5a04;margin-left: 5px;margin-top:12px;">Dr. <%:Session["gDoctName"]%> </label></div>
+                    <div id="btnsDiv" class="btn-group btn-group-justified" style="margin-top: -10px;"></div>
+                </div>
+               
+                <div id="PatListPanelDiv" style="padding-top:23px;">
+                  
+                </div>
+                <%-- <a href="<%=ResolveUrl("~/DoctorDesk/PatientEntry")%>" id="lnkSearch"><i class="fa fa-home fa-lg" title="Home">Home</i></a>--%>
+                <%-- <table id="grid">
+
+            </table>--%>
+            </div>
+
+
+            <%--   <div class="dropdown">
+            
+                       <button class="dropbtn"><span>Dr. <%:Session["gDoctName"]%><i class="fa fa-caret-down"></i></span></button>
+             <div class="dropdown-content">
+
+                       <a href="<%=ResolveUrl("~/Account/Login")%>"><i class="fa fa-sign-out fa-lg" title="Sign Out">Log Out</i></a>
+
+            </div>
+            </div>--%>
+           
+
+
+        </header>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div id="secCont" class="content-wrapper">
+            <div class="row">
+                <div class="modal fade" id="mdAddChangePassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document" style="width: 30%">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myCompModalLabel">Change Password</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="list-group">
+                                    <div class="list-group-item">
+                                        <input type="text" id="txtUid" class="form-control input-sm" placeholder="User ID" />
+                                    </div>
+                                    <div class="list-group-item">
+                                        <input type="password" id="txtOPwd" class="form-control input-sm" placeholder="Current Password" />
+                                    </div>
+                                    <div class="list-group-item">
+                                        <input type="password" id="txtNPwd" class="form-control input-sm" placeholder="New Password" />
+                                    </div>
+                                    <div class="list-group-item">
+                                        <input type="password" id="txtConfirmPwd" class="form-control input-sm" placeholder="Confirm Password" />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="btnClosePass" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                                <button type="button" id="btnPass" class="btn btn-primary btn-sm">Save </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <%-- --%>
+                 <input type="text" id="tractiondropdown" style="display:none"/> 
+              <input type="text" id="txtTransTime" style="display:none" value=""/> 
+
+            <!-- Content Header (Page header) -->
+            <asp:ContentPlaceHolder runat="server" ID="Head">
+            </asp:ContentPlaceHolder>
+
+
+            <!-- Main content -->
+            <section class="content" style="padding-bottom: 1px;">
+
+                <asp:ContentPlaceHolder runat="server" ID="MainContent">
+                </asp:ContentPlaceHolder>
+
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Main Footer -->
+        <%--  <div id="footerFlow" style="    position: fixed;    bottom: 0px;    left: 0;   right: 0;">
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="pull-right hidden-xs">
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2017 <a href="#">Company NAme</a>.</strong> All rights reserved.
+ 
+        </footer>
+            </div>--%>
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+        </aside>
+        <div id="iframe" style="display: none; width: 100%; height: 100%;"></div>
+        <div class="control-sidebar-bg"></div>
+    </div>
+   <%-- 26-11-19--%>
+      <div id="ptdialog" title="Patient Helpform" style="display: none; z-index: 81">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="width: 10px;" valign="top">
+                                    <img src="../Images/secondarytile.png" id="MsgImgID" /></td>
+                                <td>
+                                    <asp:Label ID="ErrorLabel" runat="server" Text="" CssClass="ErrorCssClass LBLFormat "></asp:Label></td>
+                            </tr>
+                        </table>
+                        <%--<%--</div>--%>
+                        <div id="Customalert" class="CustomalertCss" style="display: none;">
+                            <table style="width: 100%">
+                                <tr>
+                                    <td style="width: 10px;" valign="top">
+                                        <img class="Confirmcss" id="imgCustomAlert" />
+                                    </td>
+                                    <td>
+                                        <label id="lblCustomAlert"></label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                         <div id="CustomalertOK" class="CustomalertCss" style="display: none;">   
+                            <table style="width: 100%">
+                                <tr>
+                                    <td style="width: 10px;" valign="top">
+                                        <img class="Informcss" id="imgCustomAlertOK" />
+                                    </td>
+                                    <td>
+                                        <label id="lblCustomAlertOK"></label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+   <%-- end--%>
+</body>
+</html>

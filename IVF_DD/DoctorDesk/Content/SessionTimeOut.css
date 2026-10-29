@@ -1,0 +1,49 @@
+﻿#sessionPopupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    background: rgba(80,80,80,0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+
+#sessionPopupBox {
+    width: 400px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 14px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+
+#sessionPopupMessage {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.7;
+}
+
+
+#sessionTimer {
+    font-size: 28px;
+    font-weight: bold;
+    color: green;
+}
+
+
+#sessionPopupBtn {
+    margin-top: 22px;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #1976d2;
+    color: white;
+    cursor: pointer;
+}

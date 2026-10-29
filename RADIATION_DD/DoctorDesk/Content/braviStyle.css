@@ -1,0 +1,74 @@
+﻿#overlay
+{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #303236;
+    z-index: 1;
+  }
+
+.main
+{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    margin-left: -70px;
+    background: no-repeat;
+    border: 3px solid gray;
+    padding: 0;
+    border: 1px solid Black;
+    z-index: 1;
+    background-color: #475B7E;
+}
+#dv_no_move
+{
+    padding: 2px -40px -50px 2px;
+    height: 90%;
+    width: 100%;
+    z-index: 1;
+    background-color: #FFFFFF;
+}
+.close
+{
+    float: right;
+    cursor: pointer;
+    margin-top: 3px;
+      z-index:1;
+}
+.close:hover
+{
+    margin-top: 3px;
+      z-index:1;
+}
+.title
+{
+    background-color: #465A7D;
+    cursor: move;
+    width: 98%;
+    height: 32PX;
+    font-size: 14;
+    font-weight: 900;
+    color: #fff;
+      z-index:1;
+}
+#title_left
+{
+    padding: 4px 0 3px 9px;
+    float: left;
+    cursor: default;
+      z-index:1;
+}
+
+#dv_load
+{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin: 0 auto;
+     z-index:1;
+}
+
+.Ratealign
+{ text-align :right;
+}

@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.OncologyEMR" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="BL_Oncology">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdvAdmnYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Altermedyn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApmntDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApmntTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BMI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BSA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CIMSYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATEDBY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CallDoneYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompositStag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConsNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Diagnosis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DietYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DoctorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DoctorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ELECBP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ELECPULSE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ELECTEMP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamDet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FollowUpDt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreeComplaint" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreeInvestigation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HeadCircmf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Height" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ICD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvestOther" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MStag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Meddet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MedicineName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobileNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NStag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Noddet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Onexamdet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PCOthers" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PEFR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PMOthers" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PPOthers" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PainScore" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PastHist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatAdd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatCatg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatPhoto" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Persondet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlanOfTreatmnt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prcomdet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrescRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrevTranNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProviDiagnosis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pulse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PulseCond" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RBS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Redirect" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RefDoctCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegularMediYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Resp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPO2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SurgHist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOthers" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TRANDT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TRANNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TRANTM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TStag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Temp" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TranMode" type="xs:int" />
+      <xs:element minOccurs="0" name="Treatdet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VOthers" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WalkingDur" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WalkingDurType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WalkingYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="compliance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ecog" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="karnofsky" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="technique" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlAddicts" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlAll" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlComplaints" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlDiagnosis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlFamily" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlInvest" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlMedical" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlMedicine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlPatAdvice" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_Oncology" nillable="true" type="tns:BL_Oncology" />
+  <xs:complexType name="ArrayOfSelectLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SelectLstItem" nillable="true" type="tns:SelectLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSelectLstItem" nillable="true" type="tns:ArrayOfSelectLstItem" />
+  <xs:complexType name="SelectLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectLstItem" nillable="true" type="tns:SelectLstItem" />
+  <xs:complexType name="ArrayOfDoctorSelLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DoctorSelLstItem" nillable="true" type="tns:DoctorSelLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDoctorSelLstItem" nillable="true" type="tns:ArrayOfDoctorSelLstItem" />
+  <xs:complexType name="DoctorSelLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdmnRight" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AnesthYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Department" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Specialization" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SurgYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DoctorSelLstItem" nillable="true" type="tns:DoctorSelLstItem" />
+  <xs:complexType name="BL_SurgCostEstimation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BL_BillingCommonProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AssSurgCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CmpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CmpType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DoctCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurgeonCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurgeryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurgeryLevel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlCompList" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_SurgCostEstimation" nillable="true" type="tns:BL_SurgCostEstimation" />
+  <xs:complexType name="BL_BillingCommonProp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EditYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExcelYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FundSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrintYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rights" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShowYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranPrintYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tranmode" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cancelYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="verifyYn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_BillingCommonProp" nillable="true" type="tns:BL_BillingCommonProp" />
+  <xs:complexType name="ArrayOfBL_TransactionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BL_TransactionInfo" nillable="true" type="tns:BL_TransactionInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBL_TransactionInfo" nillable="true" type="tns:ArrayOfBL_TransactionInfo" />
+  <xs:complexType name="BL_TransactionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TranDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_TransactionInfo" nillable="true" type="tns:BL_TransactionInfo" />
+  <xs:complexType name="ArrayOfSurgListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SurgListItem" nillable="true" type="tns:SurgListItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSurgListItem" nillable="true" type="tns:ArrayOfSurgListItem" />
+  <xs:complexType name="SurgListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SurgListItem" nillable="true" type="tns:SurgListItem" />
+  <xs:complexType name="ArrayOfServMainGrp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServMainGrp" nillable="true" type="tns:ServMainGrp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServMainGrp" nillable="true" type="tns:ArrayOfServMainGrp" />
+  <xs:complexType name="ServMainGrp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillGrpCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServMainGrp" nillable="true" type="tns:ServMainGrp" />
+  <xs:complexType name="BL_PersonalSetUp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CimsYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DoctCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FrmAge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SetUpLstXml" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SetUpName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SetUpType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SetupCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SetupDetails" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_PersonalSetUp" nillable="true" type="tns:BL_PersonalSetUp" />
+  <xs:complexType name="BL_Allergy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllergicPeriod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AllergicRhinitisFrequency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AllergicRhinitisInhaled" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AllergicRhinitisNasal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AllergicRhinitisOral" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AllergicRhinitisTopical" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B2AgonistsFrequency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B2AgonistsRoute" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BeforeAllergyVaccineYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BeforeHospitalizedYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildrenAllergicRhinitisYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildrenAsthmaYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildrenFoodAllergyYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildrenSkinAllergyYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisturbSleepYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DoctName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EyesSymptomsList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GastroIntestinalSymptomsList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="H1AntiFrequency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="H1AntiNasal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="H1AntiOpthaimic" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="H1AntiOral" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MoreThan4WeeksYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MoreThan4daysYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoOfChildren" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoOfSiblings" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OtherFrequency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OtherRoute" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentAllergicRhinitisYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentAsthmaYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentFoodAllergyYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentSkinAllergyYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PastTestHistoryYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PositiveTests" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RespiratoryTractSymptomsList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseToTherapy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiblingAllergicRhinitisYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiblingAsthmaYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiblingFoodAllergyYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiblingSkinAllergyYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SkinSymptomsList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SmokerYN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SymptomsAffectActivities" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SymptomsMonthsList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TRANNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TestDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VaccinatedAllergies" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VaccinatedDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VaccineYears" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorseAtTimeList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorseInLocationList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorsenedByTriggersList" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_Allergy" nillable="true" type="tns:BL_Allergy" />
+  <xs:complexType name="BL_SPTReporting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DoctName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPTListXml" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TRANNO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_SPTReporting" nillable="true" type="tns:BL_SPTReporting" />
+  <xs:complexType name="BL_Signatory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DigiSignImg1" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="DigiSignImg2" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="DigiSignImg3" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="DoctCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Signatory1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Signatory2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Signatory3" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_Signatory" nillable="true" type="tns:BL_Signatory" />
+  <xs:complexType name="bl_MaterialDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Form" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Generic" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GenericCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MtrlRefCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Strength" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrengthUnit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="bl_MaterialDetails" nillable="true" type="tns:bl_MaterialDetails" />
+  <xs:complexType name="BL_FitnessCertificate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Body2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Body3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DoctCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IssueDateInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranMode" type="xs:int" />
+      <xs:element minOccurs="0" name="TranNo" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_FitnessCertificate" nillable="true" type="tns:BL_FitnessCertificate" />
+  <xs:complexType name="BL_FitnessCertificate2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AttendDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DoctCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IssueDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MRNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RestFromDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RestToDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TranMode" type="xs:int" />
+      <xs:element minOccurs="0" name="TranNo" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_FitnessCertificate2" nillable="true" type="tns:BL_FitnessCertificate2" />
+</xs:schema>

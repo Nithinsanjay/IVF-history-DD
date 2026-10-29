@@ -1,0 +1,149 @@
+#popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5); 
+  z-index: 1200;               
+  display: none;               
+}
+
+.MaxMinpopup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  max-width: 95%;
+  background: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 150; //1250;
+  display: none;
+  max-height:90vh;
+}
+
+.MaxMinpopup-header {
+  background: #343a40;
+  color: #fff;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px 8px 0 0;
+}
+
+.MaxMinpopup-header h5 {
+  margin: 0;
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+.MaxMinpopup-header button {
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.MaxMinpopup-body {
+    height: 100%;
+    padding: 15px;
+    overflow-y: auto; /*Added by Pournima*/
+}
+
+#minimizedContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;             
+  right: 0;
+  display: flex;
+  flex-wrap: nowrap;   
+  gap: 10px;
+  z-index: 1150;
+  max-width: 100%;
+  overflow-x: auto;    
+  overflow-y: hidden;
+  padding: 5px;
+  background: #f8f9fa; 
+}
+
+#minimizedContainer::-webkit-scrollbar {
+  height: 8px;
+}
+#minimizedContainer::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+#minimizedContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.minimized-bar {
+  background: #343a40;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.minimized-bar h5 {
+  margin: 0;
+  font-size: 14px;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.minimized-bar button {
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+.MaxMinpopup.maximized {
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  height: 90%;
+}
+
+.MaxMinpopup.maximized .popup-body {
+  height: calc(100% - 40px);
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .MaxMinpopup {
+    top: 10%;
+    width: 90%;
+  }
+  .MaxMinpopup-header h5 {
+    font-size: 14px;
+  }
+  .MaxMinpopup-body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .MaxMinpopup {
+    top: 5%;
+    width: 95%;
+  }
+  .MaxMinpopup-header h5 {
+    font-size: 13px;
+  }
+  .MaxMinpopup-body {
+    font-size: 13px;
+    padding: 10px;
+  }
+  .minimized-bar {
+    font-size: 12px;
+  }
+}

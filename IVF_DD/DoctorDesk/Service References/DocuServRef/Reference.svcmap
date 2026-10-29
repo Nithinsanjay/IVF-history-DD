@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="37cebef7-db85-426d-8c08-40d20ec743a7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://uat.himstccf.org:82/WEBHMISSERVICE/DMSService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DMSService.xsd" MetadataType="Schema" ID="bf2d9b2f-2cd8-4dd7-afcc-127d49ec7067" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/DMSService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DMSService1.xsd" MetadataType="Schema" ID="369ce567-3680-4641-a3e4-d22880308f40" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/DMSService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DMSService2.xsd" MetadataType="Schema" ID="fdd814a1-cbac-461f-bdf0-bb1459243a03" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/DMSService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DMSService.wsdl" MetadataType="Wsdl" ID="f636a16d-69a8-4ff0-8c5f-63cbc1593af0" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/DMSService.svc?wsdl" />
+    <MetadataFile FileName="DMSService.disco" MetadataType="Disco" ID="bbdb0188-18d7-44f4-a292-597cd4a1d4fa" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/DMSService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

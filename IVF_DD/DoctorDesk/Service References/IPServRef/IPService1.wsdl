@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/Imports">
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd0" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BL_Logic" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/IPService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Oncology" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IIPService_SaveUpdateAdmission_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateAdmission" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveUpdateAdmission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateAdmissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveUpdateNBAdmn_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateNBAdmn" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveUpdateNBAdmn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateNBAdmnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveDoctorTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDoctorTransfer" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveDoctorTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDoctorTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveOrUpdateRoomReserv_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrUpdateRoomReserv" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveOrUpdateRoomReserv_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrUpdateRoomReservResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_CancelRoomReserv_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelRoomReserv" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_CancelRoomReserv_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelRoomReservResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveTransferBed_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTransferBed" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveTransferBed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTransferBedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetRoomReservDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoomReservDet" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetRoomReservDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoomReservDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPRegistDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPRegistDet" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPRegistDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPRegistDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetNewBornDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewBornDet" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetNewBornDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewBornDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetTwinbabyName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTwinbabyName" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetTwinbabyName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTwinbabyNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_BedMaintainTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:BedMaintainTran" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_BedMaintainTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BedMaintainTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_BedIsolationTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:BedIsolationTran" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_BedIsolationTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BedIsolationTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveCancelDischrg_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCancelDischrg" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveCancelDischrg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCancelDischrgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_BedHoldingTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:BedHoldingTran" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_BedHoldingTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BedHoldingTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetDischargeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDischargeList" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetDischargeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDischargeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveUpdateDpstReq_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateDpstReq" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveUpdateDpstReq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateDpstReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetDepstReqList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepstReqList" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetDepstReqList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepstReqListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_IPAuthTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:IPAuthTran" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_IPAuthTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IPAuthTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_DonorRegisTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonorRegisTran" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_DonorRegisTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonorRegisTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIpMoveDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIpMoveDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIpMoveDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIpMoveDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPPatientVisitDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPPatientVisitDet" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPPatientVisitDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPPatientVisitDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetDonorRegiList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDonorRegiList" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetDonorRegiList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDonorRegiListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPOverDueAuthList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPOverDueAuthList" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPOverDueAuthList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPOverDueAuthListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetWardWiseAdmnPerHr_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWardWiseAdmnPerHr" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetWardWiseAdmnPerHr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWardWiseAdmnPerHrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetAdmnAndDiscEnqData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdmnAndDiscEnqData" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetAdmnAndDiscEnqData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdmnAndDiscEnqDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetBillAmtByIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillAmtByIP" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetBillAmtByIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillAmtByIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetAdmnAndDiscEnqSumData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdmnAndDiscEnqSumData" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetAdmnAndDiscEnqSumData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdmnAndDiscEnqSumDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_IPRefundReqTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:IPRefundReqTran" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_IPRefundReqTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IPRefundReqTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetBedOccupDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedOccupDetail" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetBedOccupDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedOccupDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPRefReqList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPRefReqList" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPRefReqList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPRefReqListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPRefReqDt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPRefReqDt" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPRefReqDt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPRefReqDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPDpstListToTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPDpstListToTransfer" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPDpstListToTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPDpstListToTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_IPDpstTransfTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:IPDpstTransfTran" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_IPDpstTransfTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IPDpstTransfTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPDpstTransferList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPDpstTransferList" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPDpstTransferList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPDpstTransferListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPDpstTransfDT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPDpstTransfDT" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetIPDpstTransfDT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPDpstTransfDTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetNotificationData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotificationData" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetNotificationData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotificationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_ReferralHospitalMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReferralHospitalMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_ReferralHospitalMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReferralHospitalMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetLastIPOPFeedByMRNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastIPOPFeedByMRNo" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetLastIPOPFeedByMRNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastIPOPFeedByMRNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetBedChart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedChart" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetBedChart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedChartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetDischargeTAT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDischargeTAT" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetDischargeTAT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDischargeTATResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_CorrectAdmisisonDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:CorrectAdmisisonDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_CorrectAdmisisonDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CorrectAdmisisonDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveUpdateChemoSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateChemoSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveUpdateChemoSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateChemoScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetNSAvailableBedSlots_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNSAvailableBedSlots" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetNSAvailableBedSlots_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNSAvailableBedSlotsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetChemoPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoPlan" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetChemoPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetChemoScheduleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoScheduleList" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetChemoScheduleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChemoScheduleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveAdmission_Draft_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAdmission_Draft" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_SaveAdmission_Draft_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAdmission_DraftResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetAdmissionDraftList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdmissionDraftList" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetAdmissionDraftList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdmissionDraftListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetAdmissionSavedCheckList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdmissionSavedCheckList" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_GetAdmissionSavedCheckList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdmissionSavedCheckListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_AllocatSchemeToIPNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllocatSchemeToIPNo" />
+  </wsdl:message>
+  <wsdl:message name="IIPService_AllocatSchemeToIPNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllocatSchemeToIPNoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IIPService">
+    <wsdl:operation name="SaveUpdateAdmission">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveUpdateAdmission" message="tns:IIPService_SaveUpdateAdmission_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveUpdateAdmissionResponse" message="tns:IIPService_SaveUpdateAdmission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateNBAdmn">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveUpdateNBAdmn" message="tns:IIPService_SaveUpdateNBAdmn_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveUpdateNBAdmnResponse" message="tns:IIPService_SaveUpdateNBAdmn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDoctorTransfer">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveDoctorTransfer" message="tns:IIPService_SaveDoctorTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveDoctorTransferResponse" message="tns:IIPService_SaveDoctorTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrUpdateRoomReserv">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveOrUpdateRoomReserv" message="tns:IIPService_SaveOrUpdateRoomReserv_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveOrUpdateRoomReservResponse" message="tns:IIPService_SaveOrUpdateRoomReserv_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelRoomReserv">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/CancelRoomReserv" message="tns:IIPService_CancelRoomReserv_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/CancelRoomReservResponse" message="tns:IIPService_CancelRoomReserv_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTransferBed">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveTransferBed" message="tns:IIPService_SaveTransferBed_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveTransferBedResponse" message="tns:IIPService_SaveTransferBed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoomReservDet">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetRoomReservDet" message="tns:IIPService_GetRoomReservDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetRoomReservDetResponse" message="tns:IIPService_GetRoomReservDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIPRegistDet">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPRegistDet" message="tns:IIPService_GetIPRegistDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPRegistDetResponse" message="tns:IIPService_GetIPRegistDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewBornDet">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetNewBornDet" message="tns:IIPService_GetNewBornDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetNewBornDetResponse" message="tns:IIPService_GetNewBornDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTwinbabyName">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetTwinbabyName" message="tns:IIPService_GetTwinbabyName_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetTwinbabyNameResponse" message="tns:IIPService_GetTwinbabyName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BedMaintainTran">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/BedMaintainTran" message="tns:IIPService_BedMaintainTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/BedMaintainTranResponse" message="tns:IIPService_BedMaintainTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BedIsolationTran">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/BedIsolationTran" message="tns:IIPService_BedIsolationTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/BedIsolationTranResponse" message="tns:IIPService_BedIsolationTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCancelDischrg">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveCancelDischrg" message="tns:IIPService_SaveCancelDischrg_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveCancelDischrgResponse" message="tns:IIPService_SaveCancelDischrg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BedHoldingTran">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/BedHoldingTran" message="tns:IIPService_BedHoldingTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/BedHoldingTranResponse" message="tns:IIPService_BedHoldingTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDischargeList">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetDischargeList" message="tns:IIPService_GetDischargeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetDischargeListResponse" message="tns:IIPService_GetDischargeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateDpstReq">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveUpdateDpstReq" message="tns:IIPService_SaveUpdateDpstReq_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveUpdateDpstReqResponse" message="tns:IIPService_SaveUpdateDpstReq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepstReqList">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetDepstReqList" message="tns:IIPService_GetDepstReqList_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetDepstReqListResponse" message="tns:IIPService_GetDepstReqList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IPAuthTran">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/IPAuthTran" message="tns:IIPService_IPAuthTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/IPAuthTranResponse" message="tns:IIPService_IPAuthTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonorRegisTran">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/DonorRegisTran" message="tns:IIPService_DonorRegisTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/DonorRegisTranResponse" message="tns:IIPService_DonorRegisTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIpMoveDetails">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIpMoveDetails" message="tns:IIPService_GetIpMoveDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIpMoveDetailsResponse" message="tns:IIPService_GetIpMoveDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIPPatientVisitDet">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPPatientVisitDet" message="tns:IIPService_GetIPPatientVisitDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPPatientVisitDetResponse" message="tns:IIPService_GetIPPatientVisitDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDonorRegiList">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetDonorRegiList" message="tns:IIPService_GetDonorRegiList_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetDonorRegiListResponse" message="tns:IIPService_GetDonorRegiList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIPOverDueAuthList">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPOverDueAuthList" message="tns:IIPService_GetIPOverDueAuthList_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPOverDueAuthListResponse" message="tns:IIPService_GetIPOverDueAuthList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWardWiseAdmnPerHr">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetWardWiseAdmnPerHr" message="tns:IIPService_GetWardWiseAdmnPerHr_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetWardWiseAdmnPerHrResponse" message="tns:IIPService_GetWardWiseAdmnPerHr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdmnAndDiscEnqData">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetAdmnAndDiscEnqData" message="tns:IIPService_GetAdmnAndDiscEnqData_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetAdmnAndDiscEnqDataResponse" message="tns:IIPService_GetAdmnAndDiscEnqData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillAmtByIP">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetBillAmtByIP" message="tns:IIPService_GetBillAmtByIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetBillAmtByIPResponse" message="tns:IIPService_GetBillAmtByIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdmnAndDiscEnqSumData">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetAdmnAndDiscEnqSumData" message="tns:IIPService_GetAdmnAndDiscEnqSumData_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetAdmnAndDiscEnqSumDataResponse" message="tns:IIPService_GetAdmnAndDiscEnqSumData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IPRefundReqTran">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/IPRefundReqTran" message="tns:IIPService_IPRefundReqTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/IPRefundReqTranResponse" message="tns:IIPService_IPRefundReqTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBedOccupDetail">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetBedOccupDetail" message="tns:IIPService_GetBedOccupDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetBedOccupDetailResponse" message="tns:IIPService_GetBedOccupDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIPRefReqList">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPRefReqList" message="tns:IIPService_GetIPRefReqList_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPRefReqListResponse" message="tns:IIPService_GetIPRefReqList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIPRefReqDt">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPRefReqDt" message="tns:IIPService_GetIPRefReqDt_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPRefReqDtResponse" message="tns:IIPService_GetIPRefReqDt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIPDpstListToTransfer">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPDpstListToTransfer" message="tns:IIPService_GetIPDpstListToTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPDpstListToTransferResponse" message="tns:IIPService_GetIPDpstListToTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IPDpstTransfTran">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/IPDpstTransfTran" message="tns:IIPService_IPDpstTransfTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/IPDpstTransfTranResponse" message="tns:IIPService_IPDpstTransfTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIPDpstTransferList">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPDpstTransferList" message="tns:IIPService_GetIPDpstTransferList_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPDpstTransferListResponse" message="tns:IIPService_GetIPDpstTransferList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIPDpstTransfDT">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPDpstTransfDT" message="tns:IIPService_GetIPDpstTransfDT_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetIPDpstTransfDTResponse" message="tns:IIPService_GetIPDpstTransfDT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotificationData">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetNotificationData" message="tns:IIPService_GetNotificationData_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetNotificationDataResponse" message="tns:IIPService_GetNotificationData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReferralHospitalMstTran">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/ReferralHospitalMstTran" message="tns:IIPService_ReferralHospitalMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/ReferralHospitalMstTranResponse" message="tns:IIPService_ReferralHospitalMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastIPOPFeedByMRNo">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetLastIPOPFeedByMRNo" message="tns:IIPService_GetLastIPOPFeedByMRNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetLastIPOPFeedByMRNoResponse" message="tns:IIPService_GetLastIPOPFeedByMRNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBedChart">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetBedChart" message="tns:IIPService_GetBedChart_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetBedChartResponse" message="tns:IIPService_GetBedChart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDischargeTAT">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetDischargeTAT" message="tns:IIPService_GetDischargeTAT_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetDischargeTATResponse" message="tns:IIPService_GetDischargeTAT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CorrectAdmisisonDetails">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/CorrectAdmisisonDetails" message="tns:IIPService_CorrectAdmisisonDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/CorrectAdmisisonDetailsResponse" message="tns:IIPService_CorrectAdmisisonDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateChemoSchedule">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveUpdateChemoSchedule" message="tns:IIPService_SaveUpdateChemoSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveUpdateChemoScheduleResponse" message="tns:IIPService_SaveUpdateChemoSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNSAvailableBedSlots">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetNSAvailableBedSlots" message="tns:IIPService_GetNSAvailableBedSlots_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetNSAvailableBedSlotsResponse" message="tns:IIPService_GetNSAvailableBedSlots_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoPlan">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetChemoPlan" message="tns:IIPService_GetChemoPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetChemoPlanResponse" message="tns:IIPService_GetChemoPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChemoScheduleList">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetChemoScheduleList" message="tns:IIPService_GetChemoScheduleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetChemoScheduleListResponse" message="tns:IIPService_GetChemoScheduleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAdmission_Draft">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveAdmission_Draft" message="tns:IIPService_SaveAdmission_Draft_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/SaveAdmission_DraftResponse" message="tns:IIPService_SaveAdmission_Draft_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdmissionDraftList">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetAdmissionDraftList" message="tns:IIPService_GetAdmissionDraftList_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetAdmissionDraftListResponse" message="tns:IIPService_GetAdmissionDraftList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdmissionSavedCheckList">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetAdmissionSavedCheckList" message="tns:IIPService_GetAdmissionSavedCheckList_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/GetAdmissionSavedCheckListResponse" message="tns:IIPService_GetAdmissionSavedCheckList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllocatSchemeToIPNo">
+      <wsdl:input wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/AllocatSchemeToIPNo" message="tns:IIPService_AllocatSchemeToIPNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.datacontract.org/2004/07/BL_Logic.Inpatient/IIPService/AllocatSchemeToIPNoResponse" message="tns:IIPService_AllocatSchemeToIPNo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

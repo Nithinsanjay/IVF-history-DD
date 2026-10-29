@@ -1,0 +1,1435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ICU" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IICU_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.10.15.246/lservfrhmis/ICU.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.10.15.246/lservfrhmis/ICU.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.10.15.246/lservfrhmis/ICU.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.ICU" />
+      <xsd:import schemaLocation="http://10.10.15.246/lservfrhmis/ICU.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IICU_CaseDetailTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CaseDetailTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CaseDetailTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CaseDetailTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCaseDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseDetail" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCaseDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCaseDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_OtherNursingAssessmentMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:OtherNursingAssessmentMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_OtherNursingAssessmentMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OtherNursingAssessmentMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CritAssesmnt1Tran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CritAssesmnt1Tran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CritAssesmnt1Tran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CritAssesmnt1TranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_ISBarFieldTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ISBarFieldTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_ISBarFieldTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ISBarFieldTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_ScaleAssesmntTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ScaleAssesmntTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_ScaleAssesmntTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ScaleAssesmntTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_ClinicalAssesmntTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClinicalAssesmntTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_ClinicalAssesmntTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClinicalAssesmntTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_AssessOfLineTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssessOfLineTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_AssessOfLineTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssessOfLineTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetAssesOfLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssesOfLine" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetAssesOfLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssesOfLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CriticAssesTwoTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CriticAssesTwoTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CriticAssesTwoTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CriticAssesTwoTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCriticAsses2Det_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCriticAsses2Det" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCriticAsses2Det_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCriticAsses2DetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetOTHRNursng_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTHRNursng" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetOTHRNursng_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOTHRNursngResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetISBARField_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetISBARField" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetISBARField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetISBARFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCriticalAss1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCriticalAss1" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCriticalAss1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCriticalAss1Response" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetClinicalAss_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClinicalAss" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetClinicalAss_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClinicalAssResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetScaleAss_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScaleAss" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetScaleAss_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScaleAssResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetISBARFieldPrint_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetISBARFieldPrint" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetISBARFieldPrint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetISBARFieldPrintResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetNursNotePrint_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNursNotePrint" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetNursNotePrint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNursNotePrintResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetRespiAssesPrint_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRespiAssesPrint" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetRespiAssesPrint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRespiAssesPrintResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCritCareFlowGrapPrint_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCritCareFlowGrapPrint" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCritCareFlowGrapPrint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCritCareFlowGrapPrintResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetMaxTempList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxTempList" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetMaxTempList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxTempListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetNursAssmntRptDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNursAssmntRptDet" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetNursAssmntRptDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNursAssmntRptDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetInvestChart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestChart" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetInvestChart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestChartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_TreatmentSheetTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:TreatmentSheetTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_TreatmentSheetTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TreatmentSheetTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetDiabeticChartData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiabeticChartData" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetDiabeticChartData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiabeticChartDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTreatmentSheetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTreatmentSheetData" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTreatmentSheetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTreatmentSheetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_NurseNoteTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:NurseNoteTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_NurseNoteTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NurseNoteTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetICUNurseNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetICUNurseNotes" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetICUNurseNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetICUNurseNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_MobTreatmentSheetTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:MobTreatmentSheetTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_MobTreatmentSheetTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MobTreatmentSheetTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetMobTreatmentSheetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMobTreatmentSheetData" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetMobTreatmentSheetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMobTreatmentSheetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_ICURefillMedicines_InputMessage">
+    <wsdl:part name="parameters" element="tns:ICURefillMedicines" />
+  </wsdl:message>
+  <wsdl:message name="IICU_ICURefillMedicines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ICURefillMedicinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_BundleChkLstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:BundleChkLstTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_BundleChkLstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BundleChkLstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetBundleCheckList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundleCheckList" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetBundleCheckList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBundleCheckListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_TISS28ScoringTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:TISS28ScoringTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_TISS28ScoringTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TISS28ScoringTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetInvestResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestResult" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetInvestResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetMaxTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxTemp" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetMaxTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTISS28Scoring_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTISS28Scoring" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTISS28Scoring_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTISS28ScoringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTreatSheetMedList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTreatSheetMedList" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTreatSheetMedList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTreatSheetMedListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_ICUTSPlanAndAdminTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ICUTSPlanAndAdminTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_ICUTSPlanAndAdminTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ICUTSPlanAndAdminTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTSAdminAndPlanList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTSAdminAndPlanList" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTSAdminAndPlanList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTSAdminAndPlanListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetAddNurseNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddNurseNotes" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetAddNurseNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddNurseNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_AddNurseNoteTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNurseNoteTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_AddNurseNoteTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNurseNoteTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCriticAsses2TestDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCriticAsses2TestDet" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCriticAsses2TestDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCriticAsses2TestDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CriticAssesTwoTestTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CriticAssesTwoTestTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CriticAssesTwoTestTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CriticAssesTwoTestTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTSNotifDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTSNotifDetails" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTSNotifDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTSNotifDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetUpdateTSNotif_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateTSNotif" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetUpdateTSNotif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateTSNotifResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetOrderTestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderTestList" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetOrderTestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderTestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CancelTSTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelTSTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CancelTSTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelTSTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetMaxMedSeq_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxMedSeq" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetMaxMedSeq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxMedSeqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetInfusionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfusionList" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetInfusionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfusionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_InfusionMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:InfusionMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_InfusionMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InfusionMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_AntibioticSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:AntibioticSave" />
+  </wsdl:message>
+  <wsdl:message name="IICU_AntibioticSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AntibioticSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetAntibioticList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAntibioticList" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetAntibioticList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAntibioticListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_DelIcuRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelIcuRecord" />
+  </wsdl:message>
+  <wsdl:message name="IICU_DelIcuRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelIcuRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetPeriBundheckList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPeriBundheckList" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetPeriBundheckList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPeriBundheckListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_PeriBundlChkLstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PeriBundlChkLstTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_PeriBundlChkLstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PeriBundlChkLstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetBldCultResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBldCultResult" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetBldCultResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBldCultResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetPainMonitorChart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPainMonitorChart" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetPainMonitorChart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPainMonitorChartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetHourMonitorChart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHourMonitorChart" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetHourMonitorChart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHourMonitorChartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_PhysRestraintTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhysRestraintTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_PhysRestraintTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhysRestraintTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetPhyRestrdata_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhyRestrdata" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetPhyRestrdata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhyRestrdataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetAllInvestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInvestList" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetAllInvestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInvestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_saveInvestLstMst_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveInvestLstMst" />
+  </wsdl:message>
+  <wsdl:message name="IICU_saveInvestLstMst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveInvestLstMstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTestInvestChart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestInvestChart" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTestInvestChart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestInvestChartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTestChart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestChart" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetTestChart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestChartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetSkinReAssBradenScale_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSkinReAssBradenScale" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetSkinReAssBradenScale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSkinReAssBradenScaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CasAdmissionDetailTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CasAdmissionDetailTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CasAdmissionDetailTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CasAdmissionDetailTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCasAdmissionDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasAdmissionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCasAdmissionDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasAdmissionDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CasHistoryTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CasHistoryTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CasHistoryTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CasHistoryTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCasHistoryDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasHistoryDetails" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCasHistoryDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasHistoryDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CasVitalSignTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CasVitalSignTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CasVitalSignTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CasVitalSignTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCasVitalSigns_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasVitalSigns" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCasVitalSigns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasVitalSignsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CasExaminTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CasExaminTran" />
+  </wsdl:message>
+  <wsdl:message name="IICU_CasExaminTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CasExaminTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCasExamination_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasExamination" />
+  </wsdl:message>
+  <wsdl:message name="IICU_GetCasExamination_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasExaminationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IICU">
+    <wsdl:operation name="CaseDetailTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/CaseDetailTran" message="tns:IICU_CaseDetailTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/CaseDetailTranResponse" message="tns:IICU_CaseDetailTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetCaseDetail" message="tns:IICU_GetCaseDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetCaseDetailResponse" message="tns:IICU_GetCaseDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OtherNursingAssessmentMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/OtherNursingAssessmentMstTran" message="tns:IICU_OtherNursingAssessmentMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/OtherNursingAssessmentMstTranResponse" message="tns:IICU_OtherNursingAssessmentMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CritAssesmnt1Tran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/CritAssesmnt1Tran" message="tns:IICU_CritAssesmnt1Tran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/CritAssesmnt1TranResponse" message="tns:IICU_CritAssesmnt1Tran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ISBarFieldTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/ISBarFieldTran" message="tns:IICU_ISBarFieldTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/ISBarFieldTranResponse" message="tns:IICU_ISBarFieldTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ScaleAssesmntTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/ScaleAssesmntTran" message="tns:IICU_ScaleAssesmntTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/ScaleAssesmntTranResponse" message="tns:IICU_ScaleAssesmntTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClinicalAssesmntTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/ClinicalAssesmntTran" message="tns:IICU_ClinicalAssesmntTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/ClinicalAssesmntTranResponse" message="tns:IICU_ClinicalAssesmntTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssessOfLineTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/AssessOfLineTran" message="tns:IICU_AssessOfLineTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/AssessOfLineTranResponse" message="tns:IICU_AssessOfLineTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssesOfLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetAssesOfLine" message="tns:IICU_GetAssesOfLine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetAssesOfLineResponse" message="tns:IICU_GetAssesOfLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CriticAssesTwoTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/CriticAssesTwoTran" message="tns:IICU_CriticAssesTwoTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/CriticAssesTwoTranResponse" message="tns:IICU_CriticAssesTwoTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCriticAsses2Det">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetCriticAsses2Det" message="tns:IICU_GetCriticAsses2Det_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetCriticAsses2DetResponse" message="tns:IICU_GetCriticAsses2Det_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOTHRNursng">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetOTHRNursng" message="tns:IICU_GetOTHRNursng_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetOTHRNursngResponse" message="tns:IICU_GetOTHRNursng_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetISBARField">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetISBARField" message="tns:IICU_GetISBARField_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetISBARFieldResponse" message="tns:IICU_GetISBARField_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCriticalAss1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetCriticalAss1" message="tns:IICU_GetCriticalAss1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetCriticalAss1Response" message="tns:IICU_GetCriticalAss1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClinicalAss">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetClinicalAss" message="tns:IICU_GetClinicalAss_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetClinicalAssResponse" message="tns:IICU_GetClinicalAss_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScaleAss">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetScaleAss" message="tns:IICU_GetScaleAss_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetScaleAssResponse" message="tns:IICU_GetScaleAss_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetISBARFieldPrint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetISBARFieldPrint" message="tns:IICU_GetISBARFieldPrint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetISBARFieldPrintResponse" message="tns:IICU_GetISBARFieldPrint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNursNotePrint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetNursNotePrint" message="tns:IICU_GetNursNotePrint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetNursNotePrintResponse" message="tns:IICU_GetNursNotePrint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRespiAssesPrint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetRespiAssesPrint" message="tns:IICU_GetRespiAssesPrint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetRespiAssesPrintResponse" message="tns:IICU_GetRespiAssesPrint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCritCareFlowGrapPrint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetCritCareFlowGrapPrint" message="tns:IICU_GetCritCareFlowGrapPrint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetCritCareFlowGrapPrintResponse" message="tns:IICU_GetCritCareFlowGrapPrint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxTempList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetMaxTempList" message="tns:IICU_GetMaxTempList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetMaxTempListResponse" message="tns:IICU_GetMaxTempList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNursAssmntRptDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetNursAssmntRptDet" message="tns:IICU_GetNursAssmntRptDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetNursAssmntRptDetResponse" message="tns:IICU_GetNursAssmntRptDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestChart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetInvestChart" message="tns:IICU_GetInvestChart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetInvestChartResponse" message="tns:IICU_GetInvestChart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TreatmentSheetTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/TreatmentSheetTran" message="tns:IICU_TreatmentSheetTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/TreatmentSheetTranResponse" message="tns:IICU_TreatmentSheetTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiabeticChartData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetDiabeticChartData" message="tns:IICU_GetDiabeticChartData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetDiabeticChartDataResponse" message="tns:IICU_GetDiabeticChartData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTreatmentSheetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetTreatmentSheetData" message="tns:IICU_GetTreatmentSheetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetTreatmentSheetDataResponse" message="tns:IICU_GetTreatmentSheetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NurseNoteTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/NurseNoteTran" message="tns:IICU_NurseNoteTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/NurseNoteTranResponse" message="tns:IICU_NurseNoteTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetICUNurseNotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetICUNurseNotes" message="tns:IICU_GetICUNurseNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetICUNurseNotesResponse" message="tns:IICU_GetICUNurseNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MobTreatmentSheetTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/MobTreatmentSheetTran" message="tns:IICU_MobTreatmentSheetTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/MobTreatmentSheetTranResponse" message="tns:IICU_MobTreatmentSheetTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMobTreatmentSheetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetMobTreatmentSheetData" message="tns:IICU_GetMobTreatmentSheetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetMobTreatmentSheetDataResponse" message="tns:IICU_GetMobTreatmentSheetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ICURefillMedicines">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/ICURefillMedicines" message="tns:IICU_ICURefillMedicines_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/ICURefillMedicinesResponse" message="tns:IICU_ICURefillMedicines_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BundleChkLstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/BundleChkLstTran" message="tns:IICU_BundleChkLstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/BundleChkLstTranResponse" message="tns:IICU_BundleChkLstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBundleCheckList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetBundleCheckList" message="tns:IICU_GetBundleCheckList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetBundleCheckListResponse" message="tns:IICU_GetBundleCheckList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TISS28ScoringTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/TISS28ScoringTran" message="tns:IICU_TISS28ScoringTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/TISS28ScoringTranResponse" message="tns:IICU_TISS28ScoringTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetInvestResult" message="tns:IICU_GetInvestResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetInvestResultResponse" message="tns:IICU_GetInvestResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxTemp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetMaxTemp" message="tns:IICU_GetMaxTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetMaxTempResponse" message="tns:IICU_GetMaxTemp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTISS28Scoring">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetTISS28Scoring" message="tns:IICU_GetTISS28Scoring_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetTISS28ScoringResponse" message="tns:IICU_GetTISS28Scoring_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTreatSheetMedList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetTreatSheetMedList" message="tns:IICU_GetTreatSheetMedList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetTreatSheetMedListResponse" message="tns:IICU_GetTreatSheetMedList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ICUTSPlanAndAdminTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/ICUTSPlanAndAdminTran" message="tns:IICU_ICUTSPlanAndAdminTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/ICUTSPlanAndAdminTranResponse" message="tns:IICU_ICUTSPlanAndAdminTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTSAdminAndPlanList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetTSAdminAndPlanList" message="tns:IICU_GetTSAdminAndPlanList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetTSAdminAndPlanListResponse" message="tns:IICU_GetTSAdminAndPlanList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddNurseNotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetAddNurseNotes" message="tns:IICU_GetAddNurseNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetAddNurseNotesResponse" message="tns:IICU_GetAddNurseNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNurseNoteTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/AddNurseNoteTran" message="tns:IICU_AddNurseNoteTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/AddNurseNoteTranResponse" message="tns:IICU_AddNurseNoteTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCriticAsses2TestDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetCriticAsses2TestDet" message="tns:IICU_GetCriticAsses2TestDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetCriticAsses2TestDetResponse" message="tns:IICU_GetCriticAsses2TestDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CriticAssesTwoTestTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/CriticAssesTwoTestTran" message="tns:IICU_CriticAssesTwoTestTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/CriticAssesTwoTestTranResponse" message="tns:IICU_CriticAssesTwoTestTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTSNotifDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetTSNotifDetails" message="tns:IICU_GetTSNotifDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetTSNotifDetailsResponse" message="tns:IICU_GetTSNotifDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateTSNotif">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetUpdateTSNotif" message="tns:IICU_GetUpdateTSNotif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetUpdateTSNotifResponse" message="tns:IICU_GetUpdateTSNotif_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderTestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetOrderTestList" message="tns:IICU_GetOrderTestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetOrderTestListResponse" message="tns:IICU_GetOrderTestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelTSTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/CancelTSTran" message="tns:IICU_CancelTSTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/CancelTSTranResponse" message="tns:IICU_CancelTSTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxMedSeq">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetMaxMedSeq" message="tns:IICU_GetMaxMedSeq_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetMaxMedSeqResponse" message="tns:IICU_GetMaxMedSeq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfusionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetInfusionList" message="tns:IICU_GetInfusionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetInfusionListResponse" message="tns:IICU_GetInfusionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InfusionMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/InfusionMstTran" message="tns:IICU_InfusionMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/InfusionMstTranResponse" message="tns:IICU_InfusionMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AntibioticSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/AntibioticSave" message="tns:IICU_AntibioticSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/AntibioticSaveResponse" message="tns:IICU_AntibioticSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAntibioticList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetAntibioticList" message="tns:IICU_GetAntibioticList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetAntibioticListResponse" message="tns:IICU_GetAntibioticList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelIcuRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/DelIcuRecord" message="tns:IICU_DelIcuRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/DelIcuRecordResponse" message="tns:IICU_DelIcuRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPeriBundheckList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetPeriBundheckList" message="tns:IICU_GetPeriBundheckList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetPeriBundheckListResponse" message="tns:IICU_GetPeriBundheckList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PeriBundlChkLstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/PeriBundlChkLstTran" message="tns:IICU_PeriBundlChkLstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/PeriBundlChkLstTranResponse" message="tns:IICU_PeriBundlChkLstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBldCultResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetBldCultResult" message="tns:IICU_GetBldCultResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetBldCultResultResponse" message="tns:IICU_GetBldCultResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPainMonitorChart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetPainMonitorChart" message="tns:IICU_GetPainMonitorChart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetPainMonitorChartResponse" message="tns:IICU_GetPainMonitorChart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHourMonitorChart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetHourMonitorChart" message="tns:IICU_GetHourMonitorChart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetHourMonitorChartResponse" message="tns:IICU_GetHourMonitorChart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhysRestraintTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/PhysRestraintTran" message="tns:IICU_PhysRestraintTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/PhysRestraintTranResponse" message="tns:IICU_PhysRestraintTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhyRestrdata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetPhyRestrdata" message="tns:IICU_GetPhyRestrdata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetPhyRestrdataResponse" message="tns:IICU_GetPhyRestrdata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInvestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetAllInvestList" message="tns:IICU_GetAllInvestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetAllInvestListResponse" message="tns:IICU_GetAllInvestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveInvestLstMst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/saveInvestLstMst" message="tns:IICU_saveInvestLstMst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/saveInvestLstMstResponse" message="tns:IICU_saveInvestLstMst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestInvestChart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetTestInvestChart" message="tns:IICU_GetTestInvestChart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetTestInvestChartResponse" message="tns:IICU_GetTestInvestChart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestChart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetTestChart" message="tns:IICU_GetTestChart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetTestChartResponse" message="tns:IICU_GetTestChart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSkinReAssBradenScale">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetSkinReAssBradenScale" message="tns:IICU_GetSkinReAssBradenScale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetSkinReAssBradenScaleResponse" message="tns:IICU_GetSkinReAssBradenScale_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CasAdmissionDetailTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/CasAdmissionDetailTran" message="tns:IICU_CasAdmissionDetailTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/CasAdmissionDetailTranResponse" message="tns:IICU_CasAdmissionDetailTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCasAdmissionDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetCasAdmissionDetails" message="tns:IICU_GetCasAdmissionDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetCasAdmissionDetailsResponse" message="tns:IICU_GetCasAdmissionDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CasHistoryTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/CasHistoryTran" message="tns:IICU_CasHistoryTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/CasHistoryTranResponse" message="tns:IICU_CasHistoryTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCasHistoryDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetCasHistoryDetails" message="tns:IICU_GetCasHistoryDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetCasHistoryDetailsResponse" message="tns:IICU_GetCasHistoryDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CasVitalSignTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/CasVitalSignTran" message="tns:IICU_CasVitalSignTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/CasVitalSignTranResponse" message="tns:IICU_CasVitalSignTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCasVitalSigns">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetCasVitalSigns" message="tns:IICU_GetCasVitalSigns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetCasVitalSignsResponse" message="tns:IICU_GetCasVitalSigns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CasExaminTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/CasExaminTran" message="tns:IICU_CasExaminTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/CasExaminTranResponse" message="tns:IICU_CasExaminTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCasExamination">
+      <wsdl:input wsaw:Action="http://tempuri.org/IICU/GetCasExamination" message="tns:IICU_GetCasExamination_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IICU/GetCasExaminationResponse" message="tns:IICU_GetCasExamination_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IICU" type="tns:IICU">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IICU_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CaseDetailTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/CaseDetailTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseDetail">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetCaseDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OtherNursingAssessmentMstTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/OtherNursingAssessmentMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CritAssesmnt1Tran">
+      <soap:operation soapAction="http://tempuri.org/IICU/CritAssesmnt1Tran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISBarFieldTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/ISBarFieldTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScaleAssesmntTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/ScaleAssesmntTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClinicalAssesmntTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/ClinicalAssesmntTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssessOfLineTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/AssessOfLineTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssesOfLine">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetAssesOfLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriticAssesTwoTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/CriticAssesTwoTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCriticAsses2Det">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetCriticAsses2Det" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOTHRNursng">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetOTHRNursng" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetISBARField">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetISBARField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCriticalAss1">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetCriticalAss1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClinicalAss">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetClinicalAss" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScaleAss">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetScaleAss" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetISBARFieldPrint">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetISBARFieldPrint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNursNotePrint">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetNursNotePrint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRespiAssesPrint">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetRespiAssesPrint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCritCareFlowGrapPrint">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetCritCareFlowGrapPrint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxTempList">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetMaxTempList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNursAssmntRptDet">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetNursAssmntRptDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestChart">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetInvestChart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreatmentSheetTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/TreatmentSheetTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiabeticChartData">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetDiabeticChartData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTreatmentSheetData">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetTreatmentSheetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NurseNoteTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/NurseNoteTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetICUNurseNotes">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetICUNurseNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MobTreatmentSheetTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/MobTreatmentSheetTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMobTreatmentSheetData">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetMobTreatmentSheetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ICURefillMedicines">
+      <soap:operation soapAction="http://tempuri.org/IICU/ICURefillMedicines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BundleChkLstTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/BundleChkLstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBundleCheckList">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetBundleCheckList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TISS28ScoringTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/TISS28ScoringTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestResult">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetInvestResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxTemp">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetMaxTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTISS28Scoring">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetTISS28Scoring" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTreatSheetMedList">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetTreatSheetMedList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ICUTSPlanAndAdminTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/ICUTSPlanAndAdminTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTSAdminAndPlanList">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetTSAdminAndPlanList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddNurseNotes">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetAddNurseNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNurseNoteTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/AddNurseNoteTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCriticAsses2TestDet">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetCriticAsses2TestDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriticAssesTwoTestTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/CriticAssesTwoTestTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTSNotifDetails">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetTSNotifDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateTSNotif">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetUpdateTSNotif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderTestList">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetOrderTestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelTSTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/CancelTSTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxMedSeq">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetMaxMedSeq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfusionList">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetInfusionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InfusionMstTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/InfusionMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AntibioticSave">
+      <soap:operation soapAction="http://tempuri.org/IICU/AntibioticSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAntibioticList">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetAntibioticList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelIcuRecord">
+      <soap:operation soapAction="http://tempuri.org/IICU/DelIcuRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPeriBundheckList">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetPeriBundheckList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PeriBundlChkLstTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/PeriBundlChkLstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBldCultResult">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetBldCultResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPainMonitorChart">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetPainMonitorChart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHourMonitorChart">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetHourMonitorChart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PhysRestraintTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/PhysRestraintTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhyRestrdata">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetPhyRestrdata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInvestList">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetAllInvestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveInvestLstMst">
+      <soap:operation soapAction="http://tempuri.org/IICU/saveInvestLstMst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestInvestChart">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetTestInvestChart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestChart">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetTestChart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSkinReAssBradenScale">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetSkinReAssBradenScale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CasAdmissionDetailTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/CasAdmissionDetailTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCasAdmissionDetails">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetCasAdmissionDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CasHistoryTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/CasHistoryTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCasHistoryDetails">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetCasHistoryDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CasVitalSignTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/CasVitalSignTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCasVitalSigns">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetCasVitalSigns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CasExaminTran">
+      <soap:operation soapAction="http://tempuri.org/IICU/CasExaminTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCasExamination">
+      <soap:operation soapAction="http://tempuri.org/IICU/GetCasExamination" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ICU">
+    <wsdl:port name="BasicHttpBinding_IICU" binding="tns:BasicHttpBinding_IICU">
+      <soap:address location="http://10.10.15.246/lservfrhmis/ICU.svc/ICU.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

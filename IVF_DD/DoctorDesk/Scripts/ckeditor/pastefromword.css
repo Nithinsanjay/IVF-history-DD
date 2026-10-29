@@ -1,0 +1,51 @@
+﻿body.document-editor {
+    /*width: 21.5cm !important;*/
+    /*min-height: 21cm;*/
+    /*padding: 0.2cm 0.2cm 0.2cm 0.2cm;*/
+    width: auto;
+    margin: 0px auto;
+    bottom: 0.1cm;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    min-height: 12.2cm; /* Pournima 16th june 2026*/
+}
+
+body.document-editor, body.document-editor td, body.document-editor th {
+    font-size: 0.9em;
+}
+
+body.document-editor table {
+    margin-top: 0.2cm !important;
+}
+
+body.document-editor table td > p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 4px 0 3px 5px;
+}
+
+body.document-editor h1 {
+    margin-bottom: 1cm;
+}
+
+body.document-editor ol, body.document-editor ul, body.document-editor dl {
+
+	margin-right: 0px; margin-top: 3px !important;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+   padding-inline-start: 1em;
+
+}
+
+body.document-editor p {
+    margin-top: 0 !important;
+    margin-bottom: 1px !important;  /*6px*/
+    line-height: 1.2 !important;   /*1*/   /*1.2*/  
+    margin-block-start: 0.4em !important;
+    margin-block-end: 0.4em !important;
+}
+

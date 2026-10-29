@@ -1,0 +1,48 @@
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\OncologyEMR.dll.config
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\OncologyEMR.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\OncologyEMR.pdb
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.ReportSource.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.Shared.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\bin\stdole.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\obj\Debug\OncologyEMR.csproj.AssemblyReference.cache
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\obj\Debug\OncologyEMR.csproj.CoreCompileInputs.cache
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\obj\Debug\Oncology.4B101C9A.Up2Date
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\obj\Debug\OncologyEMR.dll
+D:\TCCF_Source\3_DEV ENV\DoctorDesk\obj\Debug\OncologyEMR.pdb
+D:\DoctorDesk\obj\Debug\OncologyEMR.csproj.AssemblyReference.cache
+D:\DoctorDesk\obj\Debug\OncologyEMR.csproj.CoreCompileInputs.cache
+D:\DoctorDesk\obj\Debug\OncologyEMR.dll
+D:\DoctorDesk\obj\Debug\OncologyEMR.pdb
+D:\DoctorDesk\bin\OncologyEMR.dll.config
+D:\DoctorDesk\bin\OncologyEMR.dll
+D:\DoctorDesk\bin\OncologyEMR.pdb
+D:\DoctorDesk\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\DoctorDesk\bin\CrystalDecisions.ReportSource.dll
+D:\DoctorDesk\bin\CrystalDecisions.Shared.dll
+D:\DoctorDesk\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\DoctorDesk\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\DoctorDesk\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\DoctorDesk\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\DoctorDesk\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\DoctorDesk\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\DoctorDesk\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\DoctorDesk\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\DoctorDesk\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\DoctorDesk\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\DoctorDesk\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\DoctorDesk\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\DoctorDesk\bin\stdole.dll
+D:\DoctorDesk\obj\Debug\Oncology.4B101C9A.Up2Date

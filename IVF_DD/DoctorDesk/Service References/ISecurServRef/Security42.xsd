@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BL_Logic.Security" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BL_Logic.Security" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.3/WebHMISServiceNUnit/Security.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+  <xs:complexType name="BL_Module">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q1:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ModImageData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Seqno" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_Module" nillable="true" type="tns:BL_Module" />
+  <xs:complexType name="BL_ModuleFormLink">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q2:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActionNm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FormCatg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FrmCategoryLst" nillable="true" type="tns:ArrayOfSelectLstItem" />
+          <xs:element minOccurs="0" name="ModuelID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_ModuleFormLink" nillable="true" type="tns:BL_ModuleFormLink" />
+  <xs:complexType name="ArrayOfSelectLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SelectLstItem" nillable="true" type="tns:SelectLstItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSelectLstItem" nillable="true" type="tns:ArrayOfSelectLstItem" />
+  <xs:complexType name="SelectLstItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Selected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectLstItem" nillable="true" type="tns:SelectLstItem" />
+  <xs:complexType name="BL_UserProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q3:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsAdmin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaxConnection" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaxLogin" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_UserProfile" nillable="true" type="tns:BL_UserProfile" />
+  <xs:complexType name="BL_UserCreation">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" base="q4:BL_AdminCommProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Authyn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Bbauthyn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CIMSYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardTechYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CrdCompanyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DOCTORYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DischrgSumAuth" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Doctcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExecutiveYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ICUADMINYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ICUAUTHYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ipdiscauthyn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LabTechYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NMTechYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Opdiscauthyn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PACSADMINYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PACSYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pharmacist" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Profileid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PwdRestYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RADIOLOGISTYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RadTechYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServClassCD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShowPrescript" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Staffid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Staffyorno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SuperUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Userpwd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VTestChngAuthoYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WARDYN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="xmlUserLink" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BL_UserCreation" nillable="true" type="tns:BL_UserCreation" />
+  <xs:complexType name="BL_UserRight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FrmUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="loginUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlModuleList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlUserFormLst" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_UserRight" nillable="true" type="tns:BL_UserRight" />
+  <xs:complexType name="BL_ProfileFormRights">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FrmProf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToProf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="loginUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlModuleList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlProfFormLst" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BL_ProfileFormRights" nillable="true" type="tns:BL_ProfileFormRights" />
+</xs:schema>

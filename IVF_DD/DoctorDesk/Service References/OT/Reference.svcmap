@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="dfe421ba-f604-4986-bf75-a3c24f20ae60" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://uat.himstccf.org:82/WEBHMISSERVICE/OT.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OT.xsd" MetadataType="Schema" ID="2edd25f6-cc03-40aa-9c22-5c39358579b3" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd2" />
+    <MetadataFile FileName="OT.disco" MetadataType="Disco" ID="9e11d31e-ffa6-4ff1-a470-ae7a2d43c5af" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/OT.svc?disco" />
+    <MetadataFile FileName="OT1.xsd" MetadataType="Schema" ID="b48d5a81-577b-4b69-965c-7effe07b8a7e" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd0" />
+    <MetadataFile FileName="OT2.xsd" MetadataType="Schema" ID="444f0527-36ad-4120-94a7-1d17adf1d06e" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd1" />
+    <MetadataFile FileName="OT.wsdl" MetadataType="Wsdl" ID="4d22534b-d6e7-4be9-a107-e13a301ed9be" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/OT.svc?wsdl" />
+    <MetadataFile FileName="OT3.xsd" MetadataType="Schema" ID="7720f762-dfe8-45f5-b584-0f7720a8f6b2" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd3" />
+    <MetadataFile FileName="OT4.xsd" MetadataType="Schema" ID="429e91d6-0985-4803-a161-94b3ddff7837" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd4" />
+    <MetadataFile FileName="OT5.xsd" MetadataType="Schema" ID="1e9cdb69-a76f-4590-b415-913373471bf7" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd5" />
+    <MetadataFile FileName="OT6.xsd" MetadataType="Schema" ID="bcb85d3c-b5bb-48fe-9f85-1ee87a4ed4df" SourceId="1" SourceUrl="http://uat.himstccf.org:82/WebHMISService/OT.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

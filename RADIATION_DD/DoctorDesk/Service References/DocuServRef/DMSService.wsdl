@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="DMSService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IDMSService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/DMSService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/DMSService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/DMSService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.DocUpload" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDMSService_GetDocTypeMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocTypeMstList" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_GetDocTypeMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocTypeMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_DocTypeMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocTypeMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_DocTypeMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocTypeMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_GetDocPatientSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocPatientSearch" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_GetDocPatientSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocPatientSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_SaveUploadDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUploadDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_SaveUploadDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUploadDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_GetPatientList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientList" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_GetPatientList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_GetUploadDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUploadDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_GetUploadDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUploadDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_UserMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_UserMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_GetUserMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserMstList" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_GetUserMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_getLoginFormRights_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLoginFormRights" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_getLoginFormRights_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLoginFormRightsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_GetDashData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDashData" />
+  </wsdl:message>
+  <wsdl:message name="IDMSService_GetDashData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDashDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDMSService">
+    <wsdl:operation name="GetDocTypeMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMSService/GetDocTypeMstList" message="tns:IDMSService_GetDocTypeMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMSService/GetDocTypeMstListResponse" message="tns:IDMSService_GetDocTypeMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocTypeMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMSService/DocTypeMstTran" message="tns:IDMSService_DocTypeMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMSService/DocTypeMstTranResponse" message="tns:IDMSService_DocTypeMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocPatientSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMSService/GetDocPatientSearch" message="tns:IDMSService_GetDocPatientSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMSService/GetDocPatientSearchResponse" message="tns:IDMSService_GetDocPatientSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUploadDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMSService/SaveUploadDocument" message="tns:IDMSService_SaveUploadDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMSService/SaveUploadDocumentResponse" message="tns:IDMSService_SaveUploadDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMSService/GetPatientList" message="tns:IDMSService_GetPatientList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMSService/GetPatientListResponse" message="tns:IDMSService_GetPatientList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadDocuments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMSService/GetUploadDocuments" message="tns:IDMSService_GetUploadDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMSService/GetUploadDocumentsResponse" message="tns:IDMSService_GetUploadDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMSService/UserMstTran" message="tns:IDMSService_UserMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMSService/UserMstTranResponse" message="tns:IDMSService_UserMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMSService/GetUserMstList" message="tns:IDMSService_GetUserMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMSService/GetUserMstListResponse" message="tns:IDMSService_GetUserMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLoginFormRights">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMSService/getLoginFormRights" message="tns:IDMSService_getLoginFormRights_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMSService/getLoginFormRightsResponse" message="tns:IDMSService_getLoginFormRights_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDashData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDMSService/GetDashData" message="tns:IDMSService_GetDashData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDMSService/GetDashDataResponse" message="tns:IDMSService_GetDashData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDMSService" type="tns:IDMSService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IDMSService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDocTypeMstList">
+      <soap:operation soapAction="http://tempuri.org/IDMSService/GetDocTypeMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocTypeMstTran">
+      <soap:operation soapAction="http://tempuri.org/IDMSService/DocTypeMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocPatientSearch">
+      <soap:operation soapAction="http://tempuri.org/IDMSService/GetDocPatientSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUploadDocument">
+      <soap:operation soapAction="http://tempuri.org/IDMSService/SaveUploadDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientList">
+      <soap:operation soapAction="http://tempuri.org/IDMSService/GetPatientList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadDocuments">
+      <soap:operation soapAction="http://tempuri.org/IDMSService/GetUploadDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserMstTran">
+      <soap:operation soapAction="http://tempuri.org/IDMSService/UserMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserMstList">
+      <soap:operation soapAction="http://tempuri.org/IDMSService/GetUserMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoginFormRights">
+      <soap:operation soapAction="http://tempuri.org/IDMSService/getLoginFormRights" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDashData">
+      <soap:operation soapAction="http://tempuri.org/IDMSService/GetDashData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DMSService">
+    <wsdl:port name="BasicHttpBinding_IDMSService" binding="tns:BasicHttpBinding_IDMSService">
+      <soap:address location="http://uat.himstccf.org:82/WebHMISService/DMSService.svc/DMSService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

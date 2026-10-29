@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="DischargeSummary" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IDischargeSummary_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/DischargeSummary.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/DischargeSummary.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/DischargeSummary.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.DischargeSummary" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/DischargeSummary.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.NursingStation" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/DischargeSummary.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BL_Logic" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/DischargeSummary.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDischargeSummary_PatInxEntryTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PatInxEntryTran" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_PatInxEntryTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PatInxEntryTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetPatIndexList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatIndexList" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetPatIndexList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatIndexListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetPatIndexDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatIndexDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetPatIndexDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatIndexDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_SaveMRDFileTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMRDFileTransfer" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_SaveMRDFileTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMRDFileTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetMRDFileDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMRDFileDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetMRDFileDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMRDFileDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetFileTransStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileTransStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetFileTransStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileTransStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_SaveCPCheckListTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCPCheckListTran" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_SaveCPCheckListTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCPCheckListTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetCPList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCPList" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetCPList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCPListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetCPDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCPDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetCPDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCPDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetMaterialGenricList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialGenricList" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetMaterialGenricList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialGenricListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSDetailsPatWise_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSDetailsPatWise" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSDetailsPatWise_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSDetailsPatWiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSList" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_DischargeSummaryTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DischargeSummaryTran" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_DischargeSummaryTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DischargeSummaryTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSDetailsDsSumNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSDetailsDsSumNo" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSDetailsDsSumNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSDetailsDsSumNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSDetailsMrNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSDetailsMrNo" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSDetailsMrNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSDetailsMrNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_DSFileUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:DSFileUpload" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_DSFileUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DSFileUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSDocs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSDocs" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSDocs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSDocsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_DSTemplateMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DSTemplateMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_DSTemplateMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DSTemplateMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSTemplateList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSTemplateList" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSTemplateList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSTemplateListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSTemplateDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSTemplateDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetDSTemplateDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSTemplateDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetMRDPatientDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMRDPatientDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetMRDPatientDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMRDPatientDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_SaveMRDFileTracking_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMRDFileTracking" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_SaveMRDFileTracking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMRDFileTrackingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetMRDFileTrackingList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMRDFileTrackingList" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetMRDFileTrackingList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMRDFileTrackingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetMaterialSearchData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialSearchData" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetMaterialSearchData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialSearchDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_EmergGuidelinesMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmergGuidelinesMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_EmergGuidelinesMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmergGuidelinesMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetEmergGuidlinesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmergGuidlinesList" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetEmergGuidlinesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmergGuidlinesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_PreventGuidelinesMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PreventGuidelinesMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_PreventGuidelinesMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PreventGuidelinesMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetPreventGuidlinesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreventGuidlinesList" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetPreventGuidlinesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreventGuidlinesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetPatientInvestigation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientInvestigation" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetPatientInvestigation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientInvestigationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_MedicineNotesMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:MedicineNotesMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_MedicineNotesMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MedicineNotesMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetMedicineNotesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicineNotesList" />
+  </wsdl:message>
+  <wsdl:message name="IDischargeSummary_GetMedicineNotesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicineNotesListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDischargeSummary">
+    <wsdl:operation name="PatInxEntryTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/PatInxEntryTran" message="tns:IDischargeSummary_PatInxEntryTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/PatInxEntryTranResponse" message="tns:IDischargeSummary_PatInxEntryTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatIndexList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetPatIndexList" message="tns:IDischargeSummary_GetPatIndexList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetPatIndexListResponse" message="tns:IDischargeSummary_GetPatIndexList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatIndexDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetPatIndexDetails" message="tns:IDischargeSummary_GetPatIndexDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetPatIndexDetailsResponse" message="tns:IDischargeSummary_GetPatIndexDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMRDFileTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/SaveMRDFileTransfer" message="tns:IDischargeSummary_SaveMRDFileTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/SaveMRDFileTransferResponse" message="tns:IDischargeSummary_SaveMRDFileTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMRDFileDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetMRDFileDetails" message="tns:IDischargeSummary_GetMRDFileDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetMRDFileDetailsResponse" message="tns:IDischargeSummary_GetMRDFileDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileTransStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetFileTransStatus" message="tns:IDischargeSummary_GetFileTransStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetFileTransStatusResponse" message="tns:IDischargeSummary_GetFileTransStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCPCheckListTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/SaveCPCheckListTran" message="tns:IDischargeSummary_SaveCPCheckListTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/SaveCPCheckListTranResponse" message="tns:IDischargeSummary_SaveCPCheckListTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCPList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetCPList" message="tns:IDischargeSummary_GetCPList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetCPListResponse" message="tns:IDischargeSummary_GetCPList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCPDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetCPDetails" message="tns:IDischargeSummary_GetCPDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetCPDetailsResponse" message="tns:IDischargeSummary_GetCPDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialGenricList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetMaterialGenricList" message="tns:IDischargeSummary_GetMaterialGenricList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetMaterialGenricListResponse" message="tns:IDischargeSummary_GetMaterialGenricList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSDetailsPatWise">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSDetailsPatWise" message="tns:IDischargeSummary_GetDSDetailsPatWise_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSDetailsPatWiseResponse" message="tns:IDischargeSummary_GetDSDetailsPatWise_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSList" message="tns:IDischargeSummary_GetDSList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSListResponse" message="tns:IDischargeSummary_GetDSList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DischargeSummaryTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/DischargeSummaryTran" message="tns:IDischargeSummary_DischargeSummaryTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/DischargeSummaryTranResponse" message="tns:IDischargeSummary_DischargeSummaryTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSDetailsDsSumNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSDetailsDsSumNo" message="tns:IDischargeSummary_GetDSDetailsDsSumNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSDetailsDsSumNoResponse" message="tns:IDischargeSummary_GetDSDetailsDsSumNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSDetailsMrNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSDetailsMrNo" message="tns:IDischargeSummary_GetDSDetailsMrNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSDetailsMrNoResponse" message="tns:IDischargeSummary_GetDSDetailsMrNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DSFileUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/DSFileUpload" message="tns:IDischargeSummary_DSFileUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/DSFileUploadResponse" message="tns:IDischargeSummary_DSFileUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSDocs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSDocs" message="tns:IDischargeSummary_GetDSDocs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSDocsResponse" message="tns:IDischargeSummary_GetDSDocs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DSTemplateMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/DSTemplateMstTran" message="tns:IDischargeSummary_DSTemplateMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/DSTemplateMstTranResponse" message="tns:IDischargeSummary_DSTemplateMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSTemplateList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSTemplateList" message="tns:IDischargeSummary_GetDSTemplateList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSTemplateListResponse" message="tns:IDischargeSummary_GetDSTemplateList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSTemplateDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSTemplateDetails" message="tns:IDischargeSummary_GetDSTemplateDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetDSTemplateDetailsResponse" message="tns:IDischargeSummary_GetDSTemplateDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMRDPatientDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetMRDPatientDetails" message="tns:IDischargeSummary_GetMRDPatientDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetMRDPatientDetailsResponse" message="tns:IDischargeSummary_GetMRDPatientDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMRDFileTracking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/SaveMRDFileTracking" message="tns:IDischargeSummary_SaveMRDFileTracking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/SaveMRDFileTrackingResponse" message="tns:IDischargeSummary_SaveMRDFileTracking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMRDFileTrackingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetMRDFileTrackingList" message="tns:IDischargeSummary_GetMRDFileTrackingList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetMRDFileTrackingListResponse" message="tns:IDischargeSummary_GetMRDFileTrackingList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialSearchData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetMaterialSearchData" message="tns:IDischargeSummary_GetMaterialSearchData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetMaterialSearchDataResponse" message="tns:IDischargeSummary_GetMaterialSearchData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmergGuidelinesMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/EmergGuidelinesMstTran" message="tns:IDischargeSummary_EmergGuidelinesMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/EmergGuidelinesMstTranResponse" message="tns:IDischargeSummary_EmergGuidelinesMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmergGuidlinesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetEmergGuidlinesList" message="tns:IDischargeSummary_GetEmergGuidlinesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetEmergGuidlinesListResponse" message="tns:IDischargeSummary_GetEmergGuidlinesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PreventGuidelinesMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/PreventGuidelinesMstTran" message="tns:IDischargeSummary_PreventGuidelinesMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/PreventGuidelinesMstTranResponse" message="tns:IDischargeSummary_PreventGuidelinesMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreventGuidlinesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetPreventGuidlinesList" message="tns:IDischargeSummary_GetPreventGuidlinesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetPreventGuidlinesListResponse" message="tns:IDischargeSummary_GetPreventGuidlinesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInvestigation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetPatientInvestigation" message="tns:IDischargeSummary_GetPatientInvestigation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetPatientInvestigationResponse" message="tns:IDischargeSummary_GetPatientInvestigation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MedicineNotesMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/MedicineNotesMstTran" message="tns:IDischargeSummary_MedicineNotesMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/MedicineNotesMstTranResponse" message="tns:IDischargeSummary_MedicineNotesMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicineNotesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDischargeSummary/GetMedicineNotesList" message="tns:IDischargeSummary_GetMedicineNotesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDischargeSummary/GetMedicineNotesListResponse" message="tns:IDischargeSummary_GetMedicineNotesList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDischargeSummary" type="tns:IDischargeSummary">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IDischargeSummary_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PatInxEntryTran">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/PatInxEntryTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatIndexList">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetPatIndexList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatIndexDetails">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetPatIndexDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMRDFileTransfer">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/SaveMRDFileTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMRDFileDetails">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetMRDFileDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileTransStatus">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetFileTransStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCPCheckListTran">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/SaveCPCheckListTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCPList">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetCPList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCPDetails">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetCPDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialGenricList">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetMaterialGenricList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSDetailsPatWise">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetDSDetailsPatWise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSList">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetDSList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DischargeSummaryTran">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/DischargeSummaryTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSDetailsDsSumNo">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetDSDetailsDsSumNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSDetailsMrNo">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetDSDetailsMrNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DSFileUpload">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/DSFileUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSDocs">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetDSDocs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DSTemplateMstTran">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/DSTemplateMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSTemplateList">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetDSTemplateList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSTemplateDetails">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetDSTemplateDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMRDPatientDetails">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetMRDPatientDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMRDFileTracking">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/SaveMRDFileTracking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMRDFileTrackingList">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetMRDFileTrackingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialSearchData">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetMaterialSearchData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmergGuidelinesMstTran">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/EmergGuidelinesMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmergGuidlinesList">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetEmergGuidlinesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreventGuidelinesMstTran">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/PreventGuidelinesMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreventGuidlinesList">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetPreventGuidlinesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInvestigation">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetPatientInvestigation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MedicineNotesMstTran">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/MedicineNotesMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicineNotesList">
+      <soap:operation soapAction="http://tempuri.org/IDischargeSummary/GetMedicineNotesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DischargeSummary">
+    <wsdl:port name="BasicHttpBinding_IDischargeSummary" binding="tns:BasicHttpBinding_IDischargeSummary">
+      <soap:address location="http://uat.himstccf.org:82/WebHMISService/DischargeSummary.svc/DischargeSummary.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

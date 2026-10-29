@@ -1,0 +1,2367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Administration" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IAdmnistration_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Administration.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Administration.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Administration.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BL_Logic.Administration" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Administration.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://uat.himstccf.org:82/WebHMISService/Administration.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BL_Logic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAdministration_GetRefDoctList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefDoctList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetRefDoctList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefDoctListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_CityMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CityMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_CityMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CityMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetCityMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetCityMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDistrictMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistrictMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDistrictMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistrictMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDepartmentList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartmentList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDepartmentList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartmentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetInsurCompMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsurCompMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetInsurCompMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsurCompMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetNursingStnMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNursingStnMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetNursingStnMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNursingStnMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DistrictMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DistrictMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DistrictMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DistrictMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DeptMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeptMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DeptMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeptMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetWardMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWardMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetWardMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWardMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_WardMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:WardMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_WardMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WardMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_NursStnTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:NursStnTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_NursStnTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NursStnTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_InsurCompTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsurCompTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_InsurCompTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsurCompTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetIPPkgMasterRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPPkgMasterRecords" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetIPPkgMasterRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPPkgMasterRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_IPPkgMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:IPPkgMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_IPPkgMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IPPkgMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDoctorMstRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorMstRecords" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDoctorMstRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorMstRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SaveUpdateDoctorMst_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateDoctorMst" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SaveUpdateDoctorMst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateDoctorMstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetClinicMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClinicMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetClinicMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClinicMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_ClinicMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClinicMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_ClinicMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClinicMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetClinicData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClinicData" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetClinicData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClinicDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBedMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBedMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_BedMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:BedMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_BedMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BedMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServiceMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServiceMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_ServiceTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_ServiceTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetTariffList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTariffList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetTariffList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTariffListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DoctConsltnChrgTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoctConsltnChrgTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DoctConsltnChrgTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoctConsltnChrgTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDrConChrg_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrConChrg" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDrConChrg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrConChrgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_ServCostTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServCostTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_ServCostTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServCostTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBedCategoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBedCategoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServCostList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServCostList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServCostList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServCostListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_CreditCompanyTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreditCompanyTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_CreditCompanyTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreditCompanyTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetCreditCompMstRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCompMstRecords" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetCreditCompMstRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCompMstRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_BankMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:BankMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_BankMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BankMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBankMstRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankMstRecords" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBankMstRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankMstRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBranchList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBranchList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SetUpTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUpTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SetUpTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUpTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetHospSetupDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospSetupDet" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetHospSetupDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospSetupDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DoctScheduleTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoctScheduleTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DoctScheduleTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoctScheduleTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetScheduleData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleData" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetScheduleData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_NonAdmissibleServTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:NonAdmissibleServTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_NonAdmissibleServTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NonAdmissibleServTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_NonAdmissibleMaterialTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:NonAdmissibleMaterialTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_NonAdmissibleMaterialTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NonAdmissibleMaterialTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBedCatgByCompNTariff_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedCatgByCompNTariff" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBedCatgByCompNTariff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedCatgByCompNTariffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetNonAdmsbleMtrl_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonAdmsbleMtrl" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetNonAdmsbleMtrl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonAdmsbleMtrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBedCatgFrService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedCatgFrService" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBedCatgFrService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedCatgFrServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetNonAdmsbleServ_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonAdmsbleServ" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetNonAdmsbleServ_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonAdmsbleServResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_ServiceDiscountTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceDiscountTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_ServiceDiscountTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceDiscountTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBedCatgFrServiceDiscount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedCatgFrServiceDiscount" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetBedCatgFrServiceDiscount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedCatgFrServiceDiscountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServDiscount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServDiscount" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServDiscount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServDiscountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServMainGrpList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServMainGrpList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServMainGrpList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServMainGrpListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServBillGrpList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServBillGrpList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServBillGrpList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServBillGrpListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_PackageBillGrpTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageBillGrpTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_PackageBillGrpTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageBillGrpTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetPckgBillingLnks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPckgBillingLnks" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetPckgBillingLnks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPckgBillingLnksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_PkgSrvicesLnkTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PkgSrvicesLnkTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_PkgSrvicesLnkTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PkgSrvicesLnkTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetPkgServLnk_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPkgServLnk" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetPkgServLnk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPkgServLnkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_PkgMtrlLinkTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PkgMtrlLinkTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_PkgMtrlLinkTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PkgMtrlLinkTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetPkgMtrlLnk_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPkgMtrlLnk" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetPkgMtrlLnk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPkgMtrlLnkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_PackageTariffTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageTariffTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_PackageTariffTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageTariffTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetPkgTariff_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPkgTariff" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetPkgTariff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPkgTariffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetPatientCatgMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientCatgMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetPatientCatgMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientCatgMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_PatientCatgMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:PatientCatgMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_PatientCatgMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PatientCatgMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetReferralHospitalMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReferralHospitalMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetReferralHospitalMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReferralHospitalMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_ReferralHospitalMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReferralHospitalMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_ReferralHospitalMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReferralHospitalMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetSpecialMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetSpecialMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetRefHospData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefHospData" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetRefHospData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefHospDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_HealthCheckPckgTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:HealthCheckPckgTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_HealthCheckPckgTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HealthCheckPckgTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetHealthCheckPackageDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHealthCheckPackageDet" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetHealthCheckPackageDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHealthCheckPackageDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetAreaMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAreaMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetAreaMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAreaMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_AreaMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:AreaMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_AreaMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AreaMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDepoTypeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepoTypeList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDepoTypeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepoTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DepositTypeTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositTypeTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DepositTypeTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositTypeTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_ApplyServiceDiscount_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyServiceDiscount" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_ApplyServiceDiscount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyServiceDiscountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetOPDocLstWithFeesByTariff_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDocLstWithFeesByTariff" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetOPDocLstWithFeesByTariff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOPDocLstWithFeesByTariffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_AssetMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssetMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_AssetMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssetMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetAssetTypList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTypList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetAssetTypList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetTypListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetCounterMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCounterMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetCounterMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCounterMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_CounterMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CounterMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_CounterMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CounterMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DonationMasterSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonationMasterSave" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DonationMasterSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonationMasterSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDonationMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDonationMaster" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDonationMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDonationMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DiscProcessMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DiscProcessMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DiscProcessMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DiscProcessMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDiscProcessMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiscProcessMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDiscProcessMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiscProcessMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_CreditCompanyServCodeLink_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreditCompanyServCodeLink" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_CreditCompanyServCodeLink_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreditCompanyServCodeLinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetCreditCompServiceLinkCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCompServiceLinkCode" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetCreditCompServiceLinkCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCompServiceLinkCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetCompSetup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompSetup" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetCompSetup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompSetupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_CompSetUpTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompSetUpTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_CompSetUpTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompSetUpTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SugeryComponentMasterTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SugeryComponentMasterTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SugeryComponentMasterTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SugeryComponentMasterTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetSurgComponent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgComponent" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetSurgComponent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgComponentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SaveSMSAPIMst_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSMSAPIMst" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SaveSMSAPIMst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSMSAPIMstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetSMSAPIMst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSAPIMst" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetSMSAPIMst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSAPIMstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SaveSMSTemplateMst_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSMSTemplateMst" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SaveSMSTemplateMst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSMSTemplateMstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetSMSTemplateMst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSTemplateMst" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetSMSTemplateMst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMSTemplateMstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SMSTestSender_InputMessage">
+    <wsdl:part name="parameters" element="tns:SMSTestSender" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SMSTestSender_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SMSTestSenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SaveMastDataUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMastDataUpload" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SaveMastDataUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMastDataUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SaveEmailSenderMst_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmailSenderMst" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SaveEmailSenderMst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmailSenderMstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetEmailSenderMst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailSenderMst" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetEmailSenderMst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailSenderMstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SaveEmailTemplateMst_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmailTemplateMst" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SaveEmailTemplateMst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmailTemplateMstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetEmailTemplateMst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailTemplateMst" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetEmailTemplateMst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailTemplateMstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SendMailTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailTest" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SendMailTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetFeedbackFormMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeedbackFormMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetFeedbackFormMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeedbackFormMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SchemeTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:SchemeTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_SchemeTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SchemeTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetFeedbackFormMstDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeedbackFormMstDetails" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetFeedbackFormMstDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeedbackFormMstDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_FeedbackFormMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:FeedbackFormMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_FeedbackFormMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FeedbackFormMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetSchemeMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemeMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetSchemeMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemeMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetMtrlGrpList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMtrlGrpList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetMtrlGrpList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMtrlGrpListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DrVisitCostTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:DrVisitCostTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DrVisitCostTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DrVisitCostTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDrBedCategoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrBedCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDrBedCategoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrBedCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDrVisitCostList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrVisitCostList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDrVisitCostList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrVisitCostListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetRefEmployeeClassMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefEmployeeClassMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetRefEmployeeClassMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefEmployeeClassMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetRefEmployeeClassMstDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefEmployeeClassMstDetails" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetRefEmployeeClassMstDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefEmployeeClassMstDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_RefEmployeeClassMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefEmployeeClassMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_RefEmployeeClassMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefEmployeeClassMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetRefCityAllowanceList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefCityAllowanceList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetRefCityAllowanceList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefCityAllowanceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_RefCityAllowanceMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefCityAllowanceMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_RefCityAllowanceMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefCityAllowanceMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetRefTravelModeAllowanceList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefTravelModeAllowanceList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetRefTravelModeAllowanceList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefTravelModeAllowanceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_RefTravelModeAllowanceMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefTravelModeAllowanceMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_RefTravelModeAllowanceMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefTravelModeAllowanceMstTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetRefTravelModeListForCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefTravelModeListForCity" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetRefTravelModeListForCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefTravelModeListForCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_HealthCheckPckgTemplateTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:HealthCheckPckgTemplateTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_HealthCheckPckgTemplateTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HealthCheckPckgTemplateTranResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetHealthCheckPackageDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHealthCheckPackageDetails" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetHealthCheckPackageDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHealthCheckPackageDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetHealthCheckPackageInvestigations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHealthCheckPackageInvestigations" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetHealthCheckPackageInvestigations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHealthCheckPackageInvestigationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServDoctShareData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServDoctShareData" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServDoctShareData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServDoctShareDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServDiscountList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServDiscountList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetServDiscountList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServDiscountListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDocumentTypeMstYARAList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeMstYARAList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetDocumentTypeMstYARAList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeMstYARAListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DocumentTypeMstYARA_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentTypeMstYARA" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_DocumentTypeMstYARA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentTypeMstYARAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetIdentityMstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentityMstList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_GetIdentityMstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentityMstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_IdentityMstTran_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityMstTran" />
+  </wsdl:message>
+  <wsdl:message name="IAdministration_IdentityMstTran_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityMstTranResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAdministration">
+    <wsdl:operation name="GetRefDoctList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetRefDoctList" message="tns:IAdministration_GetRefDoctList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetRefDoctListResponse" message="tns:IAdministration_GetRefDoctList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CityMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/CityMstTran" message="tns:IAdministration_CityMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/CityMstTranResponse" message="tns:IAdministration_CityMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetCityMstList" message="tns:IAdministration_GetCityMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetCityMstListResponse" message="tns:IAdministration_GetCityMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetDistrictMstList" message="tns:IAdministration_GetDistrictMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetDistrictMstListResponse" message="tns:IAdministration_GetDistrictMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetDepartmentList" message="tns:IAdministration_GetDepartmentList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetDepartmentListResponse" message="tns:IAdministration_GetDepartmentList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsurCompMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetInsurCompMstList" message="tns:IAdministration_GetInsurCompMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetInsurCompMstListResponse" message="tns:IAdministration_GetInsurCompMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNursingStnMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetNursingStnMstList" message="tns:IAdministration_GetNursingStnMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetNursingStnMstListResponse" message="tns:IAdministration_GetNursingStnMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DistrictMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/DistrictMstTran" message="tns:IAdministration_DistrictMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/DistrictMstTranResponse" message="tns:IAdministration_DistrictMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeptMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/DeptMstTran" message="tns:IAdministration_DeptMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/DeptMstTranResponse" message="tns:IAdministration_DeptMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWardMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetWardMstList" message="tns:IAdministration_GetWardMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetWardMstListResponse" message="tns:IAdministration_GetWardMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WardMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/WardMstTran" message="tns:IAdministration_WardMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/WardMstTranResponse" message="tns:IAdministration_WardMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NursStnTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/NursStnTran" message="tns:IAdministration_NursStnTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/NursStnTranResponse" message="tns:IAdministration_NursStnTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsurCompTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/InsurCompTran" message="tns:IAdministration_InsurCompTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/InsurCompTranResponse" message="tns:IAdministration_InsurCompTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIPPkgMasterRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetIPPkgMasterRecords" message="tns:IAdministration_GetIPPkgMasterRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetIPPkgMasterRecordsResponse" message="tns:IAdministration_GetIPPkgMasterRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IPPkgMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/IPPkgMstTran" message="tns:IAdministration_IPPkgMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/IPPkgMstTranResponse" message="tns:IAdministration_IPPkgMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorMstRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetDoctorMstRecords" message="tns:IAdministration_GetDoctorMstRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetDoctorMstRecordsResponse" message="tns:IAdministration_GetDoctorMstRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateDoctorMst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/SaveUpdateDoctorMst" message="tns:IAdministration_SaveUpdateDoctorMst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/SaveUpdateDoctorMstResponse" message="tns:IAdministration_SaveUpdateDoctorMst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClinicMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetClinicMstList" message="tns:IAdministration_GetClinicMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetClinicMstListResponse" message="tns:IAdministration_GetClinicMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClinicMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/ClinicMstTran" message="tns:IAdministration_ClinicMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/ClinicMstTranResponse" message="tns:IAdministration_ClinicMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClinicData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetClinicData" message="tns:IAdministration_GetClinicData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetClinicDataResponse" message="tns:IAdministration_GetClinicData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBedMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetBedMstList" message="tns:IAdministration_GetBedMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetBedMstListResponse" message="tns:IAdministration_GetBedMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BedMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/BedMstTran" message="tns:IAdministration_BedMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/BedMstTranResponse" message="tns:IAdministration_BedMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetServiceMstList" message="tns:IAdministration_GetServiceMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetServiceMstListResponse" message="tns:IAdministration_GetServiceMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/ServiceTran" message="tns:IAdministration_ServiceTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/ServiceTranResponse" message="tns:IAdministration_ServiceTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTariffList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetTariffList" message="tns:IAdministration_GetTariffList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetTariffListResponse" message="tns:IAdministration_GetTariffList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoctConsltnChrgTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/DoctConsltnChrgTran" message="tns:IAdministration_DoctConsltnChrgTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/DoctConsltnChrgTranResponse" message="tns:IAdministration_DoctConsltnChrgTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrConChrg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetDrConChrg" message="tns:IAdministration_GetDrConChrg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetDrConChrgResponse" message="tns:IAdministration_GetDrConChrg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServCostTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/ServCostTran" message="tns:IAdministration_ServCostTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/ServCostTranResponse" message="tns:IAdministration_ServCostTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBedCategoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetBedCategoryList" message="tns:IAdministration_GetBedCategoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetBedCategoryListResponse" message="tns:IAdministration_GetBedCategoryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServCostList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetServCostList" message="tns:IAdministration_GetServCostList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetServCostListResponse" message="tns:IAdministration_GetServCostList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditCompanyTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/CreditCompanyTran" message="tns:IAdministration_CreditCompanyTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/CreditCompanyTranResponse" message="tns:IAdministration_CreditCompanyTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCompMstRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetCreditCompMstRecords" message="tns:IAdministration_GetCreditCompMstRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetCreditCompMstRecordsResponse" message="tns:IAdministration_GetCreditCompMstRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BankMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/BankMstTran" message="tns:IAdministration_BankMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/BankMstTranResponse" message="tns:IAdministration_BankMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankMstRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetBankMstRecords" message="tns:IAdministration_GetBankMstRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetBankMstRecordsResponse" message="tns:IAdministration_GetBankMstRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetBranchList" message="tns:IAdministration_GetBranchList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetBranchListResponse" message="tns:IAdministration_GetBranchList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUpTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/SetUpTran" message="tns:IAdministration_SetUpTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/SetUpTranResponse" message="tns:IAdministration_SetUpTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHospSetupDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetHospSetupDet" message="tns:IAdministration_GetHospSetupDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetHospSetupDetResponse" message="tns:IAdministration_GetHospSetupDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoctScheduleTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/DoctScheduleTran" message="tns:IAdministration_DoctScheduleTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/DoctScheduleTranResponse" message="tns:IAdministration_DoctScheduleTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetScheduleData" message="tns:IAdministration_GetScheduleData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetScheduleDataResponse" message="tns:IAdministration_GetScheduleData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NonAdmissibleServTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/NonAdmissibleServTran" message="tns:IAdministration_NonAdmissibleServTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/NonAdmissibleServTranResponse" message="tns:IAdministration_NonAdmissibleServTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NonAdmissibleMaterialTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/NonAdmissibleMaterialTran" message="tns:IAdministration_NonAdmissibleMaterialTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/NonAdmissibleMaterialTranResponse" message="tns:IAdministration_NonAdmissibleMaterialTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBedCatgByCompNTariff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetBedCatgByCompNTariff" message="tns:IAdministration_GetBedCatgByCompNTariff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetBedCatgByCompNTariffResponse" message="tns:IAdministration_GetBedCatgByCompNTariff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNonAdmsbleMtrl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetNonAdmsbleMtrl" message="tns:IAdministration_GetNonAdmsbleMtrl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetNonAdmsbleMtrlResponse" message="tns:IAdministration_GetNonAdmsbleMtrl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBedCatgFrService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetBedCatgFrService" message="tns:IAdministration_GetBedCatgFrService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetBedCatgFrServiceResponse" message="tns:IAdministration_GetBedCatgFrService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNonAdmsbleServ">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetNonAdmsbleServ" message="tns:IAdministration_GetNonAdmsbleServ_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetNonAdmsbleServResponse" message="tns:IAdministration_GetNonAdmsbleServ_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDiscountTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/ServiceDiscountTran" message="tns:IAdministration_ServiceDiscountTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/ServiceDiscountTranResponse" message="tns:IAdministration_ServiceDiscountTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBedCatgFrServiceDiscount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetBedCatgFrServiceDiscount" message="tns:IAdministration_GetBedCatgFrServiceDiscount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetBedCatgFrServiceDiscountResponse" message="tns:IAdministration_GetBedCatgFrServiceDiscount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServDiscount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetServDiscount" message="tns:IAdministration_GetServDiscount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetServDiscountResponse" message="tns:IAdministration_GetServDiscount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServMainGrpList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetServMainGrpList" message="tns:IAdministration_GetServMainGrpList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetServMainGrpListResponse" message="tns:IAdministration_GetServMainGrpList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServBillGrpList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetServBillGrpList" message="tns:IAdministration_GetServBillGrpList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetServBillGrpListResponse" message="tns:IAdministration_GetServBillGrpList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageBillGrpTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/PackageBillGrpTran" message="tns:IAdministration_PackageBillGrpTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/PackageBillGrpTranResponse" message="tns:IAdministration_PackageBillGrpTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPckgBillingLnks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetPckgBillingLnks" message="tns:IAdministration_GetPckgBillingLnks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetPckgBillingLnksResponse" message="tns:IAdministration_GetPckgBillingLnks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PkgSrvicesLnkTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/PkgSrvicesLnkTran" message="tns:IAdministration_PkgSrvicesLnkTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/PkgSrvicesLnkTranResponse" message="tns:IAdministration_PkgSrvicesLnkTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPkgServLnk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetPkgServLnk" message="tns:IAdministration_GetPkgServLnk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetPkgServLnkResponse" message="tns:IAdministration_GetPkgServLnk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PkgMtrlLinkTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/PkgMtrlLinkTran" message="tns:IAdministration_PkgMtrlLinkTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/PkgMtrlLinkTranResponse" message="tns:IAdministration_PkgMtrlLinkTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPkgMtrlLnk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetPkgMtrlLnk" message="tns:IAdministration_GetPkgMtrlLnk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetPkgMtrlLnkResponse" message="tns:IAdministration_GetPkgMtrlLnk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageTariffTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/PackageTariffTran" message="tns:IAdministration_PackageTariffTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/PackageTariffTranResponse" message="tns:IAdministration_PackageTariffTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPkgTariff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetPkgTariff" message="tns:IAdministration_GetPkgTariff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetPkgTariffResponse" message="tns:IAdministration_GetPkgTariff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientCatgMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetPatientCatgMstList" message="tns:IAdministration_GetPatientCatgMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetPatientCatgMstListResponse" message="tns:IAdministration_GetPatientCatgMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PatientCatgMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/PatientCatgMstTran" message="tns:IAdministration_PatientCatgMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/PatientCatgMstTranResponse" message="tns:IAdministration_PatientCatgMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferralHospitalMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetReferralHospitalMstList" message="tns:IAdministration_GetReferralHospitalMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetReferralHospitalMstListResponse" message="tns:IAdministration_GetReferralHospitalMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReferralHospitalMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/ReferralHospitalMstTran" message="tns:IAdministration_ReferralHospitalMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/ReferralHospitalMstTranResponse" message="tns:IAdministration_ReferralHospitalMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetSpecialMstList" message="tns:IAdministration_GetSpecialMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetSpecialMstListResponse" message="tns:IAdministration_GetSpecialMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefHospData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetRefHospData" message="tns:IAdministration_GetRefHospData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetRefHospDataResponse" message="tns:IAdministration_GetRefHospData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HealthCheckPckgTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/HealthCheckPckgTran" message="tns:IAdministration_HealthCheckPckgTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/HealthCheckPckgTranResponse" message="tns:IAdministration_HealthCheckPckgTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHealthCheckPackageDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetHealthCheckPackageDet" message="tns:IAdministration_GetHealthCheckPackageDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetHealthCheckPackageDetResponse" message="tns:IAdministration_GetHealthCheckPackageDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetAreaMstList" message="tns:IAdministration_GetAreaMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetAreaMstListResponse" message="tns:IAdministration_GetAreaMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AreaMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/AreaMstTran" message="tns:IAdministration_AreaMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/AreaMstTranResponse" message="tns:IAdministration_AreaMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepoTypeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetDepoTypeList" message="tns:IAdministration_GetDepoTypeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetDepoTypeListResponse" message="tns:IAdministration_GetDepoTypeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositTypeTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/DepositTypeTran" message="tns:IAdministration_DepositTypeTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/DepositTypeTranResponse" message="tns:IAdministration_DepositTypeTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyServiceDiscount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/ApplyServiceDiscount" message="tns:IAdministration_ApplyServiceDiscount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/ApplyServiceDiscountResponse" message="tns:IAdministration_ApplyServiceDiscount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDocLstWithFeesByTariff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetOPDocLstWithFeesByTariff" message="tns:IAdministration_GetOPDocLstWithFeesByTariff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetOPDocLstWithFeesByTariffResponse" message="tns:IAdministration_GetOPDocLstWithFeesByTariff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssetMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/AssetMstTran" message="tns:IAdministration_AssetMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/AssetMstTranResponse" message="tns:IAdministration_AssetMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetTypList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetAssetTypList" message="tns:IAdministration_GetAssetTypList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetAssetTypListResponse" message="tns:IAdministration_GetAssetTypList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCounterMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetCounterMstList" message="tns:IAdministration_GetCounterMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetCounterMstListResponse" message="tns:IAdministration_GetCounterMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CounterMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/CounterMstTran" message="tns:IAdministration_CounterMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/CounterMstTranResponse" message="tns:IAdministration_CounterMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonationMasterSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/DonationMasterSave" message="tns:IAdministration_DonationMasterSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/DonationMasterSaveResponse" message="tns:IAdministration_DonationMasterSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDonationMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetDonationMaster" message="tns:IAdministration_GetDonationMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetDonationMasterResponse" message="tns:IAdministration_GetDonationMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DiscProcessMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/DiscProcessMstTran" message="tns:IAdministration_DiscProcessMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/DiscProcessMstTranResponse" message="tns:IAdministration_DiscProcessMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscProcessMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetDiscProcessMstList" message="tns:IAdministration_GetDiscProcessMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetDiscProcessMstListResponse" message="tns:IAdministration_GetDiscProcessMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditCompanyServCodeLink">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/CreditCompanyServCodeLink" message="tns:IAdministration_CreditCompanyServCodeLink_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/CreditCompanyServCodeLinkResponse" message="tns:IAdministration_CreditCompanyServCodeLink_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCompServiceLinkCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetCreditCompServiceLinkCode" message="tns:IAdministration_GetCreditCompServiceLinkCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetCreditCompServiceLinkCodeResponse" message="tns:IAdministration_GetCreditCompServiceLinkCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompSetup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetCompSetup" message="tns:IAdministration_GetCompSetup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetCompSetupResponse" message="tns:IAdministration_GetCompSetup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompSetUpTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/CompSetUpTran" message="tns:IAdministration_CompSetUpTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/CompSetUpTranResponse" message="tns:IAdministration_CompSetUpTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SugeryComponentMasterTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/SugeryComponentMasterTran" message="tns:IAdministration_SugeryComponentMasterTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/SugeryComponentMasterTranResponse" message="tns:IAdministration_SugeryComponentMasterTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgComponent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetSurgComponent" message="tns:IAdministration_GetSurgComponent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetSurgComponentResponse" message="tns:IAdministration_GetSurgComponent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSMSAPIMst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/SaveSMSAPIMst" message="tns:IAdministration_SaveSMSAPIMst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/SaveSMSAPIMstResponse" message="tns:IAdministration_SaveSMSAPIMst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSAPIMst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetSMSAPIMst" message="tns:IAdministration_GetSMSAPIMst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetSMSAPIMstResponse" message="tns:IAdministration_GetSMSAPIMst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSMSTemplateMst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/SaveSMSTemplateMst" message="tns:IAdministration_SaveSMSTemplateMst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/SaveSMSTemplateMstResponse" message="tns:IAdministration_SaveSMSTemplateMst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSTemplateMst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetSMSTemplateMst" message="tns:IAdministration_GetSMSTemplateMst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetSMSTemplateMstResponse" message="tns:IAdministration_GetSMSTemplateMst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SMSTestSender">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/SMSTestSender" message="tns:IAdministration_SMSTestSender_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/SMSTestSenderResponse" message="tns:IAdministration_SMSTestSender_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMastDataUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/SaveMastDataUpload" message="tns:IAdministration_SaveMastDataUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/SaveMastDataUploadResponse" message="tns:IAdministration_SaveMastDataUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmailSenderMst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/SaveEmailSenderMst" message="tns:IAdministration_SaveEmailSenderMst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/SaveEmailSenderMstResponse" message="tns:IAdministration_SaveEmailSenderMst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailSenderMst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetEmailSenderMst" message="tns:IAdministration_GetEmailSenderMst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetEmailSenderMstResponse" message="tns:IAdministration_GetEmailSenderMst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmailTemplateMst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/SaveEmailTemplateMst" message="tns:IAdministration_SaveEmailTemplateMst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/SaveEmailTemplateMstResponse" message="tns:IAdministration_SaveEmailTemplateMst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailTemplateMst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetEmailTemplateMst" message="tns:IAdministration_GetEmailTemplateMst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetEmailTemplateMstResponse" message="tns:IAdministration_GetEmailTemplateMst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMailTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/SendMailTest" message="tns:IAdministration_SendMailTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/SendMailTestResponse" message="tns:IAdministration_SendMailTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFeedbackFormMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetFeedbackFormMstList" message="tns:IAdministration_GetFeedbackFormMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetFeedbackFormMstListResponse" message="tns:IAdministration_GetFeedbackFormMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SchemeTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/SchemeTran" message="tns:IAdministration_SchemeTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/SchemeTranResponse" message="tns:IAdministration_SchemeTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFeedbackFormMstDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetFeedbackFormMstDetails" message="tns:IAdministration_GetFeedbackFormMstDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetFeedbackFormMstDetailsResponse" message="tns:IAdministration_GetFeedbackFormMstDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FeedbackFormMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/FeedbackFormMstTran" message="tns:IAdministration_FeedbackFormMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/FeedbackFormMstTranResponse" message="tns:IAdministration_FeedbackFormMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemeMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetSchemeMstList" message="tns:IAdministration_GetSchemeMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetSchemeMstListResponse" message="tns:IAdministration_GetSchemeMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMtrlGrpList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetMtrlGrpList" message="tns:IAdministration_GetMtrlGrpList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetMtrlGrpListResponse" message="tns:IAdministration_GetMtrlGrpList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DrVisitCostTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/DrVisitCostTran" message="tns:IAdministration_DrVisitCostTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/DrVisitCostTranResponse" message="tns:IAdministration_DrVisitCostTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrBedCategoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetDrBedCategoryList" message="tns:IAdministration_GetDrBedCategoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetDrBedCategoryListResponse" message="tns:IAdministration_GetDrBedCategoryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrVisitCostList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetDrVisitCostList" message="tns:IAdministration_GetDrVisitCostList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetDrVisitCostListResponse" message="tns:IAdministration_GetDrVisitCostList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefEmployeeClassMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetRefEmployeeClassMstList" message="tns:IAdministration_GetRefEmployeeClassMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetRefEmployeeClassMstListResponse" message="tns:IAdministration_GetRefEmployeeClassMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefEmployeeClassMstDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetRefEmployeeClassMstDetails" message="tns:IAdministration_GetRefEmployeeClassMstDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetRefEmployeeClassMstDetailsResponse" message="tns:IAdministration_GetRefEmployeeClassMstDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefEmployeeClassMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/RefEmployeeClassMstTran" message="tns:IAdministration_RefEmployeeClassMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/RefEmployeeClassMstTranResponse" message="tns:IAdministration_RefEmployeeClassMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefCityAllowanceList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetRefCityAllowanceList" message="tns:IAdministration_GetRefCityAllowanceList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetRefCityAllowanceListResponse" message="tns:IAdministration_GetRefCityAllowanceList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefCityAllowanceMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/RefCityAllowanceMstTran" message="tns:IAdministration_RefCityAllowanceMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/RefCityAllowanceMstTranResponse" message="tns:IAdministration_RefCityAllowanceMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefTravelModeAllowanceList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetRefTravelModeAllowanceList" message="tns:IAdministration_GetRefTravelModeAllowanceList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetRefTravelModeAllowanceListResponse" message="tns:IAdministration_GetRefTravelModeAllowanceList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefTravelModeAllowanceMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/RefTravelModeAllowanceMstTran" message="tns:IAdministration_RefTravelModeAllowanceMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/RefTravelModeAllowanceMstTranResponse" message="tns:IAdministration_RefTravelModeAllowanceMstTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefTravelModeListForCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetRefTravelModeListForCity" message="tns:IAdministration_GetRefTravelModeListForCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetRefTravelModeListForCityResponse" message="tns:IAdministration_GetRefTravelModeListForCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HealthCheckPckgTemplateTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/HealthCheckPckgTemplateTran" message="tns:IAdministration_HealthCheckPckgTemplateTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/HealthCheckPckgTemplateTranResponse" message="tns:IAdministration_HealthCheckPckgTemplateTran_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHealthCheckPackageDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetHealthCheckPackageDetails" message="tns:IAdministration_GetHealthCheckPackageDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetHealthCheckPackageDetailsResponse" message="tns:IAdministration_GetHealthCheckPackageDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHealthCheckPackageInvestigations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetHealthCheckPackageInvestigations" message="tns:IAdministration_GetHealthCheckPackageInvestigations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetHealthCheckPackageInvestigationsResponse" message="tns:IAdministration_GetHealthCheckPackageInvestigations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServDoctShareData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetServDoctShareData" message="tns:IAdministration_GetServDoctShareData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetServDoctShareDataResponse" message="tns:IAdministration_GetServDoctShareData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServDiscountList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetServDiscountList" message="tns:IAdministration_GetServDiscountList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetServDiscountListResponse" message="tns:IAdministration_GetServDiscountList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeMstYARAList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetDocumentTypeMstYARAList" message="tns:IAdministration_GetDocumentTypeMstYARAList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetDocumentTypeMstYARAListResponse" message="tns:IAdministration_GetDocumentTypeMstYARAList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentTypeMstYARA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/DocumentTypeMstYARA" message="tns:IAdministration_DocumentTypeMstYARA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/DocumentTypeMstYARAResponse" message="tns:IAdministration_DocumentTypeMstYARA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentityMstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/GetIdentityMstList" message="tns:IAdministration_GetIdentityMstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/GetIdentityMstListResponse" message="tns:IAdministration_GetIdentityMstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentityMstTran">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministration/IdentityMstTran" message="tns:IAdministration_IdentityMstTran_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministration/IdentityMstTranResponse" message="tns:IAdministration_IdentityMstTran_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAdmnistration" type="tns:IAdministration">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IAdmnistration_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRefDoctList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetRefDoctList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CityMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/CityMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetCityMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetDistrictMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetDepartmentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsurCompMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetInsurCompMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNursingStnMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetNursingStnMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DistrictMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/DistrictMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeptMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/DeptMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWardMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetWardMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WardMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/WardMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NursStnTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/NursStnTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsurCompTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/InsurCompTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIPPkgMasterRecords">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetIPPkgMasterRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IPPkgMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/IPPkgMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorMstRecords">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetDoctorMstRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateDoctorMst">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/SaveUpdateDoctorMst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClinicMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetClinicMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClinicMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/ClinicMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClinicData">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetClinicData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBedMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetBedMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BedMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/BedMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetServiceMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/ServiceTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTariffList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetTariffList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoctConsltnChrgTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/DoctConsltnChrgTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrConChrg">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetDrConChrg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServCostTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/ServCostTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBedCategoryList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetBedCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServCostList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetServCostList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditCompanyTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/CreditCompanyTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCompMstRecords">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetCreditCompMstRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BankMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/BankMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankMstRecords">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetBankMstRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetBranchList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUpTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/SetUpTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospSetupDet">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetHospSetupDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoctScheduleTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/DoctScheduleTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleData">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetScheduleData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NonAdmissibleServTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/NonAdmissibleServTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NonAdmissibleMaterialTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/NonAdmissibleMaterialTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBedCatgByCompNTariff">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetBedCatgByCompNTariff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonAdmsbleMtrl">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetNonAdmsbleMtrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBedCatgFrService">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetBedCatgFrService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonAdmsbleServ">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetNonAdmsbleServ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDiscountTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/ServiceDiscountTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBedCatgFrServiceDiscount">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetBedCatgFrServiceDiscount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServDiscount">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetServDiscount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServMainGrpList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetServMainGrpList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServBillGrpList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetServBillGrpList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageBillGrpTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/PackageBillGrpTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPckgBillingLnks">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetPckgBillingLnks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PkgSrvicesLnkTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/PkgSrvicesLnkTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPkgServLnk">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetPkgServLnk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PkgMtrlLinkTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/PkgMtrlLinkTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPkgMtrlLnk">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetPkgMtrlLnk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageTariffTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/PackageTariffTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPkgTariff">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetPkgTariff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientCatgMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetPatientCatgMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatientCatgMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/PatientCatgMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferralHospitalMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetReferralHospitalMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReferralHospitalMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/ReferralHospitalMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetSpecialMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefHospData">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetRefHospData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HealthCheckPckgTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/HealthCheckPckgTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHealthCheckPackageDet">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetHealthCheckPackageDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetAreaMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AreaMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/AreaMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepoTypeList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetDepoTypeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepositTypeTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/DepositTypeTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyServiceDiscount">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/ApplyServiceDiscount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPDocLstWithFeesByTariff">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetOPDocLstWithFeesByTariff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssetMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/AssetMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetTypList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetAssetTypList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCounterMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetCounterMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CounterMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/CounterMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DonationMasterSave">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/DonationMasterSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDonationMaster">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetDonationMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DiscProcessMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/DiscProcessMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscProcessMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetDiscProcessMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditCompanyServCodeLink">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/CreditCompanyServCodeLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCompServiceLinkCode">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetCreditCompServiceLinkCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompSetup">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetCompSetup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompSetUpTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/CompSetUpTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SugeryComponentMasterTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/SugeryComponentMasterTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgComponent">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetSurgComponent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSMSAPIMst">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/SaveSMSAPIMst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSAPIMst">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetSMSAPIMst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSMSTemplateMst">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/SaveSMSTemplateMst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSTemplateMst">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetSMSTemplateMst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMSTestSender">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/SMSTestSender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMastDataUpload">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/SaveMastDataUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmailSenderMst">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/SaveEmailSenderMst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailSenderMst">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetEmailSenderMst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmailTemplateMst">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/SaveEmailTemplateMst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailTemplateMst">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetEmailTemplateMst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMailTest">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/SendMailTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeedbackFormMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetFeedbackFormMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchemeTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/SchemeTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeedbackFormMstDetails">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetFeedbackFormMstDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FeedbackFormMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/FeedbackFormMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemeMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetSchemeMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMtrlGrpList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetMtrlGrpList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DrVisitCostTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/DrVisitCostTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrBedCategoryList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetDrBedCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrVisitCostList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetDrVisitCostList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefEmployeeClassMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetRefEmployeeClassMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefEmployeeClassMstDetails">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetRefEmployeeClassMstDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefEmployeeClassMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/RefEmployeeClassMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefCityAllowanceList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetRefCityAllowanceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefCityAllowanceMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/RefCityAllowanceMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefTravelModeAllowanceList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetRefTravelModeAllowanceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefTravelModeAllowanceMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/RefTravelModeAllowanceMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefTravelModeListForCity">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetRefTravelModeListForCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HealthCheckPckgTemplateTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/HealthCheckPckgTemplateTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHealthCheckPackageDetails">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetHealthCheckPackageDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHealthCheckPackageInvestigations">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetHealthCheckPackageInvestigations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServDoctShareData">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetServDoctShareData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServDiscountList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetServDiscountList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeMstYARAList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetDocumentTypeMstYARAList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentTypeMstYARA">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/DocumentTypeMstYARA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentityMstList">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/GetIdentityMstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IdentityMstTran">
+      <soap:operation soapAction="http://tempuri.org/IAdministration/IdentityMstTran" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Administration">
+    <wsdl:port name="BasicHttpBinding_IAdmnistration" binding="tns:BasicHttpBinding_IAdmnistration">
+      <soap:address location="http://uat.himstccf.org:82/WebHMISService/Administration.svc/Administration.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
